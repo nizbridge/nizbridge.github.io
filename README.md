@@ -1,37 +1,25 @@
-# Simply Grey
-Simply Grey is a nice, easy on the eyes Jekyll theme that makes great use of grey colours. 
+## My Stack Problems
 
-![Screenshot of Simply Grey](http://i.imgur.com/sKpj8Oz.png)
+> This project forked and has been modified from [A simple grey theme for Jekyll](https://github.com/liamsymonds/simplygrey-jekyll), and the search posts using [Super Search](https://github.com/chinchang/super-search)
 
-## Installation
-There are a few requirements to using and installing the Simply Grey theme.
+### Demo
+* [https://agusmakmun.github.io](https://agusmakmun.github.io)
 
-1. You must have Jekyll installed. If you have no done this, do it by executing the following code. 
-`gem install jekyll`
+#### Feature
 
-2. You must have git installed. If you do not have this, install it on your system by using your package manager. For example, in Debian, type 
-`sudo apt-get install git`
+* Sitemap and XML Feed
+* Paginations in homepage
+* Posts under category
+* Realtime Search Posts _(title & description)_ under query.
+* Related Posts
+* Highlight pre
+* Next & Previous Post
+* Disqus comment
+* Projects
+* Project page
+* Share on social media
+* Google analytics
 
-Once you have done this, installation is pretty easy.
+#### Screenshot
 
-Simply clone the repository
-
-`git clone https://github.com/liamsymonds/simplygrey-jekyll.git`
-
-and serve the blog up so people can see it
-
-`cd simplygrey-jekyll; jekyll serve`
-
-## Configuring SimplyGrey
-The SimplyGrey theme is actually very easy to configure.
-
-### Adding more links to the navigation bar
-1. Open the _config.yml file
-2. Add some more values to the urls hash like the others that already exist there.
-
-### Changing the site name
-1. Open the _config.yml file
-2. Change the site name
-
-### Changing the logo/picture image
-1. Drop a 75x75 image into the img directory.
+![Screenshot Post Page](https://raw.githubusercontent.com/agusmakmun/agusmakmun.github.io/master/static/img/screenshot-post-page.png  "Screenshot Post Page")
