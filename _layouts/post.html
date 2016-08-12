@@ -1,17 +1,9 @@
 ---
 layout: default
 ---
+<h1>{{ page.title }}</h1>
+<span class="time">{{ page.date | date_to_string }}</span>
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html disqus_identifier=page.disqus_identifier %}
-</article>
+<div class="content">
+	<div class="post">{{ content }}</div>
+</div>
