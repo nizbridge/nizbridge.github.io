@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" name="viewport" content="text/html; charset=UTF-8; width=device-width,initial-scale=1">
+<link href="gogo_brown.css" type="text/css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Bowlby+One+SC|Londrina+Outline" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="gogo_brown.js"></script>
+</head>
+<body ontouchstart="jump();">
+<div id="wrap" class="open">
+	<h1 class="gogo_title">
+            <div class="gogo">
+                <span>G</span>
+                <span class="tit_o">o
+                    <div class="dt">
+                        <div class="top">    
+                            <span class="r"></span>
+                            <span class="r"></span>
+                            <span class="o"></span>
+                            <span class="b"></span>
+                            <span class="g"></span>
+                            <span class="o"></span>
+                            <span class="b"></span>
+                            <span class="g"></span>
+                         </div>
+                         <div class="center">
+                            <div class="sdw"></div>
+                         </div>
+                         <div class="bottom"></div>
+                    </div>
+                </span>
+                <span>G</span>
+                <span class="tit_o">o
+                    <div class="dt">
+                        <div class="top">    
+                            <span class="r"></span>
+                            <span class="r"></span>
+                            <span class="o"></span>
+                            <span class="b"></span>
+                            <span class="g"></span>
+                            <span class="o"></span>
+                            <span class="b"></span>
+                            <span class="g"></span>
+                         </div>
+                         <div class="center">
+                            <div class="sdw"></div>
+                         </div>
+                         <div class="bottom"></div>
+                    </div>
+                </span>
+            </div>
+            <div class="brown">
+                <span>B</span><span>R</span>
+                <span class="tit_bo">o
+                    <div class="all">
+                        <div class="ear1"><div class="sear1"></div></div>
+                        <div class="ear1 v2"><div class="sear1"></div></div>
+                        <div class="face"></div><div class="eye"><div></div>
+                        <div></div></div>
+                        <div class="mu"><div class="nose"><div></div><div></div><div></div></div>
+                        <div class="mouse"><div></div></div></div>
+                    </div>
+                </span>
+                <span>W</span><span>N</span>
+                <span>!!</span>
+            </div>
+        </h1>
+        <div class="ggb_box">
+			<div class="stage ani">
+				<div id="player" class="all">
+					<div class="ear1"><div class="sear1"></div></div>
+					<div class="ear1 v2"><div class="sear1"></div></div>
+					<div class="face"></div><div class="eye"><div></div>
+					<div></div></div>
+					<div class="mu"><div class="nose"><div></div><div></div><div></div></div>
+					<div class="mouse"><div></div></div></div>
+					<div class="bd"></div>
+					<div class="am1 ani03"></div>
+					<div class="am2 ani04"></div>
+					<div class="leg ani01 ani"><div></div></div>
+					<div class="leg v2 ani02 ani"><div></div></div>
+				</div>
+				<div id="celly_sec">
+					<div id="selly" class="ani">
+						<div class="b_line"></div>
+						<div id="eye"><div></div><div></div></div>
+						<div id="nose-lip">
+							<div id="nose">
+								<div class="line"></div>
+								<div class="line down"></div>
+							</div>
+						</div>
+						<div class="s_body"></div>
+						<div class="wing ani"></div>
+						<div class="wing v2 ani"></div>
+						<div class="leg"><div></div><div></div></div>
+					</div>
+				</div>
+				<div class="dt_sec">
+					<div class="dt">
+						<div class="top">    
+							<span class="r"></span>
+							<span class="r"></span>
+							<span class="o"></span>
+							<span class="b"></span>
+							<span class="g"></span>
+							<span class="o"></span>
+							<span class="b"></span>
+							<span class="g"></span>
+						</div>
+						<div class="center">
+							<div class="sdw"></div>
+						</div>
+						<div class="bottom"></div>
+					</div>
+				</div>
+				<!-- 배경   -->
+				<div id="bgimg">
+					<div class="sun"></div>
+					<div id="clouds">
+						<div class="cloud x1 ani"></div>
+						<div class="cloud x2 ani" style="-webkit-animation-play-state: paused;"></div>
+						<div class="cloud2 x3 ani" style="-webkit-animation-play-state: paused;"></div>
+					</div>					
+					<div class="lawnlawn">
+						<div class="lawn_box ani">
+							<div class="lawn_area lf"><div class="lawn"></div></div>
+							<div class="lawn_area"><div class="lawn"></div></div>
+							<div class="lawn_area lf v2"><div class="lawn"></div></div>
+							<div class="lawn_area v2"><div class="lawn"></div></div>
+							<div class="lawn_area lf v3"><div class="lawn"></div></div>
+							<div class="lawn_area v3"><div class="lawn"></div></div>
+						</div>
+					</div>
+				</div>
+				<!-- //배경 -->
+				<div id="npc">
+					<!-- test wall
+					<div class="wall n2002 t2 lv0" style="-webkit-animation-play-state: paused;left:212px;top:120px"><div class="tree"></div><div class="branch"></div></div>
+					-->
+				</div>
+				<!-- game over -->
+				<div id="gameover" style="display:none">
+					<div class="gmovr">
+						<strong>Game Over</strong>
+						<div class="score">
+							<span class="fanal_sc">score : <em>0</em></span>
+						</div>
+						<a href="#" class="btn_rstrt" onClick='game.reset()'>Try Again</a>
+					</div>
+					<!-- //game over -->
+				</div>
+				<div class="score">
+					<div>
+						<span class="sc">score : <em>0</em></span>
+						<span class="hsc">high score : <em>0</em></span>
+					</div>
+				</div>
+			</div>
+        </div>
+		<div class="cpr"> 
+        	<p>Incomms Web Standard UI Part [ Search N Store ] - 점프 : SPACE KEY</p>
+			<!--
+			<a href="#" onclick="score_board();">[순위보기]</a>
+			-->
+		</div>
+</div>
+<audio id="bg_sd" autoplay loop>
+	<source src="http://dl.bgms.kr/download/Gawh9/mp3/bgm_lobby.mp3" type="audio/mpeg" codecs="mp3">
+	<code>audio</code> 속성을 지원하지 않습니다.
+</audio>
+<audio id="bg_gameover" autoplay>
+	<source src="http://dl.bgms.kr/download/yPCKb/mp3/YSO_036.mp3" type="audio/mpeg" codecs="mp3">
+</audio>
+<audio id="jump_sd">
+	<source src="http://soundbible.com/mp3/Mario_Jumping-Mike_Koenig-989896458.mp3" type="audio/mpeg" codecs="mp3">
+</audio>
+</body>
+</html>
