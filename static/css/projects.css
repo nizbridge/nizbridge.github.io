@@ -70,3 +70,7 @@ span.tag-cloud {
 
 a.project-detail:hover {text-decoration: none;}
 a.project-detail:hover h3 {color: #62A253;}
+
+.thickbox + .project-link {
+  display:block;
+}

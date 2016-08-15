@@ -7,7 +7,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     {% for project in site.data.projects %}
         {% if project.slug == page.slug %}
-            <span class="time">{{ project.date }}</span> &raquo; 
+            <span class="time">{{ project.date }}</span> &raquo;
             {% for tag in project.tags %}
                 <span class="tags tag-filter">{{ tag }}</span>
             {% endfor %}
@@ -21,7 +21,11 @@ layout: default
             <a href="/static/projects/{{ project.image }}" class="thickbox">
                 <img src="/static/projects/{{ project.image }}" alt="{{ page.title }}" title="{{ page.title }}">
             </a>
+            {% if project.url %}
+            <a href="{{ project.url }}" class="project-link" target="_blank"><i class="fa fa-globe"></i> View</a>
+            {% endif %}
         {% endif %}
+
     {% endfor %}
     <hr />
 

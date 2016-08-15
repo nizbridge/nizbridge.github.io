@@ -84,7 +84,7 @@
         <!-- Fonts -->
         <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-        <!-- Custom CSS -->        
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="/static/css/super-search.css">
         <link rel="stylesheet" href="/static/css/thickbox.css">
         <link rel="stylesheet" href="/static/css/projects.css">
@@ -96,7 +96,7 @@
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-          
+
           ga('create', '{{ site.google_analytics }}', 'auto');
           ga('send', 'pageview');
         </script>
@@ -114,16 +114,18 @@
                 </div>
                 {% endif %}
 
+                <!--
                 <div class="social">
+
                     <ul>
                         {% for link in site.social %}
                             <li><a href="{{ link.link }}" target="_blank"><i class="fa {{ link.icon }}"></i></a></li>
                         {% endfor %}
                     </ul>
                 </div>
-
+                -->
                 <div class="search" id="js-search">
-                  <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+                  <input type="text" placeholder="type to search" class="search__input form-control" id="js-search__input">
                   <ul class="search__results" id="js-search__results"></ul>
                 </div>
                 <hr />
@@ -141,14 +143,9 @@
 
                 <footer>
                     &copy; {{ site.author }}
-                    {% if site.github %} 
-                    - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by Jekyll.
+                    {% if site.email %}
+                    - <a href="mailto:{{ site.email }}">{{ site.email }}</a> - Powered by Jekyll.
                     {% endif %}
-
-                    <div class="btn-github" style="float:right;">
-                        <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>                    
-                        <iframe src="https://ghbtns.com/github-btn.html?user=agusmakmun&repo=agusmakmun.github.io&type=fork&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>
-                    </div>
                 </footer>
             </div><!-- end /.col-sm-8 -->
         </div><!-- end /.container -->

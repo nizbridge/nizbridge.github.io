@@ -4,6 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I am UI Developer.
-
-email: nizbridge@gmail.com
+UI Developer.
