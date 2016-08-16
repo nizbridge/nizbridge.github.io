@@ -8,6 +8,14 @@
 		"tags": ["AngularJS","sass","jade","bootstrap"]
 	},
 	{
+		"slug": "dolce-timer",
+		"name": "돌체구스토 캡슐타이머 앱",
+		"image": "dolce-timer.png",
+		"url": "http://nizbridge.github.io/project/dolce-timer/index.html",
+		"date": "2016.06",
+		"tags": ["jQuery"]
+	},
+	{
 		"slug": "land",
 		"name": "네이버 부동산서비스",
 		"image": "land.png",
@@ -23,6 +31,7 @@
 		"date": "2013.12 ~ 2015.10",
 		"tags": ["html", "css"]
 	},
+
 	{
 		"slug": "band-promotion",
 		"name": "네이버 밴드 프로모션",

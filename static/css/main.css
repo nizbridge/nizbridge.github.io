@@ -217,3 +217,11 @@ div.col-sm-3 img#about {
         margin-top: 30px;
     }
 }
+
+/* custom */
+
+table td, table th {padding:3px;border:1px solid #666}
+.post-title,.post-title:link,.post-title:active,.post-title:hover {font-weight:bold;color:#4c4c4c}
+.posts > li > p {font-size:14px;line-height:18px;color:#808080}
+.text-link {color:#00c !important}
+.post .blue-box pre {background:#e9f1f5;border:1px solid #c6dce5;color:#000;margin:0;padding:10px}

@@ -3,9 +3,9 @@
 */
 .project-outer {
     display: inline-block;
-    width: 30%;
+    /* width: 30%; */
     vertical-align: top;
-    margin: 0 10px;
+    /* margin: 0 10px; */
 }
 .project-img img {
     width: 100%;
@@ -13,6 +13,7 @@
 h3.project-headlines {
     margin: 5px 0;
     font-size: 20px;
+    overflow:hidden;white-space:nowrap;word-break:break-all;text-overflow:ellipsis
 }
 span.tags {
     font-size: 10px;
@@ -44,7 +45,7 @@ span.tags:last-child{ margin-right: 0; }
     display: block;
 }
 .project-img {
-    width: 230px;
+    width: 100%;
     height: 200px;
     display: block;
     background-size: cover;

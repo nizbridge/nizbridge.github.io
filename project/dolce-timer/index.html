@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>dolce-timer</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="css/circle.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="contents">
+        <strong>Select Level</strong>
+        <div class="select-box">
+          <ul id='dropdown1'>
+            <li><a href="#" data-value="8" class="chip">1</a></li>
+            <li><a href="#" data-value="10" class="chip">2</a></li>
+            <li><a href="#" data-value="15" class="chip">3</a></li>
+            <li><a href="#" data-value="21" class="chip">4</a></li>
+            <li><a href="#" data-value="24" class="chip">5</a></li>
+            <li><a href="#" data-value="28" class="chip">6</a></li>
+            <li><a href="#" data-value="38" class="chip">7</a></li>
+          </ul>
+        </div>
+        <div class="bar-box">
+          <div id="myCircle" class="c100 p0 big">
+            <span id="per-text">0%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <p id="countdown-text"><em>0</em><span> remaining</span></p>
+        <div>
+          <button class="waves-effect waves-light btn">Start</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/style.js"></script>
+  </body>
+</html>

@@ -20,46 +20,47 @@ layout: default
 
     <div class="projects">
     {% include project_tags.html %}
-    {% for i in site.data.projects %}
-    	<div class="project-item project-outer" data-tags='{{ i.tags | jsonify | downcase }}'>
-    		<div class="project-inner">
+      <div class="row">
+      {% for i in site.data.projects %}
+      	<div class="project-item project-outer col-xs-12 col-sm-12 col-md-6 col-lg-4" data-tags='{{ i.tags | jsonify | downcase }}'>
+      		<div class="project-inner">
 
-          {% assign p_url = nil %}
-          {% for pr in p_array %}
-              {% if pr contains i.slug %}
-                  {% assign p_url = pr[1] %}
-              {% endif %}
-          {% endfor %}
-          {% if p_url == nil %}{% assign p_url = i.url %}{% endif %}
-          {% if p_url %}
-          <a href="{{ p_url }}" class="project-detail">
-          {% endif %}
-  			     <div class="project-img bordered" style="background-image: url('/static/projects/{{ i.image }}');"></div>
-  		        <h3 class="project-headlines">{{ i.name }}</h3>
-  		        {% if p_url %}
-            </a>
-              {% endif %}
-    			<div class="project-content">
-    				<div class="tag-holder">
-    				{% if i.tags %}
-    					{% for j in i.tags %}
-    					<span class="tags tag-filter" data-tag="{{ j | downcase }}"><a href="#{{ j }}">{{ j }}</a></span>
-    					{% endfor %}
-    				{% endif %}
-    				</div>
+            {% assign p_url = nil %}
+            {% for pr in p_array %}
+                {% if pr contains i.slug %}
+                    {% assign p_url = pr[1] %}
+                {% endif %}
+            {% endfor %}
+            {% if p_url == nil %}{% assign p_url = i.url %}{% endif %}
+            {% if p_url %}
+            <a href="{{ p_url }}" class="project-detail">
+            {% endif %}
+    			     <div class="project-img bordered" style="background-image: url('/static/projects/{{ i.image }}');"></div>
+    		        <h3 class="project-headlines">{{ i.name }}</h3>
+    		        {% if p_url %}
+              </a>
+                {% endif %}
+      			<div class="project-content">
+      				<div class="tag-holder">
+      				{% if i.tags %}
+      					{% for j in i.tags %}
+      					<span class="tags tag-filter" data-tag="{{ j | downcase }}"><a href="#{{ j }}">{{ j }}</a></span>
+      					{% endfor %}
+      				{% endif %}
+      				</div>
 
-    			</div>
-    			<div class="project-footer">
-    				{% if i.url %}
-    				<a href="{{ i.url }}" class="project-link" target="_blank"><i class="fa fa-globe"></i> View</a>
-    				{% endif %}
-    				<span class="project-timeline">{{ i.date }}</span>
-    			</div>
-    		</div>
-    		<hr>
-    	</div>
-
-    {% endfor %}
+      			</div>
+      			<div class="project-footer">
+      				{% if i.url %}
+      				<a href="{{ i.url }}" class="project-link" target="_blank"><i class="fa fa-globe"></i> View</a>
+      				{% endif %}
+      				<span class="project-timeline">{{ i.date }}</span>
+      			</div>
+      		</div>
+      		<hr>
+      	</div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 
