@@ -25,5 +25,12 @@ jade, sass, CoffeeScript 문법을 사용했습니다.
 ```
 광고주에게 서비스되는 페이지이기 때문에 VIEW 링크로 접속하여도 계정이 없으면
 광고관리시스템 페이지를 확인할 수는 없습니다.
+
+광고관리시스템의 일부 UI를 확인해 볼 수 있는 강좌 페이지가 있어서 아래 링크로 대신합니다.
 ```
 {:class="blue-box"}
+
+<br>
+[> 광고관리시스템 소개영상 보기1](http://www.edwith.org/naveredu_01/lecture/4377){:class="text-link" target="blank"}
+
+[> 광고관리시스템 소개영상 보기2](http://www.edwith.org/naveredu_01/lecture/4379){:class="text-link" target="blank"}
