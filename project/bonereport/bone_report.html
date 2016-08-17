@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<title>Bone Report TEST</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap_custom_theme.css">
+<link rel="stylesheet" href="css/webfont.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/2.0.0/xeicon.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/component.css">
+<link rel="stylesheet" href="css/bone.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="dist/jui.min.css" />
+<link rel="stylesheet" href="dist/jennifer.theme.min.css" />
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/alasql.min.js"></script>
+<script src='js/xlsx.core.min.js'></script>
+<script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+<script src="dist/jui.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/s_graph.js"></script>
+<script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+</head>
+<body>
+<div class="container">
+	<div class="header">
+    	<div class="img_wrap">
+        	<img src="img/@thmb_img.jpg" width="50" height="50px" alt="profile">
+        </div>
+        <span class="txt_name">Tester Guy</span>
+
+         <div class="pull-right">
+            <a href="#" class="link_config dropdown-toggle" data-toggle="dropdown" title="설정"><i class="xi-cog"></i></a>
+            <ul class="dropdown-menu pull-right hdropdown animated flipInX">
+            <li><a href="#">설정</a></li>
+            <li><a href="#">리포트 저장</a></li>
+            <li class="summary"><a href="#"></i>Logout</a></li>
+            </ul>
+        </div>
+        <div class="pull-right">
+            <a href="#" class="link_config dropdown-toggle" data-toggle="dropdown" title="히스토리"><i class="xi-paper-stack-o"></i></a>
+            <ul class="dropdown-menu pull-right hdropdown animated flipInX">
+                <li><a href="#">2015년 11월 리포트</a></li>
+                <li><a href="#">2015년 10월 리포트</a></li>
+                <li><a href="#">2015년 9월 리포트</a></li>
+                <li><a href="#">2015년 8월 리포트</a></li>
+                <li><a href="#">2015년 7월 리포트</a></li>
+                <li class="summary"><a href="#">모든 리포트 보기</a></li>
+            </ul>
+        </div>
+        <div class="pull-right">
+            <a class="link_config dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown" title="메일"><i class="xi-mail-o"></i><span class="label label-success">3</span></a>
+            <ul class="dropdown-menu pull-right hdropdown animated flipInX">
+                <div class="title">3개의 새로운 메세지가 있습니다.</div>
+                <li><a>작년도 이슈 정보를 올려주세요.</a></li>
+                <li><a>2015년 11월 리스크 수치가 이상합니다.</a></li>
+                <li><a>멤버현황 업데이트 부탁드려요.</a></li>
+                <li class="summary"><a href="#">모든 메세지 보기</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="spot">
+    	<h1>Bone Report<span>이슈&amp;리스크 현황</span></h1>
+    </div>
+    <div class="tab blind">
+        <ul class="nav nav-pills nav-justified">
+        <li class="active"><a href="#" class="bx-pager-link">Main</a></li>
+        <li><a href="#" class="bx-pager-link">Monthly Report</a></li>
+        <li><a href="#" class="bx-pager-link">Members Report</a></li>
+        </ul>
+    </div>
+    <div class="ct">
+	    <ul class="bxslider">
+        <li>
+			<!-- Main TAB -->
+            <div id="_tab1" class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Monthly Report</p>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="xi-ellipsis-v"></i></a>
+                            <ul class="dropdown-menu pull-right hdropdown animated flipInX">
+                                <li><a href="#">데이터 수정</a></li>
+                                <li><a href="#">공유 권한 설정</a></li>
+                            </ul>
+                        </div>
+                        <div class="sort_btn_area">
+							<div id="_sort_btn" class="btn-group btn-group-sm" role="group" aria-label="차트 정렬 구분">
+							  <button type="button" class="btn btn-default">3개월</button>
+							  <button type="button" class="btn btn-default">6개월</button>
+							  <button type="button" class="btn btn-default">12개월</button>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div id="chart-content"></div>
+                    	</div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Members Report</p>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="xi-ellipsis-v"></i></a>
+                            <ul class="dropdown-menu pull-right hdropdown animated flipInX">
+                                <li><a href="#">데이터 수정</a></li>
+                                <li><a href="#">공유 권한 설정</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div id="chart-content3"></div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Members Report</p>
+                        </div>
+                        <div class="panel-body">
+							<div>
+								<table class="member_table display" cellspacing="0" width="100%">
+									<thead>
+										<tr>
+											<th>이름</th>
+											<th>직책</th>
+											<th>Risk</th>
+											<th>Issue</th>
+											<th>가동률</th>
+											<th>업무연차</th>
+											<th>입사연차</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+                    </div>
+                    <div class="hpanel">
+                        <div class="panel-heading hbuilt">
+                            <div class="pull-right">
+                                <a class="btn btn-default btn-xs">의견 입력</a>
+                            </div>
+                            리포트 작성자의 의견입니다.
+                        </div>
+                        <div class="panel-body">
+                            <p>연말 브랜딩 업무 유입 증가로 인해 가동률 및 리스크 상승 됨.</p>
+                        </div>
+                    </div>
+					<div class="comment_bx">
+						<div id="disqus_thread"></div>
+						<script>
+						/**
+						* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+						*/
+						/*
+						var disqus_config = function () {
+						this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						};
+						*/
+						(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+
+						s.src = '//bonereport.disqus.com/embed.js';
+
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+					</div>                </div>
+            </div>
+        </li>
+        <li>
+			<!-- Monthly Report TAB -->
+            <div id="_tab2" class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Monthly Report Upload data</p>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <p class="tit_txt"><i class="xi-file-text"></i>엑셀파일 불러오기</p>
+                                <div class="box js">
+                                    <input type="file" name="upload_file" id="upload_file" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple onchange="loadFile(event,1)" />
+                                    <label for="upload_file"><span></span> <strong><i class="xi-download"></i> Choose a file&hellip;</strong></label>
+                                </div>
+                                <div class="pull-left">
+                                    <p class="tit_txt"><i class="xi-align-left"></i>그래프 유형선택하기</p>
+                                    <div id="select_box">
+                                        <label for="color">Choose a Chart</label>
+                                        <select id="color" title="select color">
+                                        <option selected="selected">Bar Chart</option>
+                                        <option>Circle Chart</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pull-left">
+                                    <p class="tit_txt"><i class="xi-documents"></i>엑셀 시트선택하기</p>
+                                    <div id="select_box">
+                                        <label for="color">Choose a Sheet</label>
+                                        <select id="color" title="select color">
+                                        <option selected="selected">First Sheet</option>
+                                        <option>Second Sheet</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+								<button id="chart_submit" type="button" class="btn btn-success pull-right" data-toggle="dropdown" aria-expanded="false">변환하기</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Monthly Report</p>
+                        </div>
+                        <div class="sort_btn_area">
+							<div id="_sort_btn" class="btn-group btn-group-sm" role="group" aria-label="차트 정렬 구분">
+							  <button type="button" class="btn btn-default">3개월</button>
+							  <button type="button" class="btn btn-default">6개월</button>
+							  <button type="button" class="btn btn-default">12개월</button>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div id="chart-content2"></div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+			<!-- Members Report TAB-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Members Report Upload data</p>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <p class="tit_txt"><i class="xi-file-text"></i>엑셀파일 불러오기</p>
+                                <div class="box js">
+                                    <input type="file" name="upload_file2" id="upload_file2" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple  onchange="loadFile(event,2)" />
+                                    <label for="upload_file2"><span></span> <strong><i class="xi-download"></i> Choose a file&hellip;</strong></label>
+                                </div>
+                                <div class="pull-left">
+                                    <p class="tit_txt"><i class="xi-align-left"></i>그래프 유형선택하기</p>
+                                    <div id="select_box">
+                                        <label for="color">Choose a Chart</label>
+                                        <select id="color" title="select color">
+                                        <option selected="selected">Bar Chart</option>
+                                        <option>Circle Chart</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pull-left">
+                                    <p class="tit_txt"><i class="xi-documents"></i>엑셀 시트선택하기</p>
+                                    <div id="select_box">
+                                        <label for="color">Choose a Sheet</label>
+                                        <select id="color" title="select color">
+                                        <option selected="selected">First Sheet</option>
+                                        <option>Second Sheet</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button id="member_submit" type="button" class="btn btn-success pull-right" data-toggle="dropdown" aria-expanded="false">변환하기</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Members Report</p>
+                        </div>
+                        <div class="panel-body">
+							<div id="chart-content4"></div>
+						</div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">Members Report</p>
+                        </div>
+                        <div class="panel-body">
+							<div>
+								<table class="member_table display" cellspacing="0" width="100%">
+									<thead>
+										<tr>
+											<th>이름</th>
+											<th>직책</th>
+											<th>Risk</th>
+											<th>Issue</th>
+											<th>가동률</th>
+											<th>업무연차</th>
+											<th>입사연차</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        </ul>
+	</div>
+    <div class="footer">
+        <span>Copyright ©2015 <a href="#">BoneReport</a> All rights reserved.</span>
+        <em class="pull-right">Version 0.2</em>
+    </div>
+</div>
+<script src="js/jquery.bxslider.js"></script>
+<script src="js/custom-file-input.js"></script>
+<script>
+jQuery(document).ready(function(){
+
+    var select = $("select#color");
+
+    select.change(function(){
+        var select_name = $(this).children("option:selected").text();
+        $(this).siblings("label").text(select_name);
+    });
+	var slider = $('.bxslider').bxSlider({
+	  adaptiveHeight: true,
+	  mode: 'horizontal',
+	  buildPager: function(slideIndex){
+		switch(slideIndex){
+		  case 0:
+			return $(".bx-pager-link:eq(0)").text();
+		  case 1:
+			return $(".bx-pager-link:eq(1)").text();
+		  case 2:
+			return $(".bx-pager-link:eq(2)").text();
+		}
+	  }
+	});
+});
+</script>
+</body>
+</html>

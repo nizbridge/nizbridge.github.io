@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "name": "김명중",
+      "position": "선임",
+      "risk": "1",
+      "issue": "0",
+      "ratio": "100%",
+      "part_year": "3",
+      "work_year": "3"
+    },
+	 {
+      "name": "신장철",
+      "position": "선임",
+      "risk": "1",
+      "issue": "0",
+      "ratio": "80%",
+      "part_year": "3",
+      "work_year": "6"
+    },
+	 {
+      "name": "신영화",
+      "position": "선임",
+      "risk": "2",
+      "issue": "0",
+      "ratio": "100%",
+      "part_year": "3",
+      "work_year": "5"
+    },
+	 {
+      "name": "박상훈",
+      "position": "선임",
+      "risk": "0",
+      "issue": "2",
+      "ratio": "70%",
+      "part_year": "3",
+      "work_year": "6"
+    }
+  ]
+}

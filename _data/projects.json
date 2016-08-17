@@ -19,16 +19,24 @@
 		"slug": "land",
 		"name": "네이버 부동산서비스",
 		"image": "land.png",
-		"utl": "http://m.land.naver.com/index.nhn",
+		"url": "http://m.land.naver.com/index.nhn",
 		"date": "2015.12 ~ 2016.03",
 		"tags": ["html", "sass"]
+	},
+	{
+		"slug": "bonereport",
+		"name": "Bone-Report(지표관리툴)",
+		"image": "bonereport.png",
+		"url": "http://nizbridge.github.io/project/bonereport/bone_report.html",
+		"date": "2015.11 ~ 2015.12",
+		"tags": ["jQuery"]
 	},
 	{
 		"slug": "contents-search",
 		"name": "네이버 컨텐츠검색",
 		"image": "contents-search.png",
 		"url": "https://m.search.naver.com/search.naver?where=m&query=%EA%B2%BD%EB%B6%80%EA%B3%A0%EC%86%8D%EB%8F%84%EB%A1%9C%20%EA%B5%90%ED%86%B5%EC%83%81%ED%99%A9&sm=mtb_etc&ie=utf8",
-		"date": "2013.12 ~ 2015.10",
+		"date": "2013 ~ 2015",
 		"tags": ["html", "css"]
 	},
 
@@ -69,7 +77,7 @@
 		"name": "네이버 N스토어",
 		"image": "nstore.png",
 		"url": "http://nstore.naver.com/ebook/home.nhn",
-		"date": "2014 ~ 2015",
+		"date": "2012 ~ 2013",
 		"tags": ["html", "css"]
 	},
 	{
@@ -77,7 +85,7 @@
 		"name": "네이버 금융서비스",
 		"image": "fund.png",
 		"url": "http://finance.naver.com/",
-		"date": "2013 ~ 2014",
+		"date": "2011 ~ 2012",
 		"tags": ["html", "css"]
 	}
 ]
