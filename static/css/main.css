@@ -1,8 +1,11 @@
 /**
  * Master styling
  */
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
 body {
-    font-family: "Roboto Condensed", Arial, sans-serif;
+
+    font-family: "Jeju Gothic", "Roboto Condensed", Arial, sans-serif;
     background-color: #fff;
     font-size: 16px;
     line-height: 1.5em;
@@ -226,3 +229,5 @@ table td, table th {padding:3px;border:1px solid #666}
 .posts > li > p {font-size:14px;line-height:18px;color:#808080}
 .text-link {color:#00c !important}
 .post .blue-box pre {background:#e9f1f5;border:1px solid #c6dce5;color:#000;margin:0;padding:10px}
+
+code, kbd, pre, samp {font-family: "Jeju Gothic", "Roboto Condensed", Arial, sans-serif;}
