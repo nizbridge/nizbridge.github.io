@@ -80,7 +80,7 @@ and rerun 'ruby dk.rb install'
 - 지킬의 syntax highlighter인 pygments를 설치하기 위해서는 python을 먼저 설치해야 합니다.
 - python은 2.7.x 버전으로 설치해줍니다.
 - 설치후에 cmd의 모든 경로에서 `python`을 실행해주기 위해 윈도우 환경 변수를 추가해줍니다.
-- *내컴퓨터>속성>고급시스템 설정>고급>환경변수>시스템변수*에서 아래 경로를 추가합니다.
+- *내컴퓨터>속성>고급시스템 설정>고급>환경변수*에서 *Path* 부분에 에 아래 경로를 추가합니다.
 - `C:\Python27;C:\Python27\Scripts;C:\Python27\Lib\site-packages`
 
 #### pygments 
