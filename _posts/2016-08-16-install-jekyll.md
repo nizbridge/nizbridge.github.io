@@ -88,7 +88,7 @@ and rerun 'ruby dk.rb install'
 
 - cmd에서 `easy_install Pygments`를 실행하여 pygments를 설치합니다.
 
-##### jekyll
+#### jekyll
 
 - cmd에서 `gem install jekyll`를 실행하여 지킬을 설치합니다.
 
