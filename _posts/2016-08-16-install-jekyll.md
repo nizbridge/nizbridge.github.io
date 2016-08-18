@@ -47,7 +47,7 @@ and rerun 'ruby dk.rb install'
 ---
 ```	
 
-- ruby와 rubydevkit이 설치된 경로로 수정을 해줍니다. 저는 아래와 같이 수정했습니다.
+- ruby가 설치된 경로로 수정을 해줍니다. 저는 아래와 같이 수정했습니다.
 
 ```sh
 # This configuration file contains the absolute path locations of all
@@ -65,7 +65,6 @@ and rerun 'ruby dk.rb install'
 #
 ---
 - C:/Ruby21-x64
-- C:/Rubydevkit
 ```
 
 - 그리고 다시 `ruby dk.rb install` 를 실행합니다.
