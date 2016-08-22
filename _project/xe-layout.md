@@ -3,7 +3,9 @@ layout: project_single
 title:  "XE Portfolio type Layout"
 slug: "xe-layout"
 ---
-PHP기반의 CMS인 XE를 활용한 홈페이지를 개발했습니다.<br>
+
+- PHP기반의 CMS인 XE를 활용한 홈페이지를 개발.
+<br><br>
 
 직무와는 상관없이 개인적인 호기심으로 공부하여 진행하였으며<br>
 XE와 PHP를 활용한 모듈과 레이아웃을 제작했습니다.<br>

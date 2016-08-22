@@ -3,6 +3,11 @@ layout: project_single
 title:  "GOGO BROWN"
 slug: "gogo-brown"
 ---
+
+- JS 개발자로 참여.
+- 모든 이미지는 css3를 사용하여 그림.
+<br><br>
+
 사내에서 진행된 10k 컨테스트 출품작입니다.<br>
 
 10k 컨테스트는 아래의 조건을 만족해야 합니다.

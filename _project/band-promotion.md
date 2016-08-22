@@ -3,6 +3,10 @@ layout: project_single
 title:  "네이버 밴드 프로모션"
 slug: "band-promotion"
 ---
+
+- 마크업 개발자로 참여하였으며, JS 개발도 함께 진행.
+<br><br>
+
 네이버밴드의 홍보페이지 개발에 참여했습니다.<br>
 
 **PC와 모바일을 같이 진행**하였으며,<br>
