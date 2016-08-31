@@ -19,7 +19,7 @@ categories: [all, etc]
 
 #### [rubydevkit](http://rubyinstaller.org/downloads/){:class="text-link" target="blank"}
 - rubydevkit을 다운받은 후에 임의의 폴더 생성 후 압출을 풀어줍니다. (저는 rubydevkit 이란 폴더르 만들었습니다.)
-- 압축을 푼 폴더에서 cmd로 `ruby dk.rb init` 를 실행합니다.
+- 압축을 푼 폴더에서 console로 `ruby dk.rb init` 를 실행합니다.
 - 그리고 `ruby dk.rb install` 를 실행합니다.
 - 이때 만약 아래와 같은 에러 메세지가 나온다면, `config.yml` 을 수정해줘야 합니다.
 
@@ -72,24 +72,24 @@ and rerun 'ruby dk.rb install'
 
 #### bundler
 
-- cmd에서 `gem install bundler` 를 실행하여 bundler를 설치해줍니다.
+- console에서 `gem install bundler` 를 실행하여 bundler를 설치해줍니다.
 
 
 #### [python](https://www.python.org/downloads/windows/){:class="text-link" target="blank"}
 
 - 지킬의 syntax highlighter인 pygments를 설치하기 위해서는 python을 먼저 설치해야 합니다.
 - python은 2.7.x 버전으로 설치해줍니다.
-- 설치후에 cmd의 모든 경로에서 `python`을 실행해주기 위해 윈도우 환경 변수를 추가해줍니다.
+- 설치후에 console의 모든 경로에서 `python`을 실행해주기 위해 윈도우 환경 변수를 추가해줍니다.
 - *내컴퓨터>속성>고급시스템 설정>고급>환경변수*에서 *Path* 부분에 아래 경로를 추가합니다.
 - `C:\Python27;C:\Python27\Scripts;C:\Python27\Lib\site-packages`
 
 #### pygments 
 
-- cmd에서 `easy_install Pygments`를 실행하여 pygments를 설치합니다.
+- console에서 `easy_install Pygments`를 실행하여 pygments를 설치합니다.
 
 #### jekyll
 
-- cmd에서 `gem install jekyll`를 실행하여 지킬을 설치합니다.
+- console에서 `gem install jekyll`를 실행하여 지킬을 설치합니다.
 
 #### 테마 적용
 
