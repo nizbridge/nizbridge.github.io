@@ -16,16 +16,14 @@
 <script>
 	var price=0,
 	prePrice=0,
-	priceH=0,
 	prePriceH=0,
-	priceH4=0,
 	prePriceH4=0;
 	function checkBit() {
 
 
 		$('#checkdata').html('');
 		$.ajax({
-			url:'https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/10?code=CRIX.UPBIT.KRW-SNT&count=2',
+			url:'https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/10?code=CRIX.UPBIT.KRW-SNT&count=24',
 			dataType:'json',
 			success:function(data){
 				
@@ -41,32 +39,22 @@
 						$('#checkdata').append('<dt>highPrice</dt><dd>' + item.highPrice + '</dd>');
 						$('#checkdata').append('<dt>lowPrice</dt><dd>' + item.lowPrice + '</dd>');
 					}
-					else {
+					else if(index == 1) {
 						$('#checkdata').append('<dt>prePrice</dt><dd>' + item.tradePrice + '</dd>');
 						prePrice = item.tradePrice;
 					}
-				});
-			}
-		});
-		$.ajax({
-			url:'https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/60?code=CRIX.UPBIT.KRW-SNT&count=2',
-			dataType:'json',
-			success:function(data){
-
-				$.each(data, function(index, item){
-					var date = new Date(item.timestamp);
-
-					if(index == 0) {
-						priceH = item.tradePrice;
-					}
-					else {
+					else if(index == 5) {
 						$('#checkdata').append('<dt>prePriceH</dt><dd>' + item.tradePrice + '</dd>');
 						prePriceH = item.tradePrice;
 					}
+					else if(index == 23) {
+						$('#checkdata').append('<dt>prePriceH4</dt><dd>' + item.tradePrice + '</dd>');
+						prePriceH4 = item.tradePrice;
+					}
 				});
 			}
 		});
-		document.title = price + ' : ' + (price-prePrice) + ' : ' + (priceH-prePriceH);
+		document.title = price + ' : ' + (price-prePrice) + ' : ' + (price-prePriceH) + ' : ' + (price-prePriceH4);
 
 		setTimeout("checkBit()",2000);
 	}
