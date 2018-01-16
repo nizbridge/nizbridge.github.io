@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>lin2 radnom</title>
+<style type="text/css">
+body{font-size:13px;}
+.label{display:inline-block;padding:1px 5px;border-radius:3px;background:#eee;margin-right:5px;}
+.intro{margin-bottom:10px;}
+.result{margin-top:10px;font-size:15px;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+// 멤버 리스트
+var member_list = [
+    {name : 'Rocket', cnt : 0},
+    {name : 'nooz', cnt : 0},
+    {name : '블러드스톰', cnt : 0},
+    {name : '세오', cnt : 0},
+    {name : '드란트', cnt : 0},
+    {name : '건담스', cnt : 0},
+    {name : 'Jinssoo', cnt : 0},
+    {name : '여자늑대', cnt : 0},
+    {name : '경난2', cnt : 0},
+    {name : '야몽', cnt : 1}, // 메테오스톰
+    {name : '주하남편', cnt : 0},
+    {name : '변지지짖', cnt : 0},
+    {name : '지수기남편', cnt : 1} // 메테오스톰
+]
+
+// 랜덤 발생 함수
+function randomBackground(min, max, choice) {
+     
+     var bgArray = [];
+     var bgResult = [];
+     var bgNum;
+     
+     for (i=min; i<=max; i++) {
+         bgArray.push(i);
+     }
+     for (i=0; i<choice; i++) {
+        bgNum = Math.floor(Math.random() * bgArray.length);
+        bgResult.push(member_list[bgArray[bgNum]].name); // 랜덤으로 선택된 숫자 순서대로 bgReult에 저장
+        bgArray.splice(bgNum, 1);    // 선택된 숫자 bgArray에서 삭제, 중복 선택 방지
+     }
+     
+     bgResult = bgResult.join(', ');
+     $('.result').html(bgResult);
+     
+}
+
+$(document).ready(function() {
+	var list_length = member_list.length;
+
+	$('.intro').append('<p>총 멤버 수 : '+list_length+'</p>');
+	$.each(member_list, function( i, val) {
+		$('.intro').append('<span class="label">'+(i+1)+' '+member_list[i].name+'</span>');
+	})
+	
+	$('button').click(function(){
+		var count = $('input').val();
+	
+		if(count <= 0) {
+			alert('횟수를 입력하세요.');
+		}
+		else if(count > list_length) {
+			alert('횟수를 멤버수보다 작게 입력해주세요.');
+		}
+		else {
+			randomBackground(0, list_length-1, count);
+		}
+		
+	});
+    
+});
+
+</script>
+</head>
+<body>
+<div>
+	
+    <div class="intro">
+    </div>
+    <div class="input_group">
+	    <input type='text'>
+	    <button>Run</button>
+    </div>
+    <div class="result">
+
+    </div>
+</div>
+</body>
+</html>
