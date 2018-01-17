@@ -8,26 +8,38 @@
 	dt{position:relative;float:left;}
 	dt:after{content:':';padding:0 4px}
 	dd{oveflow:hidden}
+	input, textarea {
+    display: block;
+}
 </style>
 </head>
 <body>
+	<select id="selectBox">
+		<option value="KRW-SNT">SNT - 스테이터스네트워크토큰</option>
+		<option value="KRW-BTC">BTC - 비트코인</option>
+		<option value="KRW-ADA">ADA - 에디다</option>
+		<option value="USDT-BTC">USDT.BTC - 비트코인</option>
+	</select>
+	<button type="button" id="stopButton">일시정지</button>
 	<dl id="checkdata"></dl>
 </body>
 <script>
 	var price=0,
 	prePrice=0,
 	prePriceH=0,
-	prePriceH4=0;
+	prePriceH4=0,
+	btcPrice=0;
+
+	var timeCheck;
+	var myurl = 'http://10.101.30.189/prj2/bit-chart/';
+
 	function checkBit() {
-
-
+		var checkName = $("#selectBox option:selected").val();
 		$('#checkdata').html('');
 		$.ajax({
-			url:'https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/10?code=CRIX.UPBIT.KRW-SNT&count=24',
+			url:'https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/10?code=CRIX.UPBIT.'+checkName+'&count=24',
 			dataType:'json',
 			success:function(data){
-				
-
 				$.each(data, function(index, item){
 					var date = new Date(item.timestamp);
 
@@ -36,8 +48,10 @@
 						$('#checkdata').append('<dt>time</dt><dd>' + date + '</dd>');
 						$('#checkdata').append('<dt>code</dt><dd>' + item.code + '</dd>');
 						$('#checkdata').append('<dt>price</dt><dd>' + item.tradePrice + '</dd>');
+						/*
 						$('#checkdata').append('<dt>highPrice</dt><dd>' + item.highPrice + '</dd>');
 						$('#checkdata').append('<dt>lowPrice</dt><dd>' + item.lowPrice + '</dd>');
+						*/
 					}
 					else if(index == 1) {
 						$('#checkdata').append('<dt>prePrice</dt><dd>' + item.tradePrice + '</dd>');
@@ -54,10 +68,15 @@
 				});
 			}
 		});
+
 		document.title = price + ' : ' + (price-prePrice) + ' : ' + (price-prePriceH) + ' : ' + (price-prePriceH4);
 
-		setTimeout("checkBit()",2000);
+		timeCheck = setTimeout("checkBit()",1000);
 	}
 	checkBit();
+	
+	$('#stopButton').click(function() {
+		clearTimeout(timeCheck);
+	})
 </script>
 </html>
