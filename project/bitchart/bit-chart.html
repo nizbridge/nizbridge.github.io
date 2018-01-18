@@ -15,36 +15,44 @@
 </head>
 <body>
 	<select id="selectBox">
-		<option value="KRW-SNT">SNT - 스테이터스네트워크토큰</option>
-		<option value="KRW-BTC">BTC - 비트코인</option>
-		<option value="KRW-ADA">ADA - 에디다</option>
-		<option value="USDT-BTC">USDT.BTC - 비트코인</option>
+		<option dataLang='KRW' value="SNT">SNT - 스테이터스네트워크토큰</option>
+		<option dataLang='KRW' value="BTC">BTC - 비트코인</option>
+		<option dataLang='KRW' value="ADA">ADA - 에디다</option>
+		<option dataLang='USDT' value="BTC">USDT.BTC - 비트코인</option>
 	</select>
 	<button type="button" id="stopButton">일시정지</button>
+	<button id="requestPermissionButton">알림</button>
+	<input type="text" id="notiInput">
 	<dl id="checkdata"></dl>
 </body>
 <script>
+	var requestPermissionButton = $("#requestPermissionButton");
 	var price=0,
 	prePrice=0,
 	prePriceH=0,
 	prePriceH4=0,
-	btcPrice=0;
+	btcPrice=0,
+	notiValue;
 
+	var checkName;
 	var timeCheck;
 	var myurl = 'http://10.101.30.189/prj2/bit-chart/';
 
 	function checkBit() {
-		var checkName = $("#selectBox option:selected").val();
+		checkName = $("#selectBox option:selected").val();
+		notiValue = $("#notiInput").val();
+		
+		var dataLang = $("#selectBox option:selected").attr('dataLang');
 		$('#checkdata').html('');
 		$.ajax({
-			url:'https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/10?code=CRIX.UPBIT.'+checkName+'&count=24',
+			url:'https://crix-api-endpoint.upbit.com/v1/crix/candles/minutes/10?code=CRIX.UPBIT.'+dataLang+'-'+checkName+'&count=24',
 			dataType:'json',
 			success:function(data){
 				$.each(data, function(index, item){
 					var date = new Date(item.timestamp);
 
 					if(index == 0) {
-						price = item.tradePrice;
+						price = item.tradePrice.toFixed(0);
 						$('#checkdata').append('<dt>time</dt><dd>' + date + '</dd>');
 						$('#checkdata').append('<dt>code</dt><dd>' + item.code + '</dd>');
 						$('#checkdata').append('<dt>price</dt><dd>' + item.tradePrice + '</dd>');
@@ -55,21 +63,24 @@
 					}
 					else if(index == 1) {
 						$('#checkdata').append('<dt>prePrice</dt><dd>' + item.tradePrice + '</dd>');
-						prePrice = item.tradePrice;
+						prePrice = item.tradePrice.toFixed(0);
 					}
 					else if(index == 5) {
 						$('#checkdata').append('<dt>prePriceH</dt><dd>' + item.tradePrice + '</dd>');
-						prePriceH = item.tradePrice;
+						prePriceH = item.tradePrice.toFixed(0);
 					}
 					else if(index == 23) {
 						$('#checkdata').append('<dt>prePriceH4</dt><dd>' + item.tradePrice + '</dd>');
-						prePriceH4 = item.tradePrice;
+						prePriceH4 = item.tradePrice.toFixed(0);
 					}
 				});
 			}
 		});
 
-		document.title = price + ' : ' + (price-prePrice) + ' : ' + (price-prePriceH) + ' : ' + (price-prePriceH4);
+		document.title = checkName + ' ' + price + ' : ' + (price-prePrice) + ' : ' + (price-prePriceH) + ' : ' + (price-prePriceH4);
+		if(price == notiValue && price > 0) {
+			noti(checkName, price);
+		}
 
 		timeCheck = setTimeout("checkBit()",1000);
 	}
@@ -78,5 +89,38 @@
 	$('#stopButton').click(function() {
 		clearTimeout(timeCheck);
 	})
+
+requestPermissionButton.on("click", function () {
+	//데스크탑 알림 권한 요청
+    Notification.requestPermission(function (result) {
+
+        //요청을 거절하면,
+        if (result === 'denied') {
+            return;
+        }
+        //요청을 허용하면,
+        else {
+            return;
+        }
+    });
+});
+
+function noti(checkName, notiValue) {
+
+	var options = {
+		body: notiValue,
+	}
+
+	//데스크탑 알림 요청
+	var notification = new Notification(checkName + " 가즈아!!", options);
+
+	//알림 후 5초 뒤,
+	setTimeout(function () {
+		//얼람 메시지 닫기
+		notification.close();
+	}, 3000);    
+}
+
+
 </script>
 </html>
