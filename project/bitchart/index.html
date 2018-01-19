@@ -8,21 +8,38 @@
 	dt{position:relative;float:left;}
 	dt:after{content:':';padding:0 4px}
 	dd{oveflow:hidden}
-	input, textarea {
-    display: block;
-}
+	input, textarea {display: block;}
+	.noti_table{table-layout:fixed;border-collapse: collapse;margin-top:10px;}
+	.noti_table th{font-weight:normal;font-size:12px;text-align:center;}
+	.noti_table td{font-size:12px;text-align:center;}
 </style>
 </head>
 <body>
 	<select id="selectBox">
 		<option dataLang='KRW' value="SNT">SNT - 스테이터스네트워크토큰</option>
 		<option dataLang='KRW' value="BTC">BTC - 비트코인</option>
+		<option dataLang='KRW' value="ETH">ETH - 이더리움</option>
 		<option dataLang='KRW' value="ADA">ADA - 에디다</option>
+		<option dataLang='KRW' value="XRP">XRP - 리플</option>
 		<option dataLang='USDT' value="BTC">USDT.BTC - 비트코인</option>
 	</select>
 	<button type="button" id="stopButton">일시정지</button>
-	<button id="requestPermissionButton">알림</button>
-	<input type="text" id="notiInput">
+	<button id="requestPermissionButton">알림권한</button>
+	<table class="noti_table">
+		<tbody>
+			<tr>
+				<th>알림1</th>
+				<th>알림2</th>
+				<th>알림3</th>
+			</tr>
+			<tr>
+				<td><input type="text" id="notiInput"></td>
+				<td><input type="text" id="notiInput2"></td>
+				<td><input type="text" id="notiInput3"></td>
+			</tr>
+		</tbody>
+	</table>
+	
 	<dl id="checkdata"></dl>
 </body>
 <script>
@@ -32,15 +49,15 @@
 	prePriceH=0,
 	prePriceH4=0,
 	btcPrice=0,
-	notiValue;
+	notiValue,notiValue2,notiValue3;
 
-	var checkName;
-	var timeCheck;
-	var myurl = 'http://10.101.30.189/prj2/bit-chart/';
+	var checkName, timeCheck;
 
 	function checkBit() {
 		checkName = $("#selectBox option:selected").val();
 		notiValue = $("#notiInput").val();
+		notiValue2 = $("#notiInput2").val();
+		notiValue3 = $("#notiInput3").val();
 		
 		var dataLang = $("#selectBox option:selected").attr('dataLang');
 		$('#checkdata').html('');
@@ -78,8 +95,10 @@
 		});
 
 		document.title = checkName + ' ' + price + ' : ' + (price-prePrice) + ' : ' + (price-prePriceH) + ' : ' + (price-prePriceH4);
-		if(price == notiValue && price > 0) {
-			noti(checkName, price);
+		if(price > 0) {
+			if(price == notiValue || price == notiValue2 || price == notiValue3) {
+				noti(checkName, price);
+			}
 		}
 
 		timeCheck = setTimeout("checkBit()",1000);
@@ -118,7 +137,7 @@ function noti(checkName, notiValue) {
 	setTimeout(function () {
 		//얼람 메시지 닫기
 		notification.close();
-	}, 3000);    
+	}, 3000);
 }
 
 
