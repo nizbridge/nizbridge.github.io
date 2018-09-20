@@ -21,9 +21,22 @@ function permute(input) {
 
 // 배열 합치기
 function disArr(inputArr) {
+    var resultVal = [], check=0, dmstr;
 
     for (i = 0; i < inputArr.length; i++) {
-        $('.result').append(i+1 + ' : ' + inputArr[i].join('') + "<br>");
+        resultVal.push(dmstr = inputArr[i].join(''));
+    }
+    resultVal2 = resultVal;
+    for (i = 0; i < resultVal.length; i++) {
+        for (j = i+1; j < resultVal.length; j++) {
+            if(resultVal[i] == resultVal[j]) {
+                resultVal2.splice(i,1);
+            }
+        }
+    }
+
+    for(i=0; i<resultVal2.length; i++) {
+        $('.result').append(i+1 + ' : ' + resultVal[i] + "<br>");
     }
 }
 
