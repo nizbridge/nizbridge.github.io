@@ -231,3 +231,4 @@ table td, table th {padding:3px;border:1px solid #666}
 .post .blue-box pre {background:#e9f1f5;border:1px solid #c6dce5;color:#333;margin:0;padding:10px;font-size:16px;font-weight:normal;}
 
 code, kbd, pre, samp {font-family: "Jeju Gothic", "Roboto Condensed", Arial, sans-serif;}
+pre {background-color: #000;color:#fff}
