@@ -9,12 +9,18 @@ UI Developer.
 ### TECHNICAL SKILLS
 ---
 - Web, Languages : HTML5, CSS3, Javascript,PHP
-- Framework, CMS : Jquery, Bootstrap, XepressEngine
+- Framework, CMS : React, Jquery, Bootstrap, XepressEngine
 - Projects & Control Systems : GIT, SVN
 
 
 ### PROFESSIONAL EXPERIENCE
 ---
+**# 더존 WEHAGO 플랫폼, 2016 ~ **
+
+- React 기반 WEHAGO 플랫폼의 전반적인 서비스 마크업 진행.
+- 주요 서비스로 메인화면, 랜딩, 채팅, 경영관리, 세금계산서, 노트, 할일, 웹빌더 등.
+<br><br>
+
 **# 네이버 광고관리시스템, Nov 2015 ~ Jun 2016**
 
 - 네이버의 광고주들이 검색광고를 쉽게 관리할 수 있도록 도와주는 관리시스템.

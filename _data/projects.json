@@ -1,5 +1,13 @@
 [
-	{
+  {
+    "slug": "wehago",
+    "name": "더존 WEHAGO 플랫폼",
+    "image": "wehago.png",
+    "url": "https://www.wehago.com/",
+    "date": "2016 ~ ",
+    "tags": ["React","sass","html","css"]
+  },
+  {
 		"slug": "ncc",
 		"name": "네이버 광고관리시스템",
 		"image": "ncc.jpg",
