@@ -12,13 +12,19 @@ $(function() {
     
     $('.item').click(function() {
         if(gameStat) { // 시작
-            var daraRow = $(this).attr('dataRow');
-            var daraCol = $(this).attr('dataCol');
-            $(this).addClass('check');
-            bingoArr[daraRow][daraCol] = 1;
+            var dataRow = $(this).attr('dataRow');
+            var dataCol = $(this).attr('dataCol');
+            if($(this).hasClass('check')) {
+                $(this).removeClass('check');    
+                bingoArr[dataRow][dataCol] = 0;
+            }
+            else {
+                $(this).addClass('check');
+                bingoArr[dataRow][dataCol] = 1;
+            }
             console.log(bingoArr);
 
-            checkLine();
+            checkLine(); // 완성된 줄 확인
 
         }
         else { // 시작상태가 아닐때
