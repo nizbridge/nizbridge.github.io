@@ -38,7 +38,7 @@ input::-ms-clear{display:none}
 .beginGame .infobox .step1{display:none}
 .beginGame .infobox .step2{position:relative;display:block;overflow:hidden;background:#3498db;border-radius:4px;padding:0 20px;height:32px;line-height:33px;box-sizing:border-box}
 .beginGame .infobox .step2 .graph_item {position:absolute;top:0;left:0;bottom:0;background:rgba(0,0,0,.2)}
-.infobox .guidewrap {display:inline-block;overflow:hidden;background:#fff;border-radius:4px;padding:0 20px;height:32px;line-height:33px;overflow:hidden}
+.infobox .guidewrap {display:inline-block;overflow:hidden;background:#fff;border-radius:4px;padding:0 20px;height:32px;line-height:33px}
 
 .startbox{display: flex;justify-content: center;align-items: center;}
 .startbox .center_text {z-index:10;display:block;font-size:60px;color:#fff;background:#4caf50;padding:1px 40px 7px;border-radius:50px}
