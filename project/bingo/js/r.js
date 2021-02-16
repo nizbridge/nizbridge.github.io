@@ -87,7 +87,7 @@ function showAlert(msg) {
 function gameStart() { 
     $('body').addClass('beginGame');
 
-    $('body').append('<div class="alert_popup startbox"><div class="dimmed"></div><strong class="center_text">Start</strong></div>');  
+    $('body').append('<div class="alert_popup startbox"><div class="dimmed"></div><strong class="center_text">시작</strong></div>');  
     $('.startbox').click(function() {
         $(this).remove();
     });
@@ -96,7 +96,7 @@ function gameStart() {
 }
 
 function endGame() {
-    $('body').append('<div class="alert_popup startbox"><div class="dimmed"></div><div style="z-index:10"><strong class="center_text">게임 끝</strong><button type="button" class="refbtn">다시하기</button></div></div>');  
+    $('body').append('<div class="alert_popup startbox"><div class="dimmed"></div><div style="z-index:10"><strong class="center_text">빙고!!</strong><button type="button" class="refbtn">다시하기</button></div></div>');  
     $('.refbtn').click(function() {
         location.href = location.href;
     })
