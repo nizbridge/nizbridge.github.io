@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,img,button,select{margin:0;padding:0}
-body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family: 'Cute Font', cursive;}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family: 'Noto Sans KR', sans-serif;}
 body{min-width:1280px;-webkit-text-size-adjust:none;background:#999}
 img,fieldset{border:0;vertical-align:top}
 a{color:#1a1a1a}
@@ -15,7 +15,7 @@ input::-ms-clear{display:none}
 
 .tblbox{position:absolute;top:0;left:0;right:0;bottom:0;padding:50px 10px 10px;box-sizing:border-box}
 .tblbox .row{display:flex;height:20%;justify-content: center;}
-.tblbox .row .item {position:relative;border:1px solid #999;width:20%;background:#fff;outline:0;color:#000;font-size:2em}
+.tblbox .row .item {position:relative;border:1px solid #999;width:20%;background:#fff;outline:0;color:#000;font-size:3em}
 .tblbox .row .item:hover:after,
 .tblbox .row .item:focus:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid #1c90fb}
 .tblbox .row .item + .item {border-left:0}
@@ -29,7 +29,7 @@ input::-ms-clear{display:none}
 .alert_popup .popupbox .confirmbtn {display: inline-block;width: auto;position: relative;vertical-align: top;box-sizing: border-box;cursor: pointer;border-radius: 4px;font-size: 14px;padding: 0 10px;text-decoration: none;overflow: hidden;height: 28px;line-height: 29px;border: 1px solid #1c90fb;background: #1c90fb;color: #fff;}
 .alert_popup .popupbox .confirmbtn:hover{box-shadow:0 3px 4px 0 rgba(28,144,251,.4);background:#0078e6}
 
-.infobox{position:absolute;top:0;left:0;right:0;padding:4px;box-sizing:border-box;text-align:center;font-family: 'Cute Font', cursive;}
+.infobox{position:absolute;top:0;left:0;right:0;padding:4px;box-sizing:border-box;text-align:center;font-family: 'Noto Sans KR', sans-serif;}
 .infobox dl{width:100%;color:#fff}
 .infobox dt,
 .infobox dd{display:inline-block;font-size:18px}
@@ -41,5 +41,5 @@ input::-ms-clear{display:none}
 .infobox .guidewrap {display:inline-block;overflow:hidden;background:#fff;border-radius:4px;padding:0 20px;height:32px;line-height:33px;overflow:hidden}
 
 .startbox{display: flex;justify-content: center;align-items: center;}
-.startbox .center_text {z-index:10;display:block;font-size:60px;color:#fff;background:#4caf50;padding:10px 30px;border-radius:50px}
+.startbox .center_text {z-index:10;display:block;font-size:60px;color:#fff;background:#4caf50;padding:1px 40px 7px;border-radius:50px}
 .refbtn {z-index:10;display:block;border:0;margin-top:15px;padding:5px 20px;background:#1c90fb;color:#fff;border-radius:20px;font-size:3em;width:100%}
