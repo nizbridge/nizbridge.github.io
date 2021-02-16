@@ -69,7 +69,7 @@ function showAlert(msg) {
 
 // 게임 시작
 function gameStart() { 
-    $('.tblbox').addClass('beginGame');
+    $('body').addClass('beginGame');
 
     $('body').append('<div class="alert_popup startbox"><div class="dimmed"></div><strong class="center_text">Start</strong></div>');  
     $('.startbox').click(function() {
