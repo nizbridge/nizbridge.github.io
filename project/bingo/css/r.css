@@ -30,13 +30,14 @@ input::-ms-clear{display:none}
 .alert_popup .popupbox .confirmbtn:hover{box-shadow:0 3px 4px 0 rgba(28,144,251,.4);background:#0078e6}
 
 .infobox{position:absolute;top:0;left:0;right:0;padding:4px;box-sizing:border-box;text-align:center}
-.infobox dl{display:inline-block;overflow:hidden;background:#fff;border-radius:4px;padding:0 20px;height:32px;line-height:33px;overflow:hidden}
+.infobox dl{width:100%;color:#fff}
 .infobox dt,
 .infobox dd{display:inline-block;font-size:18px}
 .infobox .step1{display:block}
 .infobox .step2{display:none}
 .beginGame .infobox .step1{display:none}
-.beginGame .infobox .step2{display:block}
+.beginGame .infobox .step2{position:relative;display:block;overflow:hidden;background:#3498db;border-radius:4px;padding:0 20px;height:32px;line-height:33px;box-sizing:border-box}
+.beginGame .infobox .step2 .graph_item {position:absolute;top:0;left:0;bottom:0;background:rgba(0,0,0,.2)}
 .infobox .guidewrap {display:inline-block;overflow:hidden;background:#fff;border-radius:4px;padding:0 20px;height:32px;line-height:33px;overflow:hidden}
 
 .startbox{display: flex;justify-content: center;align-items: center;}

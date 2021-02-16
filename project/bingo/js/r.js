@@ -1,5 +1,5 @@
 
-var bingoSize = 5; // 빙고 사이즈
+var bingoSize = 2; // 빙고 사이즈
 var gameStat = false; // 게임 시작상태    
 var curNum = 1; // 현재 입력하고 있는 숫자
 var MaxNum = bingoSize * bingoSize; // 빙고 최고사이즈
@@ -131,6 +131,7 @@ function checkLine() {
     }
 
     $('#_lineCount').html(lineCount);
+    $('.graph_item').css('width', (lineCount/bingoSize)*100 + '%');
     if(lineCount >= bingoSize) {
         endGame();
     }
