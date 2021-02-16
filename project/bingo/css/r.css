@@ -15,7 +15,7 @@ input::-ms-clear{display:none}
 
 .tblbox{position:absolute;top:0;left:0;right:0;bottom:0;padding:50px 10px 10px;box-sizing:border-box}
 .tblbox .row{display:flex;height:20%;justify-content: center;}
-.tblbox .row .item {position:relative;border:1px solid #999;width:20%;background:#fff;outline:0;color:#000;font-size:7em}
+.tblbox .row .item {position:relative;border:1px solid #999;width:20%;background:#fff;outline:0;color:#000;font-size:4em}
 .tblbox .row .item:hover:after,
 .tblbox .row .item:focus:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid #1c90fb}
 .tblbox .row .item + .item {border-left:0}
@@ -30,9 +30,9 @@ input::-ms-clear{display:none}
 .alert_popup .popupbox .confirmbtn:hover{box-shadow:0 3px 4px 0 rgba(28,144,251,.4);background:#0078e6}
 
 .infobox{position:absolute;top:0;left:0;right:0;padding:4px;box-sizing:border-box;text-align:center}
-.infobox dl{display:inline-block;overflow:hidden;background:#fff;border-radius:4px;padding:10px 20px;}
+.infobox dl{display:inline-block;overflow:hidden;background:#fff;border-radius:4px;padding:0 20px;height:32px}
 .infobox dt,
-.infobox dd{display:inline-block;font-size:1.2em}
+.infobox dd{display:inline-block;font-size:18px;line-height:32px}
 
 .startbox{display: flex;justify-content: center;align-items: center;}
 .startbox .center_text {z-index:10;display:block;font-size:60px;color:#fff;background:#4caf50;padding:10px 30px;border-radius:50px}
