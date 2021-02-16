@@ -47,6 +47,8 @@ $(function() {
 // 빙고판 생성
 function createBingoTbl(bingoRow) {
     var checkPer = 100 / bingoRow;
+    var tblWidth, tblHeight;
+
     for(var i = 0; i< bingoRow; i++){
         $('.tblbox').append('<div class="row"></div>');
         for(var j = 0; j< bingoRow; j++) {
@@ -55,6 +57,20 @@ function createBingoTbl(bingoRow) {
     }
     $('.tblbox .row').css('height',checkPer + '%');
     $('.tblbox .item').css('width',checkPer + '%');
+
+    tblWidth = $('.tblbox').width();
+    tblHeight = $('.tblbox').height();
+
+    if(tblWidth > tblHeight) tblWidth = tblHeight;
+    else {
+        tblHeight = tblWidth;
+    }
+    $('.tblbox').css({
+        'width' : tblWidth,
+        'height' : tblHeight,
+        'left': '50%',
+        'margin-left': -tblWidth/2,
+    });
 }
 
 // 경고 팝업
