@@ -20,8 +20,8 @@ var game = {
 		this.score = 0,  // 점수
 		this.bonus = 0,  // 보너스 점수(코인)
 		this.jumping = false, // 점프 체크
-		this.jump_cnt = 0, // 점수횟수
-		this.max_jump = 1, // 점수가능 횟수(2단 점프)
+		this.jump_cnt = 0, // 점프횟수
+		this.max_jump = 1, // 점프가능 횟수(2단 점프)
 		this.jump_delay = 280, // 점프시간
 		this.wall_delay = 9, // 장애물 생성속도
 		this.clv = 0, // 장애물 레벨
@@ -173,7 +173,10 @@ function npc_crash_check(pc, npc) { // PC와 NPC 객체의 충돌여부 체크 �
 	
 	if(game.score%40 == 0) { // 4초에 한번씩 지나간 장애물 삭제
 		npc.forEach(function(item) { 
-			if(item.left >= $('.stage').width()) $(item.obj_name).remove();
+			if(item.left >= $('.stage').width()) {
+				$(item.obj_name).style.willChange = 'auto';
+				$(item.obj_name).remove();
+			}
 		});
 	}
 
