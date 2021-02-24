@@ -174,7 +174,6 @@ function npc_crash_check(pc, npc) { // PC와 NPC 객체의 충돌여부 체크 �
 	if(game.score%40 == 0) { // 4초에 한번씩 지나간 장애물 삭제
 		npc.forEach(function(item) { 
 			if(item.left >= $('.stage').width()) {
-				$(item.obj_name).style.willChange = 'auto';
 				$(item.obj_name).remove();
 			}
 		});
