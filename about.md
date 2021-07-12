@@ -15,7 +15,7 @@ UI Developer.
 
 ### PROFESSIONAL EXPERIENCE
 ---
-**# 더존 WEHAGO 플랫폼, 2016 ~**
+**# 더존 WEHAGO 플랫폼, 2016 ~ 2021**
 
 - React 기반 WEHAGO 플랫폼의 전반적인 서비스 마크업 진행.
 - 주요 서비스로 메인화면, 랜딩, 채팅, 경영관리, 세금계산서, 노트, 할일, 웹빌더 등.
