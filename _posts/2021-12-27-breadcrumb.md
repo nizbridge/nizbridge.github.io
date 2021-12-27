@@ -6,6 +6,7 @@ categories: [all, html-css]
 ---
 
 게시판 같은 글 목록을 만들때 많이 사용되는 breadcrumb를 만들어볼려고 합니다.
+
 스펙은 다음과 같습니다.
 
 - 게시판이 depth 순서대로 표현될 것
@@ -18,7 +19,9 @@ categories: [all, html-css]
 
 
 이런 스펙일 경우 말줄임에 대한 부분 때문에 구현하기가 참 어려울 수 있지만,
+
 flex를 사용해서 비교적 간단하게 구현가능합니다.
+
 우선 html 구조는 아래와 같이 만듭니다.
 
 ```html
@@ -31,6 +34,7 @@ flex를 사용해서 비교적 간단하게 구현가능합니다.
 ```
 
 ul이 'flex container' 이고, li가 'flex item' 입니다.
+
 css를 살펴볼까요.
 
 ```css
@@ -62,6 +66,7 @@ li + li:before{
 ```
 
 기본적으로 flex item은 'flex:0 1 auto' 속성으로 되어있습니다. 이건 flex  item의 기본값입니다.
+
 이 의미는 'flex-grow, flex-shrink, flex-basis'를 출약해서 사용하는 것으로 아래와 같습니다.
 
 ```css
@@ -76,9 +81,12 @@ flex-basis:auto; /* item의 기본너비를 정합니다. auto이면 item들의 
 ![Demo Image](/assets/20211227-img2.png)
 
 처음에 정한 스펙에서 마지막 게시판명, 즉 현재 위치한 게시판명은 말줄임되면 안된다고 했습니다.
+
 말줄임을 안되게 하려면 어떻게해야할까요?
 
+
 flex item의 작아지는 비율을 없애면됩니다. 그게 바로 'flex-shrink' 속성이죠.
+
 마지막 li에 'flex-shrink:0' 을 함으로서 해당 item는 온전히 그 너비를 가질수있게 만들수 있습니다.
 
 ```css
