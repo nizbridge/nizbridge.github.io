@@ -15,4 +15,5 @@ categories: [all, html-css]
 재현 브라우저 : Edge, IE 11이상
 
 
-[> 샘플예제](http://codepen.io/Fyrd/pen/oXVYyq){:class="text-link" target="blank"}
+{% include codepen.html hash="oNGybNG" title="box-shadow bug" %}
+

@@ -31,7 +31,6 @@ categories: [all, html-css]
 
 {% include codepen.html hash="fwmup" title="수직/수평 정렬방법 그리고 가변되는 말풍선" %}
 
-[결과보기](http://codepen.io/anon/pen/PwqGBv){:class="text-link" target="blank"}
 <br>
 
 box 클래스를 보면 넓이를 100%로 지정한 이후 ```margin-left:50%```만큼 우로 이동시키고 있습니다.<br>

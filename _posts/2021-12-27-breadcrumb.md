@@ -97,4 +97,5 @@ li:last-of-type{
 
 그럼 이제 원하는 스펙대로 모두 구현이 되었습니다.
 
-[> 예제보기](https://codepen.io/niizguy/pen/rNGpaog){:class="text-link" target="blank"}
+{% include codepen.html hash="rNGpaog" title="flex를 활용한 breadcrumb 만들기" %}
+

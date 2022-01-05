@@ -37,4 +37,4 @@ html5 이전 버전에서는 css에서 지원을 하지 않았기 때문에 labe
 :-ms-input-placeholder { color: #CCC; } 
 ```
 
-[> 예제보기](http://codepen.io/anon/pen/cxrKz){:class="text-link" target="blank"}
+{% include codepen.html hash="GRMGpVB" title="input 속성 중 placeholder 의 색 바꾸기" %}
