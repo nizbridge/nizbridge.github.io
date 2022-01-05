@@ -29,7 +29,7 @@ categories: [all, html-css]
 .arrow{position:absolute;width:10px;height:5px;left:15px;bottom:-5px;margin-right:-5px;background:blue}
 ```
 
-{% include codepen.html hash="PwqGBv" title="수직/수평 정렬방법 그리고 가변되는 말풍선" %}
+{% include codepen.html hash="fwmup" title="수직/수평 정렬방법 그리고 가변되는 말풍선" %}
 
 [결과보기](http://codepen.io/anon/pen/PwqGBv){:class="text-link" target="blank"}
 <br>
