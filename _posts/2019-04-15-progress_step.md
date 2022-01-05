@@ -60,3 +60,4 @@ flex-grow:1; /*  flex:1 0 auto; */
 잘 배워두면 쓰일 곳이 많습니다~!
 
 {% include codepen.html hash="NmaMPw" title="flex를 활용한 progress step 만들기" %}
+<br><br>

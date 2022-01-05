@@ -38,3 +38,4 @@ html5 이전 버전에서는 css에서 지원을 하지 않았기 때문에 labe
 ```
 
 {% include codepen.html hash="GRMGpVB" title="input 속성 중 placeholder 의 색 바꾸기" %}
+<br><br>
