@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "수직/수평 정렬방법 그리고 가변되는 말풍선"
-date:   2014-03-24
+date:   2014-03-31
 categories: [all, html-css]
 ---
 
@@ -28,6 +28,8 @@ categories: [all, html-css]
         background:url(sp7.png) 100% -231px no-repeat}
 .arrow{position:absolute;width:10px;height:5px;left:15px;bottom:-5px;margin-right:-5px;background:blue}
 ```
+
+{% include codepen.html hash="PwqGBv" title="수직/수평 정렬방법 그리고 가변되는 말풍선" %}
 
 [결과보기](http://codepen.io/anon/pen/PwqGBv){:class="text-link" target="blank"}
 <br>
