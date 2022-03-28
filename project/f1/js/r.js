@@ -1,31 +1,36 @@
 const trackList = [
-    'AUSTRALIA',
     'BAHRAIN',
-    'VIETNAM',
-    'CHINA',
-    'NETHERLANDS',
+    'IMOLA',
+    'PORTUGAL',
     'SPAIN',
     'MONACO',
     'AZERBAIJAN',
     'CANADA',
     'FRANCE',
     'AUSTRIA',
-    'GREATBRITAIN',
+    'BRITAIN',
     'HUNGARY',
     'BELGIUM',
+    'NETHERLANDS',
     'ITALY',
-    'SINGAPORE',
     'RUSSIA',
+    'SINGAPORE',
     'JAPAN',
     'USA',
     'MEXICO',
     'BRAZIL',
+    'AUSTRALIA',
+    'SAUDI ARABIA',    
     'ABUDABHI'
 ];
 
 $(function() {
     $('button').click(function() {
         var randNum = $('.inpNum').val();
+        if(randNum > trackList.length) {
+            randNum = trackList.length;
+            $('.inpNum').val(trackList.length);
+        }
         $('.list').empty();
         selectTrack(randNum);
     });
@@ -44,9 +49,16 @@ function selectTrack(randNum) {
             i--;
           }
     }
-    
+    choiceTrack.sort(function(a, b) { // 오름차순
+        return a - b;
+    });
+    console.log(choiceTrack);
     for(var i=0;i<choiceTrack.length;i++) {
-        $('.list').append('<li>' + trackList[choiceTrack[i]] + '</li>');
+        $('.list').append('<li>' + (i+1) + '. ' + trackList[choiceTrack[i]] + '</li>');
     }
-    // 
 }
+$(function(){
+    for(var i=0;i<trackList.length;i++) {
+        $('.list').append('<li>' + (i+1) + '. ' + trackList[i] + '</li>');
+    }
+});
