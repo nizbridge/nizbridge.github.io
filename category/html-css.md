@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
 categories: html-css
-title: html-cssl
+title: html-css
 permalink: /category/html-css
 ---
