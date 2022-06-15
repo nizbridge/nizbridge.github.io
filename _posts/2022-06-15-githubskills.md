@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GitHub Skill"
+title:  "GitHub Skills"
 date:   2022-06-15
 categories: [all, etc]
 ---
@@ -15,6 +15,8 @@ github에서 만든 github 가이드 문서가 있어서 소개합니다.
 순서대로 따라하다보면 어느정도 감을 잡을 수 있습니다.
 
 깃헙을 처음 배우거나 조금 더 자세히 알고 싶다 하시는 분들, 고고!
+
+[가이드문서 바로가기](https://skills.github.com/)
 <br><br>
 
 ### First day on GitHub
@@ -42,5 +44,3 @@ github에서 만든 github 가이드 문서가 있어서 소개합니다.
 - Publish packages
     - GitHub Action을 사용하여 프로젝트를 게시(배포)하는 방법을 알아봅니다.
 <br><br>
-
-[가이드문서 바로가기](https://skills.github.com/)
