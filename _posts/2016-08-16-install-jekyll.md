@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "window에서 jekyll 설치하기"
+title:  "Jekyll을 활용한 GitHub 블로그 만들기 (Window)"
 date:   2016-08-16
 categories: [all, etc]
 ---
