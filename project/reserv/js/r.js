@@ -7,13 +7,15 @@ var reservTry;
 
 
 $(function() {
+    Notification.requestPermission();
+
     scrapingData();
 
-    // const timer = setInterval(() => {
-    //     scrapingData();
-    // }, 300000); 
+    const timer = setInterval(() => {
+        scrapingData();
+        console.log(11);
+    }, 60000); 
     
-    // clearInterval(timer); 
 });
 
 function currentTime() {
@@ -63,6 +65,7 @@ function scrapingData() {
         });
         if(revTitle != "") {
             document.title = revTitle;
+            new Notification("예약가능", {body:revTitle});
         }
         else {
             document.title = currentTime();
