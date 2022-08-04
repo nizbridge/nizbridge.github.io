@@ -2,6 +2,7 @@
 var typeRoom = ['dbd','nbd','hhbd'];
 var dateInfo8 = ['2022-08-14','2022-08-20','2022-08-27'];
 var dateInfo9 = ['2022-09-03','2022-09-09','2022-09-17','2022-09-24'];
+var dateInfo10 = ['2022-10-01','2022-10-02','2022-10-08','2022-10-09'];
 var findText = "type=dbd&today=2022-09-06";
 var reservTry;
 
@@ -13,8 +14,7 @@ $(function() {
 
     const timer = setInterval(() => {
         scrapingData();
-        console.log(11);
-    }, 60000); 
+    }, 30000); 
     
 });
 
@@ -31,6 +31,8 @@ function currentTime() {
 }
 function scrapingData() {
     var revTitle = "";
+    
+    $('.reservList').empty();
     $.get("https://www.campingkorea.or.kr/reservation/06.htm?code=&year=2022&month=8#container", function(data) {
         result = data.match(/{/g);
         
@@ -39,7 +41,7 @@ function scrapingData() {
             for(var i=0; i <= typeRoom.length-1; i++) {
                 findText = 'type='+typeRoom[i]+'&today='+item;
                 reservTry = data.lastIndexOf(findText);
-                console.log(findText);
+                // console.log(findText);
                 if(reservTry > 0) {
                     $('.reservList').append('<li>' + findText + "</li>");
                     revTitle += typeRoom[i]+item.substr(5)+" ";
@@ -56,7 +58,25 @@ function scrapingData() {
             for(var i=0; i <= typeRoom.length-1; i++) {
                 findText = 'type='+typeRoom[i]+'&today='+item;
                 reservTry = data.lastIndexOf(findText);
-                console.log(findText);
+                // console.log(findText);
+                if(reservTry > 0) {
+                    $('.reservList').append('<li>' + findText + "</li>");
+                    revTitle += typeRoom[i]+item.substr(5)+" ";
+                }
+            }
+        });
+
+        
+    });
+
+    $.get("https://www.campingkorea.or.kr/reservation/06.htm?code=&year=2022&month=10#container", function(data) {
+        result = data.match(/{/g);
+
+        $.each(dateInfo10, function(index, item) {
+            for(var i=0; i <= typeRoom.length-1; i++) {
+                findText = 'type='+typeRoom[i]+'&today='+item;
+                reservTry = data.lastIndexOf(findText);
+                // console.log(findText);
                 if(reservTry > 0) {
                     $('.reservList').append('<li>' + findText + "</li>");
                     revTitle += typeRoom[i]+item.substr(5)+" ";
@@ -64,10 +84,12 @@ function scrapingData() {
             }
         });
         if(revTitle != "") {
+            console.log(revTitle);
             document.title = revTitle;
             new Notification("예약가능", {body:revTitle});
         }
         else {
+            console.log(currentTime());
             document.title = currentTime();
         }
         
