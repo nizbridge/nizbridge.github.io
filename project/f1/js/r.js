@@ -12,7 +12,7 @@ const trackList = [
     'HUNGARY (H)',
     'BELGIUM (E)',
     'NETHERLANDS(M)',
-    'ITALY (VE)',
+    '*ITALY (VE)',
     'RUSSIA (E)',
     'SINGAPORE (VH)',
     'JAPAN (M)',
@@ -20,9 +20,10 @@ const trackList = [
     'MEXICO (E)',
     'BRAZIL (E)',
     'AUSTRALIA (VH)',
-    'SAUDI ARABIA (M)',    
+    '*SAUDI ARABIA (H)',    
     'ABUDABHI (E)',
-    'CHINA (H)'
+    'CHINA (H)',
+    '*MIAMI (H)'
 ];
 
 $(function() {
