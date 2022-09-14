@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head>
+	<meta name="viewport" content="width=device-width">
+
+	<style>
+		p,h1 {
+			font-size:1.8em;
+			margin:0 0 0.5em 0;
+			text-align:center;
+		}
+		h1 {
+			color:#999;
+		}
+	</style>
+
+	<script>
+	//	Scott Jehl's viewport size function: https://gist.github.com/2051999
+	function viewportSize(){
+		var test = document.createElement( "div" );
+
+		test.style.cssText = "position: fixed;top: 0;left: 0;bottom: 0;right: 0;";
+		document.documentElement.insertBefore( test, document.documentElement.firstChild );
+
+		var dims = { width: test.offsetWidth, height: test.offsetHeight };
+		document.documentElement.removeChild( test );
+
+		return dims;
+	}
+	function loaded() {
+		setTimeout(function(){
+			document.getElementById('dpr').innerHTML = window.devicePixelRatio;
+			document.getElementById('wid').innerHTML = viewportSize().width;
+		}, 1000)
+	}
+	</script>
+</head>
+<body onload="loaded();">
+	<h1>device-width set</h1>
+	<p>Width = <span id="wid">1920</span>px</p>
+	<p>Pixel ratio = <span id="dpr">1</span></p>
+
+</body></html>
