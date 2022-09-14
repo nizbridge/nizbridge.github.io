@@ -50,11 +50,11 @@ h3 {
 
 a, a:link, a:active {
     text-decoration: none;
-    color: #1c90fb;
+    color: #8C8C8C;
 }
 
 a:hover {
-    color: #1c90fb;
+    color: #B3B3B3;
     text-decoration: underline;
 }
 
@@ -232,3 +232,8 @@ table td, table th {padding:3px;border:1px solid #666}
 
 code, kbd, pre, samp {font-family: "Jeju Gothic", "Roboto Condensed", Arial, sans-serif;}
 pre {background-color: #000;color:#fff}
+
+.post a,
+.post a:link,
+.post a:active {color:#1c90fb}
+.post a:hover {color:#1c90fb}
