@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,img,button,select{margin:0;padding:0}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family: 'Noto Sans KR', sans-serif;}
+img,fieldset{border:0;vertical-align:top}
+a{color:#1a1a1a}
+em,address{font-style:normal}
+ul,ol,li{list-style:none}
+label,button{cursor:pointer}
+input::-ms-clear{display:none}
+.blind{position:absolute !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-1px !important;overflow:hidden !important}
+.table thead.blind{position:static;font-size:0} /* 테이블 thead blind 버그해결 */
+.clearbx:after,.clearfix:after{content:'';clear:both;display:table}
+
+body {-webkit-text-size-adjust:none;background:#f8f8f8;padding:10px;box-sizing:border-box}
+.inpbox{padding:10px}
+.rollNum {margin-right:10px;width:50px;height:30px;font-size:14px;color:#4a4a4a;text-align:center;}
+.lt_list{padding:10px;}
+.lt_list li > span{display:inline-block;width:26px;height:26px;border-radius:50%;background:#e4a716;text-align:center;line-height:26px;overflow:hidden;color:#fff;font-size:14px;margin-right:4px}
+.lt_list li > span.n10{background:#1993da}
+.lt_list li > span.n20{background:#e96353}
+.lt_list li > span.n30{background:#8f8f8f}
+.lt_list li > span.n40{background:#5ab545}
+.retry {display: inline-block;width: auto;position: relative;vertical-align: top;box-sizing: border-box;cursor: pointer;border-radius: 4px;font-size: 14px;padding: 0 10px;text-decoration: none;overflow: hidden;height: 30px;line-height: 28px;border: 1px solid #1c90fb;background: #1c90fb;color: #fff;}
+.retry:hover {background:#0078e6;box-shadow:0 3px 4px rgba(28,144,251,.4)}
+
