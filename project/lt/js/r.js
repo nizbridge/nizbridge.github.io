@@ -8,10 +8,12 @@ var numWeight = { // 색상별 가중치 적용..
         n30 : 1.2,
         n40 : 1
 };
-var weightNewArr = weightRand(numWeight);
-console.log('weight:',weightNewArr);
+var weightNewArr;
 
 $(function() {
+    weightNewArr = weightRand(numWeight);
+    console.log('weight:',weightNewArr);
+
     $('.retry').click(function() {
         var rolnum = $('.rollNum').val();
         $('.lt_list').empty();
@@ -26,6 +28,7 @@ function weightRand(w) {
     const weightArr = Object.values(w);
     var weightNewArr = [];
     var weightSum=0;
+
     // 가중치값 계산하여 범위정하기
     for(let index in weightArr) {
         weightSum += weightArr[index];
@@ -39,6 +42,8 @@ function weightRand(w) {
         }
         
     }
+    
+    $('.info').append('<p>=가중치=<br>1~9 : '+Math.round((weightArr[0]/weightSum)*100)+'%<br>10~19 : '+Math.round((weightArr[1]/weightSum)*100)+'%<br>20~29 : '+Math.round((weightArr[2]/weightSum)*100)+'%<br>30~39 : '+Math.round((weightArr[3]/weightSum)*100)+'%<br>40~45 : '+Math.round((weightArr[4]/weightSum)*100)+'%</p>');
     return weightNewArr;
 }
 

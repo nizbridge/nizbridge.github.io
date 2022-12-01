@@ -23,4 +23,8 @@ body {-webkit-text-size-adjust:none;background:#f8f8f8;padding:10px;box-sizing:b
 .lt_list li > span.n40{background:#5ab545}
 .retry {display: inline-block;width: auto;position: relative;vertical-align: top;box-sizing: border-box;cursor: pointer;border-radius: 4px;font-size: 14px;padding: 0 10px;text-decoration: none;overflow: hidden;height: 30px;line-height: 28px;border: 1px solid #1c90fb;background: #1c90fb;color: #fff;}
 .retry:hover {background:#0078e6;box-shadow:0 3px 4px rgba(28,144,251,.4)}
+.info{position:relative;display:inline-block;vertical-align:top;width:20px;height:20px;background:#fff;border:1px solid #000;border-radius:50%;}
+.info:before{content:'?';position:absolute;top:0;left:0;right:0;text-align:center;font-size:12px;line-height:20px;font-weight:bold}
+.info > p {display:none;position:absolute;top:0;left:100%;background:#fff;border:1px solid #eaeaea;padding:10px;border-radius:8px;font-size:12px;width:100px;box-sizing:border-box;margin-left:4px}
+.info:hover > p{display:block}
 
