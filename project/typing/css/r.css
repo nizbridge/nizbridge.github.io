@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,img,button,select{margin:0;padding:0}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family: 'Noto Sans KR', sans-serif;}
+body{min-width:1280px;-webkit-text-size-adjust:none;background:#999}
+img,fieldset{border:0;vertical-align:top}
+a{color:#1a1a1a}
+em,address{font-style:normal}
+ul,ol,li{list-style:none}
+label,button{cursor:pointer}
+input::-ms-clear{display:none}
+.blind{position:absolute !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-1px !important;overflow:hidden !important}
+.table thead.blind{position:static;font-size:0} /* 테이블 thead blind 버그해결 */
+.clearbx:after,.clearfix:after{content:'';clear:both;display:table}
+
+body {background:#f8f8f8}
+
+.inputBox{position:fixed;bottom:0;left:0;right:0;background:#ccc;padding:20px 40px;box-sizing:border-box}
+.inputBox_inp {border:1px solid #4a4a4a;border-radius:8px;width:100%;height:30px;font-size:14px;color:#4a4a4a;padding:0 10px;box-sizing:border-box}
+
+.treeBox__item {position:absolute;top:0;left:10%;padding:0 10px;border:1px solid #eee;border-radius:8px;font-size:14px;color:#000;background:#ccc;font-weight:bold;line-height:18px;height:20px;overflow:hidden}
+/* .treeBox__item.lv1 {animation:downItem 5s linear} */
+
+@keyframes downItem {
+    from { top : 0%; }
+    to { top : 100%; }
+}
