@@ -15,13 +15,28 @@ input::-ms-clear{display:none}
 
 body {background:#f8f8f8}
 
-.inputBox{position:fixed;bottom:0;left:0;right:0;background:#ccc;padding:20px 40px;box-sizing:border-box}
-.inputBox_inp {border:1px solid #4a4a4a;border-radius:8px;width:100%;height:30px;font-size:14px;color:#4a4a4a;padding:0 10px;box-sizing:border-box}
+.inputBox{position:fixed;bottom:0;left:0;right:0;background:#9f814f;padding:20px 40px;box-sizing:border-box}
+.inputBox_inp {border:1px solid #4a4a4a;border-radius:8px;width:100%;height:30px;font-size:16px;color:#4a4a4a;padding:0 10px;box-sizing:border-box}
 
 .treeBox__item {position:absolute;top:0;left:10%;padding:0 10px;border:1px solid #eee;border-radius:8px;font-size:14px;color:#000;background:#ccc;font-weight:bold;line-height:18px;height:20px;overflow:hidden}
 /* .treeBox__item.lv1 {animation:downItem 5s linear} */
 
+.treeBox__item.lv5{background:#6496ed;color:#fff}
+.treeBox__item.lv4{background:#008080;color:#fff}
+.treeBox__item.lv3{background:#228b57;color:#fff}
+.treeBox__item.lv2{background:#ff5675;color:#fff}
+.treeBox__item.lv1{background:#da70d6;color:#fff}
+
+.userpoint {position:absolute;top:5px;left:5px;font-size:14px;color:#fff;background:#ff8200;border-radius:5px;padding:5px;font-weight:bold;border:1px solid #d2691e}
 @keyframes downItem {
     from { top : 0%; }
     to { top : 100%; }
 }
+
+.dimm {
+    z-index:10;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.4);
+}
+.btn_start {
+    position:absolute;top:50%;left:50%;width:100px;height:50px;background:#1c90fb;color:#fff;margin:-25px 0 0 -50px;border:1px solid #ddd;box-sizing:border-box;border-radius:6px;font-size:20px
+}
+.btn_start:hover {background:#0064ff}
