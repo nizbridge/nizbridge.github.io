@@ -1,6 +1,6 @@
 
 var gameLevel = 1; // 게임레벨
-var maxCounter = 10 // 단어갯수
+var maxCounter = 50 // 단어갯수
 var userPoint = 0; // 점수
 var itemCount = 1; // 아이템 카운트 - id값으로 활용
 var removeCount = 0; // 삭제한 아이템 갯수 (게임종료 확인)
