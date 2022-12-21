@@ -4,6 +4,7 @@ var maxCounter = 50 // 단어갯수
 var userPoint = 0; // 점수
 var itemCount = 1; // 아이템 카운트 - id값으로 활용
 var removeCount = 0; // 삭제한 아이템 갯수 (게임종료 확인)
+
 var wordArr = new Array( // 단어 리스트
     '가구','가난','가능','가능해지다','가득히','가라앉다','가려지다','가령','가로등',
     '가로막다','가로수','가르다','가르침','가만','가만있다','가뭄','가사','가상','가입',
@@ -385,7 +386,11 @@ $(function() {
             $('.treeBox__item').each(function(index, item) {
                 if($(item).text() == inpVal) {
                     $(item).remove();
-                    userPoint++;
+                    userPoint++; // 포인트 올리기
+                    removeCount++; // 삭제한 아이템
+                    if(removeCount >= maxCounter) { // 게임종료
+                        $('.dimm').show();
+                    }
                 }
             });
             $('.userpoint__val').text(userPoint);
@@ -411,10 +416,12 @@ function createItem(word, level) {
         if(topPos > 95) {
             clearInterval(intervalId);
             console.log('delete : ' + countLv);
-            $(countLv).remove();
-            removeCount++;
-            if(removeCount >= maxCounter) { // 게임종료
-                $('.dimm').show();
+            if($(countLv).length) {
+                $(countLv).remove();
+                removeCount++;
+                if(removeCount >= maxCounter) { // 게임종료
+                    $('.dimm').show();
+                }
             }
         }
     }, level*100);
