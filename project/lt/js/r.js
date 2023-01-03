@@ -18,7 +18,7 @@ $(function() {
         var rolnum = $('.rollNum').val();
         $('.lt_list').empty();
         for(var i=0; i<rolnum; i++) {
-            createItem(6,i);    
+            createItem(6,i);
         }
     })
 });
