@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,img,button,select{margin:0;padding:0}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family: 'Noto Sans KR', sans-serif;}
+body{min-width:1280px;-webkit-text-size-adjust:none;background:#4a4a4a}
+img,fieldset{border:0;vertical-align:top}
+a{color:#1a1a1a}
+em,address{font-style:normal}
+ul,ol,li{list-style:none}
+label,button{cursor:pointer}
+input::-ms-clear{display:none}
+.blind{position:absolute !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-1px !important;overflow:hidden !important}
+.table thead.blind{position:static;font-size:0} /* 테이블 thead blind 버그해결 */
+.clearbx:after,.clearfix:after{content:'';clear:both;display:table}
+
+body{padding:50px}
+.trackBox{position:relative;width:200px;height:200px}
+.mover {
+  offset-path: path("M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z");
+  animation: move 3s linear infinite;
+  width: 10px;
+  height: 10px;
+  position:absolute;
+  background: red;
+  border-radius:50%;
+}
+.mover.blue {
+    background:blue;
+    animation: move 3.01s linear infinite;
+}
+@keyframes move {
+  100% { 
+    offset-distance: 100%;
+  }
+}
+
+.track {
+    stroke: #ccc;
+}
+
+.mover.t2 {
+    offset-path: path("m42.75.13C-12.14,16.01,1.67,63.3,1.67,63.3c0,0,55.23-.69,22.09,43.84-33.14,44.53,55.58,48.67,56.27,27.27.69-21.4-12.43-54.54-20.71-50.4-8.28,4.14-40.04-23.82,26.58-48.67,66.62-24.85-7.94-30.38-7.94-30.38L42.75.13Z");
+}
