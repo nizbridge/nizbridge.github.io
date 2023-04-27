@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "사파리 16.0 업데이트 살펴보기"
+title:  "media query 의 새로운 기능 : update"
 date:   2023-04-27
 categories: [all, html-css]
 ---
-# media query 의 새로운 기능 : update
-<br>
+
 CSS의 media query 는 디바이스에 따라서 UI에 다양한 변화를 줄 수 있는 좋은 기능입니다.
 
 보통은 반응형 웹을 구현하기위해 화면의 넓이나 높이에 따라 변화가 필요할때 많이 사용을 했을텐데요,
