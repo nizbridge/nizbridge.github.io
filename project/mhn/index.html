@@ -13,35 +13,61 @@
     
 </head>
 <body>
-    <form id="simulationForm">
-        <label for="skill">스킬 선택:</label>
-        <select name="skill" id="skill">
-            <option value="skill1">스킬 1</option>
-            <option value="skill2">스킬 2</option>
-            <!-- 다른 스킬 옵션들 추가 -->
+     <!-- 장비 부위 선택 폼 -->
+     <div id="equipmentSelector">
+        <h2>장비 부위 선택</h2>
+        <label for="selectedBodyPart">부위 선택:</label>
+        <select name="selectedBodyPart" id="selectedBodyPart">
+            <option value="head">머리</option>
+            <option value="torso">몸통</option>
+            <option value="chest">가슴</option>
         </select>
-        <br>
-        
-        <label for="equipment">장비 선택:</label>
-        <select name="equipment" id="equipment">
-            <option value="equipment1">장비 1</option>
-            <option value="equipment2">장비 2</option>
-            <!-- 다른 장비 옵션들 추가 -->
+        <p>선택한 부위: <span id="selectedBodyPartLabel">부위 없음</span></p>
+    </div>
+
+    <!-- 부위별 장비 선택 폼 -->
+    <div id="bodyPartEquipment">
+        <h2>부위별 장비 선택</h2>
+        <label for="selectedEquipment">장비 선택:</label>
+        <select name="selectedEquipment" id="selectedEquipment">
+            <!-- 머리 부위 장비 옵션 -->
+            <optgroup label="머리">
+                <option value="headEquipment1">머리 장비 1</option>
+                <option value="headEquipment2">머리 장비 2</option>
+                <!-- 다른 머리 부위 장비 옵션들 추가 -->
+            </optgroup>
+            <!-- 몸통 부위 장비 옵션 -->
+            <optgroup label="몸통">
+                <option value="torsoEquipment1">몸통 장비 1</option>
+                <option value="torsoEquipment2">몸통 장비 2</option>
+                <!-- 다른 몸통 부위 장비 옵션들 추가 -->
+            </optgroup>
+            <!-- 가슴 부위 장비 옵션 -->
+            <optgroup label="가슴">
+                <option value="chestEquipment1">가슴 장비 1</option>
+                <option value="chestEquipment2">가슴 장비 2</option>
+                <!-- 다른 가슴 부위 장비 옵션들 추가 -->
+            </optgroup>
         </select>
-        <br>
-        
-        <input type="submit" value="시뮬레이션 시작">
-    </form>
+    </div>
 
-    <!-- 추가된 검색 폼 -->
-    <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="스킬 또는 장비 검색">
-        <button type="button" id="searchButton">검색</button>
-    </form>
+    <!-- 스킬 빌더 섹션 -->
+    <div id="skillBuilder">
+        <h2>스킬 빌더</h2>
+        <!-- 장비에 따른 스킬 목록 -->
+        <div id="equipmentSkills">
+            <h3>부위에 따른 스킬 목록:</h3>
+            <ul id="skillList"></ul>
+        </div>
+        <input type="button" value="빌드 추가" id="addBuildButton">
+    </div>
 
-    <div id="searchResult"></div>
+    <!-- 빌드 목록 섹션 -->
+    <div id="builderResult">
+        <h2>빌드 목록</h2>
+        <ul id="buildList"></ul>
+    </div>
 
-    <div id="simulationResult"></div>
     <script src="js/mhn.js"  charset="UTF-8"></script>
 </body>
 </html>
