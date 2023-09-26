@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<title>MHN</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mhn.css">
+    <script src="js/mhn.json" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <form id="simulationForm">
+        <label for="skill">스킬 선택:</label>
+        <select name="skill" id="skill">
+            <option value="skill1">스킬 1</option>
+            <option value="skill2">스킬 2</option>
+            <!-- 다른 스킬 옵션들 추가 -->
+        </select>
+        <br>
+        
+        <label for="equipment">장비 선택:</label>
+        <select name="equipment" id="equipment">
+            <option value="equipment1">장비 1</option>
+            <option value="equipment2">장비 2</option>
+            <!-- 다른 장비 옵션들 추가 -->
+        </select>
+        <br>
+        
+        <input type="submit" value="시뮬레이션 시작">
+    </form>
+
+    <!-- 추가된 검색 폼 -->
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="스킬 또는 장비 검색">
+        <button type="button" id="searchButton">검색</button>
+    </form>
+
+    <div id="searchResult"></div>
+
+    <div id="simulationResult"></div>
+    <script src="js/mhn.js"  charset="UTF-8"></script>
+</body>
+</html>
