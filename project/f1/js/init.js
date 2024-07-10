@@ -95,6 +95,18 @@ $(document).ready(function() {
         ]
     });
     
+    var constructorTable = $('#constructor-data').DataTable({
+        paging: false,
+        searching: false,
+        ordering: false,
+        columns: [
+            { data: "Season" },
+            { data: "Position" },
+            { data: "Points" },
+            { data: "ConstructorName" }
+        ]
+    });
+
     table.on('draw', function() {
         var body = $(table.table().body());
         body.unhighlight();
@@ -105,6 +117,7 @@ $(document).ready(function() {
         var selectedSeason = this.value;
         filterDataBySeason(selectedSeason);
         generateTrackButtons(selectedSeason);
+        filterDataByConstructor(selectedSeason);
     });
 
     $('.trackTag').on('click', '.trackTag__btn', function() {
@@ -153,6 +166,7 @@ function loadCSVFiles(seasonFilePaths) {
             });
         });
         filterDataBySeason('F3_S1'); // 초기 로드시 F3_S1 데이터 로드
+        filterDataByConstructor('F3_S1');
         generateTrackButtons('F3_S1'); // 초기 트랙 버튼 생성
     }).catch(error => {
         console.error('Error loading CSV files:', error);
@@ -185,6 +199,11 @@ function csvToJson(csv, season) {
             obj["FastestLap"] = obj["FastestLap"].slice(0, -4);
         }
 
+        // ConstructorName이 'World Car'인 경우 'AlphaTauri'로 변경
+        if (obj["ConstructorName"] === 'World Car') {
+            obj["ConstructorName"] = 'AlphaTauri';
+        }
+
         result.push(obj);
     }
     return result;
@@ -214,13 +233,83 @@ function filterDataByTrack(track) {
         filterDataBySeason(currentSeason);
         $('#track-data').addClass('off');
         $('#kindom-data').removeClass('off');
+        $('#constructor-data').removeClass('off');
     } else {
         let filteredData = allData[currentSeason].filter(record => record.TrackName === track);
         displayTrackData(filteredData);
         $('#track-data').removeClass('off');
         $('#kindom-data').addClass('off');
+        $('#constructor-data').addClass('off');
     }
 }
+
+function filterDataByConstructor(season) {
+    var constructorPoints = {};
+    var seasonData = allData[season] || [];
+
+    seasonData.forEach(record => {
+        var constructorName = record['ConstructorName'];
+        var points = parseFloat(record['Points']) || 0;
+
+        // World Car를 AlphaTauri로 변환
+        if (constructorName === 'World Car') {
+            constructorName = 'AlphaTauri';
+        }
+
+        if (!constructorPoints[constructorName]) {
+            constructorPoints[constructorName] = {
+                Points: 0
+            };
+        }
+
+        constructorPoints[constructorName].Points += points;
+    });
+
+    var constructorData = Object.keys(constructorPoints).map(function(key) {
+        return {
+            Points: constructorPoints[key].Points,
+            ConstructorName: key
+        };
+    }).sort(function(a, b) {
+        return b.Points - a.Points;
+    });
+
+    constructorData.forEach(function(data, index) {
+        data.Position = index + 1;
+        data.Season = season;
+
+        // World Car를 AlphaTauri로 변환
+        if (data.ConstructorName === 'World Car') {
+            data.ConstructorName = 'AlphaTauri';
+        }
+    });
+
+    // DataTable 객체를 가져옵니다.
+    var constructorTable = $('#constructor-data').DataTable();
+
+    // DataTable이 초기화되었는지 확인합니다.
+    if ($.fn.DataTable.isDataTable('#constructor-data')) {
+        // DataTable이 이미 초기화된 경우, 기존 DataTable을 업데이트합니다.
+        constructorTable.clear().rows.add(constructorData).draw();
+    } else {
+        // DataTable이 초기화되지 않은 경우, DataTable을 초기화하고 데이터를 추가합니다.
+        constructorTable = $('#constructor-data').DataTable({
+            paging: false,
+            searching: false,
+            ordering: false,
+            columns: [
+                { data: "Season" },
+                { data: "Position" },
+                { data: "Points" },
+                { data: "ConstructorName" }
+            ]
+        });
+
+        constructorTable.rows.add(constructorData).draw();
+    }
+    calculateDriverPoints(seasonData);
+}
+
 
 function calculateDriverPoints(data) {
     const pointsSummary = {};
@@ -290,6 +379,7 @@ function highlightFastestLap(data) {
         else if (teamName == 'Red Bull') $(`td:contains(${record.ConstructorName})`).addClass('redbull');
         else if (teamName == 'Mercedes-AMG Petronas') $(`td:contains(${record.ConstructorName})`).addClass('mer');
         else if (teamName == 'AlphaTauri') $(`td:contains(${record.ConstructorName})`).addClass('tauri');
+        else if (teamName == 'World Car') $(`td:contains(${record.ConstructorName})`).addClass('tauri');
         else if (teamName == 'Aston Martin') $(`td:contains(${record.ConstructorName})`).addClass('aston');
         else if (teamName == 'Ferrari') $(`td:contains(${record.ConstructorName})`).addClass('ferrari');
         else if (teamName == 'Alfa Romeo') $(`td:contains(${record.ConstructorName})`).addClass('romeo');
