@@ -118,9 +118,13 @@ $(document).ready(function() {
         filterDataBySeason(selectedSeason);
         generateTrackButtons(selectedSeason);
         filterDataByConstructor(selectedSeason);
+        showFullTable(selectedSeason); // 전체 테이블 표시 함수 호출
     });
 
     $('.trackTag').on('click', '.trackTag__btn', function() {
+        $('.trackTag__btn').removeClass('selected'); // 모든 버튼에서 selected 클래스 제거
+        $(this).addClass('selected'); // 클릭된 버튼에 selected 클래스 추가
+
         var selectedTrack = $(this).text();
         filterDataByTrack(selectedTrack);
     });
@@ -141,6 +145,18 @@ $(document).ready(function() {
 let allData = {};
 let currentSeason = '';
 
+// 전체 테이블 표시 함수
+function showFullTable(season) {
+    if (season === '') {
+        season = 'F3_S1'; // 기본 시즌 설정 (임의로 F3_S1 선택)
+    }
+    $('.trackTag__btn').eq(0).addClass('selected');
+
+    filterDataBySeason(season); // 선택한 시즌 데이터 필터링
+    $('#track-data').addClass('off'); // 트랙 데이터 숨기기
+    $('#kindom-data').removeClass('off'); // 기본 데이터 표시
+    $('#constructor-data').removeClass('off'); // Constructor 데이터 표시
+}
 function loadCSVFiles(seasonFilePaths) {
     let loadPromises = [];
 
@@ -168,6 +184,7 @@ function loadCSVFiles(seasonFilePaths) {
         filterDataBySeason('F3_S1'); // 초기 로드시 F3_S1 데이터 로드
         filterDataByConstructor('F3_S1');
         generateTrackButtons('F3_S1'); // 초기 트랙 버튼 생성
+        $('.trackTag__btn').eq(0).addClass('selected');
     }).catch(error => {
         console.error('Error loading CSV files:', error);
     });
