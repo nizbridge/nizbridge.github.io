@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV Files to HTML Tables</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<div id="csvTables"></div>
+
+<script>
+    // CSV 파일이 들어있는 폴더 경로
+    const folderPath = 'data/f3_s7';
+
+    // 폴더 내의 모든 CSV 파일을 읽어와서 테이블로 변환하는 함수
+    async function loadCSVFiles() {
+        const response = await fetch(folderPath);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const htmlDocument = parser.parseFromString(text, 'text/html');
+        const fileList = htmlDocument.querySelectorAll('a');
+		
+
+        // 폴더 내의 모든 CSV 파일에 대해 처리
+        for (const file of fileList) {
+            const fileName = file.textContent;
+			
+            if (fileName.endsWith('.csv')) {
+                const fileUrl = folderPath + '/' + fileName;
+                const csvData = await fetch(fileUrl).then(response => response.text());
+                const tableHtml = convertCSVToHTMLTable(csvData);
+				console.log(fileName);
+                document.getElementById('csvTables').innerHTML += tableHtml;
+            }
+        }
+    }
+
+    // CSV 데이터를 HTML 테이블로 변환하는 함수
+    function convertCSVToHTMLTable(csvData) {
+        const rows = csvData.trim().split('\n').map(row => row.split(','));
+        let tableHtml = '<table>';
+        rows.forEach((rowData, rowIndex) => {
+            const rowTag = rowIndex === 0 ? 'thead' : 'tbody';
+            tableHtml += `<${rowTag}><tr>`;
+            rowData.forEach(cellData => {
+                const cellTag = rowIndex === 0 ? 'th' : 'td';
+                tableHtml += `<${cellTag}>${cellData}</${cellTag}>`;
+            });
+            tableHtml += `</tr></${rowTag}>`;
+        });
+        tableHtml += '</table>';
+        return tableHtml;
+    }
+
+    // 페이지 로드 시 모든 CSV 파일 로드
+    window.onload = loadCSVFiles;
+</script>
+
+</body>
+</html>

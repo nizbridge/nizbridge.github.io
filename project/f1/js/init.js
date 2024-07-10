@@ -1,0 +1,323 @@
+$(document).ready(function() {
+    const seasonFilePaths = {
+        'F3_S1': [
+            'data/f3_s1/event_200977_tier_1_results.csv',
+            'data/f3_s1/event_201124_tier_1_results.csv',
+            'data/f3_s1/event_201125_tier_1_results.csv',
+            'data/f3_s1/event_201126_tier_1_results.csv',
+            'data/f3_s1/event_201127_tier_1_results.csv',
+            'data/f3_s1/event_201199_tier_1_results.csv',
+            'data/f3_s1/event_201200_tier_1_results.csv',
+            'data/f3_s1/event_201201_tier_1_results.csv',
+            'data/f3_s1/event_201202_tier_1_results.csv',
+            'data/f3_s1/event_201203_tier_1_results.csv',
+            'data/f3_s1/event_201204_tier_1_results.csv',
+            'data/f3_s1/event_201205_tier_1_results.csv',
+            'data/f3_s1/event_201206_tier_1_results.csv',
+            'data/f3_s1/event_201207_tier_1_results.csv',
+            'data/f3_s1/event_201208_tier_1_results.csv',
+            'data/f3_s1/event_201209_tier_1_results.csv',
+            'data/f3_s1/event_201210_tier_1_results.csv',
+            'data/f3_s1/event_201212_tier_1_results.csv',
+            'data/f3_s1/event_201213_tier_1_results.csv',
+            'data/f3_s1/event_201214_tier_1_results.csv',
+            'data/f3_s1/event_201215_tier_1_results.csv',
+            'data/f3_s1/event_201216_tier_1_results.csv',
+            
+        ],
+        'F3_S2': [
+            'data/f3_s2/event_252300_tier_1_results.csv',
+            'data/f3_s2/event_252301_tier_1_results.csv',
+            'data/f3_s2/event_252302_tier_1_results.csv',
+            'data/f3_s2/event_252303_tier_1_results.csv',
+            'data/f3_s2/event_252304_tier_1_results.csv',
+            'data/f3_s2/event_252305_tier_1_results.csv',
+            'data/f3_s2/event_252306_tier_1_results.csv',
+            'data/f3_s2/event_252307_tier_1_results.csv',
+            'data/f3_s2/event_252308_tier_1_results.csv',
+            'data/f3_s2/event_252309_tier_1_results.csv',
+            'data/f3_s2/event_252310_tier_1_results.csv',
+            'data/f3_s2/event_252311_tier_1_results.csv',
+            'data/f3_s2/event_252312_tier_1_results.csv',
+            'data/f3_s2/event_252313_tier_1_results.csv',
+            'data/f3_s2/event_252314_tier_1_results.csv',
+            'data/f3_s2/event_252315_tier_1_results.csv',
+        ],
+        'F3_S3': [
+            'data/f3_s3/event_467172_tier_1_results.csv',
+            'data/f3_s3/event_467173_tier_1_results.csv',
+        ],
+        'F4_S1': [
+            'data/f4_s1/event_177632_tier_1_results.csv',
+            'data/f4_s1/event_177635_tier_1_results.csv',
+            'data/f4_s1/event_177636_tier_1_results.csv',
+            'data/f4_s1/event_177637_tier_1_results.csv',
+            'data/f4_s1/event_177638_tier_1_results.csv',
+            'data/f4_s1/event_177639_tier_1_results.csv',
+            'data/f4_s1/event_177640_tier_1_results.csv',
+            'data/f4_s1/event_177651_tier_1_results.csv',
+            'data/f4_s1/event_179913_tier_1_results.csv',
+        ],
+        'F4_S2': [
+            'data/f4_s2/event_199644_tier_1_results.csv',
+            'data/f4_s2/event_199645_tier_1_results.csv',
+        ]
+    };
+    loadCSVFiles(seasonFilePaths);
+
+    var table = $('#kindom-data').DataTable({
+        paging: false,
+        searching: false,
+        ordering:  false,
+        columns: [
+            { data: "Season" },
+            { data: "Rank" },
+            { data: "Points" },
+            { data: "PlayerName" },
+            { data: "ConstructorName" },
+            { data: "Wins" }, // 1등 횟수
+            { data: "Podiums" } // 3등 안에 들었던 횟수
+        ]
+    });
+
+    var trackTable = $('#track-data').DataTable({
+        paging: false,
+        searching: false,
+        ordering:  false,
+        columns: [
+            { data: "TrackName" },
+            { data: "Position" },
+            { data: "Points" },
+            { data: "PlayerName" },
+            { data: "ConstructorName" },
+            { data: "Time" },
+            { data: "FastestLap" },
+        ]
+    });
+    
+    table.on('draw', function() {
+        var body = $(table.table().body());
+        body.unhighlight();
+        body.highlight(table.search());
+    });
+
+    $('#dropdown1').on('change', function() {
+        var selectedSeason = this.value;
+        filterDataBySeason(selectedSeason);
+        generateTrackButtons(selectedSeason);
+    });
+
+    $('.trackTag').on('click', '.trackTag__btn', function() {
+        var selectedTrack = $(this).text();
+        filterDataByTrack(selectedTrack);
+    });
+
+    $('.xi-info-o').hover(function() {
+        var offset = $(this).offset();
+        var layer_name = $(this).attr('data-layer');
+        $('.' + layer_name).toggleClass('on');
+        $('.' + layer_name).offset({ top: offset.top, left: offset.left + 30 });
+    });
+
+    $('.btn_comment').click(function() {
+        $('.comment-box').toggleClass('on');
+        $(this).toggleClass('on');
+    });
+});
+
+let allData = {};
+let currentSeason = '';
+
+function loadCSVFiles(seasonFilePaths) {
+    let loadPromises = [];
+
+    for (let season in seasonFilePaths) {
+        let filePaths = seasonFilePaths[season];
+        let seasonPromises = filePaths.map(filePath => $.ajax({
+            url: filePath,
+            dataType: 'text'
+        }).then(data => {
+            return csvToJson(data, season);
+        }));
+
+        loadPromises = loadPromises.concat(seasonPromises);
+    }
+
+    Promise.all(loadPromises).then(results => {
+        results.forEach(dataArray => {
+            dataArray.forEach(data => {
+                if (!allData[data.Season]) {
+                    allData[data.Season] = [];
+                }
+                allData[data.Season].push(data);
+            });
+        });
+        filterDataBySeason('F3_S1'); // 초기 로드시 F3_S6 데이터 로드
+        generateTrackButtons('F3_S1'); // 초기 트랙 버튼 생성
+    }).catch(error => {
+        console.error('Error loading CSV files:', error);
+    });
+}
+
+function csvToJson(csv, season) {
+    const lines = csv.split('\n');
+    const result = [];
+    const headers = lines[0].split(',');
+
+    for (let i = 1; i < lines.length; i++) {
+        if (lines[i].trim() === '') {
+            continue; // 빈 줄 무시
+        }
+
+        const obj = {};
+        const currentline = lines[i].split(',');
+
+        for (let j = 0; j < headers.length; j++) {
+            obj[headers[j].trim()] = currentline[j] ? currentline[j].trim() : ''; // 빈 필드 처리
+        }
+        obj["Season"] = season; // 시즌 정보 추가
+
+        // Time과 FastestLap 필드에서 마지막 4자리 제거
+        if (obj["Time"] && obj["Time"].length > 4) {
+            obj["Time"] = obj["Time"].slice(0, -4);
+        }
+        if (obj["FastestLap"] && obj["FastestLap"].length > 4) {
+            obj["FastestLap"] = obj["FastestLap"].slice(0, -4);
+        }
+
+        result.push(obj);
+    }
+    return result;
+}
+
+
+
+function filterDataBySeason(season) {
+    let filteredData = [];
+
+    if (season === '') {
+        for (let key in allData) {
+            filteredData = filteredData.concat(allData[key]);
+        }
+    } else {
+        filteredData = allData[season] || [];
+    }
+
+    currentSeason = season;
+    highlightFastestLap(filteredData); // 수정된 부분: highlightFastestLap 함수 호출
+    calculateDriverPoints(filteredData);
+}
+
+
+function filterDataByTrack(track) {
+    if (track === '전체') {
+        filterDataBySeason(currentSeason);
+        $('#track-data').addClass('off');
+        $('#kindom-data').removeClass('off');
+    } else {
+        let filteredData = allData[currentSeason].filter(record => record.TrackName === track);
+        displayTrackData(filteredData);
+        $('#track-data').removeClass('off');
+        $('#kindom-data').addClass('off');
+    }
+}
+
+function calculateDriverPoints(data) {
+    const pointsSummary = {};
+
+    data.forEach(record => {
+        const playerName = record.PlayerName;
+        const constructorName = record.ConstructorName;
+        const points = parseFloat(record.Points) || 0;
+        const position = parseInt(record.Position);
+
+        if (!pointsSummary[playerName]) {
+            pointsSummary[playerName] = {
+                points: 0,
+                constructorName: constructorName,
+                wins: 0,
+                podiums: 0,
+                Season: record.Season // 시즌 정보 추가
+            };
+        }
+
+        pointsSummary[playerName].points += points;
+
+        if (position === 1) {
+            pointsSummary[playerName].wins += 1;
+        }
+
+        if (position <= 3) {
+            pointsSummary[playerName].podiums += 1;
+        }
+    });
+
+    const sortedPointsSummary = Object.entries(pointsSummary)
+        .sort((a, b) => b[1].points - a[1].points)
+        .reduce((acc, [key, value], index) => {
+            acc[key] = { ...value, rank: index + 1 };
+            return acc;
+        }, {});
+
+    const tableData = Object.entries(sortedPointsSummary).map(([playerName, data]) => {
+        return {
+            "Season": data.Season, // 시즌 정보 추가
+            "Rank": data.rank,
+            "PlayerName": playerName,
+            "ConstructorName": data.constructorName,
+            "Points": data.points,
+            "Wins": data.wins,
+            "Podiums": data.podiums
+        };
+    });
+
+    $('#kindom-data').DataTable().clear().rows.add(tableData).draw();
+    highlightFastestLap(data);
+}
+
+function highlightFastestLap(data) {
+    data.forEach(record => {
+        const hasFastestLap = record.HasFastestLap === 'True';
+        const teamName = record.ConstructorName;
+        const driverName = record.PlayerName;
+
+        if (hasFastestLap) {
+            // FastestLap을 변경할 HTML 요소를 선택하여 색상을 변경
+            // $(`td:contains(${record.FastestLap})`).css('color', '#1c90fb');
+            $(`td:contains(${record.FastestLap})`).addClass('fastlap');
+        }
+        if (teamName == 'Alpine') $(`td:contains(${record.ConstructorName})`).addClass('alpine');
+        else if (teamName == 'McLaren') $(`td:contains(${record.ConstructorName})`).addClass('mcLaren');
+        else if (teamName == 'Red Bull') $(`td:contains(${record.ConstructorName})`).addClass('redbull');
+        else if (teamName == 'Mercedes-AMG Petronas') $(`td:contains(${record.ConstructorName})`).addClass('mer');
+        else if (teamName == 'AlphaTauri') $(`td:contains(${record.ConstructorName})`).addClass('tauri');
+        else if (teamName == 'Aston Martin') $(`td:contains(${record.ConstructorName})`).addClass('aston');
+        else if (teamName == 'Ferrari') $(`td:contains(${record.ConstructorName})`).addClass('ferrari');
+        else if (teamName == 'Alfa Romeo') $(`td:contains(${record.ConstructorName})`).addClass('romeo');
+        else if (teamName == 'Haas') $(`td:contains(${record.ConstructorName})`).addClass('hass');
+        else if (teamName == 'Williams') $(`td:contains(${record.ConstructorName})`).addClass('williams');
+
+        if (driverName == '0x5e0x5e' || driverName == 'kkulkkule' || driverName == 'dev-Tobby' || driverName == 'dayofsoul') {
+            $(`td:contains(${record.PlayerName})`).addClass('textBold');
+        } 
+        
+        
+    });
+}
+
+function displayTrackData(data) {
+    $('#track-data').DataTable().clear().rows.add(data).draw();
+    // 수정된 부분: 테이블 데이터 갱신 후에 FastestLap을 처리하는 함수 호출
+    highlightFastestLap(data);
+}
+
+function generateTrackButtons(season) {
+    const trackSet = new Set(allData[season].map(record => record.TrackName));
+    let buttonsHtml = '<button type="button" class="trackTag__btn">전체</button>';
+
+    trackSet.forEach(track => {
+        buttonsHtml += `<button type="button" class="trackTag__btn">${track}</button>`;
+    });
+
+    $('.trackTag').html(buttonsHtml);
+}

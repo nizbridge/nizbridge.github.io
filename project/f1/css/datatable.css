@@ -1,0 +1,65 @@
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0;line-height:15px}
+body,input,textarea,select,button,table{font-family:"Noto Sans KR", sans-serif;font-size:12px;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+img,fieldset{border:0}
+img{vertical-align:top}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none;background-color:transparent}
+a:hover,a:active,a:focus{border:0;text-decoration:none;outline:0}
+.blind{visibility:hidden;overflow:hidden;position:absolute;width:0;height:0;line-height:0;font-size:0}
+
+table th, table td {text-align:center}
+h1{font-size:18px}
+h1 > span {font-size:12px;padding-left:20px;font-weight:normal}
+h2 {margin-bottom:10px;color:#999;font-size:15px;font-weight:normal}
+.filter-area {margin:20px 5px;padding:0 10px;border-left:3px solid #999}
+.filter-area .form-group {margin-bottom:10px}
+.filter-area .form-group select {width:150px}
+table .text-left{text-align:left !important}
+table .badge{display: inline-block;padding: .25em .4em;font-size: 90%;font-weight: normal;line-height: 1;color: #fff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25rem;background-color: #818a91;}
+table br + .badge {margin-top:1px;}
+table i.xi-info-o{font-size:14px;vertical-align: top}
+.layer {z-index:1000;display:none;position:absolute;top:0;left:0;border:1px solid #c2c2c2;background:#fff;padding:10px}
+.layer.on{display:block}
+.layer ul li {line-height:22px;}
+.comment-box{display:none}
+.comment-box.on{display:block}
+.btn{background:none;border:0;cursor:pointer}
+.btn_comment{margin-top:20px;font-size:15px}
+.btn_comment .xi-angle-down{display:inline-block}
+.btn_comment .xi-angle-up{display:none;}
+.btn_comment.on .xi-angle-down{display:none;}
+.btn_comment.on .xi-angle-up{display:inline-block;}
+table.dataTable span.highlight {
+  background-color: #FFFF88;
+}
+
+/* layout */
+body {background:#f7f4f1}
+.header {position:relative;background:#e10600;height:30px;display:flex;align-items: center;padding:5px 40px}
+.header  h1{font-size:18px;color:#fff;padding-left:4px}
+.container {position:relative;padding:10px 40px}
+.carBox {position:relative;}
+.carBox .dataTable{background: #fff;border-radius: 8px;padding: 5px 10px;box-sizing: border-box;border:1px solid #e0e0e0}
+.carBox table.dataTable.no-footer{border-bottom:1px solid #e0e0e0}
+.carBox .dataTables_filter{margin-bottom:4px}
+.carBox .dataTables_info{display:none}
+
+.trackTag__btn {position:relative;display:inline-block;vertical-align: top;padding:4px 10px 5px;border-radius:10px;font-size:13px;color:#fff;overflow:hidden;background:#00bcd4;border:0;transition: all .3s;margin:2px;cursor:pointer}
+.trackTag__btn:hover{color:#4a4a4a;box-shadow:0 3px 10px rgba(0, 188, 212,.2)}
+.on {display: block;}
+.off {display: none;}
+.fastlap {color:blue;font-weight:bold}
+.textBold{font-weight:bold}
+
+.alpine {color:#1692cc;font-weight:bold}
+.mcLaren {color:#fd7e03;font-weight:bold}
+.redbull {color:#376ec5;font-weight:bold}
+.mer {color:#3bf8d3;font-weight:bold}
+.tauri {color:#678dfe;font-weight:bold}
+.aston {color:#2c9b73;font-weight:bold}
+.ferrari {color:#e50020;font-weight:bold}
+.romeo {color:#5be753;font-weight:bold}
+.hass {color:#b6babe;font-weight:bold}
+.williams {color:#66c3ff;font-weight:bold}

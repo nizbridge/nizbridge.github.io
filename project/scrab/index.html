@@ -16,5 +16,21 @@
 <body>
     <input type="text">
     <button type="button">확인</button>
+<script>
+    const isDevToolsOpen = () => {
+        const threshold = 160;
+        const before = new Date();
+        debugger; // 개발자 도구가 열려 있을 때 시간을 지연시킴
+        const after = new Date();
+        return after - before > threshold;
+    };
+
+    if (isDevToolsOpen()) {
+    alert("개발자 도구가 열려 있습니다.");
+    } else {
+        alert("개발자 도구가 닫혀 있습니다.");
+    }
+
+    </script>
 </body>
 </html>

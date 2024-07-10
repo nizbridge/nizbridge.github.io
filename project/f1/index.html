@@ -1,20 +1,87 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-	<title>f1</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
-    <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="js/r.js"  charset="UTF-8"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/r.css?v=2021021701">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<title>F1 DATA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="css/datatable.css" />
+<script src="//code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="//bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+<script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.10.12/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+<script src="js/init.js"></script>
 </head>
 <body>
-    <label id="choiceNumber">숫자를 고르세요</label>
-    <input type="number" for="choiceNumber" class="inpNum">
-    <button type="button">확인</button>
-    <ul class="list">
-    </ul>
+	<div class="header">
+		<img src="imgs/f1_logo.svg" width="60"><h1>DATA</h1>
+	</div>
+	<div class="container">
+		<div class="filter-area">
+			<div class="form-group">
+				<label for="dropdown1">시즌</label>
+				<select id="dropdown1">
+					<!-- <option value="">전체</option> -->
+					<option value="F3_S1">F3_S1</option>
+					<option value="F3_S2">F3_S2</option>
+					<option value="F3_S3">F3_S3</option>
+					<option value="F4_S1">F4_S1</option>
+					<option value="F4_S2">F4_S2</option>	
+				</select>
+			</div>
+			<div class="trackTag">
+				<button type="button" class="trackTag__btn">전체</button>
+				<button type="button" class="trackTag__btn">Abu Dhabi</button>
+			</div>
+		</div>
+		
+		<div class="carBox">
+			<table id="kindom-data" class="display" cellspacing="0" width="100%">
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:8%">
+					<col style="width:10%">
+					<col style="width:25%">
+					<col style="width:25%">
+					<col style="width:11%">
+					<col style="width:11%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Season</th>
+						<th>Pos</th>
+						<th>Pts</th>
+						<th>Driver</th>
+						<th>Car</th>
+						<th>Win</th>
+						<th>Podium</th>
+					</tr>
+				</thead>
+			</table>
+
+			<!-- New table for track data -->
+			<table id="track-data" class="display off" style="width:100%">
+				<thead>
+					<tr>
+						<th>Track</th>
+						<th>Pos</th>
+						<th>Pts</th>
+						<th>Driver</th>
+						<th>Car</th>
+						<th>Time</th>
+						<th>FastestLap</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+
+
 </body>
 </html>
