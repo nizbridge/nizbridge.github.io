@@ -152,7 +152,7 @@ function loadCSVFiles(seasonFilePaths) {
                 allData[data.Season].push(data);
             });
         });
-        filterDataBySeason('F3_S1'); // 초기 로드시 F3_S6 데이터 로드
+        filterDataBySeason('F3_S1'); // 초기 로드시 F3_S1 데이터 로드
         generateTrackButtons('F3_S1'); // 초기 트랙 버튼 생성
     }).catch(error => {
         console.error('Error loading CSV files:', error);
@@ -204,7 +204,7 @@ function filterDataBySeason(season) {
     }
 
     currentSeason = season;
-    highlightFastestLap(filteredData); // 수정된 부분: highlightFastestLap 함수 호출
+    highlightFastestLap(filteredData); // highlightFastestLap 함수 호출
     calculateDriverPoints(filteredData);
 }
 
@@ -283,7 +283,6 @@ function highlightFastestLap(data) {
 
         if (hasFastestLap) {
             // FastestLap을 변경할 HTML 요소를 선택하여 색상을 변경
-            // $(`td:contains(${record.FastestLap})`).css('color', '#1c90fb');
             $(`td:contains(${record.FastestLap})`).addClass('fastlap');
         }
         if (teamName == 'Alpine') $(`td:contains(${record.ConstructorName})`).addClass('alpine');
@@ -307,7 +306,7 @@ function highlightFastestLap(data) {
 
 function displayTrackData(data) {
     $('#track-data').DataTable().clear().rows.add(data).draw();
-    // 수정된 부분: 테이블 데이터 갱신 후에 FastestLap을 처리하는 함수 호출
+    // 테이블 데이터 갱신 후에 FastestLap을 처리하는 함수 호출
     highlightFastestLap(data);
 }
 
