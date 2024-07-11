@@ -65,3 +65,4 @@ body {background:#f7f4f1}
 .williams {color:#66c3ff;font-weight:bold}
 #constructor-data{margin-top:10px}
 .trackTag__btn.selected{background:#1c90fb}
+.dataTables_wrapper{overflow:auto}
