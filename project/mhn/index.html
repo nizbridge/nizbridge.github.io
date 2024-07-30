@@ -1,73 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-	<title>MHN</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roguelike</title>
     <link rel="stylesheet" href="css/mhn.css">
-    <script src="js/mhn.json" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
 </head>
 <body>
-     <!-- 장비 부위 선택 폼 -->
-     <div id="equipmentSelector">
-        <h2>장비 부위 선택</h2>
-        <label for="selectedBodyPart">부위 선택:</label>
-        <select name="selectedBodyPart" id="selectedBodyPart">
-            <option value="head">머리</option>
-            <option value="torso">몸통</option>
-            <option value="chest">가슴</option>
-        </select>
-        <p>선택한 부위: <span id="selectedBodyPartLabel">부위 없음</span></p>
+    <h1>Roguelike</h1>
+    <div id="game-container">
+        <div id="game"></div>
+        <div id="player-info"></div>
     </div>
-
-    <!-- 부위별 장비 선택 폼 -->
-    <div id="bodyPartEquipment">
-        <h2>부위별 장비 선택</h2>
-        <label for="selectedEquipment">장비 선택:</label>
-        <select name="selectedEquipment" id="selectedEquipment">
-            <!-- 머리 부위 장비 옵션 -->
-            <optgroup label="머리">
-                <option value="headEquipment1">머리 장비 1</option>
-                <option value="headEquipment2">머리 장비 2</option>
-                <!-- 다른 머리 부위 장비 옵션들 추가 -->
-            </optgroup>
-            <!-- 몸통 부위 장비 옵션 -->
-            <optgroup label="몸통">
-                <option value="torsoEquipment1">몸통 장비 1</option>
-                <option value="torsoEquipment2">몸통 장비 2</option>
-                <!-- 다른 몸통 부위 장비 옵션들 추가 -->
-            </optgroup>
-            <!-- 가슴 부위 장비 옵션 -->
-            <optgroup label="가슴">
-                <option value="chestEquipment1">가슴 장비 1</option>
-                <option value="chestEquipment2">가슴 장비 2</option>
-                <!-- 다른 가슴 부위 장비 옵션들 추가 -->
-            </optgroup>
-        </select>
-    </div>
-
-    <!-- 스킬 빌더 섹션 -->
-    <div id="skillBuilder">
-        <h2>스킬 빌더</h2>
-        <!-- 장비에 따른 스킬 목록 -->
-        <div id="equipmentSkills">
-            <h3>부위에 따른 스킬 목록:</h3>
-            <ul id="skillList"></ul>
-        </div>
-        <input type="button" value="빌드 추가" id="addBuildButton">
-    </div>
-
-    <!-- 빌드 목록 섹션 -->
-    <div id="builderResult">
-        <h2>빌드 목록</h2>
-        <ul id="buildList"></ul>
-    </div>
-
-    <script src="js/mhn.js"  charset="UTF-8"></script>
+    <div id="log"></div>
+    <script src="js/mhn.js"></script>
 </body>
 </html>
