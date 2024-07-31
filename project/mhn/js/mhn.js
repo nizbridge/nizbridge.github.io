@@ -57,7 +57,6 @@ function createVTunnel(y1, y2, x) {
     }
 }
 
-
 function generateMap() {
     gameMap = [];
     monsters = [];
@@ -135,8 +134,6 @@ function generateMonsters() {
     }
 }
 
-
-
 function drawMap() {
     let gameDiv = document.getElementById('game');
     gameDiv.innerHTML = '';
@@ -195,13 +192,14 @@ function movePlayer(dx, dy) {
             }
 
             gameMap[player.y][player.x] = PLAYER;
-
+            
             // Set canDescend flag if on stairs
             if (destination === STAIRS) {
                 canDescend = true;
                 logMessage(`You are on stairs. Press '>' to move to the next floor.`);
             } else {
                 canDescend = false; // Reset flag if player moves off stairs
+
             }
         } else if (destination === 'a') {
             let monster = monsters.find(m => m.x === newX && m.y === newY);
@@ -215,6 +213,7 @@ function movePlayer(dx, dy) {
                     gameMap[monster.y][monster.x] = FLOOR;
                     monsters = monsters.filter(m => m !== monster);
                     player.experience += 1; // Gain experience for killing a monster
+
                     if (player.experience >= player.level * 10) {
                         player.experience -= player.level * 10;
                         player.level += 1;
@@ -222,12 +221,14 @@ function movePlayer(dx, dy) {
                         player.defense += 1;
                         player.maxHealth += 1;
                         player.health = player.maxHealth; // Fully heal on level up
+
                         logMessage(`Player leveled up to level ${player.level}!`);
                     }
                 }
                 if (player.health <= 0) {
                     logMessage(`Player is dead. Game over.`);
                     document.removeEventListener('keydown', handleKeydown);
+                    showGameOver();
                 }
             }
         }
@@ -255,6 +256,7 @@ function moveMonsters() {
                 if (player.health <= 0) {
                     logMessage(`Player is dead. Game over.`);
                     document.removeEventListener('keydown', handleKeydown);
+                    showGameOver();
                 }
             } else if (gameMap[newY][newX] === FLOOR) {
                 gameMap[monster.y][monster.x] = FLOOR;
@@ -308,6 +310,49 @@ function handleKeydown(event) {
             updatePlayerInfo();
             break;
     }
+}
+
+
+function calculateScore() {
+    return (floor * 5) + (player.level * 10) + player.experience;
+}
+
+function showGameOver() {
+    let overlay = document.getElementById('game-over-overlay');
+    let scoreElement = document.getElementById('score');
+    let score = calculateScore();
+    scoreElement.innerHTML = `Your score: ${score}`;
+    overlay.style.display = 'flex';
+}
+
+function restartGame() {
+    let overlay = document.getElementById('game-over-overlay');
+    overlay.style.display = 'none';
+    
+    // 초기화
+    player = {
+        x: 1,
+        y: 1,
+        attack: 3,
+        defense: 1,
+        health: 10,
+        maxHealth: 10,
+        level: 1,
+        experience: 0
+    };
+    floor = 1;
+    restCount = 0; // Rest counter 초기화
+    canDescend = false; // Flag 초기화
+    
+    // 로그 초기화
+    let logDiv = document.getElementById('log');
+    logDiv.innerHTML = '';
+
+    generateMap();
+    drawMap();
+    updatePlayerInfo();
+    updateFloorInfo();
+    document.addEventListener('keydown', handleKeydown);
 }
 
 document.addEventListener('keydown', handleKeydown);
