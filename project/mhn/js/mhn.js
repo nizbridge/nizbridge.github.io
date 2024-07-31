@@ -7,13 +7,17 @@ const STAIRS = '>';
 const NUM_ROOMS = 10;
 const ROOM_MIN_SIZE = 3;
 const ROOM_MAX_SIZE = 8;
+const MONSTER_VISION_RADIUS = 8; // 몬스터가 플레이어를 인식하는 범위
 
 let player = {
     x: 1,
     y: 1,
     attack: 3,
     defense: 1,
-    health: 10
+    health: 10,
+    maxHealth: 10,
+    level: 1,
+    experience: 0
 };
 
 let gameMap = [];
@@ -21,6 +25,7 @@ let monsters = [];
 let floor = 1;
 let stairsPosition = { x: 0, y: 0 }; // Stairs position
 let canDescend = false; // Flag to determine if player is on stairs
+let restCount = 0; // Rest counter
 
 const MONSTER_TYPES = {
     'a': {
@@ -116,19 +121,17 @@ function placeStairs() {
 }
 
 function generateMonsters() {
-    let numMonsters = Math.floor(Math.random() * 3) + 1; // 1 to 3 monsters
+    let numMonsters = Math.floor(Math.random() * 4) + 3; // 3~6마리
     for (let i = 0; i < numMonsters; i++) {
-        let monster = {
-            ...MONSTER_TYPES['a'],
-            x: Math.floor(Math.random() * WIDTH),
-            y: Math.floor(Math.random() * HEIGHT)
-        };
-        while (gameMap[monster.y][monster.x] !== FLOOR) {
-            monster.x = Math.floor(Math.random() * WIDTH);
-            monster.y = Math.floor(Math.random() * HEIGHT);
+        let x = Math.floor(Math.random() * WIDTH);
+        let y = Math.floor(Math.random() * HEIGHT);
+        while (gameMap[y][x] !== FLOOR) {
+            x = Math.floor(Math.random() * WIDTH);
+            y = Math.floor(Math.random() * HEIGHT);
         }
-        monsters.push(monster);
-        gameMap[monster.y][monster.x] = 'a';
+        let monsterType = 'a';
+        monsters.push({ ...MONSTER_TYPES[monsterType], x: x, y: y });
+        gameMap[y][x] = monsterType;
     }
 }
 
@@ -164,7 +167,7 @@ function attack(attacker, defender) {
 
 function updatePlayerInfo() {
     let playerInfoDiv = document.getElementById('player-info');
-    playerInfoDiv.innerHTML = `Player Info\nAttack: ${player.attack}\nDefense: ${player.defense}\nHealth: ${player.health}`;
+    playerInfoDiv.innerHTML = `Player Info\nLevel: ${player.level}\nExperience: ${player.experience}\nAttack: ${player.attack}\nDefense: ${player.defense}\nHealth: ${player.health}/${player.maxHealth}`;
 }
 
 function updateFloorInfo() {
@@ -182,7 +185,7 @@ function movePlayer(dx, dy) {
 
         if (destination === FLOOR || destination === STAIRS) {
             // Move player to new position
-            gameMap[player.y][player.x] = FLOOR;
+            gameMap[player.y][player.x] = (player.x === stairsPosition.x && player.y === stairsPosition.y) ? STAIRS : FLOOR;
             player.x = newX;
             player.y = newY;
 
@@ -211,6 +214,16 @@ function movePlayer(dx, dy) {
                     logMessage(`${monster.name} is dead.`);
                     gameMap[monster.y][monster.x] = FLOOR;
                     monsters = monsters.filter(m => m !== monster);
+                    player.experience += 1; // Gain experience for killing a monster
+                    if (player.experience >= player.level * 10) {
+                        player.experience -= player.level * 10;
+                        player.level += 1;
+                        player.attack += 1;
+                        player.defense += 1;
+                        player.maxHealth += 1;
+                        player.health = player.maxHealth; // Fully heal on level up
+                        logMessage(`Player leveled up to level ${player.level}!`);
+                    }
                 }
                 if (player.health <= 0) {
                     logMessage(`Player is dead. Game over.`);
@@ -218,11 +231,40 @@ function movePlayer(dx, dy) {
                 }
             }
         }
+        moveMonsters();
         drawMap();
         updatePlayerInfo(); // Update player info after each move
     }
 }
 
+function moveMonsters() {
+    for (let monster of monsters) {
+        let distanceX = player.x - monster.x;
+        let distanceY = player.y - monster.y;
+
+        if (Math.abs(distanceX) <= MONSTER_VISION_RADIUS && Math.abs(distanceY) <= MONSTER_VISION_RADIUS) {
+            let dx = distanceX > 0 ? 1 : (distanceX < 0 ? -1 : 0);
+            let dy = distanceY > 0 ? 1 : (distanceY < 0 ? -1 : 0);
+            
+            let newX = monster.x + dx;
+            let newY = monster.y + dy;
+
+            if (newX === player.x && newY === player.y) {
+                let monsterDamage = attack(monster, player);
+                logMessage(`${monster.name} attacks Player for ${monsterDamage} damage.`);
+                if (player.health <= 0) {
+                    logMessage(`Player is dead. Game over.`);
+                    document.removeEventListener('keydown', handleKeydown);
+                }
+            } else if (gameMap[newY][newX] === FLOOR) {
+                gameMap[monster.y][monster.x] = FLOOR;
+                monster.x = newX;
+                monster.y = newY;
+                gameMap[monster.y][monster.x] = 'a';
+            }
+        }
+    }
+}
 
 function handleKeydown(event) {
     switch (event.key) {
@@ -250,6 +292,20 @@ function handleKeydown(event) {
             } else {
                 logMessage(`You must be on stairs to descend.`);
             }
+            break;
+        case '.':
+            // Resting
+            restCount++;
+            if (restCount >= 5) {
+                restCount = 0;
+                if (player.health < player.maxHealth) {
+                    player.health = Math.min(player.maxHealth, player.health + 1);
+                    logMessage(`Player rests and heals 1 health.`);
+                }
+            }
+            moveMonsters();
+            drawMap();
+            updatePlayerInfo();
             break;
     }
 }
