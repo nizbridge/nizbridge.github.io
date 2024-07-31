@@ -3,6 +3,7 @@ const HEIGHT = 30;
 const PLAYER = '@';
 const WALL = '#';
 const FLOOR = '.';
+const STAIRS = '>';
 const NUM_ROOMS = 10;
 const ROOM_MIN_SIZE = 3;
 const ROOM_MAX_SIZE = 8;
@@ -17,6 +18,9 @@ let player = {
 
 let gameMap = [];
 let monsters = [];
+let floor = 1;
+let stairsPosition = { x: 0, y: 0 }; // Stairs position
+let canDescend = false; // Flag to determine if player is on stairs
 
 const MONSTER_TYPES = {
     'a': {
@@ -47,6 +51,7 @@ function createVTunnel(y1, y2, x) {
         gameMap[y][x] = FLOOR;
     }
 }
+
 
 function generateMap() {
     gameMap = [];
@@ -90,8 +95,24 @@ function generateMap() {
         }
     }
 
+    placeStairs();
     generateMonsters();
     gameMap[player.y][player.x] = PLAYER;
+    canDescend = false; // Reset flag
+}
+
+function placeStairs() {
+    let room = gameMap.find(row => row.includes(FLOOR));
+    if (room) {
+        let x = Math.floor(Math.random() * WIDTH);
+        let y = Math.floor(Math.random() * HEIGHT);
+        while (gameMap[y][x] !== FLOOR) {
+            x = Math.floor(Math.random() * WIDTH);
+            y = Math.floor(Math.random() * HEIGHT);
+        }
+        gameMap[y][x] = STAIRS;
+        stairsPosition = { x, y }; // Save the stairs position
+    }
 }
 
 function generateMonsters() {
@@ -110,6 +131,8 @@ function generateMonsters() {
         gameMap[monster.y][monster.x] = 'a';
     }
 }
+
+
 
 function drawMap() {
     let gameDiv = document.getElementById('game');
@@ -144,6 +167,12 @@ function updatePlayerInfo() {
     playerInfoDiv.innerHTML = `Player Info\nAttack: ${player.attack}\nDefense: ${player.defense}\nHealth: ${player.health}`;
 }
 
+function updateFloorInfo() {
+    let floorDiv = document.getElementById('floor-number');
+    floorDiv.innerHTML = floor;
+}
+
+
 function movePlayer(dx, dy) {
     let newX = player.x + dx;
     let newY = player.y + dy;
@@ -151,11 +180,26 @@ function movePlayer(dx, dy) {
     if (newX >= 0 && newX < WIDTH && newY >= 0 && newY < HEIGHT) {
         let destination = gameMap[newY][newX];
 
-        if (destination === FLOOR) {
+        if (destination === FLOOR || destination === STAIRS) {
+            // Move player to new position
             gameMap[player.y][player.x] = FLOOR;
             player.x = newX;
             player.y = newY;
+
+            // If the player moves off the stairs, restore the stairs tile
+            if (player.x !== stairsPosition.x || player.y !== stairsPosition.y) {
+                gameMap[stairsPosition.y][stairsPosition.x] = STAIRS;
+            }
+
             gameMap[player.y][player.x] = PLAYER;
+
+            // Set canDescend flag if on stairs
+            if (destination === STAIRS) {
+                canDescend = true;
+                logMessage(`You are on stairs. Press '>' to move to the next floor.`);
+            } else {
+                canDescend = false; // Reset flag if player moves off stairs
+            }
         } else if (destination === 'a') {
             let monster = monsters.find(m => m.x === newX && m.y === newY);
             if (monster) {
@@ -194,6 +238,19 @@ function handleKeydown(event) {
         case 'ArrowRight':
             movePlayer(1, 0);
             break;
+        case '>':
+            // Only allow descending if on stairs
+            if (canDescend) {
+                floor++;
+                updateFloorInfo();
+                generateMap();
+                drawMap();
+                updatePlayerInfo(); // Update player info after map generation
+                logMessage(`Descending to floor ${floor}.`);
+            } else {
+                logMessage(`You must be on stairs to descend.`);
+            }
+            break;
     }
 }
 
@@ -202,3 +259,4 @@ document.addEventListener('keydown', handleKeydown);
 generateMap();
 drawMap();
 updatePlayerInfo(); // Initial update of player info
+updateFloorInfo(); // Initial update of floor info
