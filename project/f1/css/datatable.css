@@ -37,8 +37,12 @@ table.dataTable span.highlight {
 
 /* layout */
 body {background:#f7f4f1}
-.header {position:relative;background:#e10600;height:30px;display:flex;align-items: center;padding:5px 40px}
+.header {position:relative;background:#e10600;height:30px;display:flex;align-items: center;padding:5px 40px;justify-content: space-between;}
 .header  h1{font-size:18px;color:#fff;padding-left:4px}
+.header .btnbox {display:flex;align-items: center;gap:10px;}
+.header .btnbox > a {text-decoration: none;color:#fff;font-weight:bold;font-size:14px;padding: 4px;border-radius: 4px;background: none;color: #fff;border: 1px solid #fff;}
+.header .btnbox > a.selected{color:#4a4a4a;background:#fff}
+.header .btnbox > a:hover{box-shadow:0 3px 9px rgba(255,255,255,.3)}
 .container {position:relative;padding:10px 40px}
 .carBox {position:relative;}
 .carBox .dataTable{background: #fff;border-radius: 8px;padding: 5px 10px;box-sizing: border-box;border:1px solid #e0e0e0}
@@ -66,3 +70,10 @@ body {background:#f7f4f1}
 #constructor-data{margin-top:10px}
 .trackTag__btn.selected{background:#1c90fb}
 .dataTables_wrapper{overflow:auto}
+
+#tables-container {display:flex;flex-wrap:wrap;gap:10px}
+.tableBox{width:calc(33.3333% - 10px);border: 1px solid #4a4a4a;border-radius: 6px;overflow: hidden;border-bottom: 0;}
+.tableBox > h2 {display:block;margin:0;font-size:14px;color:#000;height:30px;background:#eaeaea;text-align:center;font-weight:900;line-height:30px;overflow:hidden;border-bottom:1px solid #4a4a4a}
+.dataTables_info{display:none}
+.dataTables_wrapper{display:flex}
+.tableBox .dataTable{width:100% !important}
