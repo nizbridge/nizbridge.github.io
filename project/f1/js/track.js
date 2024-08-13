@@ -164,14 +164,18 @@ $(document).ready(function() {
             return (isNaN(timeA) ? Infinity : timeA) - (isNaN(timeB) ? Infinity : timeB);
         });
 
-        // 상위 5개만 선택
+        // 상위 10개만 선택
         let top10Data = sortedData.slice(0, 5).map((record, index) => {
+            let fastestLapTime = formatTime(parseTime(record.FastestLap));
+            let gap = index === 0 ? '' :
+                      ` (+${formatGap(parseTime(record.FastestLap) - parseTime(sortedData[0].FastestLap))})`;
+
             return {
                 Rank: index + 1,
                 Season: record.Season,
                 PlayerName: record.PlayerName,
                 ConstructorName: record.ConstructorName,
-                FastestLap: formatTime(parseTime(record.FastestLap))
+                FastestLap: `${fastestLapTime}${gap}`
             };
         });
 
@@ -204,7 +208,6 @@ $(document).ready(function() {
                            parseInt(minutes, 10) * 60 + 
                            parseFloat(seconds);
 
-        console.log(`Parsed time - ${timeString}: ${totalSeconds} seconds`);
         return totalSeconds;
     }
 
@@ -216,5 +219,10 @@ $(document).ready(function() {
         let secs = (seconds % 60).toFixed(3);
 
         return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(5, '0')}`;
+    }
+
+    function formatGap(seconds) {
+        if (isNaN(seconds)) return "N/A";
+        return seconds.toFixed(3); // 초 단위로 포맷 (소수점 3자리)
     }
 });

@@ -72,7 +72,8 @@ body {background:#f7f4f1}
 .dataTables_wrapper{overflow:auto}
 
 #tables-container {display:flex;flex-wrap:wrap;gap:10px}
-.tableBox{width:calc(33.3333% - 10px);border: 1px solid #4a4a4a;border-radius: 6px;overflow: hidden;border-bottom: 0;}
+.tableBox{width:calc(33.3333% - 10px);border: 1px solid #4a4a4a;border-radius: 6px;overflow: hidden}
+.tableBox table.dataTable.no-footer{border:0}
 .tableBox > h2 {display:block;margin:0;font-size:14px;color:#000;height:30px;background:#eaeaea;text-align:center;font-weight:900;line-height:30px;overflow:hidden;border-bottom:1px solid #4a4a4a}
 .dataTables_info{display:none}
 .dataTables_wrapper{display:flex}
