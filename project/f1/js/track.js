@@ -139,7 +139,7 @@ $(document).ready(function() {
                             <tr>
                                 <th>Rank</th>
                                 <th>Season</th>
-                                <th>PlayerName</th>
+                                <th>Driver</th>
                                 
                                 <th>FastestLap</th>
                             </tr>
