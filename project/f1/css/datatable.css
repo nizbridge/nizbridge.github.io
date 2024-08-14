@@ -78,3 +78,4 @@ body {background:#f7f4f1}
 .dataTables_info{display:none}
 .dataTables_wrapper{display:flex}
 .tableBox .dataTable{width:100% !important}
+table.dataTable tbody td {white-space: nowrap;}
