@@ -86,4 +86,4 @@ table.dataTable tbody td {white-space: nowrap;}
 .mainDialog__con h2{padding:5px 0 0 20px}
 #popup-leaderboard_wrapper {overflow-y:auto;height:calc(100% - 40px);}
 #popup-leaderboard_wrapper thead{position:sticky;top:0;background:#fff}
-.closePopupBtn {position:absolute;top:5px;right:5px;border:0;background:none;}
+.closePopupBtn {position:absolute;top:5px;right:5px;border:0;background:none;cursor:pointer}
