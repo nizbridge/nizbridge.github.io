@@ -15,23 +15,35 @@
 <script src="//bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/plug-ins/1.10.12/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
-<!-- <script src="js/init.js"></script> -->
 <script src="js/track.js"></script>
 </head>
 <body>
-	<div class="header">
-		<h1><img src="imgs/f1_logo.svg" width="60">DATA</h1>
-		<div class="btnbox">
-			<a href="index.html">시즌기록</a>
-			<a href="track.html" class="selected">트랙기록</a>
-		</div>
-	</div>
-	<div class="container">
-		<div id="tables-container"></div>
-	
-		
-	</div>
-
-
+    <div class="header">
+        <h1><img src="imgs/f1_logo.svg" width="60">DATA</h1>
+        <div class="btnbox">
+            <a href="index.html">시즌기록</a>
+            <a href="track.html" class="selected">트랙기록</a>
+        </div>
+    </div>
+    <div class="container">
+        <div id="tables-container"></div>
+    </div>
+    <div class="mainDialog" style="display:none">
+        <div class="mainDialog__con">
+            <button type="button" class="closePopupBtn">Close</button>
+			<table id="popup-leaderboard" class="display">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Season</th>
+                        <th>Driver</th>
+                        <th>FastestLap</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <!-- 팝업에 전체 트랙 기록 테이블이 여기에 추가됩니다. -->
+        </div>
+    </div>
 </body>
 </html>

@@ -1,3 +1,5 @@
+var startSeason = 'JJ_S1';
+
 $(document).ready(function() {
     const seasonFilePaths = {
         'F3_S1': [
@@ -60,6 +62,10 @@ $(document).ready(function() {
         'F4_S2': [
             'data/f4_s2/event_199644_tier_1_results.csv',
             'data/f4_s2/event_199645_tier_1_results.csv',
+        ],
+        'JJ_S1': [
+            'data/jj_s1/event_623042_tier_1_results.csv',
+            'data/jj_s1/event_623043_tier_1_results.csv',
         ]
     };
     loadCSVFiles(seasonFilePaths);
@@ -147,7 +153,7 @@ let currentSeason = '';
 // 전체 테이블 표시 함수
 function showFullTable(season) {
     if (season === '') {
-        season = 'F3_S1'; // 기본 시즌 설정 (임의로 F3_S1 선택)
+        season = startSeason; // 기본 시즌 설정 (임의로 F3_S1 선택)
     }
     $('.trackTag__btn').eq(0).addClass('selected');
 
@@ -180,9 +186,9 @@ function loadCSVFiles(seasonFilePaths) {
                 allData[data.Season].push(data);
             });
         });
-        filterDataBySeason('F3_S1'); // 초기 로드시 F3_S1 데이터 로드
-        filterDataByConstructor('F3_S1');
-        generateTrackButtons('F3_S1'); // 초기 트랙 버튼 생성
+        filterDataBySeason(startSeason); // 초기 로드시 F3_S1 데이터 로드
+        filterDataByConstructor(startSeason);
+        generateTrackButtons(startSeason); // 초기 트랙 버튼 생성
         $('.trackTag__btn').eq(0).addClass('selected');
     }).catch(error => {
         console.error('Error loading CSV files:', error);
@@ -402,7 +408,7 @@ function highlightFastestLap(data) {
         else if (teamName == 'Haas') $(`td:contains(${record.ConstructorName})`).addClass('hass');
         else if (teamName == 'Williams') $(`td:contains(${record.ConstructorName})`).addClass('williams');
 
-        if (driverName == '0x5e0x5e' || driverName == 'kkulkkule' || driverName == 'dev-Tobby' || driverName == 'dayofsoul') {
+        if (driverName == '0x5e0x5e' || driverName == 'kkulkkule' || driverName == 'dev-Tobby' || driverName == 'dayofsoul' || driverName == 'Naaz82' || driverName == 'jjk') {
             $(`td:contains(${record.PlayerName})`).addClass('textBold');
         } 
         
