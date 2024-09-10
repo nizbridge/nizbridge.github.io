@@ -64,5 +64,6 @@ const seasonFilePaths = {
     'JJ_S1': [
         'data/jj_s1/event_623042_tier_1_results.csv',
         'data/jj_s1/event_623043_tier_1_results.csv',
+        'data/jj_s1/event_623044_tier_1_results.csv'
     ]
 };
