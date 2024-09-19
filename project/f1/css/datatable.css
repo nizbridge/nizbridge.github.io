@@ -87,3 +87,16 @@ table.dataTable tbody td {white-space: nowrap;}
 #popup-leaderboard_wrapper {overflow-y:auto;height:calc(100% - 40px);}
 #popup-leaderboard_wrapper thead{position:sticky;top:0;background:#fff}
 .closePopupBtn {position:absolute;top:5px;right:5px;border:0;background:none;cursor:pointer}
+
+@media only screen and (max-width: 800px){
+  .tableBox {
+    width:calc(50% - 10px);
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .tableBox {
+    width:calc(100%);
+  }
+}
+
