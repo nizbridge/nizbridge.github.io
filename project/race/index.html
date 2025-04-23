@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<title>RACE GOGO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css" />
+<script src="//code.jquery.com/jquery-1.12.3.min.js"></script>
+<script type="module" src="js/init.js"></script>
+</head>
+<body>
+	<div id="ui-container">
+		<div id="input-section">
+			<h2>Enter 20 Company Names:</h2>
+			<textarea id="companyNames" rows="10" cols="40" placeholder="Company 1
+	Company 2
+	...
+	Company 20"></textarea>
+			<div class="button-group">
+				 <button id="autoGenerateNames">Auto-Generate Names</button>
+				 <button id="submitNames">Prepare Race</button>
+			</div>
+		</div>
+	
+		<div id="controls-section" class="hidden">
+			 <p>Get Ready!</p>
+			<!-- Start button enabled based on preparation only -->
+			<button id="startRace" disabled>Start Race!</button>
+			<button id="resetRace">Reset Race</button>
+			<button id="changeNames">Change Names</button>
+		</div>
+	
+		 <div id="winner-display" class="hidden">
+			<h2>🏆 WINNERS 🏆</h2>
+			<ol>
+				<li id="winner1">🥇 1st: ---</li>
+				<li id="winner2">🥈 2nd: ---</li>
+				<li id="winner3">🥉 3rd: ---</li>
+			</ol>
+		</div>
+	</div>
+	
+	<!-- Removed loading-overlay div -->
+	
+	<div id="raceContainer"></div>
+
+
+</body>
+</html>
