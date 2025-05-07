@@ -86,3 +86,13 @@ h1 {
     font-size: 1.25rem;
   }
 }
+
+@keyframes flash {
+  0% { color: red; transform: scale(1); }
+  100% { color: orange; transform: scale(1.1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); background-color: #444; }
+  100% { transform: scale(1.05); background-color: #666; }
+}

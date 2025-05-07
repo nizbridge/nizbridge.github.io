@@ -30,6 +30,8 @@ function createBoard() {
   cells[3][4].classList.add('black');
   cells[4][3].classList.add('black');
 
+  currentPlayer = 'black';
+  statusText.textContent = `⚫ 흑돌 차례`;
   updateHints();
   updateScore();
 }
@@ -48,7 +50,7 @@ function handleClick(x, y) {
   }
 
   currentPlayer = currentPlayer === 'black' ? 'white' : 'black';
-  statusText.textContent = `${currentPlayer === 'black' ? '흑돌' : '백돌'} 차례`;
+  statusText.textContent = `${currentPlayer === 'black' ? '⚫ 흑돌' : '⚪ 백돌'} 차례`;
 
   updateScore();
   updateHints();
@@ -85,28 +87,6 @@ function getFlippedStones(x, y, player) {
   return flipped;
 }
 
-function updateHints() {
-  // 힌트 초기화
-  for (let row of cells) {
-    for (let cell of row) {
-      cell.classList.remove('hint');
-    }
-  }
-
-  // 새 힌트 표시
-  for (let y = 0; y < SIZE; y++) {
-    for (let x = 0; x < SIZE; x++) {
-      const cell = cells[y][x];
-      if (!cell.classList.contains('black') && !cell.classList.contains('white')) {
-        const flips = getFlippedStones(x, y, currentPlayer);
-        if (flips.length > 0) {
-          cell.classList.add('hint');
-        }
-      }
-    }
-  }
-}
-
 function updateScore() {
   let black = 0, white = 0;
   for (let row of cells) {
@@ -119,9 +99,93 @@ function updateScore() {
   whiteCountEl.textContent = white;
 }
 
+function updateHints() {
+  for (let row of cells) {
+    for (let cell of row) {
+      cell.classList.remove('hint');
+    }
+  }
+
+  const hasMoves = highlightValidMoves(currentPlayer);
+  const opponent = currentPlayer === 'black' ? 'white' : 'black';
+  const opponentHasMoves = hasValidMove(opponent);
+
+  if (!hasMoves && !opponentHasMoves) {
+    finishGame();
+  } else if (!hasMoves && opponentHasMoves) {
+    statusText.textContent = `${currentPlayer === 'black' ? '⚫ 흑돌' : '⚪ 백돌'}는 둘 곳이 없습니다. 턴을 넘깁니다.`;
+    currentPlayer = opponent;
+    setTimeout(() => {
+      statusText.textContent = `${currentPlayer === 'black' ? '⚫ 흑돌' : '⚪ 백돌'} 차례`;
+      updateHints();
+    }, 1000);
+  }
+}
+
+function highlightValidMoves(player) {
+  let found = false;
+  for (let y = 0; y < SIZE; y++) {
+    for (let x = 0; x < SIZE; x++) {
+      const cell = cells[y][x];
+      if (!cell.classList.contains('black') && !cell.classList.contains('white')) {
+        const flips = getFlippedStones(x, y, player);
+        if (flips.length > 0) {
+          if (player === currentPlayer) {
+            cell.classList.add('hint');
+          }
+          found = true;
+        }
+      }
+    }
+  }
+  return found;
+}
+
+function hasValidMove(player) {
+  for (let y = 0; y < SIZE; y++) {
+    for (let x = 0; x < SIZE; x++) {
+      const cell = cells[y][x];
+      if (!cell.classList.contains('black') && !cell.classList.contains('white')) {
+        const flips = getFlippedStones(x, y, player);
+        if (flips.length > 0) return true;
+      }
+    }
+  }
+  return false;
+}
+
+function finishGame() {
+  updateScore();
+  let black = parseInt(blackCountEl.textContent);
+  let white = parseInt(whiteCountEl.textContent);
+
+  let result = '';
+  if (black > white) {
+    result = '⚫ 흑돌 승리!';
+  } else if (white > black) {
+    result = '⚪ 백돌 승리!';
+  } else {
+    result = '무승부!';
+  }
+
+  statusText.innerHTML = `<span style="font-size: 1.5em; animation: flash 1s infinite alternate;">🎉 게임 종료! ${result}</span>`;
+  
+  // 클릭 비활성화
+  for (let row of cells) {
+    for (let cell of row) {
+      const newCell = cell.cloneNode(true);
+      cell.replaceWith(newCell);
+    }
+  }
+
+  // 리셋 버튼 강조
+  resetBtn.style.display = 'inline-block';
+  resetBtn.style.animation = 'pulse 1s infinite alternate';
+}
+
+// 리셋 버튼 클릭 시
 resetBtn.addEventListener('click', () => {
-  currentPlayer = 'black';
-  statusText.textContent = `흑돌 차례`;
+  resetBtn.style.animation = 'none';
   createBoard();
 });
 
