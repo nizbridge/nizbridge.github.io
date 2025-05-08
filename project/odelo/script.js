@@ -4,8 +4,9 @@ const blackCountEl = document.getElementById('black-count');
 const whiteCountEl = document.getElementById('white-count');
 const resetBtn = document.getElementById('reset');
 
-let mode = 'human'; // 기본은 사람 vs 사람
+let mode = 'human';
 let isAIMode = false;
+let aiLevel = 1;
 
 
 const SIZE = 8;
@@ -17,8 +18,20 @@ function startGame(selectedMode) {
   isAIMode = (mode === 'ai');
 
   document.getElementById('mode-select').style.display = 'none';
-  document.getElementById('game-container').style.display = 'block';
 
+  if (isAIMode) {
+    document.getElementById('ai-level-select').style.display = 'block';
+  } else {
+    document.getElementById('game-container').style.display = 'flex';
+    createBoard();
+  }
+}
+
+// 난이도 선택
+function startGameWithLevel(level) {
+  aiLevel = level;
+  document.getElementById('ai-level-select').style.display = 'none';
+  document.getElementById('game-container').style.display = 'flex';
   createBoard();
 }
 
@@ -229,23 +242,59 @@ function makeAIMove() {
     return;
   }
 
-  // 단순 전략: 뒤집는 돌 개수가 많은 수 선택
-  moves.sort((a, b) => b.flips.length - a.flips.length);
-  const best = moves[0]; // 혹은 moves[Math.floor(Math.random() * moves.length)]
+  let selectedMove;
+  switch (aiLevel) {
+    case 1:
+      selectedMove = moves[Math.floor(Math.random() * moves.length)];
+      break;
+    case 2:
+      moves.sort((a, b) => b.flips.length - a.flips.length);
+      selectedMove = moves[0];
+      break;
+    case 3:
+      moves.sort((a, b) => {
+        const centerScore = (m) => -Math.abs(3.5 - m.x) - Math.abs(3.5 - m.y);
+        return centerScore(b) - centerScore(a);
+      });
+      selectedMove = moves[0];
+      break;
+    case 4:
+      selectedMove = moves.find(m => isEdge(m.x, m.y)) || moves[0];
+      break;
+    case 5:
+      selectedMove =
+        moves.find(m => isCorner(m.x, m.y)) ||
+        moves.find(m => isEdge(m.x, m.y)) ||
+        moves.find(m => isCenter(m.x, m.y)) ||
+        moves[0];
+      break;
+  }
 
-  const cell = cells[best.y][best.x];
+  // 실행
+  const cell = cells[selectedMove.y][selectedMove.x];
   cell.classList.add('white');
-  for (const [fx, fy] of best.flips) {
+  for (const [fx, fy] of selectedMove.flips) {
     cells[fy][fx].classList.remove('black', 'white');
     cells[fy][fx].classList.add('white');
   }
 
   currentPlayer = 'black';
   statusText.textContent = `⚫ 흑돌 차례`;
-
   updateScore();
   updateHints();
 }
+
+// 위치 판단 보조 함수
+function isCorner(x, y) {
+  return (x === 0 || x === 7) && (y === 0 || y === 7);
+}
+function isEdge(x, y) {
+  return (x === 0 || x === 7 || y === 0 || y === 7) && !isCorner(x, y);
+}
+function isCenter(x, y) {
+  return x >= 2 && x <= 5 && y >= 2 && y <= 5;
+}
+
 
 // 리셋 버튼 클릭 시
 resetBtn.addEventListener('click', () => {

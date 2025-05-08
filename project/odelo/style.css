@@ -97,6 +97,17 @@ h1 {
   100% { transform: scale(1.05); background-color: #666; }
 }
 
+#game-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 #mode-select {
   text-align: center;
   padding: 2rem;
@@ -107,3 +118,5 @@ h1 {
   padding: 1rem 2rem;
   cursor: pointer;
 }
+
+.levelSelector button {width:2rem;height:2rem}

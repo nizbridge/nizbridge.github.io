@@ -20,6 +20,18 @@
     <div id="board" class="board"></div>
     <button id="reset">다시 시작</button>
   </div>
+  <div id="ai-level-select" style="display:none; text-align:center;">
+    <h2>AI 난이도 선택</h2>
+    <p>1 (쉬움) ~ 5 (어려움)</p>
+    <div class="levelSelector">
+      <button onclick="startGameWithLevel(1)">1</button>
+      <button onclick="startGameWithLevel(2)">2</button>
+      <button onclick="startGameWithLevel(3)">3</button>
+      <button onclick="startGameWithLevel(4)">4</button>
+      <button onclick="startGameWithLevel(5)">5</button>
+    </div>
+  </div>
+  
 
   <script src="script.js"></script>
 </body>
