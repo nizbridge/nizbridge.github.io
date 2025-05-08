@@ -4,9 +4,24 @@ const blackCountEl = document.getElementById('black-count');
 const whiteCountEl = document.getElementById('white-count');
 const resetBtn = document.getElementById('reset');
 
+let mode = 'human'; // 기본은 사람 vs 사람
+let isAIMode = false;
+
+
 const SIZE = 8;
 let currentPlayer = 'black';
 let cells = [];
+
+function startGame(selectedMode) {
+  mode = selectedMode;
+  isAIMode = (mode === 'ai');
+
+  document.getElementById('mode-select').style.display = 'none';
+  document.getElementById('game-container').style.display = 'block';
+
+  createBoard();
+}
+
 
 function createBoard() {
   board.innerHTML = '';
@@ -54,6 +69,10 @@ function handleClick(x, y) {
 
   updateScore();
   updateHints();
+
+  if (isAIMode && currentPlayer === 'white') {
+    setTimeout(makeAIMove, 500);  // AI가 0.5초 뒤 자동 진행
+  }
 }
 
 function getFlippedStones(x, y, player) {
@@ -183,10 +202,55 @@ function finishGame() {
   resetBtn.style.animation = 'pulse 1s infinite alternate';
 }
 
+function makeAIMove() {
+  const moves = [];
+
+  for (let y = 0; y < SIZE; y++) {
+    for (let x = 0; x < SIZE; x++) {
+      const cell = cells[y][x];
+      if (!cell.classList.contains('black') && !cell.classList.contains('white')) {
+        const flips = getFlippedStones(x, y, 'white');
+        if (flips.length > 0) {
+          moves.push({ x, y, flips });
+        }
+      }
+    }
+  }
+
+  if (moves.length === 0) {
+    const hasHumanMoves = hasValidMove('black');
+    if (!hasHumanMoves) {
+      finishGame();
+    } else {
+      currentPlayer = 'black';
+      statusText.textContent = `⚫ 흑돌 차례`;
+      updateHints();
+    }
+    return;
+  }
+
+  // 단순 전략: 뒤집는 돌 개수가 많은 수 선택
+  moves.sort((a, b) => b.flips.length - a.flips.length);
+  const best = moves[0]; // 혹은 moves[Math.floor(Math.random() * moves.length)]
+
+  const cell = cells[best.y][best.x];
+  cell.classList.add('white');
+  for (const [fx, fy] of best.flips) {
+    cells[fy][fx].classList.remove('black', 'white');
+    cells[fy][fx].classList.add('white');
+  }
+
+  currentPlayer = 'black';
+  statusText.textContent = `⚫ 흑돌 차례`;
+
+  updateScore();
+  updateHints();
+}
+
 // 리셋 버튼 클릭 시
 resetBtn.addEventListener('click', () => {
-  resetBtn.style.animation = 'none';
-  createBoard();
+  document.getElementById('game-container').style.display = 'none';
+  document.getElementById('mode-select').style.display = 'block';
 });
 
 createBoard();
