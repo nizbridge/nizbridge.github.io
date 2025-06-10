@@ -105,9 +105,13 @@ $(document).ready(function() {
         // 중복된 드라이버 이름을 필터링하여 가장 좋은 기록만 남김
         let uniqueDrivers = {};
         sortedData = sortedData.filter(record => {
+            // if (record.Season == "Time Trial") { // time trial 기록을 제외
+            //     return false;
+            // }
             if (uniqueDrivers[record.PlayerName]) {
                 return false;
-            } else {
+            }
+            else {
                 uniqueDrivers[record.PlayerName] = true;
                 return true;
             }
@@ -214,9 +218,13 @@ $(document).ready(function() {
         // 중복된 드라이버 이름을 필터링하여 가장 좋은 기록만 남김
         let uniqueDrivers = {};
         sortedData = sortedData.filter(record => {
+            // if (record.Season == "Time Trial") { // time trial 기록을 제외
+            //     return false;
+            // }
             if (uniqueDrivers[record.PlayerName]) {
                 return false;
-            } else {
+            }
+            else {
                 uniqueDrivers[record.PlayerName] = true;
                 return true;
             }
