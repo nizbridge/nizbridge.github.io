@@ -87,6 +87,7 @@ table.dataTable tbody td {white-space: nowrap;}
 #popup-leaderboard_wrapper {overflow-y:auto;height:calc(100% - 40px);}
 #popup-leaderboard_wrapper thead{position:sticky;top:0;background:#fff}
 .closePopupBtn {position:absolute;top:5px;right:5px;border:0;background:none;cursor:pointer}
+.mainDialog__con .dataTables_wrapper{display:block}
 
 @media only screen and (max-width: 800px){
   .tableBox {
