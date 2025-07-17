@@ -62,11 +62,15 @@ body {background:#f7f4f1}
 .redbull {color:#376ec5;font-weight:bold}
 .mer {color:#3bf8d3;font-weight:bold}
 .tauri {color:#678dfe;font-weight:bold}
+.rb {color:#678dfe;font-weight:bold}
 .aston {color:#2c9b73;font-weight:bold}
 .ferrari {color:#e50020;font-weight:bold}
 .romeo {color:#5be753;font-weight:bold}
+.sauber {color:#5be753;font-weight:bold}
 .hass {color:#b6babe;font-weight:bold}
 .williams {color:#66c3ff;font-weight:bold}
+.apxgp {color:#d6b534;font-weight:bold}
+
 #constructor-data{margin-top:10px}
 .trackTag__btn.selected{background:#1c90fb}
 .dataTables_wrapper{overflow:auto}

@@ -1,4 +1,3 @@
-var startSeason = 'JJ_S1';
 const seasonFilePaths = {
     'F3_S1': [
         'data/f3_s1/event_200977_tier_1_results.csv', // Bahrain
@@ -94,5 +93,8 @@ const seasonFilePaths = {
         'data/ta/france_ta.csv',
         'data/ta/monaco_ta.csv',
         'data/ta/portugal_ta.csv',
-    ]
+    ],
+    'F25_career_S2': [
+        'data/f25_cr_s2/event_results_1.csv',
+    ],
 };

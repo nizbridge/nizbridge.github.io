@@ -1,4 +1,4 @@
-var startSeason = 'JJ_S1';
+var startSeason = 'F25_career_S2';
 
 $(document).ready(function() {
     
@@ -341,6 +341,9 @@ function highlightFastestLap(data) {
         else if (teamName == 'Alfa Romeo') $(`td:contains(${record.ConstructorName})`).addClass('romeo');
         else if (teamName == 'Haas') $(`td:contains(${record.ConstructorName})`).addClass('hass');
         else if (teamName == 'Williams') $(`td:contains(${record.ConstructorName})`).addClass('williams');
+        else if (teamName == 'Sauber') $(`td:contains(${record.ConstructorName})`).addClass('sauber');
+        else if (teamName == 'APXGP') $(`td:contains(${record.ConstructorName})`).addClass('apxgp');
+        else if (teamName == 'RB') $(`td:contains(${record.ConstructorName})`).addClass('rb');
 
         if (driverName == '0x5e0x5e' || driverName == 'kkulkkule' || driverName == 'dev-Tobby' || driverName == 'dayofsoul' || driverName == 'Naaz82' || driverName == 'jjk') {
             $(`td:contains(${record.PlayerName})`).addClass('textBold');
