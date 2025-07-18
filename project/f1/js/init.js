@@ -129,7 +129,8 @@ function loadCSVFiles(seasonFilePaths) {
     });
 }
 
-function csvToJson(csv, season) {
+// 안쓰임
+function csvToJson_backup(csv, season) {
     const lines = csv.split('\n');
     const result = [];
     const headers = lines[0].split(',');
@@ -164,6 +165,106 @@ function csvToJson(csv, season) {
     }
     return result;
 }
+
+
+function csvToJson(csv, season) {
+    const lines = csv.split('\n');
+    const result = [];
+    const headers = lines[0].split(',');
+
+    for (let i = 1; i < lines.length; i++) {
+        if (lines[i].trim() === '') continue;
+
+        const obj = {};
+        const currentline = lines[i].split(',');
+
+        for (let j = 0; j < headers.length; j++) {
+            obj[headers[j].trim()] = currentline[j] ? currentline[j].trim() : '';
+        }
+
+        obj["Season"] = season;
+
+        // ConstructorName 변환
+        if (obj["ConstructorName"] === 'World Car') {
+            obj["ConstructorName"] = 'AlphaTauri';
+        }
+
+        // FastestLap 뒤에 붙은 0000 제거
+        if (obj["FastestLap"] && obj["FastestLap"].length > 4) {
+            obj["FastestLap"] = extractTimePrefix(obj["FastestLap"]) || obj["FastestLap"];
+        }
+
+        result.push(obj);
+    }
+
+    // 트랙별로 그룹화
+    const groupedByTrack = {};
+    result.forEach(record => {
+        const track = record.TrackName || 'Unknown';
+        if (!groupedByTrack[track]) groupedByTrack[track] = [];
+        groupedByTrack[track].push(record);
+    });
+
+    // 각 트랙별 1등 기준 시간 차이 계산
+    for (const track in groupedByTrack) {
+        const racers = groupedByTrack[track];
+
+        // Position 기준 정렬
+        racers.sort((a, b) => parseInt(a.Position) - parseInt(b.Position));
+
+        // 1등 찾기
+        let firstTimeMs = null;
+        for (const racer of racers) {
+            if (racer.Position === '1' && racer.Time) {
+                const baseTime = extractTimePrefix(racer.Time);
+                if (baseTime) {
+                    firstTimeMs = timeStringToMs(baseTime);
+                    break;
+                }
+            }
+        }
+
+        for (const racer of racers) {
+            const cleanTime = extractTimePrefix(racer.Time);
+            if (cleanTime) {
+                racer.Time = cleanTime;
+
+                if (firstTimeMs !== null && racer.Position !== '1') {
+                    const diffMs = timeStringToMs(cleanTime) - firstTimeMs;
+                    const diffStr = msToDiffString(diffMs);
+                    racer.Time += ` (+${diffStr})`;
+                }
+            }
+        }
+    }
+
+    return result;
+}
+
+// hh:mm:ss.0000000 → hh:mm:ss.000 추출
+function extractTimePrefix(timeStr) {
+    const match = timeStr.match(/\d{2}:\d{2}:\d{2}\.\d{3}/);
+    return match ? match[0] : null;
+}
+
+function timeStringToMs(timeStr) {
+    const [h, m, s] = timeStr.split(':');
+    const [sec, ms] = s.split('.');
+    return (
+        parseInt(h) * 3600000 +
+        parseInt(m) * 60000 +
+        parseInt(sec) * 1000 +
+        parseInt(ms)
+    );
+}
+
+function msToDiffString(ms) {
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
+    const milliseconds = ms % 1000;
+    return `${minutes}:${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
+}
+
 
 
 
