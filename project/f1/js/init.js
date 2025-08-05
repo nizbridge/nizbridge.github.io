@@ -435,6 +435,7 @@ function highlightFastestLap(data) {
         else if (teamName == 'McLaren') $(`td:contains(${record.ConstructorName})`).addClass('mcLaren');
         else if (teamName == 'Red Bull') $(`td:contains(${record.ConstructorName})`).addClass('redbull');
         else if (teamName == 'Mercedes-AMG Petronas') $(`td:contains(${record.ConstructorName})`).addClass('mer');
+        else if (teamName == 'Mercedes') $(`td:contains(${record.ConstructorName})`).addClass('mer');
         else if (teamName == 'AlphaTauri') $(`td:contains(${record.ConstructorName})`).addClass('tauri');
         else if (teamName == 'World Car') $(`td:contains(${record.ConstructorName})`).addClass('tauri');
         else if (teamName == 'Aston Martin') $(`td:contains(${record.ConstructorName})`).addClass('aston');
