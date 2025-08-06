@@ -1,0 +1,23 @@
+TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
+Spain,1,Max VERSTAPPEN,00:29:51.9480000,25,1,0,00:01:15.371,True,Ferrari,0,False,True
+Spain,1,kkulkkule,00:29:58.7670000,18,2,0,00:01:16.053,False,APXGP,0,False,False
+Spain,1,Oscar PIASTRI,00:30:03.8180000,15,3,0,00:01:16.612,False,McLaren,0,False,True
+Spain,1,Carlos SAINZ,00:30:06.7200000,12,4,0,00:01:16.627,False,Williams,0,False,True
+Spain,1,Charles LECLERC,00:30:12.1080000,10,5,0,00:01:16.316,False,Ferrari,0,False,True
+Spain,1,Alexander ALBON,00:30:12.2820000,8,6,0,00:01:16.165,False,Williams,0,False,True
+Spain,1,Fernando ALONSO,00:30:12.8350000,6,7,0,00:01:16.683,False,Aston Martin,0,False,True
+Spain,1,George RUSSELL,00:30:13.2530000,4,8,0,00:01:16.481,False,Mercedes,0,False,True
+Spain,1,Andrea Kimi ANTONELLI,00:30:13.6490000,2,9,0,00:01:16.342,False,Mercedes,0,False,True
+Spain,1,Lando NORRIS,00:30:14.8900000,1,10,0,00:01:16.604,False,McLaren,0,False,True
+Spain,1,Yuki TSUNODA,00:30:16.2590000,0,11,0,00:01:16.377,False,Red Bull,0,False,True
+Spain,1,Pierre GASLY,00:30:18.6960000,0,12,0,00:01:16.949,False,Alpine,0,False,True
+Spain,1,Lance STROLL,00:30:22.9560000,0,13,0,00:01:17.100,False,Aston Martin,0,False,True
+Spain,1,Esteban OCON,00:30:24.0660000,0,14,0,00:01:16.644,False,Haas,0,False,True
+Spain,1,Liam LAWSON,00:30:27.3510000,0,15,0,00:01:17.491,False,Red Bull,0,False,True
+Spain,1,Sonny HAYES,00:30:30.4120000,0,16,0,00:01:16.979,False,APXGP,0,False,True
+Spain,1,Oliver BEARMAN,00:30:32.3630000,0,17,0,00:01:16.817,False,Haas,0,False,True
+Spain,1,Gabriel BORTOLETO,00:30:42.3820000,0,18,0,00:01:17.769,False,Sauber,0,False,True
+Spain,1,Franco COLAPINTO,00:30:44.3540000,0,19,0,00:01:17.821,False,RB,0,False,True
+Spain,1,Paul ARON,00:30:51.3570000,0,20,0,00:01:18.252,False,RB,0,False,True
+Spain,1,Jack DOOHAN,1 Lap,0,21,0,00:01:19.366,False,Alpine,0,False,True
+Spain,1,Nico HULKENBERG,DNF,0,22,0,00:01:16.951,False,Sauber,0,False,True

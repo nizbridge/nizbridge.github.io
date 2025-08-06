@@ -1,23 +1,23 @@
 TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
-Saudi Arabia,1,Oscar PIASTRI,00:28:32.2690000,25,1,0,1:33.174,False,McLaren,0,False,False
-Saudi Arabia,1,Lando NORRIS,00:28:33.5750000,18,2,0,1:33.375,False,McLaren,0,False,False
-Saudi Arabia,1,Charles LECLERC,00:28:34.6600000,15,3,0,1:33.197,False,Ferrari,0,False,False
-Saudi Arabia,1,Max VERSTAPPEN,00:28:39.6160000,12,4,0,1:32.816,False,Ferrari,0,False,False
-Saudi Arabia,1,Carlos SAINZ,00:28:40.2150000,10,5,0,1:33.551,False,Williams,0,False,False
-Saudi Arabia,1,kkulkkule,00:28:43.1250000,8,6,0,1:32.557,True,APXGP,0,False,False
-Saudi Arabia,1,George RUSSELL,00:28:43.5350000,6,7,0,1:33.552,False,Mercedes,0,False,False
-Saudi Arabia,1,Alexander ALBON,00:28:45.8810000,4,8,0,1:33.656,False,Williams,0,False,False
-Saudi Arabia,1,Sonny HAYES,00:28:48.9990000,2,9,0,1:33.672,False,APXGP,0,False,False
-Saudi Arabia,1,Fernando ALONSO,00:28:52.5500000,1,10,0,1:33.865,False,Aston Martin,0,False,False
-Saudi Arabia,1,Pierre GASLY,00:28:53.8240000,0,11,0,1:33.997,False,Alpine,0,False,False
-Saudi Arabia,1,Liam LAWSON,00:28:53.9410000,0,12,0,1:34.353,False,Red Bull,0,False,False
-Saudi Arabia,1,Yuki TSUNODA,00:28:57.1750000,0,13,0,1:34.274,False,Red Bull,0,False,False
-Saudi Arabia,1,Esteban OCON,00:29:00.0480000,0,14,0,1:34.637,False,Haas,0,False,False
-Saudi Arabia,1,Nico HULKENBERG,00:29:02.3220000,0,15,0,1:34.659,False,Sauber,0,False,False
-Saudi Arabia,1,Jack DOOHAN,00:29:02.5250000,0,16,0,1:34.232,False,Alpine,0,False,False
-Saudi Arabia,1,Andrea Kimi ANTONELLI,00:29:03.6050000,0,17,0,1:33.990,False,Mercedes,0,False,False
-Saudi Arabia,1,Oliver BEARMAN,00:29:03.8810000,0,18,0,1:34.125,False,Haas,0,False,False
-Saudi Arabia,1,Lance STROLL,00:29:03.8810000,0,19,0,1:34.123,False,Aston Martin,0,False,False
-Saudi Arabia,1,Gabriel BORTOLETO,00:29:09.2990000,0,20,0,1:34.815,False,Sauber,0,False,False
-Saudi Arabia,1,Franco COLAPINTO,00:29:10.7300000,0,21,0,1:34.828,False,RB,0,False,False
-Saudi Arabia,1,Paul ARON,00:29:11.0930000,0,22,0,1:34.620,False,RB,0,False,False
+Saudi Arabia,1,Oscar PIASTRI,00:28:32.2690000,25,1,0,00:01:33.174,False,McLaren,0,False,True
+Saudi Arabia,1,Lando NORRIS,00:28:33.5750000,18,2,0,00:01:33.375,False,McLaren,0,False,True
+Saudi Arabia,1,Charles LECLERC,00:28:34.6600000,15,3,0,00:01:33.197,False,Ferrari,0,False,True
+Saudi Arabia,1,Max VERSTAPPEN,00:28:39.6160000,12,4,0,00:01:32.816,False,Ferrari,0,False,True
+Saudi Arabia,1,Carlos SAINZ,00:28:40.2150000,10,5,0,00:01:33.551,False,Williams,0,False,True
+Saudi Arabia,1,kkulkkule,00:28:43.1250000,8,6,0,00:01:32.557,True,APXGP,0,False,False
+Saudi Arabia,1,George RUSSELL,00:28:43.5350000,6,7,0,00:01:33.552,False,Mercedes,0,False,True
+Saudi Arabia,1,Alexander ALBON,00:28:45.8810000,4,8,0,00:01:33.656,False,Williams,0,False,True
+Saudi Arabia,1,Sonny HAYES,00:28:48.9990000,2,9,0,00:01:33.672,False,APXGP,0,False,True
+Saudi Arabia,1,Fernando ALONSO,00:28:52.5500000,1,10,0,00:01:33.865,False,Aston Martin,0,False,True
+Saudi Arabia,1,Pierre GASLY,00:28:53.8240000,0,11,0,00:01:33.997,False,Alpine,0,False,True
+Saudi Arabia,1,Liam LAWSON,00:28:53.9410000,0,12,0,00:01:34.353,False,Red Bull,0,False,True
+Saudi Arabia,1,Yuki TSUNODA,00:28:57.1750000,0,13,0,00:01:34.274,False,Red Bull,0,False,True
+Saudi Arabia,1,Esteban OCON,00:29:00.0480000,0,14,0,00:01:34.637,False,Haas,0,False,True
+Saudi Arabia,1,Nico HULKENBERG,00:29:02.3220000,0,15,0,00:01:34.659,False,Sauber,0,False,True
+Saudi Arabia,1,Jack DOOHAN,00:29:02.5250000,0,16,0,00:01:34.232,False,Alpine,0,False,True
+Saudi Arabia,1,Andrea Kimi ANTONELLI,00:29:03.6050000,0,17,0,00:01:33.990,False,Mercedes,0,False,True
+Saudi Arabia,1,Oliver BEARMAN,00:29:03.8810000,0,18,0,00:01:34.125,False,Haas,0,False,True
+Saudi Arabia,1,Lance STROLL,00:29:03.8810000,0,19,0,00:01:34.123,False,Aston Martin,0,False,True
+Saudi Arabia,1,Gabriel BORTOLETO,00:29:09.2990000,0,20,0,00:01:34.815,False,Sauber,0,False,True
+Saudi Arabia,1,Franco COLAPINTO,00:29:10.7300000,0,21,0,00:01:34.828,False,RB,0,False,True
+Saudi Arabia,1,Paul ARON,00:29:11.0930000,0,22,0,00:01:34.620,False,RB,0,False,True

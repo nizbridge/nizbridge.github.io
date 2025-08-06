@@ -1,23 +1,23 @@
 TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi,
-Bahrain,1,Max VERSTAPPEN,00:31:31.374,25,1,0,01:32.123,True,Ferrari,0,False,True
-Bahrain,1,Lando NORRIS,00:31:37.224,18,2,0,01:32.477,False,McLaren,0,False,True
-Bahrain,1,kkulkkule,00:31:47.647,15,3,0,01:33.419,False,APXGP,0,False,True
-Bahrain,1,Oscar PIASTRI,00:31:50.727,12,4,0,01:33.167,False,McLaren,0,False,True
-Bahrain,1,Pierre GASLY,00:31:55.682,10,5,0,01:33.417,False,Alpine,0,False,True
-Bahrain,1,Charles LECLERC,00:31:56.801,8,6,0,01:33.444,False,Ferrari,0,False,True
-Bahrain,1,George RUSSELL,00:31:57.071,6,7,0,01:33.128,False,Mercedes,0,False,True
-Bahrain,1,Carlos SAINZ,00:31:57.642,4,8,0,01:33.670,False,Williams,0,False,True
-Bahrain,1,Andrea Kimi ANTONELLI,00:32:01.588,2,9,0,01:33.855,False,Mercedes,0,False,True
-Bahrain,1,Fernando ALONSO,00:32:09.845,1,10,0,01:33.844,False,Aston Martin,0,False,True
-Bahrain,1,Yuki TSUNODA,00:32:10.414,0,11,0,01:34.004,False,Red Bull,0,False,True
-Bahrain,1,Alexander ALBON,00:32:11.938,0,12,0,01:32.955,False,Williams,0,False,True
-Bahrain,1,Esteban OCON,00:32:13.561,0,13,0,01:33.359,False,Haas,0,False,True
-Bahrain,1,Nico HULKENBERG,00:32:15.259,0,14,0,01:33.334,False,Sauber,0,False,True
-Bahrain,1,Oliver BEARMAN,00:32:23.624,0,15,0,01:33.905,False,Haas,0,False,True
-Bahrain,1,Gabriel BORTOLETO,00:32:25.839,0,16,0,01:33.805,False,Sauber,0,False,True
-Bahrain,1,Lance STROLL,00:32:27.166,0,17,0,01:34.078,False,Aston Martin,0,False,True
-Bahrain,1,Jack DOOHAN,00:32:33.091,0,18,0,01:34.854,False,Alpine,0,False,True
-Bahrain,1,Sonny HAYES,00:32:35.362,0,19,0,01:35.082,False,APXGP,0,False,True
-Bahrain,1,Franco COLAPINTO,00:32:54.993,0,20,0,01:35.297,False,RB,0,False,True
-Bahrain,1,Paul ARON,00:32:54.531,0,21,0,01:36.547,False,RB,0,False,True
-Bahrain,1,Liam LAWSON,DNF,0,22,0,01:34.308,False,Red Bull,0,False,True
+Bahrain,1,Max VERSTAPPEN,00:31:31.374,25,1,0,00:01:32.123,True,Ferrari,0,False,True
+Bahrain,1,Lando NORRIS,00:31:37.224,18,2,0,00:01:32.477,False,McLaren,0,False,True
+Bahrain,1,kkulkkule,00:31:47.647,15,3,0,00:01:33.419,False,APXGP,0,False,False
+Bahrain,1,Oscar PIASTRI,00:31:50.727,12,4,0,00:01:33.167,False,McLaren,0,False,True
+Bahrain,1,Pierre GASLY,00:31:55.682,10,5,0,00:01:33.417,False,Alpine,0,False,True
+Bahrain,1,Charles LECLERC,00:31:56.801,8,6,0,00:01:33.444,False,Ferrari,0,False,True
+Bahrain,1,George RUSSELL,00:31:57.071,6,7,0,00:01:33.128,False,Mercedes,0,False,True
+Bahrain,1,Carlos SAINZ,00:31:57.642,4,8,0,00:01:33.670,False,Williams,0,False,True
+Bahrain,1,Andrea Kimi ANTONELLI,00:32:01.588,2,9,0,00:01:33.855,False,Mercedes,0,False,True
+Bahrain,1,Fernando ALONSO,00:32:09.845,1,10,0,00:01:33.844,False,Aston Martin,0,False,True
+Bahrain,1,Yuki TSUNODA,00:32:10.414,0,11,0,00:01:34.004,False,Red Bull,0,False,True
+Bahrain,1,Alexander ALBON,00:32:11.938,0,12,0,00:01:32.955,False,Williams,0,False,True
+Bahrain,1,Esteban OCON,00:32:13.561,0,13,0,00:01:33.359,False,Haas,0,False,True
+Bahrain,1,Nico HULKENBERG,00:32:15.259,0,14,0,00:01:33.334,False,Sauber,0,False,True
+Bahrain,1,Oliver BEARMAN,00:32:23.624,0,15,0,00:01:33.905,False,Haas,0,False,True
+Bahrain,1,Gabriel BORTOLETO,00:32:25.839,0,16,0,00:01:33.805,False,Sauber,0,False,True
+Bahrain,1,Lance STROLL,00:32:27.166,0,17,0,00:01:34.078,False,Aston Martin,0,False,True
+Bahrain,1,Jack DOOHAN,00:32:33.091,0,18,0,00:01:34.854,False,Alpine,0,False,True
+Bahrain,1,Sonny HAYES,00:32:35.362,0,19,0,00:01:35.082,False,APXGP,0,False,True
+Bahrain,1,Franco COLAPINTO,00:32:54.993,0,20,0,00:01:35.297,False,RB,0,False,True
+Bahrain,1,Paul ARON,00:32:54.531,0,21,0,00:01:36.547,False,RB,0,False,True
+Bahrain,1,Liam LAWSON,DNF,0,22,0,00:01:34.308,False,Red Bull,0,False,True

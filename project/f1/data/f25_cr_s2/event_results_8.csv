@@ -1,23 +1,23 @@
 TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
-Imola,1,Max VERSTAPPEN,00:30:34.2060000,25,1,0,1:18.217,True,Red Bull,0,False,False
-Imola,1,Lando NORRIS,00:30:35.6000000,18,2,0,1:18.588,False,McLaren,0,False,False
-Imola,1,Charles LECLERC,00:30:45.3120000,15,3,0,1:18.387,False,Ferrari,0,False,False
-Imola,1,Alexander ALBON,00:30:47.9290000,12,4,0,1:19.046,False,Williams,0,False,False
-Imola,1,kkulkkule,00:30:58.3200000,10,5,0,1:19.763,False,APXGP,0,False,False
-Imola,1,George RUSSELL,00:30:58.8440000,8,6,0,1:18.671,False,Mercedes,0,False,False
-Imola,1,Oscar PIASTRI,00:30:59.3640000,6,7,0,1:18.588,False,McLaren,0,False,False
-Imola,1,Yuki TSUNODA,00:30:59.7690000,4,8,0,1:20.048,False,RB,0,False,False
-Imola,1,Carlos SAINZ,00:31:00.2620000,2,9,0,1:19.757,False,Ferrari,0,False,False
-Imola,1,Franco COLAPINTO,00:31:02.7080000,1,10,0,1:20.562,False,RB,0,False,False
-Imola,1,Gabriel BORTOLETO,00:31:03.2010000,0,11,0,1:19.721,False,Sauber,0,False,False
-Imola,1,Pierre GASLY,00:31:03.7600000,0,12,0,1:20.461,False,Alpine,0,False,False
-Imola,1,Andrea Kimi ANTONELLI,00:31:04.5730000,0,13,0,1:20.518,False,Mercedes,0,False,False
-Imola,1,Sonny HAYES,00:31:04.8690000,0,14,0,1:19.840,False,APXGP,0,False,False
-Imola,1,Oliver BEARMAN,00:31:05.4680000,0,15,0,1:20.407,False,Haas,0,False,False
-Imola,1,Liam LAWSON,00:31:05.7190000,0,16,0,1:19.764,False,Red Bull,0,False,False
-Imola,1,Lance STROLL,00:31:06.0600000,0,17,0,1:20.409,False,Aston Martin,0,False,False
-Imola,1,Esteban OCON,00:31:06.2190000,0,18,0,1:20.013,False,Alpine,0,False,False
-Imola,1,Paul ARON,00:31:08.3340000,0,19,0,1:20.598,False,RB,0,False,False
-Imola,1,Jack DOOHAN,00:31:10.0650000,0,20,0,1:20.627,False,Alpine,0,False,False
-Imola,1,Nico HULKENBERG,00:31:15.0580000,0,21,0,1:20.573,False,Sauber,0,False,False
-Imola,1,Fernando ALONSO,DNF,0,22,0,1:20.927,False,Aston Martin,0,False,False
+Imola,1,Max VERSTAPPEN,00:30:34.2060000,25,1,0,00:01:18.217,True,Ferrari,0,False,True
+Imola,1,Lando NORRIS,00:30:35.6000000,18,2,0,00:01:18.588,False,McLaren,0,False,True
+Imola,1,Charles LECLERC,00:30:45.3120000,15,3,0,00:01:18.387,False,Ferrari,0,False,True
+Imola,1,Alexander ALBON,00:30:47.9290000,12,4,0,00:01:19.046,False,Williams,0,False,True
+Imola,1,kkulkkule,00:30:58.3200000,10,5,0,00:01:19.763,False,APXGP,0,False,False
+Imola,1,George RUSSELL,00:30:58.8440000,8,6,0,00:01:18.671,False,Mercedes,0,False,True
+Imola,1,Oscar PIASTRI,00:30:59.3640000,6,7,0,00:01:18.588,False,McLaren,0,False,True
+Imola,1,Yuki TSUNODA,00:30:59.7690000,4,8,0,00:01:20.048,False,Red Bull,0,False,True
+Imola,1,Carlos SAINZ,00:31:00.2620000,2,9,0,00:01:19.757,False,Williams,0,False,True
+Imola,1,Franco COLAPINTO,00:31:02.7080000,1,10,0,00:01:20.562,False,RB,0,False,True
+Imola,1,Gabriel BORTOLETO,00:31:03.2010000,0,11,0,00:01:19.721,False,Sauber,0,False,True
+Imola,1,Pierre GASLY,00:31:03.7600000,0,12,0,00:01:20.461,False,Alpine,0,False,True
+Imola,1,Andrea Kimi ANTONELLI,00:31:04.5730000,0,13,0,00:01:20.518,False,Mercedes,0,False,True
+Imola,1,Sonny HAYES,00:31:04.8690000,0,14,0,00:01:19.840,False,APXGP,0,False,True
+Imola,1,Oliver BEARMAN,00:31:05.4680000,0,15,0,00:01:20.407,False,Haas,0,False,True
+Imola,1,Liam LAWSON,00:31:05.7190000,0,16,0,00:01:19.764,False,Red Bull,0,False,True
+Imola,1,Lance STROLL,00:31:06.0600000,0,17,0,00:01:20.409,False,Aston Martin,0,False,True
+Imola,1,Esteban OCON,00:31:06.2190000,0,18,0,00:01:20.013,False,Haas,0,False,True
+Imola,1,Paul ARON,00:31:08.3340000,0,19,0,00:01:20.598,False,RB,0,False,True
+Imola,1,Jack DOOHAN,00:31:10.0650000,0,20,0,00:01:20.627,False,Alpine,0,False,True
+Imola,1,Nico HULKENBERG,00:31:15.0580000,0,21,0,00:01:20.573,False,Sauber,0,False,True
+Imola,1,Fernando ALONSO,DNF,0,22,0,00:01:20.927,False,Aston Martin,0,False,True
