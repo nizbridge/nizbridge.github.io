@@ -1,0 +1,23 @@
+TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
+Canada,1,kkulkkule,00:31:49.3140000,25,1,0,00:01:13.8070000,True,APXGP,0,False,False
+Canada,1,Carlos SAINZ,00:31:49.3160000,18,2,0,00:01:14.0860000,False,Williams,0,False,True
+Canada,1,Lando NORRIS,00:31:50.4940000,15,3,0,00:01:14.3500000,False,McLaren,0,False,True
+Canada,1,George RUSSELL,00:31:55.3360000,12,4,0,00:01:14.7050000,False,Mercedes,0,False,True
+Canada,1,Lance STROLL,00:31:55.7570000,10,5,0,00:01:14.4040000,False,Aston Martin,0,True,True
+Canada,1,Esteban OCON,00:31:56.3070000,8,6,0,00:01:14.7030000,False,Haas,0,False,True
+Canada,1,Oscar PIASTRI,00:31:57.0920000,6,7,0,00:01:14.0830000,False,McLaren,0,False,True
+Canada,1,Liam LAWSON,00:31:57.9030000,4,8,0,00:01:14.6890000,False,Red Bull,0,False,True
+Canada,1,Charles LECLERC,00:31:58.7360000,2,9,0,00:01:14.1190000,False,Ferrari,0,False,True
+Canada,1,Max VERSTAPPEN,00:31:59.6760000,1,10,0,00:01:14.3460000,False,Ferrari,0,False,True
+Canada,1,Fernando ALONSO,00:32:00.3690000,0,11,0,00:01:14.7560000,False,Aston Martin,0,False,True
+Canada,1,Andrea Kimi ANTONELLI,00:32:02.0420000,0,12,0,00:01:14.5360000,False,Mercedes,0,False,True
+Canada,1,Alexander ALBON,00:32:05.4900000,0,13,0,00:01:14.5100000,False,Williams,0,False,True
+Canada,1,Yuki TSUNODA,00:32:06.0130000,0,14,0,00:01:14.8450000,False,Red Bull,0,False,True
+Canada,1,Nico HULKENBERG,00:32:07.3200000,0,15,0,00:01:14.9560000,False,Sauber,0,False,True
+Canada,1,Oliver BEARMAN,00:32:09.1430000,0,16,0,00:01:14.8290000,False,Haas,0,False,True
+Canada,1,Gabriel BORTOLETO,00:32:09.8400000,0,17,0,00:01:15.0500000,False,Sauber,0,False,True
+Canada,1,Pierre GASLY,00:32:14.0460000,0,18,0,00:01:14.9900000,False,Alpine,0,False,True
+Canada,1,Jack DOOHAN,00:32:14.5200000,0,19,0,00:01:15.3730000,False,Alpine,0,False,True
+Canada,1,Paul ARON,00:32:16.7940000,0,20,0,00:01:15.4800000,False,RB,0,False,True
+Canada,1,Franco COLAPINTO,00:32:20.7920000,0,21,0,00:01:15.4850000,False,RB,0,False,True
+Canada,1,Sonny HAYES,DNF,0,22,0,00:01:16.2440000,False,APXGP,0,False,True
