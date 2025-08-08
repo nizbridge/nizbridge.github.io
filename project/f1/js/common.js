@@ -105,5 +105,6 @@ const seasonFilePaths = {
         'data/f25_cr_s2/event_results_8.csv',
         'data/f25_cr_s2/event_results_9.csv',
         'data/f25_cr_s2/event_results_10.csv',
+        'data/f25_cr_s2/event_results_11.csv',
     ],
 };
