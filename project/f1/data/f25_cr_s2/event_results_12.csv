@@ -1,0 +1,23 @@
+TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
+Great Britain,1,Lando NORRIS,00:29:23.5100000,25,1,0,00:01:29.153,True,McLaren,0,False,True
+Great Britain,1,Charles LECLERC,00:29:24.2310000,18,2,0,00:01:29.540,False,Ferrari,0,False,True
+Great Britain,1,Max VERSTAPPEN,00:29:26.4670000,15,3,0,00:01:29.788,False,Ferrari,0,False,True
+Great Britain,1,George RUSSELL,00:29:26.9340000,12,4,0,00:01:29.849,False,Mercedes,0,False,True
+Great Britain,1,Yuki TSUNODA,00:29:27.5610000,10,5,0,00:01:30.010,False,Red Bull,0,False,True
+Great Britain,1,Oscar PIASTRI,00:29:28.1760000,8,6,0,00:01:30.237,False,McLaren,0,False,True
+Great Britain,1,Sonny HAYES,00:29:35.3110000,6,7,0,00:01:31.433,False,APXGP,0,False,True
+Great Britain,1,Andrea Kimi ANTONELLI,00:29:37.0490000,4,8,0,00:01:31.576,False,Mercedes,0,False,True
+Great Britain,1,Oliver BEARMAN,00:29:37.4210000,2,9,0,00:01:31.642,False,Haas,0,False,True
+Great Britain,1,Alexander ALBON,00:29:37.7180000,1,10,0,00:01:31.579,False,Williams,0,False,True
+Great Britain,1,Gabriel BORTOLETO,00:29:40.1960000,0,11,0,00:01:31.568,False,Sauber,0,False,True
+Great Britain,1,Fernando ALONSO,00:29:41.3650000,0,12,0,00:01:31.295,False,Aston Martin,0,False,True
+Great Britain,1,Nico HULKENBERG,00:29:41.9240000,0,13,0,00:01:31.381,False,Sauber,0,False,True
+Great Britain,1,Franco COLAPINTO,00:29:42.3720000,0,14,0,00:01:31.461,False,RB,0,False,True
+Great Britain,1,Lance STROLL,00:29:43.2700000,0,15,0,00:01:31.484,False,Aston Martin,0,False,True
+Great Britain,1,Carlos SAINZ,00:29:43.0860000,0,16,0,00:01:31.440,False,Williams,0,False,True
+Great Britain,1,Esteban OCON,00:29:43.6450000,0,17,0,00:01:31.645,False,Haas,0,False,True
+Great Britain,1,Pierre GASLY,00:29:44.2180000,0,18,0,00:01:31.729,False,Alpine,0,False,True
+Great Britain,1,Paul ARON,00:29:44.5550000,0,19,0,00:01:31.107,False,RB,0,False,True
+Great Britain,1,kkulkkule,00:29:46.3600000,0,20,0,00:01:31.046,False,APXGP,0,False,False
+Great Britain,1,Liam LAWSON,00:29:48.0890000,0,21,0,00:01:30.812,False,Red Bull,0,False,True
+Great Britain,1,Jack DOOHAN,DNF,0,22,0,00:01:32.152,False,Alpine,0,False,True

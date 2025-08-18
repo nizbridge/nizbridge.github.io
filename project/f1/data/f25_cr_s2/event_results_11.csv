@@ -1,23 +1,23 @@
 TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
-Austrian,1,Max VERSTAPPEN,00:45:06.6600000,25,1,0,00:01:12.2760000,True,Ferrari,0,False,True
-Austrian,1,kkulkkule,00:45:10.4750000,18,2,0,00:01:13.0660000,False,APXGP,0,False,False
-Austrian,1,Lando NORRIS,00:45:10.8850000,15,3,0,00:01:14.2540000,False,McLaren,0,False,True
-Austrian,1,George RUSSELL,00:45:11.4090000,12,4,0,00:01:15.9480000,False,Mercedes,0,False,True
-Austrian,1,Charles LECLERC,00:45:12.4380000,10,5,0,00:01:16.3960000,False,Ferrari,0,False,True
-Austrian,1,Oliver BEARMAN,00:45:13.4770000,8,6,0,00:01:16.8290000,False,Haas,0,False,True
-Austrian,1,Carlos SAINZ,00:45:13.7050000,6,7,0,00:01:15.3600000,False,Williams,0,False,True
-Austrian,1,Oscar PIASTRI,00:45:14.0440000,4,8,0,00:01:16.8700000,False,McLaren,0,False,True
-Austrian,1,Alexander ALBON,00:45:14.4390000,2,9,0,00:01:15.2750000,False,Williams,0,False,True
-Austrian,1,Lance STROLL,00:45:15.9490000,1,10,0,00:01:16.5450000,False,Aston Martin,0,False,True
-Austrian,1,Yuki TSUNODA,00:45:16.6950000,0,11,0,00:01:16.4680000,False,Red Bull,0,False,True
-Austrian,1,Sonny HAYES,00:45:17.9110000,0,12,0,00:01:16.5130000,False,APXGP,0,False,True
-Austrian,1,Fernando ALONSO,00:45:18.9370000,0,13,0,00:01:16.6560000,False,Aston Martin,0,False,True
-Austrian,1,Paul ARON,00:45:22.3300000,0,14,0,00:01:17.6710000,False,RB,0,False,True
-Austrian,1,Jack DOOHAN,00:45:22.5690000,0,15,0,00:01:17.1430000,False,Alpine,0,False,True
-Austrian,1,Liam LAWSON,00:45:22.7990000,0,16,0,00:01:16.4260000,False,Red Bull,0,False,True
-Austrian,1,Esteban OCON,00:45:22.9730000,0,17,0,00:01:16.4990000,False,Haas,0,False,True
-Austrian,1,Franco COLAPINTO,00:45:24.8480000,0,18,0,00:01:18.1870000,False,RB,0,False,True
-Austrian,1,Pierre GASLY,00:45:25.4930000,0,19,0,00:01:17.0690000,False,Alpine,0,False,True
-Austrian,1,Nico HULKENBERG,00:45:27.7710000,0,20,0,00:01:18.2110000,False,Sauber,0,False,True
-Austrian,1,Andrea Kimi ANTONELLI,00:45:27.7710000,0,21,0,00:01:16.9110000,False,Mercedes,0,False,True
-Austrian,1,Gabriel BORTOLETO,DNF,0,22,0,00:01:17.1880000,False,Sauber,0,False,True
+Austria,1,Max VERSTAPPEN,00:45:06.6600000,25,1,0,00:01:12.2760000,True,Ferrari,0,False,True
+Austria,1,kkulkkule,00:45:10.4750000,18,2,0,00:01:13.0660000,False,APXGP,0,False,False
+Austria,1,Lando NORRIS,00:45:10.8850000,15,3,0,00:01:14.2540000,False,McLaren,0,False,True
+Austria,1,George RUSSELL,00:45:11.4090000,12,4,0,00:01:15.9480000,False,Mercedes,0,False,True
+Austria,1,Charles LECLERC,00:45:12.4380000,10,5,0,00:01:16.3960000,False,Ferrari,0,False,True
+Austria,1,Oliver BEARMAN,00:45:13.4770000,8,6,0,00:01:16.8290000,False,Haas,0,False,True
+Austria,1,Carlos SAINZ,00:45:13.7050000,6,7,0,00:01:15.3600000,False,Williams,0,False,True
+Austria,1,Oscar PIASTRI,00:45:14.0440000,4,8,0,00:01:16.8700000,False,McLaren,0,False,True
+Austria,1,Alexander ALBON,00:45:14.4390000,2,9,0,00:01:15.2750000,False,Williams,0,False,True
+Austria,1,Lance STROLL,00:45:15.9490000,1,10,0,00:01:16.5450000,False,Aston Martin,0,False,True
+Austria,1,Yuki TSUNODA,00:45:16.6950000,0,11,0,00:01:16.4680000,False,Red Bull,0,False,True
+Austria,1,Sonny HAYES,00:45:17.9110000,0,12,0,00:01:16.5130000,False,APXGP,0,False,True
+Austria,1,Fernando ALONSO,00:45:18.9370000,0,13,0,00:01:16.6560000,False,Aston Martin,0,False,True
+Austria,1,Paul ARON,00:45:22.3300000,0,14,0,00:01:17.6710000,False,RB,0,False,True
+Austria,1,Jack DOOHAN,00:45:22.5690000,0,15,0,00:01:17.1430000,False,Alpine,0,False,True
+Austria,1,Liam LAWSON,00:45:22.7990000,0,16,0,00:01:16.4260000,False,Red Bull,0,False,True
+Austria,1,Esteban OCON,00:45:22.9730000,0,17,0,00:01:16.4990000,False,Haas,0,False,True
+Austria,1,Franco COLAPINTO,00:45:24.8480000,0,18,0,00:01:18.1870000,False,RB,0,False,True
+Austria,1,Pierre GASLY,00:45:25.4930000,0,19,0,00:01:17.0690000,False,Alpine,0,False,True
+Austria,1,Nico HULKENBERG,00:45:27.7710000,0,20,0,00:01:18.2110000,False,Sauber,0,False,True
+Austria,1,Andrea Kimi ANTONELLI,00:45:27.7710000,0,21,0,00:01:16.9110000,False,Mercedes,0,False,True
+Austria,1,Gabriel BORTOLETO,DNF,0,22,0,00:01:17.1880000,False,Sauber,0,False,True

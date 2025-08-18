@@ -1,0 +1,23 @@
+TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
+Belgium,1,kkulkkule,00:30:34.0890000,25,1,0,00:01:46.998,True,APXGP,0,False,False
+Belgium,1,Esteban OCON,00:30:40.6460000,18,2,0,00:01:47.652,False,Haas,0,False,True
+Belgium,1,Carlos SAINZ,00:30:42.2120000,15,3,0,00:01:47.914,False,Williams,0,False,True
+Belgium,1,George RUSSELL,00:30:42.8930000,12,4,0,00:01:48.039,False,Mercedes,0,False,True
+Belgium,1,Charles LECLERC,00:30:43.1770000,10,5,0,00:01:47.777,False,Ferrari,0,False,True
+Belgium,1,Alexander ALBON,00:30:47.6070000,8,6,0,00:01:46.788,False,Williams,0,False,True
+Belgium,1,Nico HULKENBERG,00:30:48.7750000,6,7,0,00:01:48.358,False,Sauber,0,False,True
+Belgium,1,Yuki TSUNODA,00:30:51.6330000,4,8,0,00:01:49.319,False,Red Bull,0,False,True
+Belgium,1,Oliver BEARMAN,00:30:58.1460000,2,9,0,00:01:49.575,False,Haas,0,False,True
+Belgium,1,Pierre GASLY,00:30:58.9420000,1,10,0,00:01:49.896,False,Alpine,0,False,True
+Belgium,1,Andrea Kimi ANTONELLI,00:30:59.0980000,0,11,0,00:01:48.568,False,Mercedes,0,False,True
+Belgium,1,Lando NORRIS,00:30:59.3490000,0,12,0,00:01:49.356,False,McLaren,0,False,True
+Belgium,1,Lance STROLL,00:30:59.6280000,0,13,0,00:01:48.728,False,Aston Martin,0,False,True
+Belgium,1,Paul ARON,00:31:00.3550000,0,14,0,00:01:48.340,False,RB,0,False,True
+Belgium,1,Max VERSTAPPEN,00:31:00.4490000,0,15,0,00:01:47.705,False,Ferrari,0,False,True
+Belgium,1,Fernando ALONSO,00:31:02.7340000,0,16,0,00:01:48.447,False,Aston Martin,0,False,True
+Belgium,1,Sonny HAYES,00:31:03.0190000,0,17,0,00:01:47.191,False,APXGP,0,False,True
+Belgium,1,Gabriel BORTOLETO,00:31:11.6910000,0,18,0,00:01:50.142,False,Sauber,0,False,True
+Belgium,1,Liam LAWSON,00:31:20.9490000,0,19,0,00:01:48.735,False,Red Bull,0,False,True
+Belgium,1,Jack DOOHAN,00:31:27.2390000,0,20,0,00:01:49.215,False,Alpine,0,False,True
+Belgium,1,Oscar PIASTRI,00:32:04.1510000,0,21,0,00:01:46.842,False,McLaren,0,False,True
+Belgium,1,Franco COLAPINTO,DNF,0,22,0,00:02:02.169,False,RB,0,False,True
