@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,img,button,select{margin:0;padding:0}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family:'Noto Sans KR','돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif}
+body{-webkit-text-size-adjust:none}
+img,fieldset{border:0;vertical-align:top}
+a{color:#1a1a1a}
+em,address{font-style:normal}
+ul,ol,li{list-style:none}
+label,button{cursor:pointer}
+input::-ms-clear{display:none}
+.blind{position:absolute !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-1px !important;overflow:hidden !important}
+
+header {z-index:1;position:fixed;top:0;left:0;right:0;display:flex;justify-content: center;align-items: center;height:60px;border-bottom:1px solid rgba(255,255,255,.3);background:#00a8a6}
+.header__logoBox{position: absolute;top: 50%;left:50px;height: 44px;width: 170px;background: #00a8a6;border-radius: 12px;margin-top: -22px;}
+.header__logoBox:after{content:'';position:absolute;top:50%;left:50%;width:140px;height:40px;background: url(../imgs/logo2.png) no-repeat 50% 50% / contain;margin:-20px 0 0 -70px}
+.header__menuBox {position:relative;display:flex;align-items: center;gap:40px}
+.header__menuBoxItem{font-size:16px;color:#fff;font-weight:500;text-decoration: none;padding-bottom:4px;}
+.header__menuBoxItem:hover{color:#4a4a4a}
+
+.topSpot {position:relative;width:100%;height:759px;background:url(../imgs/topSpot.jpeg) no-repeat 50% 50% / cover;}
+
+.sectionTitle {display:block;text-align: center;font-size:20px;font-weight:bold}
+.sectionCon {height:400px}

@@ -1,0 +1,23 @@
+TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
+Hungary,1,Lando NORRIS,00:33:57.3540000,25,1,0,00:01:19.552,True,McLaren,0,False,True
+Hungary,1,Max VERSTAPPEN,+00:09.585,18,2,0,00:01:20.061,False,Ferrari,0,False,True
+Hungary,1,Charles LECLERC,+00:26.852,15,3,0,00:01:20.143,False,Ferrari,0,False,True
+Hungary,1,George RUSSELL,+00:28.617,12,4,0,00:01:20.318,False,Mercedes,0,False,True
+Hungary,1,kkulkkule,+00:33.874,10,5,0,00:01:19.801,False,APXGP,0,False,False
+Hungary,1,Liam LAWSON,+00:36.585,8,6,0,00:01:20.526,False,Red Bull,0,False,True
+Hungary,1,Yuki TSUNODA,+00:41.345,6,7,0,00:01:21.274,False,Red Bull,0,False,True
+Hungary,1,Esteban OCON,+00:42.700,4,8,0,00:01:20.940,False,Haas,0,False,True
+Hungary,1,Fernando ALONSO,+00:47.358,2,9,0,00:01:21.171,False,Aston Martin,0,False,True
+Hungary,1,Carlos SAINZ,+00:51.964,1,10,0,00:01:21.262,False,Williams,0,False,True
+Hungary,1,Gabriel BORTOLETO,+00:53.592,0,11,0,00:01:21.320,False,Sauber,0,False,True
+Hungary,1,Pierre GASLY,+00:53.638,0,12,0,00:01:21.378,False,Alpine,0,False,True
+Hungary,1,Nico HULKENBERG,+00:55.374,0,13,0,00:01:21.232,False,Sauber,0,False,True
+Hungary,1,Franco COLAPINTO,+00:58.800,0,14,0,00:01:22.090,False,RB,0,False,True
+Hungary,1,Lance STROLL,+00:59.680,0,15,0,00:01:21.808,False,Aston Martin,0,False,True
+Hungary,1,Sonny HAYES,+00:59.724,0,16,0,00:01:21.807,False,APXGP,0,False,True
+Hungary,1,Alexander ALBON,+00:59.847,0,17,0,00:01:21.659,False,Williams,0,False,True
+Hungary,1,Oscar PIASTRI,+01:00.633,0,18,0,00:01:20.219,False,McLaren,0,False,True
+Hungary,1,Oliver BEARMAN,+01:00.979,0,19,0,00:01:21.760,False,Haas,0,False,True
+Hungary,1,Jack DOOHAN,+01:01.994,0,20,0,00:01:21.831,False,Alpine,0,False,True
+Hungary,1,Paul ARON,+01:02.464,0,21,0,00:01:21.828,False,RB,0,False,True
+Hungary,1,Andrea Kimi ANTONELLI,+2 Laps,0,22,0,00:01:20.982,False,Mercedes,0,False,True
