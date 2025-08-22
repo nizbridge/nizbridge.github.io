@@ -1,5 +1,5 @@
 TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
-Monza,1,SS KIM,00:26:38.159,25,1,0,00:01:21.512,True,APXGP,0,False,False
+Monza,1,kkulkkule,00:26:38.159,25,1,0,00:01:21.512,True,APXGP,0,False,False
 Monza,1,Charles LECLERC,+3.406,18,2,0,00:01:22.234,False,Ferrari,0,False,True
 Monza,1,Lando NORRIS,+12.046,15,3,0,00:01:22.257,False,McLaren,0,False,True
 Monza,1,Max VERSTAPPEN,+15.826,12,4,0,00:01:22.181,False,Ferrari,0,False,True
