@@ -1,0 +1,23 @@
+TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
+Monza,1,SS KIM,00:26:38.159,25,1,0,00:01:21.512,True,APXGP,0,False,False
+Monza,1,Charles LECLERC,+3.406,18,2,0,00:01:22.234,False,Ferrari,0,False,True
+Monza,1,Lando NORRIS,+12.046,15,3,0,00:01:22.257,False,McLaren,0,False,True
+Monza,1,Max VERSTAPPEN,+15.826,12,4,0,00:01:22.181,False,Ferrari,0,False,True
+Monza,1,Oscar PIASTRI,+16.050,10,5,0,00:01:22.426,False,McLaren,0,False,True
+Monza,1,Carlos SAINZ,+22.083,8,6,0,00:01:22.633,False,Williams,0,False,True
+Monza,1,Alexander ALBON,+23.174,6,7,0,00:01:22.216,False,Williams,0,False,True
+Monza,1,Yuki TSUNODA,+27.642,4,8,0,00:01:22.471,False,Red Bull,0,False,True
+Monza,1,Fernando ALONSO,+30.572,2,9,0,00:01:22.718,False,Aston Martin,0,False,True
+Monza,1,Esteban OCON,+31.172,1,10,0,00:01:22.577,False,Haas,0,False,True
+Monza,1,Sonny HAYES,+31.566,0,11,0,00:01:23.127,False,APXGP,0,False,True
+Monza,1,Gabriel BORTOLETO,+32.919,0,12,0,00:01:23.004,False,Sauber,0,False,True
+Monza,1,Franco COLAPINTO,+33.765,0,13,0,00:01:23.223,False,RB,0,False,True
+Monza,1,George RUSSELL,+34.002,0,14,0,00:01:23.420,False,Mercedes,0,False,True
+Monza,1,Nico HULKENBERG,+34.473,0,15,0,00:01:23.531,False,Sauber,0,False,True
+Monza,1,Oliver BEARMAN,+37.316,0,16,0,00:01:23.190,False,Haas,0,False,True
+Monza,1,Jack DOOHAN,+37.482,0,17,0,00:01:23.569,False,Alpine,0,False,True
+Monza,1,Pierre GASLY,+38.030,0,18,0,00:01:22.624,False,Alpine,0,False,True
+Monza,1,Lance STROLL,+44.195,0,19,0,00:01:23.386,False,Aston Martin,0,False,True
+Monza,1,Andrea Kimi ANTONELLI,+44.710,0,20,0,00:01:22.869,False,Mercedes,0,False,True
+Monza,1,Paul ARON,+46.231,0,21,0,00:01:23.891,False,RB,0,False,True
+Monza,1,Liam LAWSON,DNF,0,22,0,00:01:22.652,False,Ferrari,0,False,True
