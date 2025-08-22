@@ -1,0 +1,23 @@
+TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
+Netherlands,1,Lando NORRIS,00:31:13.512,25,1,0,00:01:12.828,True,McLaren,0,False,True
+Netherlands,1,SS KIM,00:31:16.042,18,2,0,00:01:13.043,False,APXGP,0,False,False
+Netherlands,1,Max VERSTAPPEN,00:31:19.822,15,3,0,00:01:13.374,False,Ferrari,0,False,True
+Netherlands,1,Oscar PIASTRI,00:31:20.572,12,4,0,00:01:13.452,False,McLaren,0,False,True
+Netherlands,1,George RUSSELL,00:31:25.426,10,5,0,00:01:13.347,False,Mercedes,0,False,True
+Netherlands,1,Carlos SAINZ,00:31:30.924,8,6,0,00:01:13.757,False,Williams,0,False,True
+Netherlands,1,Esteban OCON,00:31:33.380,6,7,0,00:01:13.499,False,Haas,0,False,True
+Netherlands,1,Alexander ALBON,00:31:37.912,4,8,0,00:01:13.446,False,Williams,0,False,True
+Netherlands,1,Yuki TSUNODA,00:31:38.412,2,9,0,00:01:14.019,False,Red Bull,0,False,True
+Netherlands,1,Andrea Kimi ANTONELLI,00:31:47.094,1,10,0,00:01:13.777,False,Mercedes,0,False,True
+Netherlands,1,Fernando ALONSO,00:31:47.894,0,11,0,00:01:14.011,False,Aston Martin,0,False,True
+Netherlands,1,Gabriel BORTOLETO,00:31:51.911,0,12,0,00:01:14.132,False,Sauber,0,False,True
+Netherlands,1,Franco COLAPINTO,00:31:54.780,0,13,0,00:01:14.444,False,RB,0,False,True
+Netherlands,1,Liam LAWSON,00:31:56.407,0,14,0,00:01:14.689,False,Red Bull,0,False,True
+Netherlands,1,Oliver BEARMAN,00:31:56.632,0,15,0,00:01:14.049,False,Haas,0,False,True
+Netherlands,1,Sonny HAYES,00:31:56.896,0,16,0,00:01:14.310,False,APXGP,0,False,True
+Netherlands,1,Nico HULKENBERG,00:31:56.917,0,17,0,00:01:14.748,False,Sauber,0,False,True
+Netherlands,1,Pierre GASLY,00:31:57.328,0,18,0,00:01:14.406,False,Alpine,0,False,True
+Netherlands,1,Paul ARON,00:31:58.100,0,19,0,00:01:14.725,False,RB,0,False,True
+Netherlands,1,Jack DOOHAN,00:32:00.170,0,20,0,00:01:14.520,False,Alpine,0,False,True
+Netherlands,1,Lance STROLL,00:32:03.655,0,21,0,00:01:14.851,False,Aston Martin,0,False,True
+Netherlands,1,Charles LECLERC,+3 Laps,0,22,0,00:01:13.071,False,Ferrari,0,False,True
