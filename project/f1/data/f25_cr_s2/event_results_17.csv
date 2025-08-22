@@ -1,5 +1,5 @@
 TrackName,Tier,PlayerName,Time,Points,Position,Penalty,FastestLap,HasFastestLap,ConstructorName,PenaltyPointsApplied,IsReserve,IsAi
-Azerbaijan,1,SS KIM,00:31:33.421,25,1,0,00:01:42.681,True,APXGP,0,False,False
+Azerbaijan,1,kkulkkule,00:31:33.421,25,1,0,00:01:42.681,True,APXGP,0,False,False
 Azerbaijan,1,Charles LECLERC,+2.837,18,2,0,00:01:42.757,False,Ferrari,0,False,True
 Azerbaijan,1,Lando NORRIS,+14.302,15,3,0,00:01:43.208,False,McLaren,0,False,True
 Azerbaijan,1,Carlos SAINZ,+14.748,12,4,0,00:01:43.338,False,Williams,0,False,True
