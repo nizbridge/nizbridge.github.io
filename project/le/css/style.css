@@ -72,22 +72,28 @@ header .desc {
 /* 탭 */
 .tabs{
   display:flex;
-  gap:8px;
+  gap:4px;
   flex-wrap:wrap;
   margin-top:10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
+.tabs  > div {display:flex;align-items: center;gap:4px;}
+.tabs strong {width:80px;font-size:0.8rem;text-align: left;}
 .tab-btn{
   background:transparent;
-  border:1px solid rgba(255,255,255,0.04);
+  border:1px solid  rgba(79,163,255,0.25);
   color:var(--text);
-  padding:8px 12px;
+  padding:4px 6px;
   border-radius:8px;
   cursor:pointer;
   font-weight:600;
   transition: all .18s ease;
+  min-width:80px;
 }
-.tab-btn:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.4) }
-.tab-btn.active{ background: linear-gradient(90deg, rgba(79,163,255,0.12), rgba(79,163,255,0.06)); border-color: rgba(79,163,255,0.25); color:var(--accent); }
+.tab-btn:hover{background: linear-gradient(90deg, rgba(79,163,255,0.12), rgba(79,163,255,0.06))}
+.tab-btn.active{ background: linear-gradient(90deg, rgba(79,163,255,0.12), rgba(79,163,255,0.06)); color:var(--accent); }
 .tab-btn.disabled{ opacity:0.45; cursor:not-allowed; }
 
 /* 정보 영역 */
@@ -131,7 +137,7 @@ header .desc {
   padding:4px;
   text-align:center;
   vertical-align:middle;
-  font-size:1rem;
+  font-size:0.9rem;
   font-weight:800;
   color:var(--text);
   border-bottom: 1px solid rgba(255,255,255,0.02);
@@ -162,11 +168,12 @@ header .desc {
 
 #race-info {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-bottom: 10px;
   color: #cfe2ff;
+  overflow-x: auto;
 }
 
 #race-info .info-item {
@@ -188,5 +195,5 @@ header .desc {
 #race-info .info-item strong {
   color: #fff;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
