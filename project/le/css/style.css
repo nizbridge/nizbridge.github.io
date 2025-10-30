@@ -183,6 +183,7 @@ header .desc {
   padding: 4px 10px;
   font-size: 0.95rem;
   text-align: center;
+  white-space: nowrap;
 }
 
 #race-info .info-item span {
