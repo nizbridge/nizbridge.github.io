@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Le Mans Ultimate — Daily Races (Beginner)</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="title-wrap">
+        <h1>Le Mans Ultimate — Daily Races <span id="current-time">--:--:-- (KST)</span></h1>
+      </div>
+      <nav class="tabs">
+        <button class="tab-btn active" data-src="api/beginner-lmp2.json">Beginner LMP2</button>
+        <button class="tab-btn" data-src="api/beginner-gt3.json">Beginner GT3</button>
+        <button class="tab-btn" data-src="api/intermediate-wec.json">Intermediate WEC</button>
+        <button class="tab-btn" data-src="api/intermediate-elms.json">Intermediate ELMS</button>
+        <button class="tab-btn" data-src="api/advanced-wec.json">Advanced WEC</button>
+        <button class="tab-btn" data-src="api/advanced-elms.json">Advanced ELMS</button>
+        <button class="tab-btn" data-src="api/weekly1.json">Weekly Races 1</button>
+        <button class="tab-btn" data-src="api/weekly2.json">Weekly Races 2</button>
+      </nav>
+      
+    </header>
+
+    <main class="content">
+      <!-- <section class="info">
+        <div class="meta">
+          <span class="badge">Class: <strong id="race-class">—</strong></span>
+          <span class="badge">Entry: <strong id="race-grade">—</strong></span>
+          <span class="badge">Times: <strong id="race-count">0</strong></span>
+        </div>
+        <div class="note">※ 표에 표시된 시간은 서버(JSON)에 저장된 시간 문자열을 그대로 출력합니다.</div>
+      </section> -->
+
+      <section id="race-info">
+        <div class="info-item"><span>타입</span> <strong id="info-name">-</strong></div>
+        <div class="info-item"><span>등급</span> <strong id="info-grade">-</strong></div>
+        <div class="info-item"><span>클래스</span> <strong id="info-class">-</strong></div>
+        <div class="info-item"><span>차량</span> <strong id="info-car">-</strong></div>
+        <div class="info-item"><span>시간</span> <strong id="info-time">-</strong></div>
+      </section>
+      
+      <table id="time-table" class="time-table">
+        <thead>
+          <tr>
+            <th colspan="4">레이스 타임 (KST)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      
+      </section>
+
+      <footer class="footer">
+        <div>© 2025 Le Mans Ultimate Fan Project</div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

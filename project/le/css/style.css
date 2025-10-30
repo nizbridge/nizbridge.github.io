@@ -1,0 +1,192 @@
+/* 다크 + 블루톤 스타일 (반응형) */
+:root{
+  --bg:#07111c;
+  --panel:#0f2133;
+  --muted:#8ca0c3;
+  --accent:#4fa3ff;
+  --text:#e6f0ff;
+  --line: rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #07111c 0%, #0b1624 60%, #08111a 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:24px;
+}
+
+/* 컨테이너 */
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border-radius:12px;
+  padding:20px;
+  box-shadow: 0 6px 30px rgba(0,10,30,0.6);
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* 헤더 */
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+header h1 {
+  font-size: 1.6rem;
+  color: #e3e9f5;
+  margin-bottom: 8px;
+}
+#current-time {
+  font-size: 0.9rem;
+  color: #66aaff;
+  margin-left: 10px;
+  font-weight: 500;
+}
+header .desc {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.site-header{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.title-wrap h1{
+  margin:0;
+  font-size:1.6rem;
+  color:var(--accent);
+  letter-spacing:0.02em;
+}
+.subtitle{
+  margin:2px 0 0 0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* 탭 */
+.tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.tab-btn{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.04);
+  color:var(--text);
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition: all .18s ease;
+}
+.tab-btn:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.4) }
+.tab-btn.active{ background: linear-gradient(90deg, rgba(79,163,255,0.12), rgba(79,163,255,0.06)); border-color: rgba(79,163,255,0.25); color:var(--accent); }
+.tab-btn.disabled{ opacity:0.45; cursor:not-allowed; }
+
+/* 정보 영역 */
+.info{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:18px;
+}
+.meta{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.badge{
+  background:#0b1b2e;
+  border:1px solid var(--line);
+  padding:6px 10px;
+  border-radius:8px;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+.badge strong{ color:var(--text); margin-left:6px; font-weight:700; }
+
+/* 테이블 래퍼 */
+.table-wrap{
+  margin-top:16px;
+  padding:16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+/* 테이블 */
+.time-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+.time-table thead th{
+  display:none; /* 숨기면 레이아웃만 사용 */
+}
+.time-table tbody td{
+  width:25%;
+  padding:4px;
+  text-align:center;
+  vertical-align:middle;
+  font-size:1rem;
+  font-weight:800;
+  color:var(--text);
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+  letter-spacing:0.04em;
+}
+
+/* 행 간격을 넉넉히 */
+.time-table tbody tr{ border-bottom:1px solid rgba(255,255,255,0.02); }
+
+
+
+/* footer */
+.footer{
+  margin-top:18px;
+  display:flex;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:0.85rem;
+}
+.footer-small{ opacity:0.8; font-size:0.8rem; }
+
+#time-table td.past {
+  color: #777;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#race-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #cfe2ff;
+}
+
+#race-info .info-item {
+  background: rgba(40, 60, 90, 0.4);
+  border: 1px solid rgba(120, 160, 255, 0.3);
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 0.95rem;
+  min-width: 120px;
+  text-align: center;
+}
+
+#race-info .info-item span {
+  display: block;
+  font-size: 0.8rem;
+  color: #88a;
+}
+
+#race-info .info-item strong {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
