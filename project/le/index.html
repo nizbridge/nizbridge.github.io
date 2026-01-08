@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Le Mans Ultimate — Daily Races (Beginner)</title>
+  <title>Le Mans Ultimate — Schedule</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/script.js" defer></script>
@@ -12,7 +12,7 @@
   <div class="wrap">
     <header class="site-header">
       <div class="title-wrap">
-        <h1>Le Mans Ultimate — Daily Races <span id="current-time">--:--:-- (KST)</span></h1>
+        <h1>Le Mans Ultimate — Schedule <span id="current-time">--:--:-- (KST)</span></h1>
       </div>
       <nav class="tabs">
         <div>
@@ -34,6 +34,12 @@
           <strong>Weekly</strong>
           <button class="tab-btn" data-src="api/weekly1.json">WEC</button>
           <button class="tab-btn" data-src="api/weekly2.json">ELMS</button>
+        </div>
+        <div>
+          <strong>Champ</strong>
+          <button class="tab-btn" data-src="api/champ-1.json">Begniner</button>
+          <button class="tab-btn" data-src="api/champ-2.json">Intermediate</button>
+          <button class="tab-btn" data-src="api/champ-3.json">Advanced</button>
         </div>
       </nav>
       
@@ -60,7 +66,7 @@
       </section>
 
       <footer class="footer">
-        <div>© 2025 Nizbridge</div>
+        <div>© 2026 Nizbridge</div>
       </footer>
     </main>
   </div>
