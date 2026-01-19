@@ -26,7 +26,7 @@ body{
   margin:0 auto;
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
   border-radius:12px;
-  padding:20px;
+  padding:0;
   box-shadow: 0 6px 30px rgba(0,10,30,0.6);
   border: 1px solid rgba(255,255,255,0.02);
 }
@@ -80,7 +80,7 @@ header .desc {
   align-items: flex-start;
 }
 .tabs  > div {display:flex;align-items: center;gap:4px;}
-.tabs strong {width:80px;font-size:0.8rem;text-align: left;}
+.tabs strong {width:86px;font-size:0.8rem;text-align: left;align-self: flex-start;line-height:25px;flex:0 0 auto}
 .tab-btn{
   background:transparent;
   border:1px solid  rgba(79,163,255,0.25);
@@ -90,7 +90,6 @@ header .desc {
   cursor:pointer;
   font-weight:600;
   transition: all .18s ease;
-  min-width:80px;
 }
 .tab-btn:hover{background: linear-gradient(90deg, rgba(79,163,255,0.12), rgba(79,163,255,0.06))}
 .tab-btn.active{ background: linear-gradient(90deg, rgba(79,163,255,0.12), rgba(79,163,255,0.06)); color:var(--accent); }
@@ -196,4 +195,11 @@ header .desc {
   color: #fff;
   font-weight: 600;
   font-size: 0.8rem;
+}
+
+.tabs__list {
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+  gap:4px;
 }

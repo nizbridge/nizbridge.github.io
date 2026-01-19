@@ -90,7 +90,7 @@ $(function () {
     const kst = new Date(now.getTime() + 9*60*60*1000);
     const currentMinutes = kst.getUTCHours()*60 + kst.getUTCMinutes();
   
-    const weekOrder = ['Tue','Wed','Thu','Fri','Sat','Sun','Mon']; // 화요일 시작
+    const weekOrder = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']; // 화요일 시작
     const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     const todayName = dayNames[kst.getUTCDay()];
     const todayIndex = weekOrder.indexOf(todayName);
