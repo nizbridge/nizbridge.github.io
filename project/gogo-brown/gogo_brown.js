@@ -193,7 +193,7 @@ function npc_crash_check(pc, npc) { // PC와 NPC 객체의 충돌여부 체크 �
 				}
 				break;
 			}
-		else if(pc.left < 0 || pc.right > $('.stage').width() || pc.top < 110 || pc.top > 278) {
+		else if(!is_mobile() && (pc.left < 0 || pc.right > $('.stage').width() || pc.top < 110 || pc.top > 278)) {
 			chk_collision=true;
 			break;
 		}
@@ -293,7 +293,46 @@ function ly_remove() {
 $(document).ready(function(){
 	if(is_mobile()) { // 모바일 분기처리
 		$('body').addClass('m');
-		game.jump_delay = 350;
+		game.jump_delay = 400;
+
+		$(window).bind('orientationchange resize', function(event){ // 강제 가로모드
+			if (event.orientation) {
+				if (event.orientation == 'landscape') {
+				if (window.rotation == 90) {
+					rotate(this, -90);
+				} else {
+					rotate(this, 90);
+				}
+				}
+			}
+		});
+		const container = document.querySelector('#wrap')
+		container.requestFullscreen();
+		lockOrientation();
+		$('.btn__exitFullScreen').on('touchstart',function(e) {
+			e.stopPropagation();
+			document.exitFullscreen();
+			location.reload(true);
+		});
 	}
+	
+	
 	game.reset();
+
+	function lockOrientation() {
+		if (screen.orientation && screen.orientation.lock) {
+			screen.orientation.lock('landscape').catch(function(error) {
+				console.log('Orientation lock failed: ', error);
+			});
+		} else if (screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation) {
+			(screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation).call(screen, 'landscape');
+		} else {
+			console.log('Screen orientation lock not supported on this device.');
+		}
+	}
+});
+
+$(document).on('touchstart', function(e) {
+    e.preventDefault();
+    if (game.jump_cnt < game.max_jump) jump();
 });
