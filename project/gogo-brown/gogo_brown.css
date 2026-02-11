@@ -7,7 +7,7 @@
 .blind{overflow:hidden;position:absolute;top:auto;left:-10000px;width:1px;height:1px}
 
 body{background-color:#EADB76;font-size:40px;color:#6A504F}
-.gogo_title{width:600px;margin:0 auto}
+.gogo_title{width:600px;margin:0 auto;display:none}
 .gogo_title .gogo{overflow:hidden}
 .gogo_title span{display:block;float:left;margin-right:3px;text-shadow:3px 3px 0 #000}
 .gogo_title .tit_o{overflow:hidden;position:relative;top:35px;width:60px;height:57px;line-height:0;color:transparent;text-shadow:0 0 0 transparent}

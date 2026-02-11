@@ -222,16 +222,16 @@ function d_check() { // 장애물과 충돌 체크
 		$('.fanal_sc em').text(game.score+game.bonus+' (bonus+ '+game.bonus+')');
 		$('#gameover').css('display','block');
 		game.playing=false;
-		$.ajax({
-			type: "POST",
-			url: "php/test_demo.php",
-			data: {sc:game.score+game.bonus},
-			success: function(msg){
-				console.log(msg);
-			},
-			error : function(){
-			}
-		});
+		// $.ajax({
+		// 	type: "POST",
+		// 	url: "php/test_demo.php",
+		// 	data: {sc:game.score+game.bonus},
+		// 	success: function(msg){
+		// 		console.log(msg);
+		// 	},
+		// 	error : function(){
+		// 	}
+		// });
 		clearInterval(game.play_time);
 	}
 	else $('.sc em').text(++game.score); // 장애물과 충돌이 없으면 스코어++
