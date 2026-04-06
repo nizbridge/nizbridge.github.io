@@ -59,12 +59,13 @@
             <div class="pit-tire-btns">
               <button class="pit-tire-btn" data-compound="S" style="--tc:#FF3333" onclick="selectPitTire('S')">S 소프트</button>
               <button class="pit-tire-btn" data-compound="M" style="--tc:#FFD700" onclick="selectPitTire('M')">M 미디엄</button>
-              <button class="pit-tire-btn" data-compound="H" style="--tc:#D8D8D8;color:#222" onclick="selectPitTire('H')">H 하드</button>
+              <button class="pit-tire-btn" data-compound="H" style="--tc:#D8D8D8" onclick="selectPitTire('H')">H 하드</button>
             </div>
             <button class="pit-cancel-btn" onclick="cancelPit()">취소</button>
           </div>
         </div>
 
+        <div class="lap-timer-live" id="lap-timer-live">0:00.00</div>
         <div class="lap-overlay" id="lap-overlay">
           <div class="fl-box" id="fl-box">
             <span class="fl-box-label">FASTEST LAP</span>

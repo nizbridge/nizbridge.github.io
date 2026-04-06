@@ -206,6 +206,23 @@ body {
   height: 100%;
 }
 
+.lap-timer-live {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(10,10,10,.78);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  color: #27F4D2;
+  letter-spacing: .06em;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
 .lap-overlay {
   position: absolute;
   top: 18px;
@@ -259,6 +276,15 @@ body {
   padding: 1px 4px;
   letter-spacing: .04em;
   flex-shrink: 0;
+}
+
+.s-tire {
+  font-size: .58rem;
+  font-weight: 900;
+  border-radius: 3px;
+  padding: 1px 4px;
+  flex-shrink: 0;
+  letter-spacing: .04em;
 }
 
 .s-ot {
@@ -535,6 +561,13 @@ body {
   border-radius: 3px;
   background: #27F4D2;
   transition: width .3s, background .3s;
+}
+.tire-wear-bar.wear-critical {
+  animation: tirewarn 1s ease-in-out infinite;
+}
+@keyframes tirewarn {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
 }
 
 .tire-wear-pct {

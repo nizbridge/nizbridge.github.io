@@ -8,12 +8,12 @@ const PIT_TIME_MAX     = 6;
 // ERS / Battery
 const BAT_MAX          = 100;
 const BAT_MAX_OT       = 150;   // overtake mode battery cap
-const BAT_DRAIN_NORM   = 4.8;   // %/s drain on straights, normal
-const BAT_DRAIN_BOOST  = 12;    // %/s drain on straights, boost mode
+const BAT_DRAIN_NORM   = 2.5;   // %/s drain on straights, normal
+const BAT_DRAIN_BOOST  = 6.5;   // %/s drain on straights, boost mode
 const BAT_REGEN_COR    = 5.5;   // %/s regen in corners (natural)
 const BAT_REGEN_RCH_S  = 6.0;   // %/s regen on straights, recharge mode
 const BAT_REGEN_RCH_C  = 25.8;  // %/s regen in corners, recharge mode
-const BOOST_MULT       = 1.18;  // speed in boost mode (with battery)
+const BOOST_MULT       = 1.15;  // speed in boost mode (with battery)
 const RECH_MULT        = 0.90;  // speed in recharge mode
 const EMPTY_BAT_MULT   = 0.68;  // speed when battery = 0%
 const OT_REGEN_FACTOR  = 1.3;   // overtake mode: 1.3× charge speed
@@ -33,7 +33,7 @@ const CIRCUITS = [
     sub: 'Circuit de Monaco',
     flag: '🇲🇨',
     color: '#E8002D',
-    targetLap: 35, totalLaps: 19,
+    targetLap: 20, totalLaps: 19,
     vb: '-10 -5 820 510',
     pts: [
       [72,215],[90,178],[118,148],[172,128],[222,116],[258,92],[290,48],
@@ -49,14 +49,23 @@ const CIRCUITS = [
     sub: 'Silverstone Circuit',
     flag: '🇬🇧',
     color: '#27F4D2',
-    targetLap: 55, totalLaps: 13,
+    targetLap: 35, totalLaps: 13,
     vb: '0 0 830 540',
     pts: [
       [556,445],[541,377],[525,314],[500,257],[508,173],[479,135],
-      [420,200],[408,305],[404,381],[389,430],[234,427],
-      [74,409],[46,272],[20,186],[90,107],[168,50],[290,32],
-      [369,29],[439,20],[528,76],[684,164],[810,274],
-      [716,445],[677,481],[558,510],
+      // Maggotts/Becketts/Chapel S-curves
+      [462,140],[442,153],[426,172],[414,196],[410,230],
+      [408,305],[404,381],[389,430],
+      // Stowe
+      [320,432],[234,427],
+      // Vale/Brooklands/Luffield
+      [130,424],[74,409],[55,355],[46,272],[30,228],[20,186],
+      // Abbey/Farm
+      [55,138],[90,107],[125,72],[168,50],[290,32],
+      [369,29],[439,20],
+      // Woodcote
+      [528,76],[640,130],[684,164],[760,218],[810,274],
+      [778,358],[716,445],[677,481],[558,510],
     ]
   },
   {
@@ -65,13 +74,37 @@ const CIRCUITS = [
     sub: 'Autodromo Nazionale di Monza',
     flag: '🇮🇹',
     color: '#FF8000',
-    targetLap: 60, totalLaps: 13,
+    targetLap: 35, totalLaps: 12,
     vb: '0 0 810 520',
     pts: [
-      [471,491],[311,490],[329,453],[249,470],[157,498],
-      [117,421],[117,344],[138,323],[64,267],[15,232],
-      [123,16],[237,145],[305,225],[378,299],[394,315],
-      [422,309],[600,309],[785,316],[723,386],[551,484],
+      // Start/finish
+      [370,455],
+      // Corner 1-2 (Variante del Rettifilo - first chicane)
+      [280,452],[262,440],[245,424],[230,404],[215,384],
+      // Corner 3 (Curva Grande)
+      [122,380],[76,368],
+      // Left side going up
+      [68,330],[70,294],
+      // Corner 4-5 (Lesmo notch)
+      [126,276],[88,264],
+      // Continue up left
+      [70,236],[70,204],
+      // Corner 6
+      [76,170],
+      // Going to top
+      [90,110],[116,64],
+      // Corner 7 (top)
+      [232,38],[294,46],
+      // Diagonal going right-down
+      [346,90],[374,164],
+      // Corner 8-9-10 (Variante Ascari chicane)
+      [352,260],[370,238],[394,244],[412,266],
+      // Long straight going right
+      [444,278],[538,282],[632,284],[728,288],
+      // Corner 11 (Parabolica)
+      [760,302],[776,350],[768,400],[740,430],
+      // Bottom straight back to start
+      [632,442],[518,448],[428,452],
     ]
   }
 ];
@@ -153,7 +186,7 @@ function showScn(id) {
 function buildSpeedProfile(lut) {
   const n = lut.samples;
   const raw = new Float32Array(n);
-  const W = 25;
+  const W = 15;
   for (let i = 0; i < n; i++) {
     const [x0,y0] = lut.pts[(i-W+n)%n];
     const [x1,y1] = lut.pts[i];
@@ -167,8 +200,8 @@ function buildSpeedProfile(lut) {
   const profile = new Float32Array(n);
   for (let i = 0; i < n; i++) {
     let v = raw[i];
-    for (let j = 1; j <= 60; j++)
-      v = Math.min(v, raw[(i+j)%n] + j*0.012);
+    for (let j = 1; j <= 50; j++)
+      v = Math.min(v, raw[(i+j)%n] + j*0.014);
     profile[i] = Math.max(0.28, v);
   }
   return profile;
@@ -188,7 +221,7 @@ function getTireFactor(car) {
 function calcSpeed(driver, pLen, targetLap) {
   const scale = targetLap / 16;
   const base  = (20 - (driver.rating/100)*5) * scale;
-  const rand  = (Math.random()*1.6 - 0.8) * scale;
+  const rand  = (Math.random()*0.8 - 0.4) * scale;
   return pLen / (base + rand);
 }
 
@@ -397,7 +430,7 @@ function raceLoop(t) {
     if (car.finishTime !== null) return;
 
     const corner = getCornerFactor(car.dist);
-    const isCorner = corner < 0.85;
+    const isCorner = corner < 0.90;
 
     // ── AI BATTERY MANAGEMENT ────────────────────
     if (!car.isPlayer) {
@@ -505,6 +538,7 @@ function raceLoop(t) {
     car.dot.setAttribute('cy', y.toFixed(2));
   });
 
+  G.currentT = t;
   updateStandings();
 
   if (G.cars.every(c => c.finishTime !== null)) {
@@ -580,9 +614,21 @@ function updateStandings() {
     document.getElementById('fl-time').textContent    = fmtTime(fl.time);
   }
 
+  // Live lap timer (top-right)
+  const timerEl = document.getElementById('lap-timer-live');
+  if (player.inPit) {
+    timerEl.textContent = 'PIT';
+  } else if (player.finishTime !== null) {
+    timerEl.textContent = 'FIN';
+  } else if (player.lapStart !== null && G.currentT) {
+    timerEl.textContent = fmtTime(G.currentT - player.lapStart);
+  }
+
   document.getElementById('standings').innerHTML = sorted.map((car, i) => {
     const isFL = fl && car === fl.car;
     const otBadge = car.overtakeModeActive ? '<span class="s-ot">OT</span>' : '';
+    const tc = COMPOUNDS[car.compound];
+    const tireBadge = `<span class="s-tire" style="background:${tc.color};color:${car.compound==='H'?'#222':'#fff'}">${car.compound}</span>`;
     let gapStr = '';
     if (i === 0) {
       gapStr = '<span class="s-gap s-gap-leader">LEADER</span>';
@@ -597,6 +643,7 @@ function updateStandings() {
       <span class="s-pos">${i+1}</span>
       <span class="s-dot" style="background:${car.d.tc}"></span>
       <span class="s-name">${car.d.sh}</span>
+      ${tireBadge}
       ${isFL ? '<span class="s-fl">FL</span>' : ''}
       ${otBadge}
       ${gapStr}
@@ -615,7 +662,7 @@ function updatePlayerHUD(player) {
   const normPct = Math.min(100, (bat / BAT_MAX) * 100);
   const fill = document.getElementById('hud-bat-bar');
   fill.style.width = `${normPct}%`;
-  fill.style.background = bat > 50 ? '#00ff87' : bat > 20 ? '#FFD700' : '#E8002D';
+  fill.style.background = bat >= player.batMax ? '#00d4ff' : bat > 50 ? '#00ff87' : bat > 20 ? '#FFD700' : '#E8002D';
 
   // OT extension bar (100–150%)
   const otTrack = document.getElementById('hud-bat-ot-track');
@@ -650,6 +697,7 @@ function updatePlayerHUD(player) {
   const wearBar = document.getElementById('hud-wear-bar');
   wearBar.style.width = `${100 - wear}%`;
   wearBar.style.background = wear < 50 ? '#27F4D2' : wear < 80 ? '#FFD700' : '#E8002D';
+  wearBar.classList.toggle('wear-critical', wear > 70);
   document.getElementById('hud-wear-pct').textContent = `${wear}%`;
 
   // Pit button

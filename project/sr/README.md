@@ -92,10 +92,10 @@ tireFactor = freshSpd - (tireWear/100) × (freshSpd - wornSpd)
 
 | 상황 | 충전/방전 |
 |------|---------|
-| 직선 — 노말 모드 | −4.8%/s |
-| 직선 — 부스트 모드 | −12%/s |
+| 직선 — 노말 모드 | −2.5%/s |
+| 직선 — 부스트 모드 | −6.5%/s |
 | 직선 — 리차지 모드 | +6.0%/s |
-| 코너 — 노말 모드 | +5.5%/s |
+| 코너 — 노말/부스트 모드 | +5.5%/s |
 | 코너 — 리차지 모드 | +25.8%/s |
 
 ---
@@ -106,8 +106,8 @@ tireFactor = freshSpd - (tireWear/100) × (freshSpd - wornSpd)
 
 ### BOOST 모드 (주황색 활성)
 
-- 속도 **×1.18** (+18%)
-- 배터리 소모 **−12%/s** (직선)
+- 속도 **×1.15** (+15%)
+- 배터리 소모 **−6.5%/s** (직선)
 - 언제든지 사용 가능, 배터리 충분할 때 추월 시 유리
 - **배터리 0% 도달 시 자동으로 노말 모드로 전환**
 
@@ -121,7 +121,7 @@ tireFactor = freshSpd - (tireWear/100) × (freshSpd - wornSpd)
 ### NORMAL 모드 (기본)
 
 - 속도 **×1.0** (배터리 있을 때)
-- 직선 소모: −4.8%/s
+- 직선 소모: −2.5%/s
 - 코너 충전: +5.5%/s
 
 ### 배터리 0% 패널티
@@ -183,8 +183,8 @@ PIT_TIME_MAX   = 6
 // 배터리
 BAT_MAX        = 100
 BAT_MAX_OT     = 150  // Overtake Mode 시
-BAT_DRAIN_NORM = 4.8  // %/s 직선 노말
-BAT_DRAIN_BOOST= 12   // %/s 직선 부스트
+BAT_DRAIN_NORM = 2.5  // %/s 직선 노말
+BAT_DRAIN_BOOST= 6.5  // %/s 직선 부스트
 BAT_REGEN_COR  = 5.5  // %/s 코너 자연충전
 BAT_REGEN_RCH_S= 6.0  // %/s 직선 리차지
 BAT_REGEN_RCH_C= 25.8 // %/s 코너 리차지
