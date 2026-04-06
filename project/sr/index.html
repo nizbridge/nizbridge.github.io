@@ -1,36 +1,127 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-	<title>SR</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/r.js"  charset="UTF-8"></script>
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/r.css">
+  <meta charset="UTF-8">
+  <title>F1 레이싱</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="css/r.css">
 </head>
 <body>
-    <div class="trackBox">
-        <div class="mover"></div>
-        <!-- <div class="mover blue"></div> -->
-        <svg>
-            <path class="track" fill="none" stroke-width="0.25" d="M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z"/>        
-        </svg>
-    </div>
 
-    <div class="trackBox">
-        <div class="mover t2"></div>
-        <!-- <div class="mover t2 blue"></div> -->
-        <svg>
-            <path class="track" fill="none" stroke-width="0.25" d="m42.75.13C-12.14,16.01,1.67,63.3,1.67,63.3c0,0,55.23-.69,22.09,43.84-33.14,44.53,55.58,48.67,56.27,27.27.69-21.4-12.43-54.54-20.71-50.4-8.28,4.14-40.04-23.82,26.58-48.67,66.62-24.85-7.94-30.38-7.94-30.38L42.75.13Z"/>
-        </svg>
+  <!-- 서킷 선택 -->
+  <div id="scn-circuit" class="scn active">
+    <div class="scn-inner">
+      <div class="page-title">서킷 선택</div>
+      <div class="circuit-grid" id="circuit-grid"></div>
     </div>
-    
-<script>
-    $(function() {
-    });
-</script>
+  </div>
+
+  <!-- 드라이버 선택 -->
+  <div id="scn-driver" class="scn">
+    <div class="scn-inner">
+      <div class="page-title">드라이버 선택</div>
+      <div class="breadcrumb" id="breadcrumb"></div>
+      <div class="driver-grid" id="driver-grid"></div>
+    </div>
+  </div>
+
+  <!-- 타이어 선택 -->
+  <div id="scn-tire" class="scn">
+    <div class="scn-inner">
+      <div class="page-title">타이어 선택</div>
+      <div class="breadcrumb" id="breadcrumb-tire"></div>
+      <div class="compound-grid" id="compound-grid"></div>
+    </div>
+  </div>
+
+  <!-- 레이스 -->
+  <div id="scn-race" class="scn">
+    <div class="race-left">
+      <div class="race-header">
+        <div class="race-circuit-lbl" id="race-circuit-lbl"></div>
+        <div class="race-lap-ctr" id="race-lap-ctr">LAP 1 / —</div>
+      </div>
+      <div class="section-label">순위</div>
+      <div id="standings"></div>
+    </div>
+    <div class="race-right">
+      <!-- Track SVG area -->
+      <div class="track-svg-wrap">
+        <svg id="track-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+        <!-- Pit tire selection overlay -->
+        <div class="pit-select-overlay" id="pit-select-overlay" style="display:none">
+          <div class="pit-select-box">
+            <div class="pit-select-title">피트 타이어 선택</div>
+            <div class="pit-select-note">스타트 라인 통과 시 피트인</div>
+            <div class="pit-tire-btns">
+              <button class="pit-tire-btn" data-compound="S" style="--tc:#FF3333" onclick="selectPitTire('S')">S 소프트</button>
+              <button class="pit-tire-btn" data-compound="M" style="--tc:#FFD700" onclick="selectPitTire('M')">M 미디엄</button>
+              <button class="pit-tire-btn" data-compound="H" style="--tc:#D8D8D8;color:#222" onclick="selectPitTire('H')">H 하드</button>
+            </div>
+            <button class="pit-cancel-btn" onclick="cancelPit()">취소</button>
+          </div>
+        </div>
+
+        <div class="lap-overlay" id="lap-overlay">
+          <div class="fl-box" id="fl-box">
+            <span class="fl-box-label">FASTEST LAP</span>
+            <span class="fl-box-driver" id="fl-driver">—</span>
+            <span class="fl-box-time" id="fl-time">—</span>
+          </div>
+          <div class="my-lap-row">
+            <span class="my-lap-label">LAST LAP</span>
+            <span class="my-lap-time" id="my-last-lap">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom control panel -->
+      <div class="race-bottom-panel">
+        <!-- ERS battery row -->
+        <div class="bat-row">
+          <span class="bat-label">ERS</span>
+          <div class="bat-bar-wrap">
+            <div class="bat-bar-main">
+              <div class="bat-bar-fill" id="hud-bat-bar" style="width:100%"></div>
+            </div>
+            <div class="bat-bar-ot" id="hud-bat-ot-track" style="opacity:0.3">
+              <div class="bat-ot-fill" id="hud-bat-ot-ext" style="width:0%"></div>
+            </div>
+          </div>
+          <span class="bat-pct" id="hud-bat-pct">100%</span>
+          <span class="bat-ot-badge" id="hud-ot-badge" style="display:none">OT</span>
+        </div>
+        <!-- Controls row -->
+        <div class="ctrl-row">
+          <button class="mode-btn mode-boost"   id="btn-boost"    onclick="setMode('B')">BOOST</button>
+          <button class="mode-btn mode-rch"     id="btn-recharge" onclick="setMode('R')">RECHARGE</button>
+          <div class="ctrl-divider"></div>
+          <span class="tire-badge" id="hud-compound">S</span>
+          <div class="tire-wear-wrap">
+            <div class="tire-wear-track">
+              <div class="tire-wear-bar" id="hud-wear-bar" style="width:100%"></div>
+            </div>
+            <span class="tire-wear-pct" id="hud-wear-pct">0%</span>
+          </div>
+          <button class="ctrl-btn btn-pit" id="btn-pit" onclick="playerPit()">PIT IN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 결과 -->
+  <div id="scn-results" class="scn">
+    <div class="scn-inner results-inner">
+      <div class="page-title">레이스 결과</div>
+      <div id="podium-area"></div>
+      <div id="results-table"></div>
+      <button class="btn-restart" onclick="restartGame()">다시 플레이</button>
+    </div>
+  </div>
+
+  <script src="js/r.js"></script>
 </body>
 </html>
