@@ -47,6 +47,20 @@
       <div id="standings"></div>
     </div>
     <div class="race-right">
+      <!-- Info bar (fastest lap + last lap + live timer) -->
+      <div class="race-info-bar">
+        <div class="fl-box" id="fl-box">
+          <span class="fl-box-label">FASTEST LAP</span>
+          <span class="fl-box-driver" id="fl-driver">—</span>
+          <span class="fl-box-time" id="fl-time">—</span>
+        </div>
+        <div class="my-lap-row">
+          <span class="my-lap-label">LAST LAP</span>
+          <span class="my-lap-time" id="my-last-lap">—</span>
+        </div>
+        <div class="lap-timer-live" id="lap-timer-live">0:00.00</div>
+      </div>
+
       <!-- Track SVG area -->
       <div class="track-svg-wrap">
         <svg id="track-svg" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -62,19 +76,6 @@
               <button class="pit-tire-btn" data-compound="H" style="--tc:#D8D8D8" onclick="selectPitTire('H')">H 하드</button>
             </div>
             <button class="pit-cancel-btn" onclick="cancelPit()">취소</button>
-          </div>
-        </div>
-
-        <div class="lap-timer-live" id="lap-timer-live">0:00.00</div>
-        <div class="lap-overlay" id="lap-overlay">
-          <div class="fl-box" id="fl-box">
-            <span class="fl-box-label">FASTEST LAP</span>
-            <span class="fl-box-driver" id="fl-driver">—</span>
-            <span class="fl-box-time" id="fl-time">—</span>
-          </div>
-          <div class="my-lap-row">
-            <span class="my-lap-label">LAST LAP</span>
-            <span class="my-lap-time" id="my-last-lap">—</span>
           </div>
         </div>
       </div>
