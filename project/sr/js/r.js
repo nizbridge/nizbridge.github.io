@@ -10,9 +10,9 @@ const BAT_MAX          = 100;
 const BAT_MAX_OT       = 150;   // overtake mode battery cap
 const BAT_DRAIN_NORM   = 2.5;   // %/s drain on straights, normal
 const BAT_DRAIN_BOOST  = 6.5;   // %/s drain on straights, boost mode
-const BAT_REGEN_COR    = 5.5;   // %/s regen in corners (natural)
-const BAT_REGEN_RCH_S  = 6.0;   // %/s regen on straights, recharge mode
-const BAT_REGEN_RCH_C  = 25.8;  // %/s regen in corners, recharge mode
+const BAT_REGEN_COR    = 5.0;   // %/s regen in corners (natural)
+const BAT_REGEN_RCH_S  = 5.4;   // %/s regen on straights, recharge mode
+const BAT_REGEN_RCH_C  = 23.2;  // %/s regen in corners, recharge mode
 const BOOST_MULT       = 1.15;  // speed in boost mode (with battery)
 const RECH_MULT        = 0.90;  // speed in recharge mode
 const EMPTY_BAT_MULT   = 0.68;  // speed when battery = 0%
@@ -247,7 +247,7 @@ function renderCircuits() {
     grid.appendChild(card);
   });
 }
-function pickCircuit(c) { G.circuit=c; renderDrivers(); showScn('driver'); }
+function pickCircuit(c) { requestFullscreen(); G.circuit=c; renderDrivers(); showScn('driver'); }
 
 // ── DRIVER SELECT ──────────────────────────────────────────────────────────
 function renderDrivers() {
@@ -283,7 +283,7 @@ function renderTireSelect() {
       <div class="compound-badge" style="background:${c.color};color:${textColor}">${key}</div>
       <div class="compound-name">${c.ko}</div>
       <div class="compound-stats">
-        <div class="cstat"><span>신선 속도</span><span>${c.freshSpd>=1?'+':''}${Math.round((c.freshSpd-1)*100)}%</span></div>
+        <div class="cstat"><span>속도증가율</span><span>${c.freshSpd>=1?'+':''}${Math.round((c.freshSpd-1)*100)}%</span></div>
         <div class="cstat"><span>마모 속도</span><span>${Math.round((c.wornSpd-1)*100)}%</span></div>
         <div class="cstat"><span>지속력</span><span>${c.dur}</span></div>
       </div>`;
@@ -350,7 +350,7 @@ function initRace() {
       lapTimes: [], lapStart: null,
       finishTime: null,
       compound, tireWear: 0,
-      inPit: false, pitTimer: 0,
+      inPit: false, pitTimer: 0, pitDuration: 0, pitNotifyTimer: 0,
       pitRequested: false, pitNewCompound: null,
       battery: BAT_MAX,
       batMode: 'N',         // 'N' normal | 'B' boost | 'R' recharge
@@ -421,12 +421,14 @@ function raceLoop(t) {
       car.pitTimer -= dt;
       if (car.pitTimer <= 0) {
         car.inPit = false;
+        if (car.isPlayer) car.pitNotifyTimer = 3.5;
         car.tireWear = 0;
         if (car.pitNewCompound) { car.compound = car.pitNewCompound; car.pitNewCompound = null; }
         car.dot.style.opacity = '1';
       }
       return;
     }
+    if (car.pitNotifyTimer > 0) car.pitNotifyTimer -= dt;
     if (car.finishTime !== null) return;
 
     const corner = getCornerFactor(car.dist);
@@ -456,8 +458,11 @@ function raceLoop(t) {
     const otMult = car.overtakeModeActive ? OT_REGEN_FACTOR : 1.0;
 
     if (isCorner) {
-      const rate = car.batMode === 'R' ? BAT_REGEN_RCH_C : BAT_REGEN_COR;
-      car.battery = Math.min(car.batMax, car.battery + rate * otMult * dt);
+      if (car.batMode !== 'B') {
+        const rate = car.batMode === 'R' ? BAT_REGEN_RCH_C : BAT_REGEN_COR;
+        car.battery = Math.min(car.batMax, car.battery + rate * otMult * dt);
+      }
+      // boost mode in corners: no regen, no drain
     } else {
       if (car.batMode === 'R') {
         car.battery = Math.min(car.batMax, car.battery + BAT_REGEN_RCH_S * otMult * dt);
@@ -511,6 +516,7 @@ function raceLoop(t) {
         car.pitRequested = false;
         car.inPit = true;
         car.pitTimer = PIT_TIME_MIN + Math.random() * (PIT_TIME_MAX - PIT_TIME_MIN);
+        car.pitDuration = car.pitTimer;
         car.dot.style.opacity = '0.3';
         return;
       }
@@ -559,10 +565,20 @@ function setMode(m) {
 function playerPit() {
   const car = G.cars?.find(c => c.isPlayer);
   if (!car || car.inPit || car.finishTime !== null) return;
-  // Highlight current compound in overlay
-  document.querySelectorAll('.pit-tire-btn').forEach(btn => {
-    btn.classList.toggle('pit-tire-current', btn.dataset.compound === car.compound);
-  });
+
+  // Render tire buttons with estimated laps
+  const remaining = G.circuit.totalLaps - car.laps;
+  document.querySelector('.pit-tire-btns').innerHTML = Object.entries(COMPOUNDS).map(([key, c]) => {
+    const estLaps = Math.floor(100 / c.wearPerLap);
+    const isCur   = key === car.compound;
+    return `<button class="pit-tire-btn${isCur ? ' pit-tire-current' : ''}"
+      data-compound="${key}" style="--tc:${c.color}"
+      onclick="selectPitTire('${key}')">
+      <span class="ptb-label" style="color:${c.color}">${key} ${c.ko}</span>
+      <span class="ptb-laps">약 ${estLaps}랩</span>
+    </button>`;
+  }).join('');
+
   document.getElementById('pit-select-overlay').style.display = 'flex';
 }
 
@@ -617,11 +633,19 @@ function updateStandings() {
   // Live lap timer (top-right)
   const timerEl = document.getElementById('lap-timer-live');
   if (player.inPit) {
-    timerEl.textContent = 'PIT';
+    timerEl.style.color = '#FFD700';
+    timerEl.textContent = `PIT ${(player.pitDuration - player.pitTimer).toFixed(1)}s`;
+  } else if (player.pitNotifyTimer > 0) {
+    timerEl.style.color = '#FFD700';
+    timerEl.textContent = `PIT ${player.pitDuration.toFixed(1)}s`;
   } else if (player.finishTime !== null) {
+    timerEl.style.color = '#27F4D2';
     timerEl.textContent = 'FIN';
-  } else if (player.lapStart !== null && G.currentT) {
-    timerEl.textContent = fmtTime(G.currentT - player.lapStart);
+  } else {
+    timerEl.style.color = '#27F4D2';
+    if (player.lapStart !== null && G.currentT) {
+      timerEl.textContent = fmtTime(G.currentT - player.lapStart);
+    }
   }
 
   document.getElementById('standings').innerHTML = sorted.map((car, i) => {
@@ -767,6 +791,24 @@ function restartGame() {
   G = {};
   renderCircuits();
   showScn('circuit');
+}
+
+// ── FULLSCREEN + ORIENTATION ───────────────────────────────────────────────
+function requestFullscreen() {
+  const el = document.documentElement;
+  const req = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen;
+  if (!req) return;
+  req.call(el).then(() => {
+    // After fullscreen, try to lock landscape (Android Chrome supports this)
+    if (screen.orientation && screen.orientation.lock) {
+      screen.orientation.lock('landscape').catch(() => {});
+    }
+  }).catch(() => {
+    // Fullscreen denied — still try orientation lock alone
+    if (screen.orientation && screen.orientation.lock) {
+      screen.orientation.lock('landscape').catch(() => {});
+    }
+  });
 }
 
 // ── BOOT ───────────────────────────────────────────────────────────────────

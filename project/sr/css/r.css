@@ -29,33 +29,33 @@ body {
 .scn.active { display: flex; }
 .scn-inner {
   width: 100%;
-  padding: 50px 60px;
+  padding: 28px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .page-title {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--red);
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 .breadcrumb {
-  font-size: .82rem;
+  font-size: .76rem;
   color: var(--text2);
   letter-spacing: .1em;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 /* ── CIRCUIT SELECT ───────────────────── */
 .circuit-grid {
   display: flex;
-  gap: 28px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -63,44 +63,44 @@ body {
 .circuit-card {
   background: var(--bg3);
   border: 1px solid var(--border2);
-  border-radius: 10px;
-  padding: 20px 20px 16px;
+  border-radius: 8px;
+  padding: 14px 14px 12px;
   cursor: pointer;
-  width: 290px;
+  width: 220px;
   transition: border-color .18s, transform .18s, box-shadow .18s;
   text-align: center;
 }
 .circuit-card:hover {
   border-color: var(--red);
-  transform: translateY(-6px);
-  box-shadow: 0 10px 40px rgba(232,0,45,.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(232,0,45,.25);
 }
 
-.circuit-flag { font-size: 2.2rem; margin-bottom: 10px; }
+.circuit-flag { font-size: 1.6rem; margin-bottom: 6px; }
 
 .circuit-svg-wrap {
   width: 100%;
-  height: 170px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .circuit-preview-svg {
   display: block;
   max-width: 100%;
-  max-height: 170px;
+  max-height: 110px;
 }
 
-.circuit-gp  { font-size: .88rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 3px; }
-.circuit-sub { font-size: .72rem; color: var(--text2); }
+.circuit-gp  { font-size: .78rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 2px; }
+.circuit-sub { font-size: .66rem; color: var(--text2); }
 
 /* ── DRIVER SELECT ────────────────────── */
 .driver-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  max-width: 1100px;
+  gap: 8px;
+  max-width: 960px;
   width: 100%;
 }
 
@@ -108,64 +108,64 @@ body {
   background: var(--bg3);
   border: 1px solid var(--border);
   border-left: 3px solid var(--tc, #fff);
-  border-radius: 6px;
-  padding: 11px 10px;
+  border-radius: 5px;
+  padding: 8px 8px;
   cursor: pointer;
   transition: background .15s, transform .15s;
 }
 .driver-card:hover { background: #222; transform: translateY(-2px); }
 
-.dc-num  { font-size: 1.25rem; font-weight: 900; color: var(--text3); line-height: 1; }
-.dc-name { font-size: .78rem; font-weight: 600; margin: 5px 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.dc-sh   { font-size: .88rem; font-weight: 700; letter-spacing: .06em; color: var(--tc, #fff); }
-.dc-team { font-size: .66rem; color: var(--text2); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dc-num  { font-size: 1rem; font-weight: 900; color: var(--text3); line-height: 1; }
+.dc-name { font-size: .7rem; font-weight: 600; margin: 4px 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dc-sh   { font-size: .8rem; font-weight: 700; letter-spacing: .06em; color: var(--tc, #fff); }
+.dc-team { font-size: .6rem; color: var(--text2); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* ── TIRE / COMPOUND SELECT ───────────── */
 .compound-grid {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .compound-card {
   background: var(--bg3);
   border: 1px solid var(--border2);
-  border-radius: 10px;
-  padding: 28px 30px 24px;
+  border-radius: 8px;
+  padding: 18px 22px 16px;
   cursor: pointer;
-  width: 210px;
+  width: 170px;
   text-align: center;
   transition: border-color .18s, transform .18s, box-shadow .18s;
 }
 .compound-card:hover {
   border-color: var(--red);
-  transform: translateY(-6px);
-  box-shadow: 0 10px 40px rgba(232,0,45,.22);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(232,0,45,.22);
 }
 
 .compound-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 900;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .compound-name {
-  font-size: 1rem;
+  font-size: .88rem;
   font-weight: 700;
   letter-spacing: .08em;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
-.compound-stats { display: flex; flex-direction: column; gap: 6px; }
-.cstat { display: flex; justify-content: space-between; font-size: .75rem; color: var(--text2); }
+.compound-stats { display: flex; flex-direction: column; gap: 5px; }
+.cstat { display: flex; justify-content: space-between; font-size: .7rem; color: var(--text2); }
 .cstat span:last-child { font-weight: 700; color: var(--text); }
 
 /* ── RACE SCREEN ──────────────────────── */
@@ -738,6 +738,23 @@ body {
   letter-spacing: .06em;
   cursor: pointer;
   transition: background .15s, border-color .15s, transform .12s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.ptb-label {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.ptb-laps {
+  font-size: .65rem;
+  font-weight: 400;
+  color: var(--text2);
+  letter-spacing: .03em;
 }
 .pit-tire-btn:hover {
   background: rgba(255,255,255,.12);
@@ -787,4 +804,129 @@ body {
 @keyframes cdpop {
   from { transform: scale(1.6); opacity: 0; }
   to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ── PORTRAIT WARNING ─────────────────── */
+.portrait-warn {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0a0a0a;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  padding: 40px;
+}
+.portrait-warn-icon {
+  font-size: 4rem;
+  animation: rotpulse 1.8s ease-in-out infinite;
+  color: var(--red);
+}
+@keyframes rotpulse {
+  0%, 100% { transform: rotate(0deg); opacity: 1; }
+  50%       { transform: rotate(90deg); opacity: .6; }
+}
+.portrait-warn-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text2);
+  letter-spacing: .08em;
+}
+
+/* ── RESPONSIVE — TABLET / MOBILE ────── */
+@media (max-width: 960px) {
+  /* Selection screens */
+  .scn-inner { padding: 20px 16px; }
+  .page-title { font-size: 1.2rem; margin-bottom: 14px; }
+  .breadcrumb { font-size: .7rem; margin-bottom: 10px; }
+
+  /* Circuit cards */
+  .circuit-grid { gap: 10px; }
+  .circuit-card { width: 180px; padding: 10px 10px 8px; }
+  .circuit-svg-wrap { height: 90px; margin-bottom: 8px; }
+  .circuit-preview-svg { max-height: 90px; }
+  .circuit-flag { font-size: 1.3rem; margin-bottom: 4px; }
+
+  /* Driver grid: 4 columns */
+  .driver-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 100%; }
+  .dc-num { font-size: .88rem; }
+  .dc-sh  { font-size: .72rem; }
+
+  /* Compound cards */
+  .compound-grid { gap: 10px; }
+  .compound-card { width: 140px; padding: 14px 14px 12px; }
+  .compound-badge { width: 36px; height: 36px; font-size: 1.1rem; margin-bottom: 6px; }
+  .compound-name { font-size: .8rem; margin-bottom: 8px; }
+
+  /* Race left panel */
+  .race-left { width: 200px; min-width: 200px; padding: 12px 10px; }
+  .race-header { margin-bottom: 10px; padding-bottom: 10px; }
+  .race-circuit-lbl { font-size: .62rem; }
+  .race-lap-ctr { font-size: 1.2rem; }
+  .standing-row { font-size: .72rem; gap: 5px; padding: 4px 3px; }
+  .s-gap { font-size: .62rem; }
+  .section-label { font-size: .6rem; }
+
+  /* Info bar */
+  .race-info-bar { padding: 5px 12px; gap: 10px; }
+
+  /* Bottom panel */
+  .race-bottom-panel { padding: 8px 14px 10px; gap: 6px; }
+  .mode-btn { padding: 8px 14px; font-size: .68rem; }
+  .ctrl-btn { padding: 8px 12px; font-size: .68rem; }
+}
+
+/* Small mobile landscape (height ≤ 480px — typical phone landscape) */
+@media (max-height: 480px) {
+  /* Race left: compact */
+  .race-left { width: 160px; min-width: 160px; padding: 8px 8px; }
+  .race-header { margin-bottom: 7px; padding-bottom: 7px; }
+  .race-circuit-lbl { font-size: .58rem; }
+  .race-lap-ctr { font-size: 1rem; }
+  .section-label { display: none; }
+  .standing-row { font-size: .65rem; gap: 4px; padding: 3px 2px; }
+  .s-gap { font-size: .58rem; }
+  .s-fl, .s-ot, .s-tire { padding: 1px 3px; font-size: .54rem; }
+
+  /* Info bar: single compact line */
+  .race-info-bar { padding: 4px 10px; gap: 8px; }
+  .fl-box { padding: 3px 6px; }
+  .fl-box-label { font-size: .5rem; }
+  .fl-box-driver, .fl-box-time { font-size: .66rem; }
+  .my-lap-label { font-size: .5rem; }
+  .my-lap-time { font-size: .66rem; }
+  .lap-timer-live { font-size: .9rem; }
+
+  /* Bottom panel: larger touch targets, tighter padding */
+  .race-bottom-panel { padding: 6px 12px 8px; gap: 5px; }
+  .bat-row { gap: 8px; }
+  .bat-label { width: 22px; font-size: .54rem; }
+  .bat-bar-main { height: 7px; }
+  .bat-bar-ot { height: 7px; }
+  .bat-pct { font-size: .68rem; width: 38px; }
+  .ctrl-row { gap: 6px; }
+  .mode-btn { padding: 10px 10px; font-size: .64rem; letter-spacing: .06em; }
+  .ctrl-btn { padding: 10px 8px; font-size: .64rem; letter-spacing: .06em; }
+  .tire-badge { width: 24px; height: 24px; font-size: .76rem; }
+  .ctrl-divider { height: 24px; }
+
+  /* Countdown */
+  .countdown-num { font-size: 5rem; }
+}
+
+/* Portrait mode on mobile: show warning, hide content */
+@media (orientation: portrait) and (max-width: 1024px) {
+  .portrait-warn { display: flex !important; }
+}
+
+/* Safe area insets for notched phones */
+@supports (padding: env(safe-area-inset-left)) {
+  .race-left   { padding-left: max(10px, env(safe-area-inset-left)); }
+  .race-right  { padding-right: env(safe-area-inset-right); }
+  .race-bottom-panel {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
 }
