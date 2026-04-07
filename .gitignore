@@ -2,3 +2,7 @@ _site*
 .sass-cache
 .jekyll-metadata
 .idea
+
+# Dependency directories
+node_modules
+jspm_packages
