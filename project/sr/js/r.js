@@ -106,6 +106,40 @@ const CIRCUITS = [
       // Bottom straight back to start
       [632,442],[518,448],[428,452],
     ]
+  },
+  {
+    id: 'suzuka',
+    name: 'Japanese Grand Prix',
+    sub: 'Suzuka International Racing Course',
+    flag: '🇯🇵',
+    color: '#DC143C',
+    targetLap: 38, totalLaps: 11,
+    vb: '0 0 820 520',
+    pts: [
+      // S/F → C01 (long diagonal straight, top-right → bottom-right)
+      [580,153],[615,191],[658,250],[700,314],[734,374],
+      // C01 hairpin (bottom-right)
+      [763,430],[750,460],[723,489],
+      // C02 exit → S-curves C03~C07 (up-left)
+      [703,476],[675,448],
+      [652,438],[636,418],[638,394],
+      [630,383],[612,374],[600,365],
+      [590,362],[575,347],[562,314],
+      [544,290],[528,261],
+      // C07 → C08~C09 (descending center, crosses return path)
+      [490,295],[407,315],[362,325],[342,322],
+      // C09 → C10 → C11 (ascending inner hairpin)
+      [348,285],[350,175],[354,100],
+      // C11 → outer loop left: C12 → C13 → C14
+      [325,113],[270,110],
+      [213,168],[175,131],[122,58],
+      [83,64],[41,95],
+      // C14 → return right → C15 (figure-8 crossing)
+      [50,145],[64,178],[102,212],
+      [162,234],[238,249],[312,254],[376,252],
+      // C15 → C16 → C17 → C18 → S/F
+      [404,228],[466,178],[508,166],[549,153],
+    ]
   }
 ];
 
@@ -298,6 +332,7 @@ function initRace() {
   const c = G.circuit;
   const svg = document.getElementById('track-svg');
   svg.setAttribute('viewBox', c.vb);
+  svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
   svg.innerHTML = '';
 
   const pathD = crPath(c.pts);
@@ -326,13 +361,12 @@ function initRace() {
   G.lut = buildLUT(measPath, LUT_SAMPLES);
   G.speedProfile = buildSpeedProfile(G.lut);
   const pLen = G.lut.total;
-  const GRID_GAP = pLen * 0.007;
-
   const gridOrder = [...DRIVERS].sort(() => Math.random()-0.5);
 
   G.cars = gridOrder.map((d, i) => {
     const isPlayer = d.sh === G.playerDriver.sh;
     const speed = calcSpeed(d, pLen, c.targetLap);
+    const GRID_GAP = speed * 0.05; // 0.05s between each car
     const startDist = -(i+1)*GRID_GAP;
     const aiCompound = ['S','M','M','H','M'][Math.floor(Math.random()*5)];
     const compound = isPlayer ? G.playerCompound : aiCompound;
@@ -666,9 +700,8 @@ function updateStandings() {
     <div class="standing-row ${car.isPlayer?'is-player':''}">
       <span class="s-pos">${i+1}</span>
       <span class="s-dot" style="background:${car.d.tc}"></span>
-      <span class="s-name">${car.d.sh}</span>
+      <span class="s-name"${isFL ? ' style="color:#c77dff"' : ''}>${car.d.sh}</span>
       ${tireBadge}
-      ${isFL ? '<span class="s-fl">FL</span>' : ''}
       ${otBadge}
       ${gapStr}
     </div>`;
