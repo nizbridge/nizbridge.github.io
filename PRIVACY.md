@@ -25,7 +25,3 @@ Claude Usage Tracker does not collect, transmit, or share any personal data with
 - Does not track browsing history or website content.
 - Does not use analytics, crash reporting, or any third-party SDK.
 - Does not execute any remotely hosted code.
-
-## Contact
-
-If you have questions about this policy, please open an issue at the [GitHub repository](https://github.com/your-username/claudeEX).
