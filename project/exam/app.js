@@ -41,13 +41,13 @@ const els = {
   restart: document.querySelector('#restart'), footer: document.querySelector('.footer-note'),
 };
 
-let questions = [], current = 0, results = [];
+let questions = [], current = 0, results = [], answered = false;
 const shuffle = (items) => [...items].sort(() => Math.random() - .5);
 const normal = (value) => value.trim().toLowerCase().replace(/[.?!]/g, '');
 
 function start() {
   questions = shuffle(words).map(word => ({ ...word, askEnglish: Math.random() < .5 }));
-  current = 0; results = [];
+  current = 0; results = []; answered = false;
   els.footer.textContent = `오늘의 단어 · ${words.length}개`;
   els.result.hidden = true; els.quiz.hidden = false;
   showQuestion();
@@ -59,22 +59,34 @@ function showQuestion() {
   els.meter.style.width = `${((current + 1) / questions.length) * 100}%`;
   els.type.textContent = isEnglish ? '영어 단어를 보고 뜻을 입력하세요' : '뜻을 보고 영어 단어를 입력하세요';
   els.prompt.textContent = isEnglish ? q.english : q.korean;
-  els.answer.value = ''; els.answer.className = ''; els.feedback.textContent = ''; els.feedback.className = 'feedback';
+  answered = false;
+  els.answer.value = ''; els.answer.className = ''; els.answer.disabled = false;
+  els.feedback.textContent = ''; els.feedback.className = 'feedback';
+  els.form.querySelector('button').innerHTML = '정답 확인 <span>↵</span>';
   els.answer.placeholder = isEnglish ? '뜻을 입력하세요' : '영어 단어를 입력하세요';
   els.answer.focus();
 }
 
 els.form.addEventListener('submit', (event) => {
   event.preventDefault();
+  if (answered) {
+    current += 1;
+    current < questions.length ? showQuestion() : showResults();
+    return;
+  }
   const q = questions[current], input = normal(els.answer.value);
   if (!input) { els.answer.focus(); return; }
   const expected = q.askEnglish ? q.korean : q.english;
   const correct = input === normal(expected);
   results.push({ ...q, correct, expected });
+  answered = true;
+  els.answer.disabled = true;
   els.answer.className = correct ? 'correct' : 'wrong';
   els.feedback.className = `feedback ${correct ? 'good' : 'bad'}`;
   els.feedback.textContent = correct ? '정답이에요!' : `정답: ${expected}`;
-  setTimeout(() => { current += 1; current < questions.length ? showQuestion() : showResults(); }, 900);
+  const submitButton = els.form.querySelector('button');
+  submitButton.innerHTML = current === questions.length - 1 ? '결과 보기 <span>→</span>' : '다음 문제 <span>→</span>';
+  submitButton.focus();
 });
 
 function showResults() {
