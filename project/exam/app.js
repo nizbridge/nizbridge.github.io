@@ -44,6 +44,8 @@ const els = {
 let questions = [], current = 0, results = [], answered = false;
 const shuffle = (items) => [...items].sort(() => Math.random() - .5);
 const normal = (value) => value.trim().toLowerCase().replace(/[.?!]/g, '');
+const meaningAnswers = (meaning) => meaning.split(/[,;·/]/).map(normal).filter(Boolean);
+const escapeHtml = (value) => value.replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' })[char]);
 
 function start() {
   questions = shuffle(words).map(word => ({ ...word, askEnglish: Math.random() < .5 }));
@@ -77,8 +79,8 @@ els.form.addEventListener('submit', (event) => {
   const q = questions[current], input = normal(els.answer.value);
   if (!input) { els.answer.focus(); return; }
   const expected = q.askEnglish ? q.korean : q.english;
-  const correct = input === normal(expected);
-  results.push({ ...q, correct, expected });
+  const correct = q.askEnglish ? meaningAnswers(q.korean).includes(input) : input === normal(q.english);
+  results.push({ ...q, correct, expected, answer: els.answer.value.trim() });
   answered = true;
   els.answer.disabled = true;
   els.answer.className = correct ? 'correct' : 'wrong';
@@ -94,7 +96,7 @@ function showResults() {
   els.quiz.hidden = true; els.result.hidden = false; els.score.textContent = correct;
   document.querySelector('.score span').textContent = `/ ${questions.length}`;
   els.copy.textContent = correct === questions.length ? '완벽해요. 모든 단어를 맞혔습니다!' : `총 ${questions.length}개 중 ${correct}개를 맞혔어요.`;
-  els.review.innerHTML = results.map(item => `<div class="review-item"><span><b>${item.english}</b> · ${item.korean}</span><span class="mark ${item.correct ? '' : 'fail'}">${item.correct ? '정답' : '오답'}</span></div>`).join('');
+  els.review.innerHTML = results.map(item => `<div class="review-item"><span><b>${item.english}</b> · ${item.korean}<small>입력한 답: ${escapeHtml(item.answer)}</small></span><span class="mark ${item.correct ? '' : 'fail'}">${item.correct ? '정답' : '오답'}</span></div>`).join('');
 }
 
 els.restart.addEventListener('click', start);
