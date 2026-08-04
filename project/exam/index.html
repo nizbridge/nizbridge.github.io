@@ -1,45 +1,20 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Word Sprint</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Sprint</title><link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main class="app-shell">
-      <section class="quiz-card" aria-live="polite">
-        <div class="topline">
-          <a class="brand" href="/" aria-label="처음으로">word<span>sprint</span></a>
-          <span id="progress" class="progress">01 <i></i> 30</span>
-        </div>
-
-        <div id="quiz-view">
-          <div class="meter"><span id="meter-fill"></span></div>
-          <p id="question-type" class="eyebrow">뜻을 보고 영어 단어를 입력하세요</p>
-          <h1 id="prompt">절대적인, 완전한</h1>
-          <form id="answer-form" novalidate>
-            <label class="sr-only" for="answer">정답 입력</label>
-            <input id="answer" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="답을 입력하세요" />
-            <button type="submit">정답 확인 <span>↵</span></button>
-          </form>
-          <p id="feedback" class="feedback" role="status"></p>
-        </div>
-
-        <div id="result-view" hidden>
-          <p class="eyebrow">시험 완료</p>
-          <h1>수고했어요!</h1>
-          <div class="score"><strong id="score">0</strong><span>/ 30</span></div>
-          <p id="result-copy" class="result-copy"></p>
-          <div id="review" class="review"></div>
-          <button id="restart" class="restart">다시 풀기 <span>↻</span></button>
-        </div>
-      </section>
-      <p class="footer-note">오늘의 단어 · 30개</p>
-    </main>
-    <script src="app.js"></script>
-  </body>
+  <body><main class="app-shell"><section class="quiz-card" aria-live="polite">
+    <div class="topline"><button id="home-button" class="brand" aria-label="메인으로">word<span>sprint</span></button><nav><button class="nav-button active" data-view="home">레슨</button><button class="nav-button" data-view="vocabulary">단어장</button></nav></div>
+    <div id="home-view" class="view">
+      <p class="eyebrow">나의 단어 시험</p><h1>오늘 공부할 레슨을<br />골라보세요.</h1><p class="intro">여러 레슨을 함께 골라도 됩니다.</p>
+      <div id="lesson-list" class="lesson-list"></div><button id="start-button" class="primary" disabled>선택한 레슨으로 시작하기 <span>→</span></button>
+    </div>
+    <div id="vocabulary-view" class="view" hidden><p class="eyebrow">단어장</p><h1>등록된 단어</h1><div id="word-list" class="word-list"></div></div>
+    <div id="quiz-view" class="view" hidden><div class="meter"><span id="meter-fill"></span></div><p id="question-type" class="eyebrow"></p><h1 id="prompt"></h1><form id="answer-form" novalidate><label class="sr-only" for="answer">정답 입력</label><input id="answer" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" /><button type="submit">정답 확인 <span>↵</span></button></form><p id="feedback" class="feedback" role="status"></p></div>
+    <div id="result-view" class="view" hidden><p class="eyebrow">시험 완료</p><h1>수고했어요!</h1><div class="score"><strong id="score">0</strong><span>/ 0</span></div><p id="result-copy" class="result-copy"></p><div id="review" class="review"></div><button id="restart" class="restart">레슨 선택으로 <span>↻</span></button></div>
+  </section><p id="footer-note" class="footer-note">Lesson을 선택해 주세요</p></main><script src="app.js"></script></body>
 </html>
