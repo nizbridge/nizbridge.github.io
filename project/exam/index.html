@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Sprint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="quiz-card" aria-live="polite">
+        <div class="topline">
+          <a class="brand" href="/" aria-label="처음으로">word<span>sprint</span></a>
+          <span id="progress" class="progress">01 <i></i> 30</span>
+        </div>
+
+        <div id="quiz-view">
+          <div class="meter"><span id="meter-fill"></span></div>
+          <p id="question-type" class="eyebrow">뜻을 보고 영어 단어를 입력하세요</p>
+          <h1 id="prompt">절대적인, 완전한</h1>
+          <form id="answer-form" novalidate>
+            <label class="sr-only" for="answer">정답 입력</label>
+            <input id="answer" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="답을 입력하세요" />
+            <button type="submit">정답 확인 <span>↵</span></button>
+          </form>
+          <p id="feedback" class="feedback" role="status"></p>
+        </div>
+
+        <div id="result-view" hidden>
+          <p class="eyebrow">시험 완료</p>
+          <h1>수고했어요!</h1>
+          <div class="score"><strong id="score">0</strong><span>/ 30</span></div>
+          <p id="result-copy" class="result-copy"></p>
+          <div id="review" class="review"></div>
+          <button id="restart" class="restart">다시 풀기 <span>↻</span></button>
+        </div>
+      </section>
+      <p class="footer-note">오늘의 단어 · 30개</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
