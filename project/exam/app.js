@@ -66,6 +66,41 @@ const lessons = [
     ['capable', '~할 수 있는, 유능한'],
     ['access', '(to) 접근'],
   ].map(([english, korean]) => ({ english, korean })) },
+  { id: 'lesson5', title: 'Lesson 5', subtitle: '단어 30개', words: [
+    ['accompany', '동반하다'],
+    ['ban', '금지하다, (on) 금지'],
+    ['cape', '망토, 곶, 갑'],
+    ['decade', '10년'],
+    ['educate', '교육하다'],
+    ['fairly', '공정하게, 꽤, 상당히'],
+    ['dare', '감히 ~하다'],
+    ['haste', '서두름'],
+    ['idle', '게으른'],
+    ['lawyer', '변호사'],
+    ['manufacture', '제조하다, 제조, 제조업'],
+    ['necessity', '필요, 필수'],
+    ['paragraph', '단락'],
+    ['satisfy', '만족시키다'],
+    ['teenage', '십대의'],
+    ['variety', '여러 가지, 각양각색'],
+    ['weed', '잡초'],
+    ['accomplish', '성취하다, 완수하다'],
+    ['capture', '포획하다, 붙잡다'],
+    ['decay', '부패하다, 썩다'],
+    ['ignorant', '무지한'],
+    ['parcel', '꾸러미, 소포'],
+    ['rapid', '빠른, 신속한'],
+    ['saucer', '(커피잔 등의) 받침 접시, 접시 모양의 물건'],
+    ['scale', '규모, 저울, 비늘'],
+    ['telegraph', '전신, 전보, 전보를 치다'],
+    ['joint', '공동의, 합동의, 관절, 연결부위'],
+    ['band', '악단, 한 무리, 띠, 대'],
+    ['knock', '똑똑 두드리다, 노크 소리'],
+    ['rank', '계급, 지위, 등급, 지위를 차지하다, 매기다'],
+  ].map(([english, korean]) => ({ english, korean })) },
+  { id: 'lesson6', title: 'Lesson 6', subtitle: '단어 30개', words: [
+    ['habitat', '서식지'], ['bang', '(쿵 하고) 치다, 달다, 부딪치다, 쾅 소리'], ['carriage', '마차'], ['deceive', '속이다, 기만하다'], ['decision', '결정'], ['religious', '종교의'], ['generous', '관대한, 너그러운'], ['hay', '건초'], ['illegal', '불법의'], ['judg(e)ment', '판단, 판결', 'judgment|judgement'], ['layer', '층, 겹'], ['march', '행진하다, 행진, 행군'], ['needle', '바늘'], ['oppose', '반대하다'], ['parliament', '의회, 국회'], ['quit', '그만두다'], ['rare', '드문, 희귀한'], ['labor', '노동, 노동의'], ['telescope', '망원경'], ['union', '연합, 조합'], ['various', '다양한'], ['weigh', '무게가 ~이다, 무게를 재다'], ['accordingly', '그에 따라서, 따라서, 그래서'], ['cart', '수레, (쇼핑) 카트'], ['participate', '참가하다'], ['particular', '특정한, 특별한'], ['scatter', '흩뿌리다'], ['racial', '인종의'], ['relieve', '완화하다, 안도하게 하다'], ['illustrate', '(책 등에) 삽화를 넣다, 예를 들어 설명하다'],
+  ].map(([english, korean, spellings]) => ({ english, korean, spellings })) },
 ];
 const $ = selector => document.querySelector(selector);
 const els = { home: $('#home-view'), vocabulary: $('#vocabulary-view'), quiz: $('#quiz-view'), result: $('#result-view'), lessonList: $('#lesson-list'), vocabularyTabs: $('#vocabulary-tabs'), wordList: $('#word-list'), start: $('#start-button'), footer: $('#footer-note'), progress: $('.progress'), meter: $('#meter-fill'), type: $('#question-type'), prompt: $('#prompt'), form: $('#answer-form'), answer: $('#answer'), feedback: $('#feedback'), score: $('#score'), copy: $('#result-copy'), review: $('#review'), restart: $('#restart') };
@@ -86,7 +121,7 @@ function renderVocabulary() { const lesson = lessons.find(item => item.id === vo
 function updateSelection() { selected = new Set([...document.querySelectorAll('.lesson input:checked')].map(input => input.value)); const count = lessons.filter(lesson => selected.has(lesson.id)).flatMap(lesson => lesson.words).length; els.start.disabled = !count; els.footer.textContent = count ? `선택한 단어 · ${count}개` : 'Lesson을 선택해 주세요'; }
 function start() { const chosen = lessons.filter(lesson => selected.has(lesson.id)).flatMap(lesson => lesson.words); questions = shuffle(chosen).map(word => ({ ...word, askEnglish: Math.random() < .5 })); current = 0; results = []; switchView('quiz'); showQuestion(); }
 function showQuestion() { const q = questions[current]; $('.topline').querySelector('nav').innerHTML = `<span class="progress">${String(current + 1).padStart(2, '0')} <i></i> ${String(questions.length).padStart(2, '0')}</span>`; els.meter.style.width = `${((current + 1) / questions.length) * 100}%`; els.type.textContent = q.askEnglish ? '영어 단어를 보고 뜻을 입력하세요' : '뜻을 보고 영어 단어를 입력하세요'; els.prompt.textContent = q.askEnglish ? q.english : q.korean; answered = false; els.answer.value = ''; els.answer.disabled = false; els.answer.className = ''; els.answer.placeholder = q.askEnglish ? '뜻을 입력하세요' : '영어 단어를 입력하세요'; els.feedback.textContent = ''; els.feedback.className = 'feedback'; els.form.querySelector('button').innerHTML = '정답 확인 <span>↵</span>'; els.answer.focus(); }
-els.form.addEventListener('submit', event => { event.preventDefault(); if (answered) { current += 1; current < questions.length ? showQuestion() : showResults(); return; } const q = questions[current], input = normal(els.answer.value); if (!input) return; const expected = q.askEnglish ? q.korean : q.english; const correct = q.askEnglish ? meaningAnswers(q).includes(input) : input === normal(q.english); results.push({ ...q, correct, expected, answer: els.answer.value.trim() }); answered = true; els.answer.disabled = true; els.answer.className = correct ? 'correct' : 'wrong'; els.feedback.className = `feedback ${correct ? 'good' : 'bad'}`; els.feedback.textContent = correct ? '정답이에요!' : `정답: ${expected}`; const button = els.form.querySelector('button'); button.innerHTML = current === questions.length - 1 ? '결과 보기 <span>→</span>' : '다음 문제 <span>→</span>'; button.focus(); });
+els.form.addEventListener('submit', event => { event.preventDefault(); if (answered) { current += 1; current < questions.length ? showQuestion() : showResults(); return; } const q = questions[current], input = normal(els.answer.value); if (!input) return; const expected = q.askEnglish ? q.korean : q.english; const correct = q.askEnglish ? meaningAnswers(q).includes(input) : [q.english, ...(q.spellings?.split('|') || [])].map(normal).includes(input); results.push({ ...q, correct, expected, answer: els.answer.value.trim() }); answered = true; els.answer.disabled = true; els.answer.className = correct ? 'correct' : 'wrong'; els.feedback.className = `feedback ${correct ? 'good' : 'bad'}`; els.feedback.textContent = correct ? '정답이에요!' : `정답: ${expected}`; const button = els.form.querySelector('button'); button.innerHTML = current === questions.length - 1 ? '결과 보기 <span>→</span>' : '다음 문제 <span>→</span>'; button.focus(); });
 function showResults() { const correct = results.filter(item => item.correct).length; switchView('result'); els.score.textContent = correct; $('.score span').textContent = `/ ${questions.length}`; els.copy.textContent = `총 ${questions.length}개 중 ${correct}개를 맞혔어요.`; els.review.innerHTML = results.map(item => `<div class="review-item"><span><b>${item.english}</b> · ${item.korean}<small>입력한 답: ${escapeHtml(item.answer)}</small></span><span class="mark ${item.correct ? '' : 'fail'}">${item.correct ? '정답' : '오답'}</span></div>`).join(''); }
 function goHome() { $('.topline nav').innerHTML = '<button class="nav-button active" data-view="home">레슨</button><button class="nav-button" data-view="vocabulary">단어장</button>'; switchView('home'); }
 document.addEventListener('change', event => { if (event.target.matches('.lesson input')) updateSelection(); });
