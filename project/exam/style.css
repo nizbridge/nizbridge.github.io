@@ -20,4 +20,8 @@ button { cursor: pointer; border: 0; border-radius: 13px; padding: 15px 18px; co
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 .review-item small { display: block; margin-top: 5px; color: #969d97; font-size: 12px; }
 .review-item .mark { flex: none; }
+.word-row { grid-template-columns: 125px 33px 1fr; }
+.speaker { display: inline-grid; place-items: center; width: 31px; height: 31px; padding: 0; border-radius: 9px; background: #edf3e8; font-size: 14px; }
+.speaker:hover { background: #d9ead0; transform: none; }
+.prompt-speaker { margin: 0 0 4px 8px; vertical-align: middle; }
 @media (max-width: 520px) { .quiz-card { padding: 23px; border-radius: 22px; }.topline { margin-bottom: 30px; }.eyebrow { margin-top: 42px; } form { flex-direction: column; margin-top: 35px; } form button { width: 100%; } }
