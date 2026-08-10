@@ -1,0 +1,21 @@
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Web application outputs
+web/node_modules/
+web/.next/
+web/dist/
+web/.env
+web/.env.local
+
+# Generated artifacts
+data/derived/
+data/exports/
+*.zip
+
+# Python outputs
+__pycache__/
+*.py[cod]
+.venv/
