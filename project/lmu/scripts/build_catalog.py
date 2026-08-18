@@ -16,8 +16,8 @@ catalog = {
     "release": {
         "version": "1.4",
         "releasedOn": "2026-07-28",
-        "reviewedOn": "2026-08-10",
-        "setupValidation": "V1.4 재검증 필요",
+        "reviewedOn": "2026-08-18",
+        "setupValidation": "V1.4 재검증 필요 (공식 최신화 확인: 2026-08-18)",
     },
     "setupCount": len(setups),
     "classes": sorted({item["class"] for item in setups}),
