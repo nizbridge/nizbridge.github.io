@@ -1,6 +1,6 @@
 # Codex 세션 인수인계 - LMU Setup
 
-최종 갱신: 2026-08-18
+최종 갱신: 2026-08-19
 
 ## 프로젝트 위치와 Git
 
@@ -21,7 +21,7 @@
 
 ## 데이터 구조
 
-- `data/raw/LMU_안정형_전체_셋업_DB_2026-07.xlsx`: 원본 스프레드시트. 직접 수정하지 말고 원본으로 보존한다.
+- `data/normalized/lmu-setup-db-2026-07.json`: 2026-07 데이터베이스의 전체 7개 시트를 셀·수식 단위로 보존한 기준 데이터다.
 - `data/reference-setups/2026-07/`: LMGT3·Hypercar 안정형 `.svm` 368개와 `manifest.csv`.
 - `data/reference/bop/LMU_BOP_1.4_Marked-up.pdf`: 공식 V1.4 BoP PDF.
 - `data/derived/catalog.json`: 웹 라이브러리용 생성 카탈로그.
@@ -39,7 +39,7 @@ python3 -m http.server 4173
 
 웹 주소: `http://localhost:4173/web/`
 
-`catalog.json` 또는 `raw-data.json`을 직접 수정하지 않는다. 원본 또는 변환 스크립트를 수정한 뒤 다시 생성한다.
+`catalog.json` 또는 `raw-data.json`을 직접 수정하지 않는다. 기준 JSON 또는 변환 스크립트를 수정한 뒤 다시 생성한다.
 
 ## 최신화 기준
 
@@ -62,6 +62,6 @@ python3 -m http.server 4173
 
 ## 작업 원칙
 
-- `data/raw/`와 `data/reference-setups/`는 원본 보존을 우선한다.
+- `data/normalized/`와 `data/reference-setups/`는 기준 데이터 보존을 우선한다.
 - 외부 자료를 반영할 때는 공식 패치 노트/BoP 문서를 우선하고, 출처 URL과 검토일을 릴리스 문서에 남긴다.
 - 사용자 요청이 "최신화해줘"인 경우: 공식 최신 패치·BoP 확인 → 영향 분석 → 근거 자료 보관 → 문서·카탈로그 갱신 → 재검증이 필요한 셋업을 명시한다.

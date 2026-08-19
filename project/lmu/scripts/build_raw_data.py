@@ -1,47 +1,40 @@
 #!/usr/bin/env python3
-"""Export selected reference sheets to JSON for the local website."""
+"""Export selected canonical JSON sheets to website RAW data."""
 
 import json
-import re
-import zipfile
 from pathlib import Path
-from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-BOOK = ROOT / "data/raw/LMU_안정형_전체_셋업_DB_2026-07.xlsx"
+SOURCE = ROOT / "data/normalized/lmu-setup-db-2026-07.json"
 OUTPUT = ROOT / "data/derived/raw-data.json"
-NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 
-def column(cell_ref):
-    return re.match(r"[A-Z]+", cell_ref).group(0)
+def ordered_columns(cells):
+    def position(column):
+        number = 0
+        for letter in column:
+            number = number * 26 + ord(letter) - 64
+        return number
+    return sorted(cells, key=position)
 
-def shared_strings(book):
-    if "xl/sharedStrings.xml" not in book.namelist():
-        return []
-    root = ET.fromstring(book.read("xl/sharedStrings.xml"))
-    return ["".join(item.itertext()) for item in root.findall(f"{NS}si")]
+def read_sheet(dataset, name):
+    sheet = next(item for item in dataset["sheets"] if item["name"] == name)
+    headers = sheet["rows"][0]["cells"]
+    columns = [column for column in ordered_columns(headers) if headers[column]["value"]]
+    labels = [headers[column]["value"] for column in columns]
+    return [
+        {
+            label: row["cells"].get(column, {}).get("value", "")
+            for column, label in zip(columns, labels)
+        }
+        for row in sheet["rows"][1:]
+        if row["cells"].get("A", {}).get("value")
+    ]
 
-def read_sheet(book, path, strings):
-    root = ET.fromstring(book.read(path))
-    rows = []
-    for row in root.findall(f".//{NS}row"):
-        values = {}
-        for cell in row.findall(f"{NS}c"):
-            value = "".join(cell.itertext())
-            if cell.get("t") == "s" and value:
-                value = strings[int(value)]
-            values[column(cell.get("r"))] = value
-        rows.append(values)
-    headers = [rows[0].get(chr(65 + index), "") for index in range(26)]
-    headers = [header for header in headers if header]
-    return [dict(zip(headers, [row.get(chr(65 + index), "") for index in range(len(headers))])) for row in rows[1:] if row.get("A")]
-
-with zipfile.ZipFile(BOOK) as book:
-    strings = shared_strings(book)
-    payload = {
-        "trackProfiles": read_sheet(book, "xl/worksheets/sheet2.xml", strings),
-        "carTraits": read_sheet(book, "xl/worksheets/sheet3.xml", strings),
-    }
+dataset = json.loads(SOURCE.read_text(encoding="utf-8"))
+payload = {
+    "trackProfiles": read_sheet(dataset, "서킷_특성"),
+    "carTraits": read_sheet(dataset, "차량_특성"),
+}
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
