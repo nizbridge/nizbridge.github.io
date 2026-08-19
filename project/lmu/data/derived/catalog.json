@@ -1,0 +1,3738 @@
+{
+  "release": {
+    "version": "1.4",
+    "releasedOn": "2026-07-28",
+    "reviewedOn": "2026-08-18",
+    "setupValidation": "V1.4 재검증 필요 (공식 최신화 확인: 2026-08-18)"
+  },
+  "setupCount": 368,
+  "classes": [
+    "GT3",
+    "Hypercar"
+  ],
+  "tracks": [
+    "Bahrain",
+    "Barcelona-Catalunya",
+    "COTA",
+    "Circuit de la Sarthe",
+    "Daytona",
+    "Fuji",
+    "Imola",
+    "Interlagos",
+    "Laguna Seca",
+    "Lusail",
+    "Monza",
+    "Paul Ricard",
+    "Portimão",
+    "Sebring",
+    "Silverstone International",
+    "Spa-Francorchamps"
+  ],
+  "vehicles": [
+    "Alpine A424",
+    "Aston Martin Valkyrie AMR-LMH",
+    "Aston Martin Vantage AMR LMGT3 Evo",
+    "BMW M Hybrid V8",
+    "BMW M4 LMGT3 Evo",
+    "Cadillac V-Series.R",
+    "Corvette Z06 LMGT3.R",
+    "Ferrari 296 LMGT3",
+    "Ferrari 499P",
+    "Ford Mustang LMGT3",
+    "Glickenhaus SCG 007",
+    "Isotta Fraschini Tipo 6",
+    "Lamborghini Huracán LMGT3 Evo2",
+    "Lamborghini SC63",
+    "Lexus RC F LMGT3",
+    "McLaren 720S LMGT3 Evo",
+    "Mercedes-AMG LMGT3",
+    "Peugeot 9X8",
+    "Peugeot 9X8 2024",
+    "Porsche 911 GT3 R LMGT3",
+    "Porsche 963",
+    "Toyota GR010 Hybrid",
+    "Vanwall Vandervell 680"
+  ],
+  "setups": [
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Bahrain/Ford Mustang LMGT3 - Bahrain - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Bahrain/McLaren 720S LMGT3 Evo - Bahrain - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Bahrain/Mercedes-AMG LMGT3 - Bahrain - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Bahrain/BMW M4 LMGT3 Evo - Bahrain - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Bahrain/Aston Martin Vantage AMR LMGT3 Evo - Bahrain - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Bahrain/Corvette Z06 LMGT3.R - Bahrain - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Bahrain/Ferrari 296 LMGT3 - Bahrain - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Bahrain/Lamborghini Huracán LMGT3 Evo2 - Bahrain - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Bahrain/Lexus RC F LMGT3 - Bahrain - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Bahrain",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Bahrain/Porsche 911 GT3 R LMGT3 - Bahrain - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Barcelona-Catalunya/Ford Mustang LMGT3 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Barcelona-Catalunya/McLaren 720S LMGT3 Evo - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Barcelona-Catalunya/Mercedes-AMG LMGT3 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Barcelona-Catalunya/BMW M4 LMGT3 Evo - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Barcelona-Catalunya/Aston Martin Vantage AMR LMGT3 Evo - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Barcelona-Catalunya/Corvette Z06 LMGT3.R - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Barcelona-Catalunya/Ferrari 296 LMGT3 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Barcelona-Catalunya/Lamborghini Huracán LMGT3 Evo2 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Barcelona-Catalunya/Lexus RC F LMGT3 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Barcelona-Catalunya/Porsche 911 GT3 R LMGT3 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Circuit de la Sarthe/Ford Mustang LMGT3 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Circuit de la Sarthe/McLaren 720S LMGT3 Evo - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Circuit de la Sarthe/Mercedes-AMG LMGT3 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Circuit de la Sarthe/BMW M4 LMGT3 Evo - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Circuit de la Sarthe/Aston Martin Vantage AMR LMGT3 Evo - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Circuit de la Sarthe/Corvette Z06 LMGT3.R - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Circuit de la Sarthe/Ferrari 296 LMGT3 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Circuit de la Sarthe/Lamborghini Huracán LMGT3 Evo2 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Circuit de la Sarthe/Lexus RC F LMGT3 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Circuit de la Sarthe/Porsche 911 GT3 R LMGT3 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Paul Ricard/Ford Mustang LMGT3 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Paul Ricard/McLaren 720S LMGT3 Evo - Paul Ricard - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Paul Ricard/Mercedes-AMG LMGT3 - Paul Ricard - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Paul Ricard/BMW M4 LMGT3 Evo - Paul Ricard - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Paul Ricard/Aston Martin Vantage AMR LMGT3 Evo - Paul Ricard - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Paul Ricard/Corvette Z06 LMGT3.R - Paul Ricard - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Paul Ricard/Ferrari 296 LMGT3 - Paul Ricard - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Paul Ricard/Lamborghini Huracán LMGT3 Evo2 - Paul Ricard - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Paul Ricard/Lexus RC F LMGT3 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Paul Ricard",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Paul Ricard/Porsche 911 GT3 R LMGT3 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/COTA/Ford Mustang LMGT3 - COTA - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/COTA/McLaren 720S LMGT3 Evo - COTA - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/COTA/Mercedes-AMG LMGT3 - COTA - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/COTA/BMW M4 LMGT3 Evo - COTA - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/COTA/Aston Martin Vantage AMR LMGT3 Evo - COTA - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/COTA/Corvette Z06 LMGT3.R - COTA - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/COTA/Ferrari 296 LMGT3 - COTA - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/COTA/Lamborghini Huracán LMGT3 Evo2 - COTA - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/COTA/Lexus RC F LMGT3 - COTA - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "COTA",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/COTA/Porsche 911 GT3 R LMGT3 - COTA - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Daytona/Ford Mustang LMGT3 - Daytona - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Daytona/McLaren 720S LMGT3 Evo - Daytona - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Daytona/Mercedes-AMG LMGT3 - Daytona - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Daytona/BMW M4 LMGT3 Evo - Daytona - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Daytona/Aston Martin Vantage AMR LMGT3 Evo - Daytona - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Daytona/Corvette Z06 LMGT3.R - Daytona - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Daytona/Ferrari 296 LMGT3 - Daytona - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Daytona/Lamborghini Huracán LMGT3 Evo2 - Daytona - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Daytona/Lexus RC F LMGT3 - Daytona - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Daytona",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Daytona/Porsche 911 GT3 R LMGT3 - Daytona - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Fuji/Ford Mustang LMGT3 - Fuji - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Fuji/McLaren 720S LMGT3 Evo - Fuji - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Fuji/Mercedes-AMG LMGT3 - Fuji - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Fuji/BMW M4 LMGT3 Evo - Fuji - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Fuji/Aston Martin Vantage AMR LMGT3 Evo - Fuji - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Fuji/Corvette Z06 LMGT3.R - Fuji - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Fuji/Ferrari 296 LMGT3 - Fuji - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Fuji/Lamborghini Huracán LMGT3 Evo2 - Fuji - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Fuji/Lexus RC F LMGT3 - Fuji - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Fuji",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Fuji/Porsche 911 GT3 R LMGT3 - Fuji - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Imola/Ford Mustang LMGT3 - Imola - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Imola/McLaren 720S LMGT3 Evo - Imola - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Imola/Mercedes-AMG LMGT3 - Imola - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Imola/BMW M4 LMGT3 Evo - Imola - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Imola/Aston Martin Vantage AMR LMGT3 Evo - Imola - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Imola/Corvette Z06 LMGT3.R - Imola - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Imola/Ferrari 296 LMGT3 - Imola - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Imola/Lamborghini Huracán LMGT3 Evo2 - Imola - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Imola/Lexus RC F LMGT3 - Imola - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Imola",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Imola/Porsche 911 GT3 R LMGT3 - Imola - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Interlagos/Ford Mustang LMGT3 - Interlagos - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Interlagos/McLaren 720S LMGT3 Evo - Interlagos - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Interlagos/Mercedes-AMG LMGT3 - Interlagos - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Interlagos/BMW M4 LMGT3 Evo - Interlagos - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Interlagos/Aston Martin Vantage AMR LMGT3 Evo - Interlagos - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Interlagos/Corvette Z06 LMGT3.R - Interlagos - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Interlagos/Ferrari 296 LMGT3 - Interlagos - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Interlagos/Lamborghini Huracán LMGT3 Evo2 - Interlagos - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Interlagos/Lexus RC F LMGT3 - Interlagos - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Interlagos",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Interlagos/Porsche 911 GT3 R LMGT3 - Interlagos - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Lusail/Ford Mustang LMGT3 - Lusail - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Lusail/McLaren 720S LMGT3 Evo - Lusail - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Lusail/Mercedes-AMG LMGT3 - Lusail - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Lusail/BMW M4 LMGT3 Evo - Lusail - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Lusail/Aston Martin Vantage AMR LMGT3 Evo - Lusail - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Lusail/Corvette Z06 LMGT3.R - Lusail - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Lusail/Ferrari 296 LMGT3 - Lusail - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Lusail/Lamborghini Huracán LMGT3 Evo2 - Lusail - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Lusail/Lexus RC F LMGT3 - Lusail - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Lusail",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Lusail/Porsche 911 GT3 R LMGT3 - Lusail - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Monza/Ford Mustang LMGT3 - Monza - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Monza/McLaren 720S LMGT3 Evo - Monza - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Monza/Mercedes-AMG LMGT3 - Monza - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Monza/BMW M4 LMGT3 Evo - Monza - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Monza/Aston Martin Vantage AMR LMGT3 Evo - Monza - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Monza/Corvette Z06 LMGT3.R - Monza - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Monza/Ferrari 296 LMGT3 - Monza - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Monza/Lamborghini Huracán LMGT3 Evo2 - Monza - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Monza/Lexus RC F LMGT3 - Monza - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Monza",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Monza/Porsche 911 GT3 R LMGT3 - Monza - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Portimão/Ford Mustang LMGT3 - Portimão - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Portimão/McLaren 720S LMGT3 Evo - Portimão - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Portimão/Mercedes-AMG LMGT3 - Portimão - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Portimão/BMW M4 LMGT3 Evo - Portimão - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Portimão/Aston Martin Vantage AMR LMGT3 Evo - Portimão - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Portimão/Corvette Z06 LMGT3.R - Portimão - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Portimão/Ferrari 296 LMGT3 - Portimão - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Portimão/Lamborghini Huracán LMGT3 Evo2 - Portimão - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Portimão/Lexus RC F LMGT3 - Portimão - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Portimão",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Portimão/Porsche 911 GT3 R LMGT3 - Portimão - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Sebring/Ford Mustang LMGT3 - Sebring - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Sebring/McLaren 720S LMGT3 Evo - Sebring - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Sebring/Mercedes-AMG LMGT3 - Sebring - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Sebring/BMW M4 LMGT3 Evo - Sebring - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Sebring/Aston Martin Vantage AMR LMGT3 Evo - Sebring - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Sebring/Corvette Z06 LMGT3.R - Sebring - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Sebring/Ferrari 296 LMGT3 - Sebring - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Sebring/Lamborghini Huracán LMGT3 Evo2 - Sebring - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Sebring/Lexus RC F LMGT3 - Sebring - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Sebring",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Sebring/Porsche 911 GT3 R LMGT3 - Sebring - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Silverstone International/Ford Mustang LMGT3 - Silverstone International - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Silverstone International/McLaren 720S LMGT3 Evo - Silverstone International - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Silverstone International/Mercedes-AMG LMGT3 - Silverstone International - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Silverstone International/BMW M4 LMGT3 Evo - Silverstone International - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Silverstone International/Aston Martin Vantage AMR LMGT3 Evo - Silverstone International - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Silverstone International/Corvette Z06 LMGT3.R - Silverstone International - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Silverstone International/Ferrari 296 LMGT3 - Silverstone International - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Silverstone International/Lamborghini Huracán LMGT3 Evo2 - Silverstone International - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Silverstone International/Lexus RC F LMGT3 - Silverstone International - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Silverstone International",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Silverstone International/Porsche 911 GT3 R LMGT3 - Silverstone International - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Spa-Francorchamps/Ford Mustang LMGT3 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Spa-Francorchamps/McLaren 720S LMGT3 Evo - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Spa-Francorchamps/Mercedes-AMG LMGT3 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Spa-Francorchamps/BMW M4 LMGT3 Evo - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Spa-Francorchamps/Aston Martin Vantage AMR LMGT3 Evo - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Spa-Francorchamps/Corvette Z06 LMGT3.R - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Spa-Francorchamps/Ferrari 296 LMGT3 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Spa-Francorchamps/Lamborghini Huracán LMGT3 Evo2 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Spa-Francorchamps/Lexus RC F LMGT3 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Spa-Francorchamps/Porsche 911 GT3 R LMGT3 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Ford Mustang LMGT3",
+      "file": "GT3/Laguna Seca/Ford Mustang LMGT3 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "McLaren 720S LMGT3 Evo",
+      "file": "GT3/Laguna Seca/McLaren 720S LMGT3 Evo - Laguna Seca - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Mercedes-AMG LMGT3",
+      "file": "GT3/Laguna Seca/Mercedes-AMG LMGT3 - Laguna Seca - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "BMW M4 LMGT3 Evo",
+      "file": "GT3/Laguna Seca/BMW M4 LMGT3 Evo - Laguna Seca - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Aston Martin Vantage AMR LMGT3 Evo",
+      "file": "GT3/Laguna Seca/Aston Martin Vantage AMR LMGT3 Evo - Laguna Seca - Stable.svm",
+      "template_vehicle": "Ford Mustang LMGT3",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Corvette Z06 LMGT3.R",
+      "file": "GT3/Laguna Seca/Corvette Z06 LMGT3.R - Laguna Seca - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Ferrari 296 LMGT3",
+      "file": "GT3/Laguna Seca/Ferrari 296 LMGT3 - Laguna Seca - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Lamborghini Huracán LMGT3 Evo2",
+      "file": "GT3/Laguna Seca/Lamborghini Huracán LMGT3 Evo2 - Laguna Seca - Stable.svm",
+      "template_vehicle": "BMW M4 LMGT3 Evo",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Lexus RC F LMGT3",
+      "file": "GT3/Laguna Seca/Lexus RC F LMGT3 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Lexus RC F LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "GT3",
+      "track": "Laguna Seca",
+      "vehicle": "Porsche 911 GT3 R LMGT3",
+      "file": "GT3/Laguna Seca/Porsche 911 GT3 R LMGT3 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Porsche 911 GT3 R LMGT3",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Bahrain/Alpine A424 - Bahrain - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Bahrain/Aston Martin Valkyrie AMR-LMH - Bahrain - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Bahrain/BMW M Hybrid V8 - Bahrain - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Bahrain/Cadillac V-Series.R - Bahrain - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Bahrain/Ferrari 499P - Bahrain - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Bahrain/Glickenhaus SCG 007 - Bahrain - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Bahrain/Isotta Fraschini Tipo 6 - Bahrain - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Bahrain/Lamborghini SC63 - Bahrain - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Bahrain/Peugeot 9X8 - Bahrain - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Bahrain/Peugeot 9X8 2024 - Bahrain - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Bahrain/Porsche 963 - Bahrain - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Bahrain/Toyota GR010 Hybrid - Bahrain - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Bahrain",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Bahrain/Vanwall Vandervell 680 - Bahrain - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Barcelona-Catalunya/Alpine A424 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Barcelona-Catalunya/Aston Martin Valkyrie AMR-LMH - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Barcelona-Catalunya/BMW M Hybrid V8 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Barcelona-Catalunya/Cadillac V-Series.R - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Barcelona-Catalunya/Ferrari 499P - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Barcelona-Catalunya/Glickenhaus SCG 007 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Barcelona-Catalunya/Isotta Fraschini Tipo 6 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Barcelona-Catalunya/Lamborghini SC63 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Barcelona-Catalunya/Peugeot 9X8 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Barcelona-Catalunya/Peugeot 9X8 2024 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Barcelona-Catalunya/Porsche 963 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Barcelona-Catalunya/Toyota GR010 Hybrid - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Barcelona-Catalunya",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Barcelona-Catalunya/Vanwall Vandervell 680 - Barcelona-Catalunya - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Circuit de la Sarthe/Alpine A424 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Circuit de la Sarthe/Aston Martin Valkyrie AMR-LMH - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Circuit de la Sarthe/BMW M Hybrid V8 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Circuit de la Sarthe/Cadillac V-Series.R - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Circuit de la Sarthe/Ferrari 499P - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Circuit de la Sarthe/Glickenhaus SCG 007 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Circuit de la Sarthe/Isotta Fraschini Tipo 6 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Circuit de la Sarthe/Lamborghini SC63 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Circuit de la Sarthe/Peugeot 9X8 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Circuit de la Sarthe/Peugeot 9X8 2024 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Circuit de la Sarthe/Porsche 963 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Circuit de la Sarthe/Toyota GR010 Hybrid - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Circuit de la Sarthe",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Circuit de la Sarthe/Vanwall Vandervell 680 - Circuit de la Sarthe - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Paul Ricard/Alpine A424 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Paul Ricard/Aston Martin Valkyrie AMR-LMH - Paul Ricard - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Paul Ricard/BMW M Hybrid V8 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Paul Ricard/Cadillac V-Series.R - Paul Ricard - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Paul Ricard/Ferrari 499P - Paul Ricard - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Paul Ricard/Glickenhaus SCG 007 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Paul Ricard/Isotta Fraschini Tipo 6 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Paul Ricard/Lamborghini SC63 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Paul Ricard/Peugeot 9X8 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Paul Ricard/Peugeot 9X8 2024 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Paul Ricard/Porsche 963 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Paul Ricard/Toyota GR010 Hybrid - Paul Ricard - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Paul Ricard",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Paul Ricard/Vanwall Vandervell 680 - Paul Ricard - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/COTA/Alpine A424 - COTA - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/COTA/Aston Martin Valkyrie AMR-LMH - COTA - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/COTA/BMW M Hybrid V8 - COTA - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/COTA/Cadillac V-Series.R - COTA - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/COTA/Ferrari 499P - COTA - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/COTA/Glickenhaus SCG 007 - COTA - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/COTA/Isotta Fraschini Tipo 6 - COTA - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/COTA/Lamborghini SC63 - COTA - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/COTA/Peugeot 9X8 - COTA - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/COTA/Peugeot 9X8 2024 - COTA - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/COTA/Porsche 963 - COTA - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/COTA/Toyota GR010 Hybrid - COTA - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "COTA",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/COTA/Vanwall Vandervell 680 - COTA - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Daytona/Alpine A424 - Daytona - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Daytona/Aston Martin Valkyrie AMR-LMH - Daytona - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Daytona/BMW M Hybrid V8 - Daytona - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Daytona/Cadillac V-Series.R - Daytona - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Daytona/Ferrari 499P - Daytona - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Daytona/Glickenhaus SCG 007 - Daytona - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Daytona/Isotta Fraschini Tipo 6 - Daytona - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Daytona/Lamborghini SC63 - Daytona - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Daytona/Peugeot 9X8 - Daytona - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Daytona/Peugeot 9X8 2024 - Daytona - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Daytona/Porsche 963 - Daytona - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Daytona/Toyota GR010 Hybrid - Daytona - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Daytona",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Daytona/Vanwall Vandervell 680 - Daytona - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Fuji/Alpine A424 - Fuji - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Fuji/Aston Martin Valkyrie AMR-LMH - Fuji - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Fuji/BMW M Hybrid V8 - Fuji - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Fuji/Cadillac V-Series.R - Fuji - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Fuji/Ferrari 499P - Fuji - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Fuji/Glickenhaus SCG 007 - Fuji - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Fuji/Isotta Fraschini Tipo 6 - Fuji - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Fuji/Lamborghini SC63 - Fuji - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Fuji/Peugeot 9X8 - Fuji - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Fuji/Peugeot 9X8 2024 - Fuji - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Fuji/Porsche 963 - Fuji - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Fuji/Toyota GR010 Hybrid - Fuji - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Fuji",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Fuji/Vanwall Vandervell 680 - Fuji - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Imola/Alpine A424 - Imola - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Imola/Aston Martin Valkyrie AMR-LMH - Imola - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Imola/BMW M Hybrid V8 - Imola - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Imola/Cadillac V-Series.R - Imola - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Imola/Ferrari 499P - Imola - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Imola/Glickenhaus SCG 007 - Imola - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Imola/Isotta Fraschini Tipo 6 - Imola - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Imola/Lamborghini SC63 - Imola - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Imola/Peugeot 9X8 - Imola - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Imola/Peugeot 9X8 2024 - Imola - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Imola/Porsche 963 - Imola - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Imola/Toyota GR010 Hybrid - Imola - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Imola",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Imola/Vanwall Vandervell 680 - Imola - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Interlagos/Alpine A424 - Interlagos - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Interlagos/Aston Martin Valkyrie AMR-LMH - Interlagos - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Interlagos/BMW M Hybrid V8 - Interlagos - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Interlagos/Cadillac V-Series.R - Interlagos - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Interlagos/Ferrari 499P - Interlagos - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Interlagos/Glickenhaus SCG 007 - Interlagos - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Interlagos/Isotta Fraschini Tipo 6 - Interlagos - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Interlagos/Lamborghini SC63 - Interlagos - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Interlagos/Peugeot 9X8 - Interlagos - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Interlagos/Peugeot 9X8 2024 - Interlagos - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Interlagos/Porsche 963 - Interlagos - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Interlagos/Toyota GR010 Hybrid - Interlagos - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Interlagos",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Interlagos/Vanwall Vandervell 680 - Interlagos - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Lusail/Alpine A424 - Lusail - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Lusail/Aston Martin Valkyrie AMR-LMH - Lusail - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Lusail/BMW M Hybrid V8 - Lusail - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Lusail/Cadillac V-Series.R - Lusail - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Lusail/Ferrari 499P - Lusail - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Lusail/Glickenhaus SCG 007 - Lusail - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Lusail/Isotta Fraschini Tipo 6 - Lusail - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Lusail/Lamborghini SC63 - Lusail - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Lusail/Peugeot 9X8 - Lusail - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Lusail/Peugeot 9X8 2024 - Lusail - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Lusail/Porsche 963 - Lusail - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Lusail/Toyota GR010 Hybrid - Lusail - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Lusail",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Lusail/Vanwall Vandervell 680 - Lusail - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Monza/Alpine A424 - Monza - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Monza/Aston Martin Valkyrie AMR-LMH - Monza - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Monza/BMW M Hybrid V8 - Monza - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Monza/Cadillac V-Series.R - Monza - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Monza/Ferrari 499P - Monza - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Monza/Glickenhaus SCG 007 - Monza - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Monza/Isotta Fraschini Tipo 6 - Monza - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Monza/Lamborghini SC63 - Monza - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Monza/Peugeot 9X8 - Monza - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Monza/Peugeot 9X8 2024 - Monza - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Monza/Porsche 963 - Monza - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Monza/Toyota GR010 Hybrid - Monza - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Monza",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Monza/Vanwall Vandervell 680 - Monza - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Portimão/Alpine A424 - Portimão - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Portimão/Aston Martin Valkyrie AMR-LMH - Portimão - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Portimão/BMW M Hybrid V8 - Portimão - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Portimão/Cadillac V-Series.R - Portimão - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Portimão/Ferrari 499P - Portimão - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Portimão/Glickenhaus SCG 007 - Portimão - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Portimão/Isotta Fraschini Tipo 6 - Portimão - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Portimão/Lamborghini SC63 - Portimão - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Portimão/Peugeot 9X8 - Portimão - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Portimão/Peugeot 9X8 2024 - Portimão - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Portimão/Porsche 963 - Portimão - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Portimão/Toyota GR010 Hybrid - Portimão - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Portimão",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Portimão/Vanwall Vandervell 680 - Portimão - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Sebring/Alpine A424 - Sebring - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Sebring/Aston Martin Valkyrie AMR-LMH - Sebring - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Sebring/BMW M Hybrid V8 - Sebring - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Sebring/Cadillac V-Series.R - Sebring - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Sebring/Ferrari 499P - Sebring - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Sebring/Glickenhaus SCG 007 - Sebring - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Sebring/Isotta Fraschini Tipo 6 - Sebring - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Sebring/Lamborghini SC63 - Sebring - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Sebring/Peugeot 9X8 - Sebring - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Sebring/Peugeot 9X8 2024 - Sebring - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Sebring/Porsche 963 - Sebring - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Sebring/Toyota GR010 Hybrid - Sebring - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Sebring",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Sebring/Vanwall Vandervell 680 - Sebring - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Silverstone International/Alpine A424 - Silverstone International - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Silverstone International/Aston Martin Valkyrie AMR-LMH - Silverstone International - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Silverstone International/BMW M Hybrid V8 - Silverstone International - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Silverstone International/Cadillac V-Series.R - Silverstone International - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Silverstone International/Ferrari 499P - Silverstone International - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Silverstone International/Glickenhaus SCG 007 - Silverstone International - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Silverstone International/Isotta Fraschini Tipo 6 - Silverstone International - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Silverstone International/Lamborghini SC63 - Silverstone International - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Silverstone International/Peugeot 9X8 - Silverstone International - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Silverstone International/Peugeot 9X8 2024 - Silverstone International - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Silverstone International/Porsche 963 - Silverstone International - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Silverstone International/Toyota GR010 Hybrid - Silverstone International - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Silverstone International",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Silverstone International/Vanwall Vandervell 680 - Silverstone International - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Spa-Francorchamps/Alpine A424 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Spa-Francorchamps/Aston Martin Valkyrie AMR-LMH - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Spa-Francorchamps/BMW M Hybrid V8 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Spa-Francorchamps/Cadillac V-Series.R - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Spa-Francorchamps/Ferrari 499P - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Spa-Francorchamps/Glickenhaus SCG 007 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Spa-Francorchamps/Isotta Fraschini Tipo 6 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Spa-Francorchamps/Lamborghini SC63 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Spa-Francorchamps/Peugeot 9X8 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Spa-Francorchamps/Peugeot 9X8 2024 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Spa-Francorchamps/Porsche 963 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Spa-Francorchamps/Toyota GR010 Hybrid - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Spa-Francorchamps",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Spa-Francorchamps/Vanwall Vandervell 680 - Spa-Francorchamps - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Alpine A424",
+      "file": "Hypercar/Laguna Seca/Alpine A424 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Aston Martin Valkyrie AMR-LMH",
+      "file": "Hypercar/Laguna Seca/Aston Martin Valkyrie AMR-LMH - Laguna Seca - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "BMW M Hybrid V8",
+      "file": "Hypercar/Laguna Seca/BMW M Hybrid V8 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Cadillac V-Series.R",
+      "file": "Hypercar/Laguna Seca/Cadillac V-Series.R - Laguna Seca - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Ferrari 499P",
+      "file": "Hypercar/Laguna Seca/Ferrari 499P - Laguna Seca - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Glickenhaus SCG 007",
+      "file": "Hypercar/Laguna Seca/Glickenhaus SCG 007 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Isotta Fraschini Tipo 6",
+      "file": "Hypercar/Laguna Seca/Isotta Fraschini Tipo 6 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "EXACT",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Lamborghini SC63",
+      "file": "Hypercar/Laguna Seca/Lamborghini SC63 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Peugeot 9X8",
+      "file": "Hypercar/Laguna Seca/Peugeot 9X8 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Peugeot 9X8 2024",
+      "file": "Hypercar/Laguna Seca/Peugeot 9X8 2024 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Porsche 963",
+      "file": "Hypercar/Laguna Seca/Porsche 963 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Cadillac V-Series.R",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Toyota GR010 Hybrid",
+      "file": "Hypercar/Laguna Seca/Toyota GR010 Hybrid - Laguna Seca - Stable.svm",
+      "template_vehicle": "Alpine A424",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    },
+    {
+      "class": "Hypercar",
+      "track": "Laguna Seca",
+      "vehicle": "Vanwall Vandervell 680",
+      "file": "Hypercar/Laguna Seca/Vanwall Vandervell 680 - Laguna Seca - Stable.svm",
+      "template_vehicle": "Isotta Fraschini Tipo 6",
+      "template_status": "INFERRED_VALIDATE",
+      "confidence": "B",
+      "validation_status": "REVIEW_V14"
+    }
+  ]
+}

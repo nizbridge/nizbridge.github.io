@@ -11,7 +11,9 @@ web/.env
 web/.env.local
 
 # Generated artifacts
-data/derived/
+data/derived/*
+!data/derived/catalog.json
+!data/derived/raw-data.json
 data/exports/
 *.zip
 
