@@ -1,6 +1,6 @@
 # Codex 세션 인수인계 - LMU Setup
 
-최종 갱신: 2026-08-19
+최종 갱신: 2026-09-07
 
 ## 프로젝트 위치와 Git
 
@@ -17,13 +17,13 @@
 - 클래스 선택 후 해당 클래스의 차량만 차량 목록에 표시
 - 셋업 카드에서 `.svm`을 직접 다운로드
 - `RAW 데이터` 메뉴에서 원본 엑셀의 서킷 특성 16개와 차량 특성 23개를 테이블로 표시
-- 상단 릴리스 표시 형식: `RELEASE V1.4 (260728)`
+- 상단 릴리스 표시 형식: `RELEASE V1.4.1 (260810)`
 
 ## 데이터 구조
 
 - `data/normalized/lmu-setup-db-2026-07.json`: 2026-07 데이터베이스의 전체 7개 시트를 셀·수식 단위로 보존한 기준 데이터다.
 - `data/reference-setups/2026-07/`: LMGT3·Hypercar 안정형 `.svm` 368개와 `manifest.csv`.
-- `data/reference/bop/LMU_BOP_1.4_Marked-up.pdf`: 공식 V1.4 BoP PDF.
+- `data/reference/bop/LMU_BOP_1.4.1_Marked-up.pdf`: 공식 V1.4.1 BoP PDF.
 - `data/derived/catalog.json`: 웹 라이브러리용 생성 카탈로그.
 - `data/derived/raw-data.json`: 웹 RAW 데이터 메뉴용 생성 파일.
 
@@ -43,19 +43,19 @@ python3 -m http.server 4173
 
 ## 최신화 기준
 
-현재 게임 기준은 LMU V1.4 (2026-07-28)이다. 2026-08-18 공식 지원 센터와 BoP 공지를 다시 확인했으며, V1.4 이후의 공식 게임 릴리스나 BoP 문서는 확인되지 않았다. 검토 기록은 `docs/releases/2026-08-v1.4-audit.md`에 남긴다.
+현재 게임 기준은 LMU V1.4.1이다. 2026-09-07 공식 지원 센터와 BoP 공지를 확인했으며, V1.4.1 BoP(2026-08-10) 및 Hotfix 4가 최신이다. 검토 기록은 `docs/releases/2026-09-v1.4.1.md`에 남긴다.
 
-- V1.4는 브레이크 열/패드 모델, Circuit de la Sarthe 환경, 트랙별 BoP를 변경했다.
-- 기존 `.svm` 묶음에는 적용 게임 버전 메타데이터가 없으므로, 368개 모두 `REVIEW_V14` 상태로 웹 카탈로그에 기록되어 있다.
+- V1.4.1은 Daytona, Laguna Seca, Le Mans의 BoP를 조정했고, Hotfix 4는 습도에 따라 브레이크 덕트 냉각률이 과도하게 달라지는 물리 문제를 수정했다.
+- 기존 `.svm` 묶음에는 적용 게임 버전 메타데이터가 없으므로, 368개 모두 `REVIEW_V141` 상태로 웹 카탈로그에 기록되어 있다.
 - 이 상태는 파일이 무효라는 뜻이 아니다. V1.4 장거리 주행으로 확인되기 전, 최신 검증본이라고 단정하지 않는다는 뜻이다.
 - BoP가 바뀌었다고 `.svm` 내부 값을 추정해 자동 변경하지 않는다. 트랙 주행 검증 후 새 릴리스 파일을 별도 보존한다.
 - V1.4의 Cadillac V-Series.R Evo는 검증된 템플릿이 없어 라이브러리에 넣지 않았다.
 
-자세한 V1.4 검토 내용은 `docs/releases/2026-07-v1.4.md`를 참고한다.
+자세한 V1.4.1 검토 내용은 `docs/releases/2026-09-v1.4.1.md`를 참고한다.
 
 ## 다음 권장 작업
 
-1. Circuit de la Sarthe의 LMGT3와 Hypercar부터 V1.4 기준 브레이크 온도·타이어 스틴트를 실제 주행으로 확인한다.
+1. Daytona, Laguna Seca, Circuit de la Sarthe의 LMGT3와 Hypercar부터 V1.4.1 기준 브레이크 온도·타이어 스틴트를 실제 주행으로 확인한다.
 2. 결과를 릴리스별 데이터로 기록할 스키마(차량, 트랙, 패치, 검증일, 출처, 파라미터)를 정의한다.
 3. `.svm` 구조를 분석해 보존적 생성기와 결과 검증을 구현한다.
 4. 라이브러리에 릴리스/검증 상태 필터와 변경 이력을 추가한다.

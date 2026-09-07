@@ -14,16 +14,16 @@ with MANIFEST.open(encoding="utf-8-sig", newline="") as source:
 
 catalog = {
     "release": {
-        "version": "1.4",
-        "releasedOn": "2026-07-28",
-        "reviewedOn": "2026-08-18",
-        "setupValidation": "V1.4 재검증 필요 (공식 최신화 확인: 2026-08-18)",
+        "version": "1.4.1",
+        "releasedOn": "2026-08-10",
+        "reviewedOn": "2026-09-07",
+        "setupValidation": "V1.4.1 재검증 필요 (공식 최신화 확인: 2026-09-07)",
     },
     "setupCount": len(setups),
     "classes": sorted({item["class"] for item in setups}),
     "tracks": sorted({item["track"] for item in setups}),
     "vehicles": sorted({item["vehicle"] for item in setups}),
-    "setups": [{**setup, "validation_status": "REVIEW_V14"} for setup in setups],
+    "setups": [{**setup, "validation_status": "REVIEW_V141"} for setup in setups],
 }
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
