@@ -62,6 +62,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -72,6 +73,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -82,6 +84,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -92,6 +95,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -102,6 +106,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -112,6 +117,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -122,6 +128,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -132,6 +139,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -142,6 +150,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -152,6 +161,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -162,6 +172,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -172,6 +183,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -182,6 +194,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -192,6 +205,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -202,6 +216,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -212,6 +227,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -222,6 +238,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -232,6 +249,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -242,6 +260,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -252,6 +271,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -262,7 +282,9 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -272,7 +294,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -282,7 +306,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -292,7 +318,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -302,7 +330,9 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -312,7 +342,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -322,7 +354,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -332,7 +366,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -342,7 +378,9 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -352,7 +390,9 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -362,6 +402,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -372,6 +413,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -382,6 +424,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -392,6 +435,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -402,6 +446,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -412,6 +457,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -422,6 +468,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -432,6 +479,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -442,6 +490,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -452,6 +501,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -462,6 +512,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -472,6 +523,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -482,6 +534,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -492,6 +545,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -502,6 +556,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -512,6 +567,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -522,6 +578,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -532,6 +589,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -542,6 +600,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -552,6 +611,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -562,7 +622,9 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -572,7 +634,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -582,7 +646,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -592,7 +658,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -602,7 +670,9 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -612,7 +682,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -622,7 +694,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -632,7 +706,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -642,7 +718,9 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -652,7 +730,9 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -662,6 +742,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -672,6 +753,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -682,6 +764,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -692,6 +775,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -702,6 +786,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -712,6 +797,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -722,6 +808,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -732,6 +819,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -742,6 +830,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -752,6 +841,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -762,6 +852,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -772,6 +863,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -782,6 +874,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -792,6 +885,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -802,6 +896,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -812,6 +907,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -822,6 +918,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -832,6 +929,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -842,6 +940,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -852,6 +951,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -862,6 +962,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -872,6 +973,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -882,6 +984,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -892,6 +995,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -902,6 +1006,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -912,6 +1017,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -922,6 +1028,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -932,6 +1039,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -942,6 +1050,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -952,6 +1061,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -962,6 +1072,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -972,6 +1083,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -982,6 +1094,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -992,6 +1105,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1002,6 +1116,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1012,6 +1127,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1022,6 +1138,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1032,6 +1149,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1042,6 +1160,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1052,6 +1171,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1062,6 +1182,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1072,6 +1193,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1082,6 +1204,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1092,6 +1215,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1102,6 +1226,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1112,6 +1237,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1122,6 +1248,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1132,6 +1259,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1142,6 +1270,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1152,6 +1281,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1162,6 +1292,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1172,6 +1303,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1182,6 +1314,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1192,6 +1325,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1202,6 +1336,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1212,6 +1347,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1222,6 +1358,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1232,6 +1369,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1242,6 +1380,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1252,6 +1391,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1262,6 +1402,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1272,6 +1413,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1282,6 +1424,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1292,6 +1435,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1302,6 +1446,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1312,6 +1457,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1322,6 +1468,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1332,6 +1479,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1342,6 +1490,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1352,6 +1501,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1362,6 +1512,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1372,6 +1523,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1382,6 +1534,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1392,6 +1545,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1402,6 +1556,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1412,6 +1567,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1422,6 +1578,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1432,6 +1589,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1442,6 +1600,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1452,6 +1611,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1462,6 +1622,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1472,6 +1633,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1482,6 +1644,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1492,6 +1655,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1502,6 +1666,7 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1512,6 +1677,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1522,6 +1688,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1532,6 +1699,7 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1542,6 +1710,7 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1552,6 +1721,7 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1562,7 +1732,9 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1572,7 +1744,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1582,7 +1756,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1592,7 +1768,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1602,7 +1780,9 @@
       "template_vehicle": "Ford Mustang LMGT3",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1612,7 +1792,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1622,7 +1804,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1632,7 +1816,9 @@
       "template_vehicle": "BMW M4 LMGT3 Evo",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1642,7 +1828,9 @@
       "template_vehicle": "Lexus RC F LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "GT3",
@@ -1652,7 +1840,9 @@
       "template_vehicle": "Porsche 911 GT3 R LMGT3",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1662,6 +1852,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1672,6 +1863,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1682,6 +1874,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1692,6 +1885,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1702,6 +1896,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1712,6 +1907,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1722,6 +1918,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1732,6 +1929,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1742,6 +1940,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1752,6 +1951,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1762,6 +1962,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1772,6 +1973,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1782,6 +1984,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1792,6 +1995,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1802,6 +2006,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1812,6 +2017,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1822,6 +2028,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1832,6 +2039,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1842,6 +2050,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1852,6 +2061,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1862,6 +2072,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1872,6 +2083,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1882,6 +2094,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1892,6 +2105,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1902,6 +2116,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1912,6 +2127,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -1922,7 +2138,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1932,7 +2150,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1942,7 +2162,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1952,7 +2174,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1962,7 +2186,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1972,7 +2198,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1982,7 +2210,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -1992,7 +2222,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2002,7 +2234,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2012,7 +2246,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2022,7 +2258,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2032,7 +2270,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2042,7 +2282,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2052,6 +2294,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2062,6 +2305,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2072,6 +2316,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2082,6 +2327,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2092,6 +2338,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2102,6 +2349,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2112,6 +2360,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2122,6 +2371,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2132,6 +2382,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2142,6 +2393,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2152,6 +2404,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2162,6 +2415,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2172,6 +2426,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2182,6 +2437,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2192,6 +2448,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2202,6 +2459,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2212,6 +2470,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2222,6 +2481,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2232,6 +2492,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2242,6 +2503,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2252,6 +2514,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2262,6 +2525,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2272,6 +2536,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2282,6 +2547,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2292,6 +2558,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2302,6 +2569,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2312,7 +2580,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2322,7 +2592,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2332,7 +2604,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2342,7 +2616,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2352,7 +2628,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2362,7 +2640,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2372,7 +2652,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2382,7 +2664,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2392,7 +2676,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2402,7 +2688,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2412,7 +2700,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2422,7 +2712,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2432,7 +2724,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -2442,6 +2736,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2452,6 +2747,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2462,6 +2758,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2472,6 +2769,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2482,6 +2780,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2492,6 +2791,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2502,6 +2802,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2512,6 +2813,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2522,6 +2824,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2532,6 +2835,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2542,6 +2846,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2552,6 +2857,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2562,6 +2868,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2572,6 +2879,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2582,6 +2890,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2592,6 +2901,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2602,6 +2912,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2612,6 +2923,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2622,6 +2934,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2632,6 +2945,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2642,6 +2956,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2652,6 +2967,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2662,6 +2978,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2672,6 +2989,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2682,6 +3000,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2692,6 +3011,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2702,6 +3022,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2712,6 +3033,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2722,6 +3044,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2732,6 +3055,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2742,6 +3066,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2752,6 +3077,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2762,6 +3088,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2772,6 +3099,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2782,6 +3110,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2792,6 +3121,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2802,6 +3132,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2812,6 +3143,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2822,6 +3154,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2832,6 +3165,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2842,6 +3176,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2852,6 +3187,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2862,6 +3198,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2872,6 +3209,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2882,6 +3220,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2892,6 +3231,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2902,6 +3242,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2912,6 +3253,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2922,6 +3264,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2932,6 +3275,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2942,6 +3286,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2952,6 +3297,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2962,6 +3308,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2972,6 +3319,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2982,6 +3330,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -2992,6 +3341,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3002,6 +3352,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3012,6 +3363,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3022,6 +3374,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3032,6 +3385,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3042,6 +3396,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3052,6 +3407,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3062,6 +3418,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3072,6 +3429,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3082,6 +3440,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3092,6 +3451,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3102,6 +3462,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3112,6 +3473,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3122,6 +3484,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3132,6 +3495,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3142,6 +3506,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3152,6 +3517,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3162,6 +3528,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3172,6 +3539,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3182,6 +3550,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3192,6 +3561,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3202,6 +3572,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3212,6 +3583,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3222,6 +3594,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3232,6 +3605,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3242,6 +3616,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3252,6 +3627,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3262,6 +3638,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3272,6 +3649,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3282,6 +3660,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3292,6 +3671,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3302,6 +3682,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3312,6 +3693,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3322,6 +3704,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3332,6 +3715,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3342,6 +3726,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3352,6 +3737,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3362,6 +3748,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3372,6 +3759,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3382,6 +3770,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3392,6 +3781,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3402,6 +3792,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3412,6 +3803,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3422,6 +3814,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3432,6 +3825,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3442,6 +3836,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3452,6 +3847,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3462,6 +3858,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3472,6 +3869,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3482,6 +3880,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3492,6 +3891,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3502,6 +3902,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3512,6 +3913,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3522,6 +3924,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3532,6 +3935,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3542,6 +3946,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3552,6 +3957,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3562,6 +3968,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3572,6 +3979,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3582,6 +3990,7 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3592,6 +4001,7 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3602,6 +4012,7 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
+      "release": "1.4",
       "validation_status": "REVIEW_V141"
     },
     {
@@ -3612,7 +4023,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3622,7 +4035,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3632,7 +4047,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3642,7 +4059,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3652,7 +4071,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3662,7 +4083,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3672,7 +4095,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "EXACT",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3682,7 +4107,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3692,7 +4119,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3702,7 +4131,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3712,7 +4143,9 @@
       "template_vehicle": "Cadillac V-Series.R",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3722,7 +4155,9 @@
       "template_vehicle": "Alpine A424",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     },
     {
       "class": "Hypercar",
@@ -3732,7 +4167,9 @@
       "template_vehicle": "Isotta Fraschini Tipo 6",
       "template_status": "INFERRED_VALIDATE",
       "confidence": "B",
-      "validation_status": "REVIEW_V141"
+      "release": "1.4.1",
+      "validation_status": "REVIEW_V141",
+      "update_scope": "BoP game-applied; brake duct revalidation required"
     }
   ]
 }
