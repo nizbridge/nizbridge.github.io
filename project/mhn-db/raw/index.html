@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" href="favicon/favicon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="favicon/favicon.png" />
+
+    <!-- Windows Tiles -->
+    <meta name="msapplication-TileImage" content="favicon/favicon.png" />
+    <meta name="msapplication-TileColor" content="#1a1a1a" />
+
+    <meta
+      name="description"
+      property="og:description"
+      content="Monster Hunter Now Armor, Skills, Upgrade Cost, Monster Guide | 配裝器，防具、武器技能、升級素材、魔物指南"
+    />
+    <meta
+      name="keywords"
+      content="MH, MHN, MonHunt Now, 魔物獵人NOW, 怪物獵人NOW, モンハンナウ, 攻略, 配裝, 防具, 武器, 裝備, 技能, Armor, Skills, Search, Wiki, 装備, スキル, 検索, 魔物指南, 升級素材"
+    />
+    <title>MHN.Quest | Tools | 工具集</title>
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#1a1a1a"
+    />
+
+    <!-- Preload eager-bundled locale data so the browser fetches en / zh
+         in parallel with the JS module instead of waiting for parse order. -->
+    <link rel="preload" href="/assets/en-BnsaMi1K.json" as="fetch" crossorigin />
+    <link rel="preload" href="/assets/zh-B_cAcaOp.json" as="fetch" crossorigin />
+
+    <!-- Third-party helpers — defer so they never block first paint.
+         gsi/client (Google Sign-In) is moved to <body> to keep its behavior
+         identical for Sync.svelte while still being non-blocking. -->
+    <script src="/dnd-touch.js" type="text/javascript" defer></script>
+    <script src="/common_ad.js" type="text/javascript" defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module" crossorigin src="/assets/index-BgEgqPWZ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-ol-DVpd_s_d.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-utils-4si3spKo.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-C-Vahq1B.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f967910f530f41cd8cf5ede1e8b2f822"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>

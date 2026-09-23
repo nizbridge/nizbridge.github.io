@@ -1,28 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roguelike</title>
-    <link rel="stylesheet" href="css/mhn.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11130f">
+  <meta name="description" content="Monster Hunter Now 몬스터 약점과 장비 스킬을 한눈에 확인하는 비공식 가이드">
+  <title>Field Notes — Monster Hunter Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mhn.css">
 </head>
 <body>
-    <h1>Roguelike - Floor <span id="floor-number">1</span></h1>
-    <div id="game-container">
-        <div id="game"></div>
-        <div id="player-info"></div>
-    </div>
-    <div id="log"></div>
-
-     <!-- 팝업 요소 추가 -->
-     <div class="overlay" id="game-over-overlay">
-        <div class="popup">
-            <h2>Game Over</h2>
-            <p id="score"></p>
-            <button onclick="location.reload()">Restart</button>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span><span>FIELD NOTES</span></a>
+    <nav><a href="#home">홈</a><a href="#monsters">몬스터</a><a href="#armor">부위별 방어구</a><a href="#recommended">추천 세팅</a><a href="#custom">커스텀 세팅</a><button id="themeButton" class="icon-button" type="button" aria-label="색상 모드 전환">◐</button></nav>
+  </header>
+  <main id="top">
+    <section id="home" class="hero page-section" data-page="home">
+      <div class="hero-copy">
+        <p class="eyebrow">UNOFFICIAL HUNTER DATABASE · 2026</p>
+        <h1>사냥 전에,<br><em>약점을 읽어라.</em></h1>
+        <p class="hero-description">몬스터 약점부터 장비 스킬까지. 필드에서 필요한 정보만 빠르게 꺼내보는 Monster Hunter Now 비공식 가이드.</p>
+        <div class="hero-stats"><span><strong id="monsterCount">—</strong> MONSTERS</span><span><strong id="skillCount">—</strong> SKILLS</span><span><strong>KO</strong> LANGUAGE</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="target-ring ring-one"></div><div class="target-ring ring-two"></div><div class="claw-mark"><i></i><i></i><i></i></div><span class="coordinate">35°41' N<br>139°41' E</span></div>
+    </section>
+    <section id="monsters" class="catalog page-section" data-page="monsters" aria-labelledby="catalogTitle" hidden>
+      <div class="section-heading"><div><p class="eyebrow">HUNTER'S INDEX</p><h2 id="catalogTitle">몬스터 도감</h2></div><p id="resultCount" class="result-count" aria-live="polite"></p></div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="몬스터, 속성, 스킬 검색" autocomplete="off"><kbd>/</kbd></label>
+        <div id="elementFilters" class="filter-row" aria-label="약점 속성 필터"></div>
+      </div>
+      <div id="monsterGrid" class="monster-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden><strong>검색 결과가 없습니다.</strong><span>다른 몬스터 이름이나 속성으로 찾아보세요.</span></div>
+    </section>
+    <section id="armor" class="armor-section page-section" data-page="armor" aria-labelledby="armorTitle" hidden>
+      <div class="section-heading"><div><p class="eyebrow">ARMOR BY PART</p><h2 id="armorTitle">부위별 방어구</h2></div><p id="armorResultCount" class="result-count" aria-live="polite"></p></div>
+      <div class="armor-toolbar">
+        <div id="partFilters" class="part-tabs" role="tablist" aria-label="방어구 부위"></div>
+        <label class="armor-search"><span>⌕</span><input id="armorSearchInput" type="search" placeholder="스킬 또는 몬스터 검색" autocomplete="off"></label>
+      </div>
+      <div class="armor-table-wrap">
+        <table class="armor-table">
+          <thead><tr><th>몬스터</th><th>부위</th><th>보유 스킬 / 해금 Grade</th><th>즐겨찾기</th><th></th></tr></thead>
+          <tbody id="armorTableBody"></tbody>
+        </table>
+      </div>
+      <div id="armorEmptyState" class="empty-state" hidden><strong>조건에 맞는 방어구가 없습니다.</strong><span>다른 부위나 스킬로 찾아보세요.</span></div>
+    </section>
+    <section id="recommended" class="recommended-section page-section" data-page="recommended" aria-labelledby="recommendedTitle" hidden>
+      <div class="section-heading"><div><p class="eyebrow">GREAT SWORD / ELEMENTAL LOADOUTS</p><h2 id="recommendedTitle">속성별 대검 추천 세팅</h2></div></div>
+      <p class="recommended-intro">몬스터의 약점 속성에 맞춰 대검을 고르세요. 합산 스킬은 방어구 최종 해금 기준이며 표류연성은 제외했습니다.</p>
+      <div id="recommendedStyleTabs" class="recommended-style-tabs" role="tablist" aria-label="대검 운용 방식"><button type="button" class="active" role="tab" aria-selected="true" data-recommended-style="charge">모아베기 · 집중</button><button type="button" role="tab" aria-selected="false" data-recommended-style="surge">수류베기 · 집중 없음</button></div>
+      <p id="recommendedStyleNote" class="recommended-style-note">모아베기의 차지 시간을 줄이는 집중을 포함한 구성입니다.</p>
+      <div id="recommendedGrid" class="recommended-grid"></div>
+      <div class="recommended-sources"><h3>구성 기준</h3><p>두 운용 모두 속성 공격강화 Lv5를 기본으로 삼았습니다. 수류베기 구성은 집중 장비를 회심·록온 장비로 교체한 제안이며, 표류연성이나 무기 스킬은 계산하지 않았습니다.</p><a href="https://scopelyexplore.helpshift.com/hc/en/15-monster-hunter-now/faq/2294-styles-great-sword/" target="_blank" rel="noopener noreferrer">공식 대검 스타일 설명 ↗</a><a href="https://niantic.helpshift.com/hc/en/39-monster-hunter-now/faq/3961-tips-skill/" target="_blank" rel="noopener noreferrer">공식 스킬 가이드 ↗</a><a href="https://www.reddit.com/r/MHNowGame/comments/1v26bsk/great_sword_build/" target="_blank" rel="noopener noreferrer">대검 커뮤니티 논의 ↗</a></div>
+    </section>
+    <section id="custom" class="custom-section page-section" data-page="custom" aria-labelledby="customTitle" hidden>
+      <div class="section-heading"><div><p class="eyebrow">CUSTOM LOADOUT</p><h2 id="customTitle">커스텀 세팅</h2></div><p class="result-count">장비를 고르면 스킬이 자동 합산됩니다.</p></div>
+      <div class="builder-layout">
+        <div class="builder-main">
+          <div id="gearSelectors" class="gear-selectors"></div>
+          <section class="favorite-gear-panel" aria-labelledby="favoriteGearTitle"><div class="builder-block-head"><h3 id="favoriteGearTitle">즐겨찾는 장비</h3><span id="favoriteGearCount">0개</span></div><div id="favoriteGearList" class="favorite-gear-list"></div></section>
+          <section class="build-summary" aria-labelledby="summaryTitle">
+            <div class="builder-block-head"><h3 id="summaryTitle">합산 스킬</h3><button id="resetBuildButton" class="text-button" type="button">선택 초기화</button></div>
+            <div id="buildSummary" class="summary-skills"></div>
+          </section>
+          <div class="save-bar">
+            <label><span>세팅 이름</span><input id="buildNameInput" type="text" maxlength="30" placeholder="예: 물속성 활 세팅"></label>
+            <button id="saveBuildButton" class="primary-button" type="button">새 세팅 저장</button>
+          </div>
+          <p id="buildMessage" class="build-message" aria-live="polite"></p>
         </div>
-    </div>
-
-    <script src="js/mhn.js"></script>
+        <aside class="saved-builds">
+          <div class="builder-block-head"><h3>저장된 세팅</h3><span id="savedBuildCount">0개</span></div>
+          <div id="savedBuildList" class="saved-build-list"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <dialog id="monsterDialog" class="monster-dialog" aria-labelledby="dialogTitle"><button id="dialogClose" class="dialog-close" type="button" aria-label="상세 닫기">×</button><div id="dialogContent"></div></dialog>
+  <dialog id="buildCardDialog" class="build-card-dialog" aria-labelledby="buildCardTitle"><button id="buildCardClose" class="dialog-close" type="button" aria-label="카드 닫기">×</button><div id="buildCardContent"></div></dialog>
+  <footer><span>FIELD NOTES / MH NOW</span><span>비공식 팬 가이드 · 데이터 스냅샷 2026-09-22</span></footer>
+  <script src="js/mhn.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+{
+  "source": "https://mhn.quest/",
+  "retrieved_at_utc": "2026-09-22T05:05:00.451764+00:00",
+  "scope": "Public client data modules, not a server database dump; images and runtime calculation code excluded.",
+  "files": [
+    {
+      "url": "https://mhn.quest/assets/data-ClWr2vI-.js",
+      "local": "raw/mhn-data.mjs",
+      "sha256": "569f25ff2e67016ed2bb31415020cccd57879c922c9a33cd46e12ef1fe4190ae"
+    },
+    {
+      "url": "https://mhn.quest/assets/lang-ko-DPmCFrll.js",
+      "local": "raw/mhn-ko.mjs",
+      "sha256": "1409b1555dc13e9d78edc54d5cc3a2f7a5144f4c76d54ddc2d87e0aecc3c4a71"
+    },
+    {
+      "url": "https://mhn.quest/assets/motions-ZA3EP2-r.js",
+      "local": "raw/mhn-motions.mjs",
+      "sha256": "fb650d8783de615c95b48a250ebf40f74940c272641079e35ecfdfe7761508d6"
+    },
+    {
+      "url": "https://mhn.quest/assets/smelt-CYVTNSE8.js",
+      "local": "raw/mhn-smelt.mjs",
+      "sha256": "2b23bed4961b09b27b6d82e00080386f2f3e27f860961670919290c9f06290ce"
+    }
+  ]
+}

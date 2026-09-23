@@ -1,0 +1,12 @@
+[
+  {"style":"charge","element":"fire","weapon":"ratha","gear":{"helm":"anja","mail":"narg","gloves":"anja","belt":"ratha","greaves":"jyur"},"note":"불속성 공격강화 Lv5에 집중을 더한 모아베기 구성입니다."},
+  {"style":"charge","element":"water","weapon":"mizu","gear":{"helm":"mizu","mail":"jyur","gloves":"jyur","belt":"raja","greaves":"tigr"},"note":"물속성 공격강화 Lv5와 라잔 허리의 집중, 티가렉스 다리의 록온을 사용합니다."},
+  {"style":"charge","element":"thunder","weapon":"zino","gear":{"helm":"tzit","mail":"tobi","gloves":"arzu","belt":"tobi","greaves":"tigr"},"note":"번개속성 공격강화 Lv5에 아오아시라 팔의 집중과 록온을 더합니다."},
+  {"style":"charge","element":"ice","weapon":"legi","gear":{"helm":"legi","mail":"narg","gloves":"bari","belt":"legi","greaves":"jyur"},"note":"얼음속성 공격강화 Lv5에 쥬라토도스 다리의 집중을 더합니다."},
+  {"style":"charge","element":"dragon","weapon":"devi","gear":{"helm":"devi","mail":"narg","gloves":"arzu","belt":"devi","greaves":"e-odog"},"note":"용속성 공격강화 Lv5에 아오아시라 팔의 집중과 록온을 더합니다."},
+  {"style":"surge","element":"fire","weapon":"ratha","gear":{"helm":"anja","mail":"a-ratha","gloves":"anja","belt":"p-rathi","greaves":"tigr"},"note":"집중 없이 불속성 공격강화 Lv5를 맞추고 간파와 록온을 더한 수류베기 구성입니다."},
+  {"style":"surge","element":"water","weapon":"mizu","gear":{"helm":"mizu","mail":"jyur","gloves":"jyur","belt":"p-rathi","greaves":"tigr"},"note":"물속성 공격강화 Lv5를 유지하며 집중 대신 간파와 록온을 사용합니다."},
+  {"style":"surge","element":"thunder","weapon":"zino","gear":{"helm":"tzit","mail":"tobi","gloves":"g-wrog","belt":"tobi","greaves":"tigr"},"note":"아오아시라 팔을 도스프로기 팔로 바꿔 집중 대신 간파를 얻습니다."},
+  {"style":"surge","element":"ice","weapon":"legi","gear":{"helm":"legi","mail":"narg","gloves":"bari","belt":"legi","greaves":"kulu"},"note":"쥬라토도스 다리를 쿠루루야크 다리로 바꿔 집중 대신 간파를 얻습니다."},
+  {"style":"surge","element":"dragon","weapon":"devi","gear":{"helm":"devi","mail":"narg","gloves":"g-wrog","belt":"devi","greaves":"e-odog"},"note":"아오아시라 팔을 도스프로기 팔로 바꿔 집중 대신 간파를 얻습니다."}
+]

@@ -1,363 +1,69 @@
-const WIDTH = 50;
-const HEIGHT = 30;
-const PLAYER = '@';
-const WALL = '#';
-const FLOOR = '.';
-const STAIRS = '>';
-const NUM_ROOMS = 10;
-const ROOM_MIN_SIZE = 3;
-const ROOM_MAX_SIZE = 8;
-const MONSTER_VISION_RADIUS = 8; // 몬스터가 플레이어를 인식하는 범위
-
-let player = {
-    x: 1,
-    y: 1,
-    attack: 3,
-    defense: 1,
-    health: 10,
-    maxHealth: 10,
-    level: 1,
-    experience: 0
-};
-
-let gameMap = [];
-let monsters = [];
-let floor = 1;
-let stairsPosition = { x: 0, y: 0 }; // Stairs position
-let canDescend = false; // Flag to determine if player is on stairs
-let restCount = 0; // Rest counter
-
-const MONSTER_TYPES = {
-    'a': {
-        name: 'slime',
-        attack: 2,
-        defense: 1,
-        speed: 1,
-        health: 5
-    }
-};
-
-function createRoom(x, y, width, height) {
-    for (let i = x; i < x + width; i++) {
-        for (let j = y; j < y + height; j++) {
-            gameMap[j][i] = FLOOR;
-        }
-    }
+const DATA_PATH='../mhn-db/json';
+const labels={elements:{fire:'불',water:'물',thunder:'번개',ice:'얼음',dragon:'용'},biomes:{forest:'삼림',desert:'사막',swamp:'늪지',tundra:'설원',volcano:'화산'},parts:{helm:'머리',mail:'몸통',gloves:'팔',belt:'허리',greaves:'다리'}};
+const state={data:null,ko:null,recommendations:[],recommendationStyle:'charge',query:'',element:'all',part:'all',armorQuery:'',selectedGear:{helm:'',mail:'',gloves:'',belt:'',greaves:''},gearSearch:{helm:'',mail:'',gloves:'',belt:'',greaves:''},openGearPart:null,favorites:[],savedBuilds:[],editingBuildId:null,previewBuildId:null};
+const els={grid:document.querySelector('#monsterGrid'),empty:document.querySelector('#emptyState'),search:document.querySelector('#searchInput'),filters:document.querySelector('#elementFilters'),results:document.querySelector('#resultCount'),partFilters:document.querySelector('#partFilters'),armorSearch:document.querySelector('#armorSearchInput'),armorBody:document.querySelector('#armorTableBody'),armorEmpty:document.querySelector('#armorEmptyState'),armorResults:document.querySelector('#armorResultCount'),gearSelectors:document.querySelector('#gearSelectors'),favoriteGearList:document.querySelector('#favoriteGearList'),favoriteGearCount:document.querySelector('#favoriteGearCount'),buildSummary:document.querySelector('#buildSummary'),buildName:document.querySelector('#buildNameInput'),saveBuild:document.querySelector('#saveBuildButton'),resetBuild:document.querySelector('#resetBuildButton'),buildMessage:document.querySelector('#buildMessage'),savedBuildList:document.querySelector('#savedBuildList'),savedBuildCount:document.querySelector('#savedBuildCount'),dialog:document.querySelector('#monsterDialog'),dialogContent:document.querySelector('#dialogContent'),buildCardDialog:document.querySelector('#buildCardDialog'),buildCardContent:document.querySelector('#buildCardContent')};
+const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const skillName=id=>state.ko['skill-name'][id]||id;
+function summarizeLevels(descriptions){
+  if(descriptions.length<2)return descriptions[0]||'';
+  const tokenPattern=/-?\d+(?:\.\d+)?%?/g;
+  const rows=descriptions.map(text=>({text,tokens:text.match(tokenPattern)||[],shape:text.replace(tokenPattern,'{value}')}));
+  if(!rows.every(row=>row.shape===rows[0].shape&&row.tokens.length===rows[0].tokens.length))return descriptions.join(' ');
+  const changing=rows[0].tokens.map((_,i)=>new Set(rows.map(row=>row.tokens[i])).size>1);
+  if(!changing.some(Boolean))return descriptions.join(' ');
+  let tokenIndex=0;
+  const summary=rows[0].text.replace(tokenPattern,token=>changing[tokenIndex++]?'':token).replace(/\s+([,.])/g,'$1').replace(/\s{2,}/g,' ').trim();
+  const progression=rows.map(row=>row.tokens.filter((_,i)=>changing[i]).join(' / ')).join(' → ');
+  return `${summary} (Max Lv.${descriptions.length})\n(${progression})`;
 }
-
-function createHTunnel(x1, x2, y) {
-    for (let x = Math.min(x1, x2); x <= Math.max(x1, x2); x++) {
-        gameMap[y][x] = FLOOR;
-    }
-}
-
-function createVTunnel(y1, y2, x) {
-    for (let y = Math.min(y1, y2); y <= Math.max(y1, y2); y++) {
-        gameMap[y][x] = FLOOR;
-    }
-}
-
-function generateMap() {
-    gameMap = [];
-    monsters = [];
-    for (let y = 0; y < HEIGHT; y++) {
-        let row = [];
-        for (let x = 0; x < WIDTH; x++) {
-            row.push(WALL);
-        }
-        gameMap.push(row);
-    }
-
-    let rooms = [];
-    for (let r = 0; r < NUM_ROOMS; r++) {
-        let roomWidth = Math.floor(Math.random() * (ROOM_MAX_SIZE - ROOM_MIN_SIZE + 1)) + ROOM_MIN_SIZE;
-        let roomHeight = Math.floor(Math.random() * (ROOM_MAX_SIZE - ROOM_MIN_SIZE + 1)) + ROOM_MIN_SIZE;
-        let x = Math.floor(Math.random() * (WIDTH - roomWidth - 1));
-        let y = Math.floor(Math.random() * (HEIGHT - roomHeight - 1));
-
-        let newRoom = { x: x, y: y, width: roomWidth, height: roomHeight };
-        let failed = false;
-        for (let otherRoom of rooms) {
-            if (newRoom.x <= otherRoom.x + otherRoom.width && newRoom.x + newRoom.width >= otherRoom.x &&
-                newRoom.y <= otherRoom.y + otherRoom.height && newRoom.y + newRoom.height >= otherRoom.y) {
-                failed = true;
-                break;
-            }
-        }
-
-        if (!failed) {
-            createRoom(newRoom.x, newRoom.y, newRoom.width, newRoom.height);
-            if (rooms.length !== 0) {
-                let prevRoom = rooms[rooms.length - 1];
-                createHTunnel(prevRoom.x + Math.floor(prevRoom.width / 2), newRoom.x + Math.floor(newRoom.width / 2), prevRoom.y + Math.floor(prevRoom.height / 2));
-                createVTunnel(prevRoom.y + Math.floor(prevRoom.height / 2), newRoom.y + Math.floor(newRoom.height / 2), newRoom.x + Math.floor(newRoom.width / 2));
-            } else {
-                player.x = newRoom.x + Math.floor(newRoom.width / 2);
-                player.y = newRoom.y + Math.floor(newRoom.height / 2);
-            }
-            rooms.push(newRoom);
-        }
-    }
-
-    placeStairs();
-    generateMonsters();
-    gameMap[player.y][player.x] = PLAYER;
-    canDescend = false; // Reset flag
-}
-
-function placeStairs() {
-    let room = gameMap.find(row => row.includes(FLOOR));
-    if (room) {
-        let x = Math.floor(Math.random() * WIDTH);
-        let y = Math.floor(Math.random() * HEIGHT);
-        while (gameMap[y][x] !== FLOOR) {
-            x = Math.floor(Math.random() * WIDTH);
-            y = Math.floor(Math.random() * HEIGHT);
-        }
-        gameMap[y][x] = STAIRS;
-        stairsPosition = { x, y }; // Save the stairs position
-    }
-}
-
-function generateMonsters() {
-    let numMonsters = Math.floor(Math.random() * 4) + 3; // 3~6마리
-    for (let i = 0; i < numMonsters; i++) {
-        let x = Math.floor(Math.random() * WIDTH);
-        let y = Math.floor(Math.random() * HEIGHT);
-        while (gameMap[y][x] !== FLOOR) {
-            x = Math.floor(Math.random() * WIDTH);
-            y = Math.floor(Math.random() * HEIGHT);
-        }
-        let monsterType = 'a';
-        monsters.push({ ...MONSTER_TYPES[monsterType], x: x, y: y });
-        gameMap[y][x] = monsterType;
-    }
-}
-
-function drawMap() {
-    let gameDiv = document.getElementById('game');
-    gameDiv.innerHTML = '';
-    for (let y = 0; y < HEIGHT; y++) {
-        for (let x = 0; x < WIDTH; x++) {
-            if (gameMap[y][x] === 'a') {
-                gameDiv.innerHTML += `<span class="red">${gameMap[y][x]}</span>`;
-            } else {
-                gameDiv.innerHTML += gameMap[y][x];
-            }
-        }
-        gameDiv.innerHTML += '\n';
-    }
-}
-
-function logMessage(message) {
-    let logDiv = document.getElementById('log');
-    logDiv.innerHTML += message + '\n';
-    logDiv.scrollTop = logDiv.scrollHeight;  // Scroll to the bottom
-}
-
-function attack(attacker, defender) {
-    let damage = Math.max(0, Math.floor(Math.random() * attacker.attack) + 1 - defender.defense);
-    defender.health -= damage;
-    return damage;
-}
-
-
-function updatePlayerInfo() {
-    let playerInfoDiv = document.getElementById('player-info');
-    playerInfoDiv.innerHTML = `Player Info\nLevel: ${player.level}\nExperience: ${player.experience}\nAttack: ${player.attack}\nDefense: ${player.defense}\nHealth: ${player.health}/${player.maxHealth}`;
-}
-
-function updateFloorInfo() {
-    let floorDiv = document.getElementById('floor-number');
-    floorDiv.innerHTML = floor;
-}
-
-
-function movePlayer(dx, dy) {
-    let newX = player.x + dx;
-    let newY = player.y + dy;
-
-    if (newX >= 0 && newX < WIDTH && newY >= 0 && newY < HEIGHT) {
-        let destination = gameMap[newY][newX];
-
-        if (destination === FLOOR || destination === STAIRS) {
-            // Move player to new position
-            gameMap[player.y][player.x] = (player.x === stairsPosition.x && player.y === stairsPosition.y) ? STAIRS : FLOOR;
-            player.x = newX;
-            player.y = newY;
-
-            // If the player moves off the stairs, restore the stairs tile
-            if (player.x !== stairsPosition.x || player.y !== stairsPosition.y) {
-                gameMap[stairsPosition.y][stairsPosition.x] = STAIRS;
-            }
-
-            gameMap[player.y][player.x] = PLAYER;
-            
-            // Set canDescend flag if on stairs
-            if (destination === STAIRS) {
-                canDescend = true;
-                logMessage(`You are on stairs. Press '>' to move to the next floor.`);
-            } else {
-                canDescend = false; // Reset flag if player moves off stairs
-
-            }
-        } else if (destination === 'a') {
-            let monster = monsters.find(m => m.x === newX && m.y === newY);
-            if (monster) {
-                let playerDamage = attack(player, monster);
-                let monsterDamage = attack(monster, player);
-                logMessage(`Player attacks ${monster.name} for ${playerDamage} damage.`);
-                logMessage(`${monster.name} attacks Player for ${monsterDamage} damage.`);
-                if (monster.health <= 0) {
-                    logMessage(`${monster.name} is dead.`);
-                    gameMap[monster.y][monster.x] = FLOOR;
-                    monsters = monsters.filter(m => m !== monster);
-                    player.experience += 1; // Gain experience for killing a monster
-
-                    if (player.experience >= player.level * 10) {
-                        player.experience -= player.level * 10;
-                        player.level += 1;
-                        player.attack += 1;
-                        player.defense += 1;
-                        player.maxHealth += 1;
-                        player.health = player.maxHealth; // Fully heal on level up
-
-                        logMessage(`Player leveled up to level ${player.level}!`);
-                    }
-                }
-                if (player.health <= 0) {
-                    logMessage(`Player is dead. Game over.`);
-                    document.removeEventListener('keydown', handleKeydown);
-                    showGameOver();
-                }
-            }
-        }
-        moveMonsters();
-        drawMap();
-        updatePlayerInfo(); // Update player info after each move
-    }
-}
-
-function moveMonsters() {
-    for (let monster of monsters) {
-        let distanceX = player.x - monster.x;
-        let distanceY = player.y - monster.y;
-
-        if (Math.abs(distanceX) <= MONSTER_VISION_RADIUS && Math.abs(distanceY) <= MONSTER_VISION_RADIUS) {
-            let dx = distanceX > 0 ? 1 : (distanceX < 0 ? -1 : 0);
-            let dy = distanceY > 0 ? 1 : (distanceY < 0 ? -1 : 0);
-            
-            let newX = monster.x + dx;
-            let newY = monster.y + dy;
-
-            if (newX === player.x && newY === player.y) {
-                let monsterDamage = attack(monster, player);
-                logMessage(`${monster.name} attacks Player for ${monsterDamage} damage.`);
-                if (player.health <= 0) {
-                    logMessage(`Player is dead. Game over.`);
-                    document.removeEventListener('keydown', handleKeydown);
-                    showGameOver();
-                }
-            } else if (gameMap[newY][newX] === FLOOR) {
-                gameMap[monster.y][monster.x] = FLOOR;
-                monster.x = newX;
-                monster.y = newY;
-                gameMap[monster.y][monster.x] = 'a';
-            }
-        }
-    }
-}
-
-function handleKeydown(event) {
-    switch (event.key) {
-        case 'ArrowUp':
-            movePlayer(0, -1);
-            break;
-        case 'ArrowDown':
-            movePlayer(0, 1);
-            break;
-        case 'ArrowLeft':
-            movePlayer(-1, 0);
-            break;
-        case 'ArrowRight':
-            movePlayer(1, 0);
-            break;
-        case '>':
-            // Only allow descending if on stairs
-            if (canDescend) {
-                floor++;
-                updateFloorInfo();
-                generateMap();
-                drawMap();
-                updatePlayerInfo(); // Update player info after map generation
-                logMessage(`Descending to floor ${floor}.`);
-            } else {
-                logMessage(`You must be on stairs to descend.`);
-            }
-            break;
-        case '.':
-            // Resting
-            restCount++;
-            if (restCount >= 5) {
-                restCount = 0;
-                if (player.health < player.maxHealth) {
-                    player.health = Math.min(player.maxHealth, player.health + 1);
-                    logMessage(`Player rests and heals 1 health.`);
-                }
-            }
-            moveMonsters();
-            drawMap();
-            updatePlayerInfo();
-            break;
-    }
-}
-
-
-function calculateScore() {
-    return (floor * 5) + (player.level * 10) + player.experience;
-}
-
-function showGameOver() {
-    let overlay = document.getElementById('game-over-overlay');
-    let scoreElement = document.getElementById('score');
-    let score = calculateScore();
-    scoreElement.innerHTML = `Your score: ${score}`;
-    overlay.style.display = 'flex';
-}
-
-function restartGame() {
-    let overlay = document.getElementById('game-over-overlay');
-    overlay.style.display = 'none';
-    
-    // 초기화
-    player = {
-        x: 1,
-        y: 1,
-        attack: 3,
-        defense: 1,
-        health: 10,
-        maxHealth: 10,
-        level: 1,
-        experience: 0
-    };
-    floor = 1;
-    restCount = 0; // Rest counter 초기화
-    canDescend = false; // Flag 초기화
-    
-    // 로그 초기화
-    let logDiv = document.getElementById('log');
-    logDiv.innerHTML = '';
-
-    generateMap();
-    drawMap();
-    updatePlayerInfo();
-    updateFloorInfo();
-    document.addEventListener('keydown', handleKeydown);
-}
-
-document.addEventListener('keydown', handleKeydown);
-
-generateMap();
-drawMap();
-updatePlayerInfo(); // Initial update of player info
-updateFloorInfo(); // Initial update of floor info
+function skillDescription(id){const value=state.ko.skill[id];return value?(Array.isArray(value)?summarizeLevels(value):String(value)):'스킬 상세 설명이 없습니다.'}
+function entries(){return Object.entries(state.data.guide).map(([id,monster],i)=>({id,index:i+1,name:state.ko['monster-name'][id]||id,monster,equipment:state.data.eq[id]||null}))}
+function searchText(e){const weak=Object.keys(e.monster.weakness||{}).map(k=>labels.elements[k]||k);const skills=Object.values(e.equipment||{}).flatMap(v=>Array.isArray(v)?v:[]).map(x=>x?.skill?skillName(x.skill):'');return[e.name,...weak,...skills].join(' ').toLowerCase()}
+function renderFilters(){els.filters.innerHTML=[['all','전체'],...Object.entries(labels.elements)].map(([k,n])=>`<button class="filter-button${state.element===k?' active':''}" type="button" data-element="${k}">${n}</button>`).join('')}
+function renderPartFilters(){els.partFilters.innerHTML=[['all','전체'],...Object.entries(labels.parts)].map(([k,n])=>`<button class="part-tab${state.part===k?' active':''}" type="button" role="tab" aria-selected="${state.part===k}" data-part="${k}">${n}</button>`).join('')}
+const chip=k=>`<span class="element-chip element-${esc(k)}">${esc(labels.elements[k]||k)}</span>`;
+function renderCards(){const q=state.query.trim().toLowerCase();const visible=entries().filter(e=>(state.element==='all'||Object.hasOwn(e.monster.weakness||{},state.element))&&(!q||searchText(e).includes(q)));els.grid.innerHTML=visible.map(({id,index,name,monster})=>{const weak=Object.keys(monster.weakness||{}),biomes=(monster.biome||[]).map(k=>labels.biomes[k]||k).join(' · ');return`<button class="monster-card" type="button" data-id="${esc(id)}"><span class="card-index">FIELD NO. ${String(index).padStart(3,'0')}</span><span class="card-arrow">↗</span><h3>${esc(name)}</h3><div class="weakness-row">${weak.length?weak.map(chip).join(''):'<span class="element-chip">약점 정보 없음</span>'}</div><span class="biome-line">${esc(biomes||'출현 지역 정보 없음')}</span></button>`}).join('');els.empty.hidden=visible.length>0;els.results.textContent=`전체 ${visible.length}종`}
+function armorEntries(){return entries().flatMap(e=>Object.keys(labels.parts).flatMap(part=>{if(state.part!=='all'&&state.part!==part)return[];const skills=e.equipment?.[part]||[];return skills.length?[{id:e.id,name:e.name,part,skills}]:[]}))}
+function renderArmor(){const q=state.armorQuery.trim().toLowerCase();const visible=armorEntries().filter(e=>!q||[e.name,...e.skills.map(s=>skillName(s.skill))].join(' ').toLowerCase().includes(q));els.armorBody.innerHTML=visible.map(e=>`<tr data-id="${esc(e.id)}"><td><button class="armor-monster" type="button" data-id="${esc(e.id)}">${esc(e.name)}</button></td><td><span class="part-label">${esc(labels.parts[e.part])}</span></td><td><div class="skill-list">${e.skills.map(formatSkill).join('')}</div></td><td><button class="favorite-button${isFavorite(e.id,e.part)?' active':''}" type="button" data-favorite-id="${esc(e.id)}" data-favorite-part="${esc(e.part)}" aria-pressed="${isFavorite(e.id,e.part)}" aria-label="${esc(e.name)} ${esc(labels.parts[e.part])} 즐겨찾기">★</button></td><td><button class="row-open" type="button" data-id="${esc(e.id)}" aria-label="${esc(e.name)} 상세 보기">↗</button></td></tr>`).join('');els.armorEmpty.hidden=visible.length>0;els.armorResults.textContent=`전체 ${visible.length}개`}
+const LOADOUT_KEY='mhn-custom-loadouts-v1';
+const FAVORITE_KEY='mhn-favorite-gear-v1';
+function readSavedBuilds(){try{const value=JSON.parse(localStorage.getItem(LOADOUT_KEY)||'[]');return Array.isArray(value)?value:[]}catch{return[]}}
+function writeSavedBuilds(){localStorage.setItem(LOADOUT_KEY,JSON.stringify(state.savedBuilds))}
+function readFavorites(){try{const value=JSON.parse(localStorage.getItem(FAVORITE_KEY)||'[]');return Array.isArray(value)?value.filter(item=>item&&item.id&&item.part):[]}catch{return[]}}
+function writeFavorites(){localStorage.setItem(FAVORITE_KEY,JSON.stringify(state.favorites))}
+function isFavorite(id,part){return state.favorites.some(item=>item.id===id&&item.part===part)}
+function renderFavoriteGear(){const favorites=state.favorites.map(item=>{const gear=gearOptions(item.part).find(option=>option.id===item.id);return gear?{...item,...gear}:null}).filter(Boolean);els.favoriteGearCount.textContent=`${favorites.length}개`;els.favoriteGearList.innerHTML=favorites.length?favorites.map(item=>`<article class="favorite-gear-item"><button class="favorite-gear-choice" type="button" data-favorite-choice="${esc(item.part)}" data-favorite-id="${esc(item.id)}"><span>${esc(labels.parts[item.part])}</span><strong>${esc(item.name)}</strong><small>${esc(gearSkillText(item.skills))}</small></button><button class="favorite-gear-remove" type="button" data-favorite-remove="${esc(item.part)}" data-favorite-id="${esc(item.id)}" aria-label="${esc(item.name)} ${esc(labels.parts[item.part])} 즐겨찾기 삭제">×</button></article>`).join(''):'<p class="favorite-gear-empty">방어구 페이지에서 ★ 버튼을 눌러 장비를 추가하세요.</p>'}
+function toggleFavorite(id,part){state.favorites=isFavorite(id,part)?state.favorites.filter(item=>item.id!==id||item.part!==part):[{id,part},...state.favorites];writeFavorites();renderArmor();renderFavoriteGear()}
+function gearOptions(part){return entries().filter(e=>(e.equipment?.[part]||[]).length).map(e=>({id:e.id,name:e.name,skills:e.equipment[part]}))}
+function gearSkillText(skills){return skills.map(item=>{const unlocks=Array.isArray(item.unlock)?item.unlock:[item.unlock],levels=Array.isArray(item.lv)?item.lv:[item.lv];const progress=unlocks.map((grade,index)=>`G${grade} Lv${levels[index]??levels.at(-1)??1}`).join(' → ');return`${skillName(item.skill)} · ${progress}`}).join(' · ')}
+function gearOptionMarkup(part){const query=state.gearSearch[part].trim().toLowerCase(),options=gearOptions(part),matches=(query?options.filter(item=>item.name.toLowerCase().includes(query)):options);return matches.length?matches.map(item=>`<button type="button" class="gear-option" data-gear-choice="${part}" data-gear-id="${esc(item.id)}"><strong>${esc(item.name)}</strong><span>${esc(gearSkillText(item.skills))}</span></button>`).join(''):'<p class="gear-no-match">일치하는 장비가 없습니다.</p>'}
+function updateGearOptionList(part){const list=els.gearSelectors.querySelector(`[data-gear-list="${part}"]`),toggle=els.gearSelectors.querySelector(`[data-gear-toggle="${part}"]`),open=state.openGearPart===part;if(!list||!toggle)return;list.hidden=!open;list.innerHTML=open?gearOptionMarkup(part):'';toggle.setAttribute('aria-expanded',String(open))}
+function renderGearSelectors(){els.gearSelectors.innerHTML=Object.entries(labels.parts).map(([part,label])=>{const options=gearOptions(part),selected=options.find(item=>item.id===state.selectedGear[part]),open=state.openGearPart===part;return`<div class="gear-selector"><label class="gear-part" for="gearSearch-${part}">${esc(label)}</label><div class="gear-input-row"><input id="gearSearch-${part}" class="gear-search" type="search" data-gear-search="${part}" value="${esc(state.gearSearch[part])}" placeholder="몬스터 검색" autocomplete="off"><button class="gear-toggle" type="button" data-gear-toggle="${part}" aria-label="${esc(label)} 장비 목록" aria-expanded="${open}">⌄</button></div><div class="gear-option-list" data-gear-list="${part}"${open?'':' hidden'}>${open?gearOptionMarkup(part):''}</div><small data-gear-help="${part}">${selected?esc(gearSkillText(selected.skills)):'이름 일부를 입력하거나 목록 버튼을 누르세요.'}</small></div>`}).join('')}
+function combinedSkills(gear=state.selectedGear){const totals=new Map();for(const part of Object.keys(labels.parts)){const id=gear[part];if(!id)continue;for(const item of state.data.eq[id]?.[part]||[]){const level=Array.isArray(item.lv)?Number(item.lv.at(-1)):Number(item.lv||1);totals.set(item.skill,(totals.get(item.skill)||0)+level)}}return[...totals.entries()].sort((a,b)=>skillName(a[0]).localeCompare(skillName(b[0]),'ko'))}
+function elementalUnlockGrade(gear,element){const target=`${labels.elements[element]}속성 공격강화`;const skillId=Object.keys(state.ko['skill-name']).find(id=>skillName(id)===target);if(!skillId)return null;for(let grade=1;grade<=10;grade++){let total=0;for(const [part,id] of Object.entries(gear)){let pieceLevel=0;for(const item of state.data.eq[id]?.[part]||[]){if(item.skill!==skillId)continue;const unlocks=Array.isArray(item.unlock)?item.unlock:[item.unlock],levels=Array.isArray(item.lv)?item.lv:[item.lv];unlocks.forEach((unlock,index)=>{if(Number(unlock)<=grade)pieceLevel=Number(levels[index]??levels.at(-1)??1)})}total+=pieceLevel}if(total>=5)return grade}return null}
+function renderRecommendations(){const grid=document.querySelector('#recommendedGrid');const visible=state.recommendations.map((build,index)=>({build,index})).filter(({build})=>build.style===state.recommendationStyle);document.querySelectorAll('[data-recommended-style]').forEach(button=>{const selected=button.dataset.recommendedStyle===state.recommendationStyle;button.classList.toggle('active',selected);button.setAttribute('aria-selected',String(selected))});document.querySelector('#recommendedStyleNote').textContent=state.recommendationStyle==='surge'?'수류베기 연속 공격 중심 구성입니다. 집중은 Lv0이며, 게임에서 대검 스타일을 수류베기로 선택하세요.':'모아베기의 차지 시간을 줄이는 집중을 포함한 구성입니다.';grid.innerHTML=visible.map(({build,index},position)=>{const name=labels.elements[build.element],skills=combinedSkills(build.gear),core=skills.find(([id])=>skillName(id)===`${name}속성 공격강화`),grade=elementalUnlockGrade(build.gear,build.element),weaponName=state.ko['monster-name'][build.weapon]||build.weapon;return`<article class="recommended-card"><div class="recommended-card-head"><span class="recommended-number">BUILD ${String(position+1).padStart(2,'0')} · ${build.style==='surge'?'수류베기':'모아베기'}</span>${chip(build.element)}<h3>${esc(name)}속성 대검</h3><p>${esc(build.note)}</p></div><div class="recommended-card-body"><div class="recommended-weapon"><span>추천 대검 계열</span><strong>${esc(weaponName)} 대검</strong></div><div class="recommended-milestone"><strong>${esc(name)}속성 공격강화 Lv${core?.[1]||0}</strong><span>${grade?`방어구 G${grade}에서 완성`:'해금 등급 확인 필요'} · 표류연성 제외</span></div><div class="recommended-gear">${Object.entries(labels.parts).map(([part,label])=>{const id=build.gear[part],gearName=state.ko['monster-name'][id]||id;return`<div><span>${esc(label)}</span><strong>${esc(gearName)}</strong><small>${esc(gearSkillText(state.data.eq[id]?.[part]||[]))}</small></div>`}).join('')}</div><div class="recommended-skills">${skills.map(([id,level])=>`<span>${esc(skillName(id))} <b>Lv${level}</b></span>`).join('')}</div><button class="primary-button recommended-load" type="button" data-recommended-load="${index}">방어구를 커스텀에 불러오기</button></div></article>`}).join('')}
+function loadRecommendation(index){const build=state.recommendations[index];if(!build)return;state.selectedGear={...build.gear};state.gearSearch=Object.fromEntries(Object.entries(build.gear).map(([part,id])=>[part,state.ko['monster-name'][id]||id]));state.openGearPart=null;state.editingBuildId=null;els.buildName.value=`${labels.elements[build.element]}속성 대검 ${build.style==='surge'?'수류베기':'모아베기'} 세팅`;els.saveBuild.textContent='새 세팅 저장';renderGearSelectors();renderBuildSummary();renderSavedBuilds();location.hash='#custom';setBuildMessage('추천 방어구를 불러왔습니다. 대검 스타일은 게임에서 별도로 선택하고 세팅을 저장하세요.','success')}
+function renderBuildSummary(){const skills=combinedSkills();els.buildSummary.innerHTML=skills.length?skills.map(([id,level])=>`<span class="summary-skill" tabindex="0" data-description="${esc(skillDescription(id))}"><strong>${esc(skillName(id))}</strong><b>Lv${level}</b></span>`).join(''):'<p class="summary-empty">장비를 선택하면 합산 스킬이 여기에 표시됩니다.</p>'}
+function renderSavedBuilds(){els.savedBuildCount.textContent=`${state.savedBuilds.length}개`;els.savedBuildList.innerHTML=state.savedBuilds.length?state.savedBuilds.map(build=>{const equipped=Object.entries(build.gear).filter(([,id])=>id).map(([part,id])=>`${labels.parts[part]} ${state.ko['monster-name'][id]||id}`).join(' · ');return`<article class="saved-build${state.editingBuildId===build.id?' editing':''}"><button class="saved-build-load" type="button" data-build-action="load" data-build-id="${esc(build.id)}"><strong>${esc(build.name)}</strong><span>${esc(equipped||'선택된 장비 없음')}</span></button><div class="saved-build-actions"><button type="button" data-build-action="card" data-build-id="${esc(build.id)}">카드 보기</button><button type="button" data-build-action="edit" data-build-id="${esc(build.id)}">수정</button><button type="button" data-build-action="delete" data-build-id="${esc(build.id)}">삭제</button></div></article>`}).join(''):'<p class="saved-empty">저장된 세팅이 없습니다.</p>'}
+function buildGearRows(build){return Object.entries(labels.parts).map(([part,label])=>{const id=build.gear[part],item=id?gearOptions(part).find(option=>option.id===id):null;return`<article class="build-card-gear"><span>${esc(label)}</span><strong>${esc(item?.name||'미선택')}</strong><small>${esc(item?gearSkillText(item.skills):'')}</small></article>`}).join('')}
+function openBuildCard(id){const build=state.savedBuilds.find(item=>item.id===id);if(!build)return;state.previewBuildId=id;const skills=combinedSkills(build.gear);els.buildCardContent.innerHTML=`<div class="build-card-preview"><p class="eyebrow">FIELD NOTES / LOADOUT</p><h2 id="buildCardTitle">${esc(build.name)}</h2><p class="build-card-date">MONSTER HUNTER NOW · CUSTOM SET</p><section><h3>장비 구성</h3><div class="build-card-gear-grid">${buildGearRows(build)}</div></section><section><h3>합산 스킬</h3><div class="build-card-skills">${skills.length?skills.map(([skill,level])=>`<span><b>${esc(skillName(skill))}</b> Lv${level}</span>`).join(''):'<p>선택된 장비가 없습니다.</p>'}</div></section><button id="saveBuildCardImage" class="primary-button build-card-save" type="button">이미지 저장</button></div>`;els.buildCardDialog.showModal()}
+function saveBuildCardImage(){const build=state.savedBuilds.find(item=>item.id===state.previewBuildId);if(!build)return;const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d'),scale=2,width=1080,height=1350;canvas.width=width*scale;canvas.height=height*scale;ctx.scale(scale,scale);ctx.fillStyle='#f1eee4';ctx.fillRect(0,0,width,height);ctx.fillStyle='#c8f135';ctx.fillRect(0,0,width,24);ctx.fillStyle='#f06b36';ctx.font='700 24px sans-serif';ctx.fillText('FIELD NOTES / LOADOUT',68,94);ctx.fillStyle='#151711';ctx.font='900 58px sans-serif';ctx.fillText(build.name.slice(0,22),68,166);ctx.strokeStyle='#15171133';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(68,196);ctx.lineTo(1012,196);ctx.stroke();ctx.font='800 22px sans-serif';ctx.fillText('장비 구성',68,248);let y=278;for(const [part,label] of Object.entries(labels.parts)){const id=build.gear[part],item=id?gearOptions(part).find(option=>option.id===id):null;ctx.fillStyle='#e7e3d7';ctx.fillRect(68,y,944,112);ctx.fillStyle='#f06b36';ctx.font='700 18px sans-serif';ctx.fillText(label,90,y+34);ctx.fillStyle='#151711';ctx.font='800 28px sans-serif';ctx.fillText((item?.name||'미선택').slice(0,25),90,y+70);ctx.fillStyle='#6f7369';ctx.font='500 16px sans-serif';ctx.fillText((item?gearSkillText(item.skills):'').slice(0,62),90,y+96);y+=126}ctx.fillStyle='#151711';ctx.font='800 22px sans-serif';ctx.fillText('합산 스킬',68,y+42);y+=70;for(const [skill,level] of combinedSkills(build.gear)){ctx.fillStyle='#151711';ctx.fillRect(68,y,944,42);ctx.fillStyle='#f1eee4';ctx.font='700 18px sans-serif';ctx.fillText(`${skillName(skill)}  Lv${level}`,86,y+28);y+=54;if(y>1270)break}ctx.fillStyle='#6f7369';ctx.font='500 15px sans-serif';ctx.fillText('Monster Hunter Now · Custom Loadout',68,1310);const link=document.createElement('a');link.download=`${build.name.replace(/[\\/:*?"<>|]/g,'_')}-세팅.png`;link.href=canvas.toDataURL('image/png');link.click()}
+function setBuildMessage(message,type=''){els.buildMessage.textContent=message;els.buildMessage.dataset.type=type}
+function resetBuild(){state.selectedGear={helm:'',mail:'',gloves:'',belt:'',greaves:''};state.gearSearch={helm:'',mail:'',gloves:'',belt:'',greaves:''};state.openGearPart=null;state.editingBuildId=null;els.buildName.value='';els.saveBuild.textContent='새 세팅 저장';renderGearSelectors();renderBuildSummary();renderSavedBuilds();setBuildMessage('')}
+function loadBuild(id,editing=false){const build=state.savedBuilds.find(item=>item.id===id);if(!build)return;state.selectedGear={helm:'',mail:'',gloves:'',belt:'',greaves:'',...build.gear};state.gearSearch=Object.fromEntries(Object.entries(state.selectedGear).map(([part,gearId])=>[part,gearId?(state.ko['monster-name'][gearId]||gearId):'']));state.openGearPart=null;state.editingBuildId=editing?id:null;els.buildName.value=build.name;els.saveBuild.textContent=editing?'변경사항 저장':'새 세팅 저장';renderGearSelectors();renderBuildSummary();renderSavedBuilds();setBuildMessage(editing?'수정할 내용을 변경한 뒤 저장하세요.':'세팅을 불러왔습니다.','success');document.querySelector('#custom').scrollIntoView({behavior:'smooth',block:'start'})}
+function saveBuild(){const name=els.buildName.value.trim();if(!name){setBuildMessage('세팅 이름을 입력해주세요.','error');els.buildName.focus();return}if(!Object.values(state.selectedGear).some(Boolean)){setBuildMessage('장비를 하나 이상 선택해주세요.','error');return}if(state.editingBuildId){const index=state.savedBuilds.findIndex(item=>item.id===state.editingBuildId);if(index>=0)state.savedBuilds[index]={...state.savedBuilds[index],name,gear:{...state.selectedGear},updatedAt:Date.now()};setBuildMessage('세팅을 수정했습니다.','success')}else{state.savedBuilds.unshift({id:`build-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,name,gear:{...state.selectedGear},updatedAt:Date.now()});setBuildMessage('새 세팅을 저장했습니다.','success')}writeSavedBuilds();state.editingBuildId=null;els.saveBuild.textContent='새 세팅 저장';renderSavedBuilds()}
+function showPage(){const requested=location.hash.replace('#','')||'home';const page=document.querySelector(`[data-page="${requested}"]`)?requested:'home';document.querySelectorAll('.page-section').forEach(section=>{section.hidden=section.dataset.page!==page});document.querySelectorAll('.site-header nav a').forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${page}`));window.scrollTo({top:0,behavior:'auto'})}
+function formatSkill(item){const unlocks=Array.isArray(item.unlock)?item.unlock:[item.unlock],levels=Array.isArray(item.lv)?item.lv:[item.lv];const progress=unlocks.map((g,i)=>`G${g} Lv${levels[i]??levels.at(-1)??1}`).join(' → ');return`<span class="skill-pill" tabindex="0" data-description="${esc(skillDescription(item.skill))}">${esc(skillName(item.skill))} · ${esc(progress)}</span>`}
+function equipmentHTML(eq){if(!eq)return'<p>연결된 장비 데이터가 없습니다.</p>';const rows=Object.entries(labels.parts).map(([k,n])=>{const skills=eq[k]||[];return skills.length?`<div class="equipment-row"><span class="equipment-part">${n} 방어구</span><div class="skill-list">${skills.map(formatSkill).join('')}</div></div>`:''}).filter(Boolean).join('');return rows||'<p>방어구 스킬 데이터가 없습니다.</p>'}
+function physiologyHTML(m){const parts=Object.entries(m.physiology||{});if(!parts.length)return'<p>부위 데이터가 없습니다.</p>';return`<table class="parts-table"><thead><tr><th>부위</th><th>절단</th><th>타격</th><th>탄</th></tr></thead><tbody>${parts.map(([k,v])=>`<tr><td>${esc(state.ko['monster-parts'][k]||k)}</td><td>${v[0]??'-'}</td><td>${v[1]??'-'}</td><td>${v[2]??'-'}</td></tr>`).join('')}</tbody></table>`}
+function openMonster(id){const m=state.data.guide[id],name=state.ko['monster-name'][id]||id,weak=Object.keys(m.weakness||{}),biomes=(m.biome||[]).map(k=>labels.biomes[k]||k),hp=Object.entries(m.hp||{});els.dialogContent.innerHTML=`<div class="dialog-hero"><span class="dialog-kicker">MONSTER PROFILE / ${esc(id.toUpperCase())}</span><h2 id="dialogTitle">${esc(name)}</h2><div class="dialog-meta">${weak.map(k=>`<span>약점 · ${esc(labels.elements[k]||k)}</span>`).join('')}${biomes.map(n=>`<span>서식 · ${esc(n)}</span>`).join('')}</div></div><div class="dialog-body"><section class="info-block"><h3>등급별 체력</h3><div class="hp-list">${hp.map(([g,v])=>`<div class="hp-item"><span>★ ${g}</span><strong>${Number(v).toLocaleString('ko-KR')}</strong></div>`).join('')}</div></section><section class="info-block"><h3>방어구 스킬 / 해금 Grade</h3><div class="equipment-list">${equipmentHTML(state.data.eq[id])}</div></section><section class="info-block"><h3>부위별 육질</h3>${physiologyHTML(m)}</section></div>`;els.dialog.showModal()}
+function bind(){els.search.addEventListener('input',e=>{state.query=e.target.value;renderCards()});els.filters.addEventListener('click',e=>{const b=e.target.closest('[data-element]');if(!b)return;state.element=b.dataset.element;renderFilters();renderCards()});els.grid.addEventListener('click',e=>{const c=e.target.closest('[data-id]');if(c)openMonster(c.dataset.id)});els.partFilters.addEventListener('click',e=>{const b=e.target.closest('[data-part]');if(!b)return;state.part=b.dataset.part;renderPartFilters();renderArmor()});els.armorSearch.addEventListener('input',e=>{state.armorQuery=e.target.value;renderArmor()});els.armorBody.addEventListener('click',e=>{const favorite=e.target.closest('[data-favorite-id]');if(favorite){toggleFavorite(favorite.dataset.favoriteId,favorite.dataset.favoritePart);return}const b=e.target.closest('[data-id]');if(b)openMonster(b.dataset.id)});els.gearSelectors.addEventListener('input',e=>{const input=e.target.closest('[data-gear-search]');if(!input)return;const part=input.dataset.gearSearch;state.gearSearch[part]=input.value;state.selectedGear[part]='';state.openGearPart=part;els.gearSelectors.querySelector(`[data-gear-help="${part}"]`).textContent='목록에서 장비를 선택하세요.';renderBuildSummary();updateGearOptionList(part)});els.gearSelectors.addEventListener('click',e=>{const toggle=e.target.closest('[data-gear-toggle]');if(toggle){const part=toggle.dataset.gearToggle;state.openGearPart=state.openGearPart===part?null:part;renderGearSelectors();return}const choice=e.target.closest('[data-gear-choice]');if(!choice)return;const part=choice.dataset.gearChoice,id=choice.dataset.gearId;state.selectedGear[part]=id;state.gearSearch[part]=state.ko['monster-name'][id]||id;state.openGearPart=null;renderGearSelectors();renderBuildSummary();setBuildMessage('')});els.favoriteGearList.addEventListener('click',e=>{const choice=e.target.closest('[data-favorite-choice]');if(!choice)return;const part=choice.dataset.favoriteChoice,id=choice.dataset.favoriteId;state.selectedGear[part]=id;state.gearSearch[part]=state.ko['monster-name'][id]||id;state.openGearPart=null;renderGearSelectors();renderBuildSummary();setBuildMessage(`${labels.parts[part]} 장비를 즐겨찾기에서 추가했습니다.`,'success')});els.saveBuild.addEventListener('click',saveBuild);els.resetBuild.addEventListener('click',resetBuild);els.savedBuildList.addEventListener('click',e=>{const button=e.target.closest('[data-build-action]');if(!button)return;const buildId=button.dataset.buildId,action=button.dataset.buildAction;if(action==='load')loadBuild(buildId);if(action==='edit')loadBuild(buildId,true);if(action==='delete'){state.savedBuilds=state.savedBuilds.filter(item=>item.id!==buildId);if(state.editingBuildId===buildId)resetBuild();writeSavedBuilds();renderSavedBuilds();setBuildMessage('세팅을 삭제했습니다.','success')}});window.addEventListener('hashchange',showPage);document.querySelector('#dialogClose').addEventListener('click',()=>els.dialog.close());els.dialog.addEventListener('click',e=>{if(e.target===els.dialog)els.dialog.close()});document.querySelector('#themeButton').addEventListener('click',()=>{document.body.classList.toggle('dark');localStorage.setItem('mhn-theme',document.body.classList.contains('dark')?'dark':'light')});document.addEventListener('keydown',e=>{if(e.key==='/'&&location.hash==='#monsters'&&document.activeElement!==els.search){e.preventDefault();els.search.focus()}})}
+async function init(){if(localStorage.getItem('mhn-theme')==='dark')document.body.classList.add('dark');try{const[d,k,s,r]=await Promise.all([fetch(`${DATA_PATH}/data.json`),fetch(`${DATA_PATH}/ko.json`),fetch('data/skill-descriptions.json'),fetch('data/great-sword-recommendations.json')]);if(!d.ok||!k.ok||!s.ok||!r.ok)throw Error('데이터 파일 오류');[state.data,state.ko,state.recommendations]=await Promise.all([d.json(),k.json(),r.json()]);Object.assign(state.ko.skill,await s.json());state.savedBuilds=readSavedBuilds();state.favorites=readFavorites();document.querySelector('#monsterCount').textContent=Object.keys(state.data.guide).length;document.querySelector('#skillCount').textContent=state.data.skills.length;renderFilters();renderCards();renderPartFilters();renderArmor();renderRecommendations();renderGearSelectors();renderFavoriteGear();renderBuildSummary();renderSavedBuilds();bind();showPage()}catch(error){els.grid.innerHTML='<div class="empty-state"><strong>데이터를 불러오지 못했습니다.</strong><span>웹 서버에서 실행해주세요.</span></div>';console.error(error)}}
+init();
+els.savedBuildList.addEventListener('click',e=>{const button=e.target.closest('[data-build-action="card"]');if(button)openBuildCard(button.dataset.buildId)});
+document.querySelector('#buildCardClose').addEventListener('click',()=>els.buildCardDialog.close());
+els.buildCardDialog.addEventListener('click',e=>{if(e.target===els.buildCardDialog)els.buildCardDialog.close()});
+els.buildCardContent.addEventListener('click',e=>{if(e.target.closest('#saveBuildCardImage'))saveBuildCardImage()});
+els.favoriteGearList.addEventListener('click',e=>{const remove=e.target.closest('[data-favorite-remove]');if(!remove)return;toggleFavorite(remove.dataset.favoriteId,remove.dataset.favoriteRemove);setBuildMessage('즐겨찾기에서 삭제했습니다.','success')});
+document.querySelector('#recommendedGrid').addEventListener('click',e=>{const button=e.target.closest('[data-recommended-load]');if(button)loadRecommendation(Number(button.dataset.recommendedLoad))});
+document.querySelector('#recommendedStyleTabs').addEventListener('click',e=>{const button=e.target.closest('[data-recommended-style]');if(!button)return;state.recommendationStyle=button.dataset.recommendedStyle;renderRecommendations()});
